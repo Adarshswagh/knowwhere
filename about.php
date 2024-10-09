@@ -37,9 +37,10 @@ include("config.php");
 <link rel="stylesheet" type="text/css" href="css/style.css">
 
 <!-- Title -->
-<title>Real Estate PHP</title>
+<title>Real Estate PHP | new changes</title>
 </head>
 <body>
+    <!-- sjksdsdfflk;;l -->
 
 <!--	Page Loader -->
 <!-- <div class="page-loader position-fixed z-index-9999 w-100 bg-white vh-100">
