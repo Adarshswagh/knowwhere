@@ -1,0 +1,384 @@
+/* General body styles */
+body {
+    margin: 0;
+    font-family: 'Lexend', sans-serif; /* Replace with your font */
+}
+/* banner */
+/* Banner styling */
+
+#banner-main{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    background-color: #050f17;
+
+}
+.banner1 {
+    height: 400px; /* Ensure height is set */
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the image */
+    display: flex; /* Flex for centering content */
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally center content */
+    color: #FFFFFF; /* Set text color to pure white */
+    background-image: url('../images/bannerabout.jpg');
+    background-color: #000; /* Fallback color if image fails to load */
+    position: relative; /* Position relative for overlay */
+}
+
+/* Overlay for better text visibility */
+.banner1::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for better contrast */
+    z-index: 1;
+}
+
+.banner-content {
+    position: relative;
+    text-align: center;
+    z-index: 2; /* Ensures content is above the overlay */
+}
+
+/* Heading styling */
+.banner-bread {
+    color: #fff; /* Keep breadcrumb links white */
+}
+
+.banner h2 {
+    color: #FFFFFF; /* Set heading color to pure white */
+    font-family: "Italiana", Sans-serif;
+    font-size: 80px;
+    font-weight: 400;
+    line-height: 1.3em;
+}
+
+/* Breadcrumb styling */
+.banner p {
+    font-size: 14px; /* Set font size to 14px */
+    font-family: 'Lexend', sans-serif; /* Lexend font for breadcrumbs */
+    margin: 10px 0 0; /* Space below the heading */
+}
+
+/* Links inside the breadcrumbs */
+.banner p a {
+    color: #FFFFFF; /* Set breadcrumb link color to pure white */
+    text-decoration: none;
+    font-family: 'Lexend', sans-serif;
+}
+
+/* Hover effect for links */
+.banner p a:hover {
+    text-decoration: underline; /* Underline on hover */
+    color: #A8894D; /* Change color on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .banner {
+        height: 300px; /* Reduce height for smaller screens */
+    }
+
+    .banner h1 {
+        font-size: 36px; /* Smaller font for mobile */
+    }
+
+    .banner p {
+        font-size: 12px; /* Adjust breadcrumb text size on smaller screens */
+    }
+}
+
+
+/* end banner */
+
+
+/* details */
+
+.about-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background-color: #050f17;
+    padding-top: 170px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    width: 100%;
+}
+
+.text {
+    max-width: 480px;
+}
+
+.text h1 {
+    color: #E8E8E8;
+    font-family: "Italiana", Sans-serif;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 1.3em;
+}
+
+.text p {
+    color: #E8E8E8;
+    font-family: "Lexend", Sans-serif;
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 1.3em;
+    text-align: left;
+    margin-top: 30px;
+}
+
+.checklist {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    margin-left: -40px;
+    margin-top: 30px;
+}
+
+.checklist li {
+    list-style: none;
+    margin-bottom: 10px;
+    color: #E8E8E8;
+    font-family: "Lexend", Sans-serif;
+    font-size: 14px;
+    
+}
+
+.checklist li span {
+    color: #d2a679; /* Gold-like color for check marks */
+    margin-right: 10px;
+}
+
+.cta-btn {
+    background-color: #A8894D;
+    color: #050f17;
+    padding: 15px 35px;
+    border: none;
+    /* border-radius: 5px; */
+    font-size: 12px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+    font-family: "Lexend", Sans-serif;
+}
+
+.cta-btn:hover {
+    background-color: #fff;
+}
+
+.images {
+    display: flex;
+}
+
+.image {
+    position: relative;
+    margin-left: 20px;
+}
+
+.image img {
+    width: 250px;
+    height: auto;
+    /* border-radius: 10px; */
+}
+
+.play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.play-btn span {
+    font-size: 24px;
+    color: #000;
+}
+/* end details */
+
+/* counter */
+.stats-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 80px 0 100px 0px;
+    background-color: #050f17;
+    padding-left: 100px;
+    padding-right: 100px;
+    
+}
+
+.stat-box {
+    text-align: center;
+    color: #e0e0e0;
+
+}
+
+.stat-box h1 {
+    font-size: 50px;
+    font-weight: 400;
+    color: #e8e8e8; /* Light gray for the numbers */
+    position: relative;
+    display: inline-block;
+    font-family: "Italiana", Sans-serif;
+    line-height: 1.3rem;
+}
+
+.stat-box h1 span {
+    font-size: 24px;
+    color: #d2a679; /* Gold-like color for the plus symbol */
+    position: absolute;
+    top: -15px;
+    right: -25px;
+}
+
+.stat-box p {
+    font-size: 14px;
+    margin-top: 5px;
+    color: #e8e8e8; /* Slightly darker text for the description */
+    font-family: "Lexend", Sans-serif;
+    font-weight: 300;
+    line-height: 1.7rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .stats-section {
+        flex-direction: column;
+    }
+
+    .stat-box h1 {
+        font-size: 48px;
+    }
+}
+/* end counter */
+
+/* vision & mission */
+.vision-mission {
+    padding: 50px 0;
+    background-color: #050f17;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.section-title h2 {
+    font-size: 48px;
+    color: #f5f5f5;
+}
+
+.button-container {
+    display: flex;
+}
+
+.btn {
+    background-color: #d2a679;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #b58b52;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: #e0e0e0;
+}
+
+.image-box img {
+    width: 400px;
+    height: auto;
+}
+
+.text-boxes {
+    display: flex;
+    justify-content: space-between;
+    width: 65%;
+}
+
+.text-box {
+    text-align: left;
+    width: 45%;
+}
+
+.text-box h3 {
+    font-size: 28px;
+    color: #f5f5f5;
+    margin-bottom: 15px;
+}
+
+.text-box p {
+    margin-bottom: 20px;
+    color: #cccccc;
+}
+
+.text-box ul {
+    list-style-type: none;
+}
+
+.text-box ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.text-box ul li span {
+    color: #d2a679;
+    margin-right: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .section-header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-boxes {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .text-box {
+        width: 80%;
+        margin-bottom: 30px;
+    }
+
+    .image-box img {
+        width: 300px;
+    }
+}
+
+/* end vision & mission */
