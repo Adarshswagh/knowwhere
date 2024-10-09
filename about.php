@@ -37,7 +37,7 @@ include("config.php");
 <link rel="stylesheet" type="text/css" href="css/style.css">
 
 <!-- Title -->
-<title>Real Estate PHP | new changes</title>
+<title>Real Estate PHP</title>
 </head>
 <body>
     <!-- sjksdsdfflk;;l -->
