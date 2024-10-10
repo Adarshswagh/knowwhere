@@ -103,19 +103,18 @@ include("config.php");
 
   <!-- vision & mission -->
     <section class="vision-mission">
-        <div class="container">
+        <div class="container1">
             <div class="section-header">
                 <div class="section-title">
                     <h2>Vision & Mission</h2>
                 </div>
                 <div class="button-container">
-                    <a href="#" class="btn">Discover More</a>
+                    <a href="#" class="btn1">Discover More</a>
                 </div>
             </div>
             <div class="content">
-                <div class="image-box">
-                    <img src="./images/v&m.jpg" alt="Vision & Mission Image">
-                </div>
+                <div class="image-box"></div>
+
                 <div class="text-boxes">
                     <div class="text-box">
                         <h3>Vision</h3>
@@ -143,7 +142,44 @@ include("config.php");
     </section>
 
 
+
    <!-- end vision & mission -->
+
+
+   <!-- why chose us -->
+    <section class="why-choose-us">
+        <div class="container-whychoose">
+            
+            <div class="features">
+                <div class="feature-box reliable">
+                    <i class="icon building"></i>
+                    <h3>Reliable</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="feature-box comfortable">
+                    <i class="icon cloud"></i>
+                    <h3>Comfortable</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="feature-box guarantee">
+                    <i class="icon thumbs-up"></i>
+                    <h3>Guarantee</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="feature-box affordable">
+                    <i class="icon tag"></i>
+                    <h3>Affordable</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+            <div class="title">
+                <h2>Why Choose Us</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nibh eu ullam corper luctus, lacus ex consequat ipsum, ultricies interdum ex ante sit amet tellus.</p>
+                <a href="#" class="discover-more">Discover More</a>
+            </div>
+        </div>
+    </section>
+    <!-- why choose us -->
 
  <!-- call to action -->
  <section id="main-call">
