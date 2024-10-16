@@ -9,6 +9,7 @@ body {
     background-color: #050f17; /* Adjust background color to your preference */
     /* padding: 15px 20px; */
     height: 120px;
+    width: 1700px;
 }
 
 .navbar-container {
@@ -536,7 +537,7 @@ footer {
 .footer-logo img {
     width: 250px; /* Reduce the width for a smaller logo */
     height: auto; /* Ensure the aspect ratio is maintained */
-    margin-bottom: -100px;
+    margin-bottom: -76px;
     margin-top: -100px;
     margin-left: -5px;
 }
@@ -652,6 +653,5 @@ footer {
 .footer-bottom-right ul li a:hover {
     color: #a3813d;
 }
-
 
 /* end footer */

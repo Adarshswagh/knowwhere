@@ -8,15 +8,18 @@ if(!isset($_SESSION['auser']))
 	header("location:index.php");
 }
 ?>  
+
+
+
   <div class="header">
 			
 				<!-- Logo -->
                 <div class="header-left">
                     <a href="dashboard.php" class="logo">
-						<img src="assets/img/rsadmin.png" alt="Logo">
+						<img src="assets/img/logo.png" alt="Logo" style= "max-height: 65px; width: 133px;">
 					</a>
 					<a href="dashboard.php" class="logo logo-small">
-						<img src="assets/img/logo-small.png" alt="Logo" width="30" height="30">
+						<img src="assets/img/logo.png" alt="Logo" width="30" height="30">
 					</a>
                 </div>
 				<!-- /Logo -->

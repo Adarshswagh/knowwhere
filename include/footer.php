@@ -10,6 +10,79 @@
 
 </head>
 <body>
+<style>
+    /* Default styles for larger screens */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.footer-logo, .footer-contact, .footer-links, .footer-location {
+    width: 24%;
+    padding: 10px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+/* Tablet view (600px to 1024px) */
+@media screen and (max-width: 1024px) {
+    .footer-logo, .footer-contact, .footer-links, .footer-location {
+        width: 48%;
+        margin-bottom: 20px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-bottom-left, .footer-bottom-right {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+/* Mobile view (up to 600px) */
+@media screen and (max-width: 600px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-logo, .footer-contact, .footer-links, .footer-location {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-bottom-left, .footer-bottom-right {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .footer-bottom-right ul {
+        padding: 0;
+    }
+
+    .footer-bottom-right ul li {
+        display: inline-block;
+        margin: 0 10px;
+    }
+}
+
+</style>
 <!-- footer -->
 
 <footer><hr>
