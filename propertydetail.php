@@ -150,6 +150,8 @@ include("config.php");
                                             </div>
                                         </div>
                                     </div>
+
+                                <!-- property details -->
                                 <div class="listing__details--content__step properties__info mb-80">
                                     <h3 class="listing__details--content__title mb-40">Properties Details:</h3>
                                     <ul class="properties__details--info__wrapper d-flex">
@@ -183,6 +185,12 @@ include("config.php");
                                         </li>
                                     </ul>
                                 </div>
+
+                                <!-- property details end -->
+
+
+                                <!-- property amenities -->
+
                                 <div class="listing__details--content__step properties__amenities mb-80">
                                     <h3 class="listing__details--content__title mb-40">Properties Amenities</h3>
                                     <div class="properties__amenities--wrapper d-flex">
@@ -278,26 +286,31 @@ include("config.php");
                                         </ul>
                                     </div>
                                 </div>
+
+                                <!-- Property amenities end -->
+
+                                <!-- Floor Plans -->
+
                                 <div class="listing__details--content__step mb-80">
                                     <div class="properties__floor--plans d-flex">
                                         <div class="properties__floor--plans__content">
                                             <h3 class="listing__details--content__title mb-40">Floor Plans</h3>
                                             <ul class="properties__floor--plans__info">
                                                 <li>
-                                                    <img src="assets/img/icon/properties-icon1.png" alt="icon">
+                                                    <img src="images/properties-icon1.png" alt="icon" style="width: 20px;">
                                                     <span>Total Size: 900 </span>
                                                 </li>
                                                 <li>
-                                                    <img src="assets/img/icon/properties-icon2.png" alt="icon">
+                                                    <img src="images/bedroom.png" alt="icon" style="width: 20px;">
                                                     <span>Bedrooms: 2 </span>
                                                 </li>
                                                 <li>
-                                                    <img src="assets/img/icon/properties-icon3.png" alt="icon">
+                                                    <img src="images/bathroom.png" alt="icon" style="width: 20px;">
                                                     <span>Bathrooms: 2 </span>
                                                 </li>
                                                 <li>
-                                                    <img src="assets/img/icon/properties-icon4.png" alt="icon">
-                                                    <span>Price: $800,000</span>
+                                                    <img src="images/price.png" alt="icon" style="width: 20px;">
+                                                    <span>Price: 800,000</span>
                                                 </li>
                                             </ul>
                                         </div>
@@ -322,23 +335,27 @@ include("config.php");
                                             <div class="tab-content">
                                                 <div class="tab-pane fade show active" id="floor1">
                                                     <div class="properties__floor--plans__display">
-                                                        <img src="assets/img/other/floor-display.png" alt="img">
+                                                        <img src="images/floor-display.png" alt="img">
                                                     </div>
                                                 </div>
                                                 <div class="tab-pane fade " id="floor2">
                                                     <div class="properties__floor--plans__display">
-                                                        <img src="assets/img/other/floor-display.png" alt="img">
+                                                        <img src="images/floor-display.png" alt="img">
                                                     </div>
                                                 </div>
                                                 <div class="tab-pane fade " id="floor3">
                                                     <div class="properties__floor--plans__display">
-                                                        <img src="assets/img/other/floor-display.png" alt="img">
+                                                        <img src="images/floor-display.png" alt="img">
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+
+                                <!-- Floor Plans end -->
+
+                                <!-- Location -->
                                 <div class="listing__details--content__step mb-80">
                                     <div class="listing__details--location__header d-flex justify-content-between mb-40">
                                         <div class="listing__details--location__header--left">
@@ -378,10 +395,13 @@ include("config.php");
                                         </ul>
                                     </div>
                                 </div>
+
+                                <!-- location end -->
+
                                 <div class="listing__details--content__step mb-80">
                                     <h3 class="listing__details--content__title mb-40">Video</h3>
                                     <div class="listing__details--video__thumbnail position-relative">
-                                        <img src="assets/img/property/property-video-thumbnail.png" alt="img">
+                                        <img src="images/property-video-thumbnail.png" alt="img">
                                         <div class="bideo__play">
                                             <a class="bideo__play--icon glightbox" href="https://vimeo.com/115041822" data-gallery="video">
                                                 <svg width="13" height="17" viewBox="0 0 13 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -392,7 +412,7 @@ include("config.php");
                                         </div>
                                     </div>
                                 </div>
-                                <div class="listing__details--content__step mb-80">
+                                <!-- <div class="listing__details--content__step mb-80">
                                     <h3 class="listing__details--content__title mb-40">Property Review</h3>
                                     <div class="listing__details--review d-flex">
                                         <div class="details__review--box">
@@ -819,37 +839,37 @@ include("config.php");
                                             </form>
                                        </div>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         <div class="row mb-4">
                             <div class="col-md-6">
-                                <div class="bg-success d-table px-3 py-2 rounded text-white text-capitalize">For <?php echo $row['5'];?></div>
+                                <!-- <div class="bg-success d-table px-3 py-2 rounded text-white text-capitalize">For <?php echo $row['5'];?></div>
                                 <h5 class="mt-2 text-secondary text-capitalize"><?php echo $row['1'];?></h5>
                                 <span class="mb-sm-20 d-block text-capitalize"><i class="fas fa-map-marker-alt text-success font-12"></i> &nbsp;<?php echo $row['14'];?></span>
 							</div>
                             <div class="col-md-6">
                                 <div class="text-success text-left h5 my-2 text-md-right">₹<?php echo $row['13'];?></div>
-                                <div class="text-left text-md-right">Price</div>
+                                <div class="text-left text-md-right">Price</div> -->
                             </div>
                         </div>
                         <div class="property-details">
                             <div class="bg-gray property-quantity px-4 pt-4 w-100">
-                                <ul>
+                                <!-- <ul>
                                     <li><span class="text-secondary"><?php echo $row['12'];?></span> Sqft</li>
                                     <li><span class="text-secondary"><?php echo $row['6'];?></span> Bedroom</li>
                                     <li><span class="text-secondary"><?php echo $row['7'];?></span> Bathroom</li>
                                     <li><span class="text-secondary"><?php echo $row['8'];?></span> Balcony</li>
                                     <li><span class="text-secondary"><?php echo $row['10'];?></span> Hall</li>
                                     <li><span class="text-secondary"><?php echo $row['9'];?></span> Kitchen</li>
-                                </ul>
+                                </ul> -->
                             </div>
-                            <h4 class="text-secondary my-4">Description</h4>
+                            <!-- <h4 class="text-secondary my-4">Description</h4> -->
                             <p><?php echo $row['2'];?></p>
                             
-                            <h5 class="mt-5 mb-4 text-secondary">Property Summary</h5>
+                            <!-- <h5 class="mt-5 mb-4 text-secondary">Property Summary</h5> -->
                             <div  class="table-striped font-14 pb-2">
-                                <table class="w-100"><!-- FOR MORE PROJECTS visit:  .com -->
-                                    <tbody>
+                                <table class="w-100">
+                                    <!-- <tbody>
                                         <tr>
                                             <td>BHK :</td>
                                             <td class="text-capitalize"><?php echo $row['4'];?></td>
@@ -869,7 +889,7 @@ include("config.php");
                                             <td class="text-capitalize"><?php echo $row['16'];?></td>
                                         </tr>
                                         
-                                    </tbody>
+                                    </tbody> -->
                                 </table>
                             </div>
                             <h5 class="mt-5 mb-4 text-secondary">Features</h5>
@@ -878,7 +898,7 @@ include("config.php");
 								
                             </div>   
 							<!-- FOR MORE PROJECTS visit:  .com -->
-                            <h5 class="mt-5 mb-4 text-secondary">Floor Plans</h5>
+                            <!-- <h5 class="mt-5 mb-4 text-secondary">Floor Plans</h5>
                             <div class="accordion" id="accordionExample">
                                 <button class="bg-gray hover-bg-success hover-text-white text-ordinary py-3 px-4 mb-1 w-100 text-left rounded position-relative" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> Floor Plans </button>
                                 <div id="collapseOne" class="collapse show p-4" aria-labelledby="headingOne" data-parent="#accordionExample">
@@ -889,28 +909,28 @@ include("config.php");
                                 <button class="bg-gray hover-bg-success hover-text-white text-ordinary py-3 px-4 mb-1 w-100 text-left rounded position-relative collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Ground Floor</button>
                                 <div id="collapseThree" class="collapse p-4" aria-labelledby="headingThree" data-parent="#accordionExample">
                                     <img src="admin/property/<?php echo $row['27'];?>" alt="Not Available"> </div>
-                            </div>
+                            </div> -->
 
-                            <h5 class="mt-5 mb-4 text-secondary double-down-line-left position-relative">Contact Agent</h5>
+                            <!-- <h5 class="mt-5 mb-4 text-secondary double-down-line-left position-relative">Contact Agent</h5> -->
                             <div class="agent-contact pt-60">
                                 <div class="row">
                                     <div class="col-sm-4 col-lg-3"> <img src="admin/user/<?php echo $row['uimage']; ?>" alt="" height="200" width="170"> </div>
                                     <div class="col-sm-8 col-lg-9">
                                         <div class="agent-data text-ordinary mt-sm-20">
                                             <h6 class="text-success text-capitalize"><?php echo $row['uname'];?></h6>
-                                            <ul class="mb-3">
+                                            <!-- <ul class="mb-3">
                                                 <li><?php echo $row['uphone'];?></li>
                                                 <li><?php echo $row['uemail'];?></li>
-                                            </ul>
+                                            </ul> -->
                                             
                                             <div class="mt-3 text-secondary hover-text-success">
-                                                <ul>
+                                                <!-- <ul>
                                                     <li class="float-left mr-3"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                                                     <li class="float-left mr-3"><a href="#"><i class="fab fa-twitter"></i></a></li>
                                                     <li class="float-left mr-3"><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
                                                     <li class="float-left mr-3"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
                                                     <li class="float-left mr-3"><a href="#"><i class="fas fa-rss"></i></a></li>
-                                                </ul>
+                                                </ul> -->
                                             </div>
                                         </div>
                                     </div>
@@ -923,38 +943,6 @@ include("config.php");
 					<?php } ?>
 					
                     <div class="col-lg-4">
-                        <!-- <h4 class="double-down-line-left text-secondary position-relative pb-4 mb-4 mt-md-50">Send Message</h4>
-                        <form method="post" action="#">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Enter Name">
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Enter Email">
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Enter Phone">
-                                    </div>
-                                </div>
-								<div class="col-md-12">
-                                    <div class="form-group">
-										<textarea class="form-control" placeholder="Enter Message"></textarea>
-                                    </div>
-                                </div>
-								
-                                <div class="col-md-12">
-                                    <div class="form-group mt-4">
-                                        <button type="submit" class="btn btn-success w-100">Search Property</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </form> -->
-
                         <div class="widget__step mb-30">
                                     <h2 class="widget__step--title">Send Messege</h2>
                                     <div class="widget__form">
