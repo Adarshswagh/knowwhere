@@ -44,102 +44,100 @@ include("config.php");
 
 <!-- details -->
 <section class="about-section">
-        <div class="content">
-            <div class="text">
-                <h1>About Mansion</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nibh eu ullamcorper luctus, lacus ex consequat ipsum, ultricies interdum ex ante sit amet tellus. Quisque faucibus iaculis quam a aliquet.</p>
-                <ul class="checklist">
-                    <div class="list-left">
-                        <li><span>✔</span> Phasellus rutrum</li>
-                        <li><span>✔</span> Donec at quam</li>
-                        <li><span>✔</span> Phasellus tristique</li>
-                        <li><span>✔</span> Quisque rhoncus</li>
-                    </div>
-                    <div class="list-right">
-                        <li><span>✔</span> Phasellus rutrum</li>
-                        <li><span>✔</span> Donec at quam</li>
-                        <li><span>✔</span> Phasellus tristique</li>
-                        <li><span>✔</span> Quisque rhoncus</li>
-                    </div>
-                </ul>
-                <button class="cta-btn">Get Started</button>
+    <div class="content">
+        <div class="text">
+            <h1>About Mansion</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nibh eu ullamcorper luctus, lacus ex consequat ipsum, ultricies interdum ex ante sit amet tellus. Quisque faucibus iaculis quam a aliquet.</p>
+            <ul class="checklist">
+                <div class="list-left">
+                    <li><span>✔</span> Phasellus rutrum</li>
+                    <li><span>✔</span> Donec at quam</li>
+                    <li><span>✔</span> Phasellus tristique</li>
+                    <li><span>✔</span> Quisque rhoncus</li>
+                </div>
+                <div class="list-right">
+                    <li><span>✔</span> Phasellus rutrum</li>
+                    <li><span>✔</span> Donec at quam</li>
+                    <li><span>✔</span> Phasellus tristique</li>
+                    <li><span>✔</span> Quisque rhoncus</li>
+                </div>
+            </ul>
+        </div>
+        <div class="images">
+            <div class="image">
+                <img src="./images/ab1.jpg" alt="Mansion Interior 1">
             </div>
-            <div class="images">
-                <div class="image">
-                    <img src="./images/ab1.jpg" alt="Mansion Interior 1">
-                </div>
-                <div class="image" style="margin-top:-50px;">
-                    <img src="./images/ab2.jpg" alt="Mansion Interior 2">
-                    
-                </div>
+            <div class="image" style="margin-top:-50px;">
+                <img src="./images/ab2.jpg" alt="Mansion Interior 2">
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
  <!-- end details -->
 
 
  <!-- counter -->
-<section class="stats-section">
-    <!-- <div class="stat-fullbox"> -->
-        <div class="stat-box">
-            <h1>25 K<span>+</span></h1>
-            <p>Happy Client</p>
-        </div>
-        <div class="stat-box">
-            <h1>560<span>+</span></h1>
-            <p>Complete Projects</p>
-        </div>
-        <div class="stat-box">
-            <h1>100 K<span>+</span></h1>
-            <p>Property Sales</p>
-        </div>
-        <div class="stat-box">
-            <h1>15<span>+</span></h1>
-            <p>Years Experience</p>
-        </div>
-    <!-- </div> -->
+ <section class="stats-section">
+    <div class="stat-box">
+        <h1 class="count" data-target="25000">0</h1>
+        <p>Happy Clients</p>
+    </div>
+    <div class="stat-box">
+        <h1 class="count" data-target="560">0</h1>
+        <p>Complete Projects</p>
+    </div>
+    <div class="stat-box">
+        <h1 class="count" data-target="100000">0</h1>
+        <p>Property Sales</p>
+    </div>
+    <div class="stat-box">
+        <h1 class="count" data-target="15">0</h1>
+        <p>Years Experience</p>
+    </div>
 </section>
+
   <!-- end counter -->
 
   <!-- vision & mission -->
-    <section class="vision-mission">
-        <div class="container1">
-            <div class="section-header">
-                <div class="section-title">
-                    <h2>Vision & Mission</h2>
-                </div>
-                <div class="button-container">
-                    <a href="#" class="btn1">Discover More</a>
-                </div>
+   <section class="vision-mission-section">
+    <div class="container1">
+        <div class="section-header">
+            <div class="section-title">
+                <h2>Vision & Mission</h2>
             </div>
-            <div class="content">
-                <div class="image-box"></div>
-
-                <div class="text-boxes">
-                    <div class="text-box">
-                        <h3>Vision</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nibh eu ullamcorper luctus.</p>
-                        <ul>
-                            <li><span>&#10003;</span> Phasellus rutrum</li>
-                            <li><span>&#10003;</span> Donec at quam</li>
-                            <li><span>&#10003;</span> Phasellus tristique</li>
-                            <li><span>&#10003;</span> Quisque rhoncus</li>
-                        </ul>
-                    </div>
-                    <div class="text-box">
-                        <h3>Mission</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nibh eu ullamcorper luctus, lacus ex consequat ipsum.</p>
-                        <ul>
-                            <li><span>&#10003;</span> Phasellus rutrum</li>
-                            <li><span>&#10003;</span> Donec at quam</li>
-                            <li><span>&#10003;</span> Phasellus tristique</li>
-                            <li><span>&#10003;</span> Quisque rhoncus</li>
-                        </ul>
-                    </div>
+            <div class="button-container">
+                <a href="#" class="btn1">Discover More</a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="image-box"></div>
+            <div class="text-boxes">
+                <div class="text-box">
+                    <h3>Vision</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nibh eu ullamcorper luctus.</p>
+                    <ul>
+                        <li><span>&#10003;</span> Phasellus rutrum</li>
+                        <li><span>&#10003;</span> Donec at quam</li>
+                        <li><span>&#10003;</span> Phasellus tristique</li>
+                        <li><span>&#10003;</span> Quisque rhoncus</li>
+                    </ul>
+                </div>
+                <div class="text-box">
+                    <h3>Mission</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nibh eu ullamcorper luctus, lacus ex consequat ipsum.</p>
+                    <ul>
+                        <li><span>&#10003;</span> Phasellus rutrum</li>
+                        <li><span>&#10003;</span> Donec at quam</li>
+                        <li><span>&#10003;</span> Phasellus tristique</li>
+                        <li><span>&#10003;</span> Quisque rhoncus</li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
 
 
 
@@ -149,7 +147,11 @@ include("config.php");
    <!-- why chose us -->
     <section class="why-choose-us">
         <div class="container-whychoose">
-            
+        <div class="title">
+                <h2>Why Choose Us</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nibh eu ullam corper luctus, lacus ex consequat ipsum, ultricies interdum ex ante sit amet tellus.</p>
+                <a href="#" class="discover-more">Discover More</a>
+            </div>
             <div class="features">
                 <div class="feature-box reliable">
                     <i class="icon building"></i>
@@ -172,11 +174,7 @@ include("config.php");
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </div>
             </div>
-            <div class="title">
-                <h2>Why Choose Us</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nibh eu ullam corper luctus, lacus ex consequat ipsum, ultricies interdum ex ante sit amet tellus.</p>
-                <a href="#" class="discover-more">Discover More</a>
-            </div>
+            
         </div>
     </section>
     <!-- why choose us -->
@@ -193,6 +191,47 @@ include("config.php");
         </div>
     </div>
 </section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    // Function to animate the counting
+    function animateCounter(element, target) {
+        let current = 0;
+        const increment = target / 200; // Adjust speed by changing 200
+
+        const updateCounter = () => {
+            current += increment;
+            if (current >= target) {
+                element.textContent = target.toLocaleString(); // Ensures the exact target value
+            } else {
+                element.textContent = Math.ceil(current).toLocaleString();
+                requestAnimationFrame(updateCounter); // Smooth animation
+            }
+        };
+
+        updateCounter();
+    }
+
+    // Detect when the stats section comes into view
+    const statSection = document.querySelector('.stats-section');
+    const statBoxes = document.querySelectorAll('.count');
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                statBoxes.forEach(box => {
+                    const target = +box.getAttribute('data-target');
+                    animateCounter(box, target);
+                });
+                observer.disconnect(); // Trigger only once
+            }
+        });
+    }, { threshold: 0.5 }); // 50% of the section must be in view
+
+    observer.observe(statSection);
+});
+
+</script>
   <!-- end call to action -->
 
   <!-- footer -->

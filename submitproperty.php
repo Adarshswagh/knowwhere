@@ -191,6 +191,40 @@ if(isset($_POST['add']))
 												</div>
 												
 											</div>
+
+											<div class="listing__details--content__step mb-80">
+                                        <h3 class="listing__details--content__title">Description:</h3>
+                                        <p class="listing__details--content__desc">Description It is a long established fact that a reader will be distrac by any websites look for ways
+                                            prevent AdBlock from blocking annoying ads. As a result, we've focused on improving our funct
+                                            so that we can overcome these anti-ad blocking attempts. Of course, you can help us continue to
+                                            improve our ad blocking ability by reporting any time you run into a website that won't allow you
+                                            to block the readable content of a page when looking at its layout. It is a long established fact</p>
+                                        <div class="apartment__info listing__d--info">
+                                            <div class="apartment__info--wrapper d-flex">
+                                                <div class="apartment__info--list">
+                                                    <span class="apartment__info--icon"><img src="assets/img/icon/bed-realistic.png" alt="img"></span>
+                                                    <p>
+                                                        <span class="apartment__info--count">3</span>
+                                                        <span class="apartment__info--title">Bedrooms</span>
+                                                    </p>
+                                                </div>
+                                                <div class="apartment__info--list">
+                                                    <span class="apartment__info--icon"><img src="assets/img/icon/modern-car.png" alt="img"></span>
+                                                    <p>
+                                                        <span class="apartment__info--count">3</span>
+                                                        <span class="apartment__info--title"> Car Parking</span>
+                                                    </p>
+                                                </div>
+                                                <div class="apartment__info--list">
+                                                    <span class="apartment__info--icon"><img src="assets/img/icon/set-square.png" alt="img"></span>
+                                                    <p>
+                                                        <span class="apartment__info--count">3</span>
+                                                        <span class="apartment__info--title">1249 Sqft</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 											<div class="col-xl-6">
 												<div class="form-group row">
 													<label class="col-lg-3 col-form-label">Property Type</label>
