@@ -19,14 +19,14 @@
                 </a>
             </div>
             <ul class="navbar-menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="knowhome.php">Home</a></li>
+                <li><a href="knowabout.php">About</a></li>
                 <li class="dropdown">
-                    <a href="#">Property</a>
-                    <ul class="dropdown-menu">
+                    <a href="knowproperties.php">Property</a>
+                    <!-- <ul class="dropdown-menu">
                         <li><a href="#">Property 1</a></li>
                         <li><a href="#">Property 2</a></li>
-                    </ul>
+                    </ul> -->
                 </li>
                 <li class="dropdown">
                     <a href="#">Pages</a>

@@ -74,7 +74,7 @@ include("config.php");
                 </div>
             </div>
         </div>
-    </section>
+</section>
  <!-- end details -->
 
 

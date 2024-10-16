@@ -1,0 +1,809 @@
+/* General body styles */
+body {
+    margin: 0;
+    font-family: 'Lexend', sans-serif; /* Replace with your font */
+}
+
+/* hero section */
+
+#hero-main{
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #050f17;
+    height: 700px;
+
+}
+.hero-section1 {
+    background-image: url('../images/bannerh.jpg'); /* Ensure the image is in the same directory */
+    background-size: cover;
+    background-position: center;
+    height: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    
+}
+
+.hero-section1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 650px;
+    background-color: rgba(0, 0, 0, 0.5); /* For overlay effect */
+}
+.content1 {
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center;     /* Vertically center */
+    height: 100vh;           /* Take full viewport height */
+    flex-direction: column;  /* Stack elements vertically */
+    text-align: center;      /* Center the text */
+    z-index: 1;
+    max-width: 100%;
+}
+
+.banner-heading {
+    color: #E8E8E8;
+    font-family: "Italiana", Sans-serif;
+    font-size: 95px;
+    font-weight: 300;
+    line-height: 1.3em;
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+
+.banner-para {
+    text-align: center;
+    color: #e8e8e8;
+    font-family: "Lexend", Sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.7rem;
+}
+
+.btn-home {
+    font-family: "Lexend", Sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 1.5em;
+    color: #050F17;
+    background-color: #fff;
+    border-style: solid;
+    border-width: 0px 0px 0px 0px;
+    border-radius: 0px 0px 0px 0px;
+    padding: 17px 35px 17px 35px;
+    margin-top: 50px;
+    text-decoration: none;
+}
+
+.btn-home:hover {
+    background-color: #A8894d;
+    text-decoration: none;
+    /* color: #fff; */
+}
+/* end hero section */
+
+/* services */
+
+#service-home {
+    background-color: #050f17;
+    display: flex;
+    justify-content: center; /* Horizontally center the container */
+    align-items: center;     /* Vertically center the container */
+    min-height: 40vh;        /* Make the section take full viewport height */
+}
+
+.container-service {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;         /* Wrap logos to a new line if the screen is too small */
+    width: 100%;
+    max-width: 1450px;
+}
+
+.logo {
+    text-align: center;
+    color: #D0E3E7;
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.logo img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Smooth transform and color change on hover */
+}
+
+.logo p {
+    font-size: 16px;
+    font-family: "Lexend", Sans-serif;
+    font-weight: 500;
+    line-height: 1.5;
+    transition: color 0.3s ease; /* Smooth transition for text color */
+}
+
+/* Hover effect */
+.logo:hover img {
+    transform: scale(1.1); /* Slightly enlarge the icon on hover */
+    filter: brightness(0) saturate(100%) invert(66%) sepia(63%) saturate(524%) hue-rotate(358deg) brightness(90%) contrast(90%);
+    /* Applies the color #A8894D to the logo */
+}
+
+
+.logo:hover p {
+    color: #A8894D; /* Change text color to the desired one on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container-service {
+        flex-direction: column; /* Stack logos vertically on smaller screens */
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        width: 80px; /* Reduce image size on smaller screens */
+        height: 80px;
+    }
+
+    .logo p {
+        font-size: 12px; /* Adjust font size on smaller screens */
+    }
+}
+/* end services */
+
+/* real estate  */
+
+#real-estate {
+    background-color: #050f17;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.container-real {
+    display: flex;
+    width: 100%;
+    max-width: 1400px;
+    justify-content: center;  /* Centers content horizontally */
+    align-items: center;      /* Centers content vertically */
+    gap: 35px;
+    flex-wrap: wrap;
+}
+
+.featured-project {
+    width: 45%;  /* Updated width to 55% */
+    height: 450px; /* Add height to show the background image */
+    position: relative;
+    background-image: url('../images/real-estate.jpg'); /* Use image as background */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end; /* Align content to the bottom */
+    /* padding: 20px; */
+    /* border-radius: 5px; */
+}
+
+.project-details {
+    background-color: #f2ddc4; /* Add some transparency to the background */
+    padding: 20px 30px 45px 40px;
+    max-width: 50%;
+    /* border-radius: 5px; */
+}
+
+.project-details h3 {
+    color: #050f17;
+    font-family: "Italiana", Sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.2em;
+    margin: 0;
+}
+
+.project-details p {
+    text-align: left;
+    font-family: "Lexend", Sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #050F17;
+    margin-bottom: 30px;
+}
+
+.see-more-btn {
+    font-family: "Lexend", Sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 1.5em;
+    color: #fff;
+    background-color: #050F17;
+    border-style: solid;
+    border-width: 0px 0px 0px 0px;
+    border-radius: 0px 0px 0px 0px;
+    padding: 17px 35px 17px 35px;
+    text-decoration: none;
+}
+
+.see-more-btn:hover{
+    background-color: #A8894d;
+    text-decoration: none;
+}
+
+.main-content {
+    width: 39%;
+}
+
+.main-content h1 {
+    color: #E8E8E8;
+    font-family: "Italiana", Sans-serif;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 1.3em;
+}
+
+.main-content p {
+    text-align: left;
+    font-family: "Lexend", Sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.7rem;
+    margin-bottom: 38px;
+}
+
+.view-projects-btn {
+    font-family: "Lexend", Sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 1.5em;
+    color: #050F17;
+    background-color: #A8894D;
+    border-style: solid;
+    border-width: 0px 0px 0px 0px;
+    border-radius: 0px 0px 0px 0px;
+    padding: 17px 35px 17px 35px;
+    text-decoration: none;
+}
+
+.view-projects-btn:hover{
+    background-color: #fff;
+    text-decoration: none;
+
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container-real {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .featured-project, .main-content {
+        width: 100%;
+    }
+
+    .main-content h1 {
+        font-size: 28px;
+    }
+
+    .project-details h3 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-content h1 {
+        font-size: 22px;
+    }
+
+    .main-content p {
+        font-size: 14px;
+    }
+
+    .view-projects-btn, .see-more-btn {
+        font-size: 12px;
+        padding: 10px 20px;
+    }
+}
+/* end real estate  */
+
+
+/* details */
+
+.about-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background-color: #050f17;
+    padding-top: 100px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: #e0e0e0;
+    margin-top: 50px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.text {
+    max-width: 480px;
+}
+
+.text h1 {
+    color: #E8E8E8;
+    font-family: "Italiana", Sans-serif;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 1.3em;
+}
+
+.text p {
+    color: #E8E8E8;
+    font-family: "Lexend", Sans-serif;
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 1.3em;
+    text-align: left;
+    margin-top: 30px;
+}
+
+.checklist {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    margin-left: -40px;
+    margin-top: 30px;
+}
+
+.checklist li {
+    list-style: none;
+    margin-bottom: 10px;
+    color: #E8E8E8;
+    font-family: "Lexend", Sans-serif;
+    font-size: 14px;
+    
+}
+
+.checklist li span {
+    color: #d2a679; /* Gold-like color for check marks */
+    margin-right: 10px;
+}
+
+.cta-btn {
+    background-color: #A8894D;
+    color: #050f17;
+    padding: 15px 35px;
+    border: none;
+    /* border-radius: 5px; */
+    font-size: 12px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+    font-family: "Lexend", Sans-serif;
+}
+
+.cta-btn:hover {
+    background-color: #fff;
+}
+
+.images {
+    display: flex;
+}
+
+.image {
+    position: relative;
+    margin-left: 20px;
+}
+
+.image img {
+    width: 250px;
+    height: auto;
+    /* border-radius: 10px; */
+}
+
+.play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.play-btn span {
+    font-size: 24px;
+    color: #000;
+}
+/* end details */
+
+ /* property cad acrousel */
+ /* General styling */
+.project-section {
+    background-color: #050f17;
+    padding: 60px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.content-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.section-title {
+    color: #E8E8E8;
+    font-family: "Italiana", Sans-serif;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 1.3em;
+}
+
+.section-description {
+    font-size: 14px;
+    font-family: 'Lexend', sans-serif; /* A simple, clean font for the description */
+    
+    line-height: 1.6;
+    color: #a9a9a9;
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 28px;
+    }
+
+    .section-description {
+        font-size: 14px;
+    }
+}
+
+#project-card {
+    margin: 0;
+    height: calc(100vh - 8em);
+    font-family: 'Muli', sans-serif;
+    background-color: #050f17;
+}
+
+.card-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.card-items {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    animation: cardCarousel 50s infinite linear;
+}
+
+.card-entry {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 420px;
+    max-width: 100%;
+    background: white;
+    margin: 1em;
+    border-radius: 10px;
+    box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card-entry:hover {
+    transform: scale(1.02);
+}
+
+.card-entry img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.promo-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #050f17;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 12px;
+    font-family: 'Lexend', sans-serif;
+}
+
+.property-info {
+    padding: 20px;
+    background-color: #e9e4d4;
+}
+
+.property-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #222;
+    font-family: "Italiana", Sans-serif;
+}
+
+.property-title:hover{
+    color: #443822;
+    text-decoration: none;
+}
+
+.price {
+    color: #A8894D;
+    font-family: 'Lexend', Sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.4rem;
+}
+
+.property-details, .property-meta {
+    font-size: 14px;
+    font-family: 'Lexend', sans-serif;
+    color: #050f17;
+    font-weight: 300;
+    line-height: 1.7em;
+    margin-bottom: 20px;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between buttons */
+    justify-content: center;
+}
+
+.view-more-btn {
+    font-family: "Lexend", Sans-serif;
+    font-size: 12px;
+    font-weight: 200;
+    text-transform: uppercase;
+    line-height: 1.5em;
+    color: #e8e8e8;
+    background-color: #e55353; /* Matches the red background from your image */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 40px;
+    text-align: center;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.view-more-btn:hover {
+    background-color: #d13f3f;
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 40px;
+    /* border-radius: 5px; */
+    font-size: 18px;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+.whatsapp-btn {
+    background-color: #25d366;
+}
+
+.whatsapp-btn:hover {
+    background-color: #1ebe5d;
+    color: #fff;
+}
+
+.call-btn {
+    background-color: #4285f4;
+}
+
+.call-btn:hover {
+    background-color: #357ae8;
+    color: #fff;
+}
+
+
+@keyframes cardCarousel {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(-100% + 300px)); /* Adjusts for left scroll */
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .card-entry {
+        width: calc(100% / 2 - 2em); /* Adjusts to show 2 cards on smaller screens */
+    }
+
+    @keyframes cardCarouselMobile {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(calc(-100% + 300px));
+        }
+    }
+}
+
+
+
+ /* end property cad acrousel */
+
+ /* property type */
+ 
+ .property-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #050F17;
+}
+
+.property-container {
+    display: flex;
+    max-width: 1450px;
+    width: 100%;
+    justify-content: center;
+}
+
+.property-card1 {
+    position: relative;
+    margin: 10px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.property-card-small {
+    width: 25%;
+}
+
+.property-card-large {
+    width: 25%; /* corrected based on your earlier 50% requirement */
+}
+
+.property-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.property-info1 {
+    position: relative;
+}
+
+.property-overlay {
+    position: absolute;
+    bottom: -100%; /* Initially hide below the image */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: bottom 0.5s ease-in-out; /* Move from bottom to top */
+}
+
+.property-info1:hover .property-overlay {
+    bottom: 0; /* Move to the top on hover */
+}
+
+.property-details1 {
+    color: white;
+    text-align: center;
+    margin-top: 335px;
+}
+
+.property-type-detail {
+    font-size: 35px;
+    font-weight: 300;
+    line-height: 1.3em;
+    color: #E8E8E8;
+}
+
+.property-details1 p {
+    font-size: 16px;
+}
+
+ /* end property type */
+
+ 
+#main-call{
+
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: #050f17;
+    padding-top: 150px;
+    padding-bottom: 100px;
+}
+
+.call-to-action {
+    /* background-color: #050f17; */
+    position: relative;
+    background-image: url('../images/bannerf.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    max-width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    max-height: 700px;
+}
+
+.hero-section {
+    
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+}
+
+.overlay {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 50px;
+    /* border-radius: 10px; */
+}
+
+h2 {
+    color: #E8E8E8;
+    font-family: "Italiana", Sans-serif;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 1.3em;
+}
+
+p {
+    text-align: left;
+    color: #e8e8e8;
+    font-size: 14px;
+    font-family: "Lexend", Sans-serif;
+    max-width: 700px;
+}
+
+.btn {
+    background-color: #A8894d;
+    color: #050f17;
+    padding: 15px 30px;
+    /* text-decoration: none; */
+    font-size: 15px;
+    /* font-weight: bold; */
+    font-family: 'Lexend'sans-serif;
+    border-radius: 0px;
+
+}
+
+.btn:hover {
+    background-color: #fff;
+}
+
+/* end call to action */

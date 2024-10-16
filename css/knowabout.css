@@ -417,6 +417,7 @@ body {
 .why-choose-us {
     padding: 50px;
     background-color: #050f17;
+    padding-top: 150px;
 }
 
 .container-whychoose {
@@ -494,14 +495,13 @@ body {
     border-style: solid;
     border-width: 1px 1px 1px 1px;
     border-color: #E8E8E824;
-8-
 }
 
 .feature-box:hover {
     /* background-color: #b49f7a; */
     border-style: solid;
     border-width: 1px 1px 1px 1px;
-    border-color: #E8E8E824;
+    border-color: #A8894d;
 }
 
 .feature-box h3 {

@@ -89,7 +89,7 @@ body {
     border-width: 0px 0px 0px 0px;
     border-radius: 0px 0px 0px 0px;
     padding: 17px 35px 17px 35px;
-    ;
+    text-decoration: none;
 }
 
 .navbar-investor a:hover{
@@ -320,7 +320,7 @@ body {
 /* Property Info */
 .property-info {
     padding: 20px;
-    background-color: #e9e4d4;
+    background-color: #f2ddc4;
 }
 
 .property-title {
@@ -337,8 +337,8 @@ body {
     color: #A8894D;
     font-family: 'Lexend', Sans-serif;
     font-size: 18px;
-    font-weight: 100;
-    line-height: 1.3rem;
+    font-weight: 400;
+    line-height: 1.4rem;
 }
 
 .property-details {
@@ -354,22 +354,28 @@ body {
     font-family: 'Lexend', Sans-serif;
     font-size: 14px;
     color: #050f17;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
 }
 
 .view-more-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #000;
-    color: #fff;
+    font-family: "Lexend", Sans-serif;
+    font-size: 12px;
+    font-weight: 200;
     text-transform: uppercase;
-    /* border-radius: 5px; */
-    font-size: 14px;
-    text-decoration: none;
+    line-height: 1.5em;
+    color: #e8e8e8;
+    background-color: #050f17;
+    border-style: solid;
+    border-width: 0px 0px 0px 0px;
+    border-radius: 0px 0px 0px 0px;
+    padding: 10px 70px 10px 70px;
+    
 }
 
 .view-more-btn:hover {
-    background-color: #555;
+    background-color: #A8894D;
+    color: #fff;
+    text-decoration: none
 }
 
 /* Right Section for Sticky Calculator */
@@ -483,7 +489,7 @@ h2 {
 }
 
 p {
-    text-align: center;
+    text-align: left;
     color: #e8e8e8;
     font-size: 14px;
     font-family: "Lexend", Sans-serif;
