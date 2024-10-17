@@ -383,6 +383,141 @@ include("config.php");
 </section>
 <!-- end property cad acrousel -->
 
+<!-- team -->
+
+<section class="project-section">
+    <div class="content-wrapper">
+        <h2 class="section-title">Expert Team Behind knowhere</h2>
+        <p class="section-description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nibh eu ullamcorper luctus, lacus ex consequat ipsum, ultricies interdum ex ante.
+        </p>
+    </div>
+
+</section>
+<section class="custom-team-section">
+        <div class="custom-container">
+            
+            <div class="custom-team-grid">
+                <div class="custom-team-card">
+                    <img src="./images/girl.jpg" alt="Sarah Jhon" class="custom-team-img">
+                    <h3 class="custom-team-name">Sarah Jhon</h3>
+                    <p class="custom-team-role">Mansion Team</p>
+                    <div class="custom-social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="custom-team-card">
+                    <img src="./images/boy.jpg" alt="Mike Morales" class="custom-team-img">
+                    <h3 class="custom-team-name">Mike Morales</h3>
+                    <p class="custom-team-role">Mansion Team</p>
+                    <div class="custom-social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="custom-team-card">
+                    <img src="./images/girl.jpg" alt="Steve Irwin" class="custom-team-img">
+                    <h3 class="custom-team-name">Steve Irwin</h3>
+                    <p class="custom-team-role">Mansion Team</p>
+                    <div class="custom-social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="custom-team-card">
+                    <img src="./images/boy.jpg" alt="Manda Jean" class="custom-team-img">
+                    <h3 class="custom-team-name">Manda Jean</h3>
+                    <p class="custom-team-role">Mansion Team</p>
+                    <div class="custom-social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ <!-- end team -->
+
+
+ <!-- blog -->
+
+ 
+<section class="project-section">
+    <div class="content-wrapper">
+        <h2 class="section-title">Blog & News</h2>
+        <p class="section-description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nibh eu ullamcorper luctus, lacus ex consequat ipsum, ultricies interdum ex ante.
+        </p>
+    </div>
+
+</section>
+<section id="blogs">
+    <section class="blog-carousel">
+        <div class="carousel-container">
+            <div class="carousel-track">
+                <div class="blog-card">
+                    <img src="./images/blog1.jpg" alt="Blog Image 1">
+                    <h3>‘Best beach in Australia’ to shake QLD coastal records</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                    <a href="#" class="read-link">Read More →</a>
+                </div>
+                <div class="blog-card">
+                    <img src="./images/blog2.jpg" alt="Blog Image 2">
+                    <h3>Burnt house in shocking condition gets the top price</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                    <a href="#" class="read-link">Read More →</a>
+                </div>
+                <div class="blog-card">
+                    <img src="./images/blog3.jpg" alt="Blog Image 3">
+                    <h3>QLD’s hoarder house attracts 39 registered bidders</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                    <a href="#" class="read-link">Read More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+
+
+    
+ <!-- end blog -->
+
+ <!-- get in touch -->
+
+
+ <section class="contact-section">
+    <div class="contact-container">
+        <div class="form-container">
+            <form style="text-align:center">
+                <div class="input-group" style="width:102%">
+                    <input type="text" name="first-name" placeholder="First Name" required>
+                    <input type="text" name="last-name" placeholder="Last Name" required>
+                </div>
+                <input type="email" name="email" placeholder="Email" required class="email-group">
+                <textarea name="message" placeholder="Message" required></textarea>
+                <button type="submit" style="margin-top:30px">SEND MESSAGE</button>
+            </form>
+        </div>
+        <div class="contact-info">
+            <h2>Get In Touch</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nibh eu ullamcorper luctus, lacus ex consequat ipsum.</p>
+            <ul>
+                <li><i class="fas fa-map-marker-alt"></i> 918 Abner Road, Hudson</li>
+                <li><i class="fas fa-envelope"></i> example@mail.com</li>
+                <li><i class="fas fa-phone-alt"></i> +1 234 567 890</li>
+                <li><i class="fas fa-clock"></i> 07.00 AM - 23.00 PM</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+ <!-- end get iin touch -->
 
 
  <!--	Footer   start-->

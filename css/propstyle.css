@@ -1014,7 +1014,7 @@ body.overlay__active::before,
 .offcanvas__filter--sidebar_active::before {
   position: absolute;
   content: "";
-  background: #000;
+  background: #fff;
   width: 100%;
   height: 100%;
   z-index: 999;
@@ -2265,7 +2265,7 @@ body.overlay__active::before,
   width: 50%;
   height: 100%;
   z-index: -1;
-  background-color: #000;
+  background-color: #fff;
   transition: all 0.3s ease 0s;
 }
 

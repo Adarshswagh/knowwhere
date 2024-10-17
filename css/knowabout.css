@@ -386,7 +386,7 @@ html, body {
 .vision-mission-section .section-title h2 {
     font-family: "Italiana", Sans-serif;
     font-size: 50px;
-    color: #f5f5f5;
+    /*  color: #f5f5f5; */
     font-weight: 400;
     line-height: 1.3;
 }

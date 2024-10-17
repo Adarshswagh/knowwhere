@@ -88,7 +88,7 @@
 <footer><hr>
         <div class="footer-container">
             <div class="footer-logo">
-                <img src="images/logo/logomain.png" alt="Mantsion Logo">
+                <a href="knowhome.php"><img src="images/logo/logomain.png" alt="Mantsion Logo"></a>
                 <!-- <h2>Connect360</h2> -->
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in nibh vehicula.</p>
                 <div class="social-icons">
