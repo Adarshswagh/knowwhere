@@ -35,7 +35,7 @@
                         <li><a href="#">Page 2</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="knowcontact.php">Contact</a></li>
             </ul>
             <div class="navbar-investor">
                 <a href="#">FOR INVESTOR</a>

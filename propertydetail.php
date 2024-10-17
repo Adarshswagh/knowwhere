@@ -39,14 +39,14 @@ include("config.php");
 <link rel="stylesheet" type="text/css" href="fonts/flaticon/flaticon.css">
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="stylesheet" type="text/css" href="css/propstyle.css">
-<link rel="stylesheet" type="text/css" href="css/knowproperties.css">
+<!-- <link rel="stylesheet" type="text/css" href="css/knowproperties.css"> -->
 
 <!--	Title
 	=========================================================-->
 <title>Real Estate PHP</title>
 
 </head>
-<body style="background-color: black;">
+<body>
 
 
 

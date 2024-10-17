@@ -43,12 +43,12 @@ include("config.php");
 
 
 <!-- properties -->
-<section class="properties-header">
+<!-- <section class="properties-header">
     <div class="properties-div">
         <h2>Properties by Mantision</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nibh eu ullam corper luctus, lacus ex consequat ipsum, ultricies interdum ex ante.</p>
     </div>
-</section>
+</section> -->
 
 
 <section id="properties">
