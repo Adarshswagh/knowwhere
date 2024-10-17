@@ -892,7 +892,7 @@ include("config.php");
                                     </tbody> -->
                                 </table>
                             </div>
-                            <h5 class="mt-5 mb-4 text-secondary">Features</h5>
+                            <!-- <h5 class="mt-5 mb-4 text-secondary">Features</h5> -->
                             <div class="row">
 								<?php echo $row['17'];?>
 								
@@ -966,7 +966,7 @@ include("config.php");
 
 
                                 <div class="widget__step mb-30">
-                                    <h2 class="widget__step--title">Mortaga Calculator</h2>
+                                    <h2 class="widget__step--title">Mortage Calculator</h2>
                                     <div class="widget__form calculator">
                                         <form action="#">
                                             <div class="widget__form--input mb-20">
