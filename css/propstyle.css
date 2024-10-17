@@ -482,7 +482,7 @@ hr {
   .row > * {
     padding-right: 1.5rem;
     padding-left: 1.5rem;
-    background-color: #050F17 !important ;
+    background-color: #000 !important
   }
 }
 
@@ -10666,7 +10666,7 @@ input[type=range]::-moz-range-thumb {
   .listing__details--title {
     font-size: 2.5rem;
     line-height: 2.8rem;
-  }       
+  }
 }
 @media only screen and (min-width: 768px) {
   .listing__details--title {
@@ -10796,7 +10796,7 @@ input[type=range]::-moz-range-thumb {
   font-size: 1.6rem;
   line-height: 3rem;
   font-weight: 500;
-  color: #ffffff;
+  color: var(--color-foreground-sub);
   margin-bottom: 2rem;
 }
 @media only screen and (min-width: 768px) {
@@ -10925,7 +10925,7 @@ input[type=range]::-moz-range-thumb {
 
 .properties__amenities--text {
   font-weight: 500;
-  color: #ffffff;
+  color: var(--color-foreground-sub);
   line-height: 2rem;
 }
 

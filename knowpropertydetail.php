@@ -17,7 +17,7 @@ include("config.php");
 
         <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Lexend&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="css/bootstrap-slider.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-slider.css">
 <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
 <link rel="stylesheet" type="text/css" href="css/layerslider.css">
 <link rel="stylesheet" type="text/css" href="css/color.css" id="color-change">
@@ -27,6 +27,7 @@ include("config.php");
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="stylesheet" type="text/css" href="css/propstyle.css">
 <link rel="stylesheet" type="text/css" href="css/knowproperties.css">
+        
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js" crossorigin="anonymous"></script>
 
 
@@ -77,8 +78,6 @@ include("config.php");
                         <div class="row" style="color:#ffffff">
                             <div class="col-md-12">
                                 <div id="single-property" style="width:1200px; height:700px; margin:30px auto 50px;"> 
-                                    <!-- Slide 1-->
-                                    <!-- <div class="ls-slide" data-ls="duration:7500; transition2d:5; kenburnszoom:in; kenburnsscale:1.2;"> <img width="1920" height="1080"      class="ls-bg" alt="" /> </div> -->
                                     
                                     <!-- Slide 2-->
                                     <div class="ls-slide" data-ls="duration:7500; transition2d:5; kenburnszoom:in; kenburnsscale:1.2;"> <img width="1920" height="1080" src="admin/property/<?php echo $row['19'];?>" class="ls-bg" alt="" /> </div>
@@ -101,7 +100,7 @@ include("config.php");
                         <div class="listing__details--main__content">
                                     <div class="listing__details--content__step mb-80" style="color:#ffffff">
                                         <h3 class="listing__details--content__title">Description:</h3>
-                                        <p class="listing__details--content__desc" style= "text-align: left; color:#aaaaaa; ">Description It is a long established fact that a reader will be distrac by any websites look for ways
+                                        <p class="listing__details--content__desc" style= "text-align: left; color:#aaaaaa;">Description It is a long established fact that a reader will be distrac by any websites look for ways
                                             prevent AdBlock from blocking annoying ads. As a result, we've focused on improving our funct
                                             so that we can overcome these anti-ad blocking attempts. Of course, you can help us continue to
                                             improve our ad blocking ability by reporting any time you run into a website that won't allow you
@@ -371,7 +370,7 @@ include("config.php");
                                                 <span class="location__google--maps__info--subtitle">United States</span>
                                             </li>
                                             <li class="location__google--maps__info--list d-flex">
-                                                <span class="location__google--maps__info--title">Neighborhood:  </span>
+                                                <span class="location__google--maps__info--title">Neighborhood: </span>
                                                 <span class="location__google--maps__info--subtitle">United States</span>
                                             </li>
                                         </ul>
@@ -402,14 +401,6 @@ include("config.php");
                         </div>
                         <div class="property-details">
                             <div class="bg-gray property-quantity px-4 pt-4 w-100">
-                                <!-- <ul>
-                                    <li><span class="text-secondary"><?php echo $row['12'];?></span> Sqft</li>
-                                    <li><span class="text-secondary"><?php echo $row['6'];?></span> Bedroom</li>
-                                    <li><span class="text-secondary"><?php echo $row['7'];?></span> Bathroom</li>
-                                    <li><span class="text-secondary"><?php echo $row['8'];?></span> Balcony</li>
-                                    <li><span class="text-secondary"><?php echo $row['10'];?></span> Hall</li>
-                                    <li><span class="text-secondary"><?php echo $row['9'];?></span> Kitchen</li>
-                                </ul> -->
                             </div>
                             <!-- <h4 class="text-secondary my-4">Description</h4> -->
                             <p><?php echo $row['2'];?></p>
@@ -453,7 +444,6 @@ include("config.php");
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- FOR MORE PROJECTS visit:  .com -->
                                 </div>
                             </div>
                         </div>
@@ -530,32 +520,6 @@ include("config.php");
                                         </form>
                                     </div>
                                 </div>
-
-                        <!-- <h4 class="double-down-line-left text-secondary position-relative pb-4 my-4">Instalment Calculator</h4> -->
-                        <!-- <form class="d-inline-block w-100" action="calc.php" method="post">
-                            <label class="sr-only">Property Amount</label>
-                            <div class="input-group mb-2 mr-sm-2">
-                                <div class="input-group-prepend">
-                                    <div class="input-group-text">$</div>
-                                </div>
-                                <input type="text" class="form-control" name="amount" placeholder="Property Price">
-                            </div>
-                            <label class="sr-only">Month</label>
-                            <div class="input-group mb-2 mr-sm-2">
-                                <div class="input-group-prepend">
-                                    <div class="input-group-text"><i class="far fa-calendar-alt"></i></div>
-                                </div>
-                                <input type="text" class="form-control" name="month" placeholder="Duration Year">
-                            </div>
-                            <label class="sr-only">Interest Rate</label>
-                            <div class="input-group mb-2 mr-sm-2">
-                                <div class="input-group-prepend">
-                                    <div class="input-group-text">%</div>
-                                </div>
-                                <input type="text" class="form-control" name="interest" placeholder="Interest Rate">
-                            </div>
-                            <button type="submit" value="submit" name="calc" class="btn btn-danger mt-4">Calclute Instalment</button>
-                        </form> -->
                         <h4 class="double-down-line-left text-secondary position-relative pb-4 mb-4 mt-5">Featured Property</h4>
                         <ul class="property_list_widget">
 							
