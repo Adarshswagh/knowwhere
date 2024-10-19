@@ -1,0 +1,357 @@
+/* banner */
+/* Banner styling */
+
+#banner-blog1{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    background-color: #050f17;
+    padding-bottom: 20px;
+
+}
+.banner-blog {
+    height: 400px; /* Ensure height is set */
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the image */
+    display: flex; /* Flex for centering content */
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally center content */
+    color: #FFFFFF; /* Set text color to pure white */
+    background-image: url('../images/contact.jpg');
+    background-color: #000; /* Fallback color if image fails to load */
+    position: relative; /* Position relative for overlay */
+}
+
+/* Overlay for better text visibility */
+.banner-blog::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for better contrast */
+    z-index: 1;
+}
+
+.blog-content {
+    position: relative;
+    text-align: center;
+    z-index: 2; /* Ensures content is above the overlay */
+}
+
+/* Heading styling */
+.banner-bread {
+    color: #fff; /* Keep breadcrumb links white */
+}
+
+.blog-heading {
+    color: #e8e8e8; /* Set heading color to pure white */
+    font-family: "Italiana", Sans-serif;    
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 1.3em;
+}
+
+/* Breadcrumb styling */
+.blog-para {
+    font-size: 14px; /* Set font size to 14px */
+    font-family: 'Lexend', sans-serif; /* Lexend font for breadcrumbs */
+    margin: 10px 0 0; /* Space below the heading */
+    text-align: center;
+}
+
+/* Links inside the breadcrumbs */
+.blog-para a {
+    color: #FFFFFF; /* Set breadcrumb link color to pure white */
+    text-decoration: none;
+    font-family: 'Lexend', sans-serif;
+}
+
+/* Hover effect for links */
+.blog-para a:hover {
+    text-decoration: underline; /* Underline on hover */
+    color: #A8894D; /* Change color on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .banner-blog {
+        height: 300px; /* Reduce height for smaller screens */
+    }
+
+    .banner-blog h1 {
+        font-size: 36px; /* Smaller font for mobile */
+    }
+
+    .banner-blog p {
+        font-size: 12px; /* Adjust breadcrumb text size on smaller screens */
+    }
+}
+
+
+/* end banner */
+
+/* blog */
+#blog {
+    background-color: #050f17;
+    max-width: 100%;
+}
+.container-blog {
+    width: 1300px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #050f17;
+}
+
+.content {
+    display: flex;
+    gap: 50px;
+    margin-top: 50px;
+}
+
+.blog-list {
+    flex: 2;
+}
+
+.blog-heading{
+
+    color: #E8E8E8;
+    font-family: "Italiana", Sans-serif;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 1.3em;
+
+}
+
+.blog-post {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.blog-post img {
+    width: 100%;
+    height: 500px;
+    /* border-radius: 8px; */
+    margin-bottom: 10px;
+}
+
+.blog-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.blog-link:hover {
+    text-decoration: none;
+}
+
+.blog-post h2 {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5em;
+
+    margin-bottom: 5px;
+    /* color: #333; */
+    font-family: "Lexend", Sans-serif;
+}
+
+.blog-post p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.7em;
+    /* color: #888; */
+    font-family: "Lexend", Sans-serif;
+}
+
+.read-link {
+    font-family: "Lexend", Sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 1.5em;
+    color: #A8894d;
+    text-decoration: none;
+    margin-top: auto;
+}
+
+.read-link:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+.right-sidebar {
+    flex: 1;
+    position: relative;
+}
+
+.sticky-box {
+    background: transparent;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 100px;
+    text-align: center;
+}
+
+.sticky-box h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #E8E8E8;
+    font-family: "Italiana", Sans-serif; 
+    font-weight: 300;
+    line-height: 1.7em;
+    margin-bottom: 20px;
+    max-width: 100%;
+
+}
+
+.form-container {
+    flex: 1;
+    padding: 40px;
+    border: 1px solid #6c6c6c;
+    max-width: 550px;
+    position: sticky;
+}
+
+.input-group {
+    display: flex;
+    gap: 20px; /* Adjust the gap between first and last name fields */
+    margin-bottom: 20px;
+    
+}
+
+.email-group{
+    margin-bottom: 20px;
+}
+
+.form-heading{
+    color: #e8e8e8;
+}
+
+.input-group input {
+    width: 97%; /* Make both input fields take up equal space */
+    font-size: 14px;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 300;
+    line-height: 1.7em;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    font-family: 'Lexend', sans-serif;
+    font-size: 14px;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #fff;
+}
+
+textarea {
+    height: 120px; /* Adjust the height of the message box */
+    resize: vertical; /* Make the textarea resizable */
+}
+
+button {
+    padding: 15px 30px; /* Increase the padding for a larger button */
+    background-color: #a38755;
+    color: #050F17;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px; /* Adjust margin for space between form elements */
+    font-family: 'Lexend', sans-serif;
+}
+
+button:hover {
+    background-color: #fff;
+}
+/* intl-tel-input custom styles */
+.iti {
+    width: 100%;
+}
+
+/* Align the country code dropdown with input padding */
+.iti__selected-flag {
+    padding: 12px 15px;
+}
+
+/* Ensure phone input takes full width */
+.form-section .iti input {
+    width: 100%;
+    padding-left: 60px; /* Adjust for flag dropdown width */
+}
+
+/* Media Queries */
+/* Keep the layout as is for laptops and above */
+@media (max-width: 991px) {
+    .content {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .right-sidebar {
+        min-width: 100%;
+        position: relative;
+    }
+    
+    .blog-list {
+        min-width: 100%;
+    }
+}
+
+/* Tablet and mobile-specific adjustments */
+@media (max-width: 768px) {
+    .blog-post h2 {
+        font-size: 20px;
+    }
+
+    .blog-post p {
+        font-size: 13px;
+    }
+
+    .sticky-box h3 {
+        font-size: 20px;
+    }
+
+    .form-section {
+        max-width: 100%;
+    }
+
+    .sticky-box {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .blog-post h2 {
+        font-size: 18px;
+    }
+
+    .blog-post p {
+        font-size: 12px;
+    }
+
+    .sticky-box h3 {
+        font-size: 18px;
+    }
+
+    .form-section input,
+    .form-section textarea {
+        padding: 10px;
+    }
+
+    .form-section button {
+        padding: 12px;
+        font-size: 1rem;
+    }
+}
+
+/*end blog   */
