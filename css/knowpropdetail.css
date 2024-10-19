@@ -35,9 +35,12 @@
 /*
     1. Base CSS
 */
+
+
+
 :root {
-    --font-body-family: "Nunito", sans-serif;
-    --font-heading-family: "Inter", sans-serif;
+    --font-body-family: "lexend", sans-serif;
+    --font-heading-family: "lexend", sans-serif;
     --font-body-size: 1.6rem;
     --font-body-weight: 400;
     --font-heading-weight: 600;
@@ -640,7 +643,7 @@
     padding: 0 1.5rem;
     letter-spacing: 0.2px;
     border-radius: 1rem;
-    background: var(--color-hover);
+    background: #A8894D;
     color: var(--color-white);
     border: 0;
     font-weight: 700;
@@ -10369,7 +10372,7 @@
     font-size: 2rem;
     line-height: 2.2rem;
     padding-left: 1.5rem;
-    border-left: 2px solid var(--color-hover);
+    border-left: 2px solid #A8894D;
     margin-bottom: 2rem;
   }
   @media only screen and (min-width: 992px) {
@@ -10630,7 +10633,7 @@
     font-weight: 600;
     height: 3rem;
     line-height: 3rem;
-    background: var(--color-hover);
+    background: #A8894D;
     color: var(--color-white);
     padding: 0 1.5rem;
     border-radius: 0.5rem;
@@ -10648,7 +10651,7 @@
   }
   
   .listing__details--meta__icon {
-    color: var(--color-hover);
+    color: #A8894D;
     margin-right: 0.5rem;
   }
   
@@ -10696,7 +10699,7 @@
   }
   
   .listing__details--price__new {
-    color: var(--color-hover);
+    color: #A8894D;
     font-weight: 700;
     font-size: 2rem;
     line-height: 2.2rem;
@@ -10775,13 +10778,14 @@
   .listing__details--content__title {
     font-size: 2rem;
     line-height: 2.2rem;
-    border-left: 2px solid var(--color-hover);
+    border-left: 2px solid #A8894D;
     padding-left: 1.5rem;
     margin-bottom: 2rem;
+    color: #A8894D;
   }
   @media only screen and (min-width: 768px) {
     .listing__details--content__title {
-      font-size: 2.2rem;
+      font-size: 2.5rem;
       line-height: 2.4rem;
     }
   }
@@ -10792,15 +10796,15 @@
   }
   
   .listing__details--content__desc {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     line-height: 3rem;
     font-weight: 500;
-    color: var(--color-foreground-sub);
+    color: #dcd6d6;
     margin-bottom: 2rem;
   }
   @media only screen and (min-width: 768px) {
     .listing__details--content__desc {
-      font-size: 1.8rem;
+      font-size: 1.7rem;
       line-height: 3.2rem;
       margin-bottom: 3rem;
     }
@@ -10855,7 +10859,7 @@
   }
   @media only screen and (min-width: 992px) {
     .properties__details--info__wrapper {
-      gap: 4.5rem;
+      gap: 6.5rem;
     }
   }
   @media only screen and (max-width: 575px) {
@@ -10879,12 +10883,14 @@
     font-size: 1.7rem;
     line-height: 2.5rem;
     font-weight: 700;
+    color: #e7e3e3;
   }
   
   .properties__details--info__subtitle {
     line-height: 2.5rem;
     font-weight: 500;
-    color: var(--color-foreground-sub);
+    color: #dcdcdc;
+    font-size: 15px;
   }
   
   .properties__details--info__list {
@@ -10919,13 +10925,14 @@
   }
   
   .properties__amenities--mark__icon {
-    color: var(--color-hover);
+    color: #A8894D;
   }
   
   .properties__amenities--text {
     font-weight: 500;
-    color: var(--color-foreground-sub);
+    color: #dad9d7;
     line-height: 2rem;
+    font-size: 15px;
   }
   
   .properties__amenities--wrapper {
@@ -11019,7 +11026,7 @@
     color: var(--color-white);
   }
   .floor__plans--tab__btn--field.active {
-    background: var(--color-hover);
+    background: #A8894D;
     color: var(--color-white);
   }
   
@@ -11112,7 +11119,7 @@
     width: 100%;
     height: 4.5rem;
     line-height: 4.5rem;
-    background: var(--color-hover);
+    background: #A8894D;
     color: var(--color-white);
     text-align: center;
     font-weight: 500;
@@ -11164,6 +11171,7 @@
       font-size: 1.8rem;
       line-height: 2rem;
       min-width: 13rem;
+      color: #ffff;
     }
   }
   
@@ -11178,7 +11186,7 @@
   .location__google--maps__info--subtitle {
     line-height: 2.5rem;
     font-weight: 500;
-    color: var(--color-foreground-sub);
+    color: #fff;
   }
   
   @media only screen and (max-width: 767px) {

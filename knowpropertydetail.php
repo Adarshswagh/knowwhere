@@ -13,7 +13,7 @@ include("config.php");
         <title>Property Details</title>
 
         <link rel="stylesheet" href="css/knowpropertydetail.css">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
 
         <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Lexend&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
