@@ -2,143 +2,243 @@
 ini_set('session.cache_limiter','public');
 session_cache_limiter(false);
 session_start();
-include("config.php");								
+include("config.php");
+								
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-<!-- Required meta tags -->
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 
-<!-- Meta Tags -->
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="description" content="Real Estate PHP">
-<meta name="keywords" content="">
-<meta name="author" content="Unicoder">
-<link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/knowabout.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com/css?family=Muli:400,400i,500,600,700&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Comfortaa:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Lexend&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js" crossorigin="anonymous"></script>
 
-<!-- Css Link -->
-<!-- FOR MORE PROJECTS visit:  .com -->
-<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="css/bootstrap-slider.css">
-<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
-<link rel="stylesheet" type="text/css" href="css/layerslider.css">
-<link rel="stylesheet" type="text/css" href="css/color.css" id="color-change">
-<link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
-<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="fonts/flaticon/flaticon.css">
-<link rel="stylesheet" type="text/css" href="css/style.css">
 
-<!-- Title -->
-<title>Real Estate PHP</title>
 </head>
 <body>
-    <!-- sjksdsdfflk;;l -->
 
-<!--	Page Loader -->
-<!-- <div class="page-loader position-fixed z-index-9999 w-100 bg-white vh-100">
-	<div class="d-flex justify-content-center y-middle position-relative">
-	  <div class="spinner-border" role="status">
-		<span class="sr-only">Loading...</span>
-	  </div>
-	</div>
-</div> -->
-<!-- FOR MORE PROJECTS visit:  .com -->
-<div id="page-wrapper">
-    <div class="row"> 
-        <!--	Header start  -->
-		<?php include("include/header.php");?>
-        <!--	Header end  -->
-        
-        <!--	Banner   --->
-        <!-- <div class="banner-full-row page-banner" style="background-image:url('images/breadcromb.jpg');">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <h2 class="page-name float-left text-white text-uppercase mt-1 mb-0"><b>About US</b></h2>
-                    </div>
-                    <div class="col-md-6">
-                        <nav aria-label="breadcrumb" class="float-left float-md-right">
-                            <ol class="breadcrumb bg-transparent m-0 p-0">
-                                <li class="breadcrumb-item text-white"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item active">About Us</li>
-                            </ol>
-                        </nav>
-                    </div>
+<!-- navbar -->
+
+<?php include("include/header.php");?>
+
+ <!-- end navbar -->
+
+
+  <!-- banner -->
+  <section id="banner-main">
+    <div class="banner1" >
+        <div class="banner-content">
+            <h2>About Us </h2>
+            <p><a href="#" class="banner-bread">Home</a> &gt; <a href="#" class="banner-bread">About Us</a></p>
+        </div>
+    </div>
+</section>
+
+<!--end banner  -->
+
+<!-- details -->
+<section class="about-section">
+    <div class="content">
+        <div class="text">
+            <h1>About Mansion</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nibh eu ullamcorper luctus, lacus ex consequat ipsum, ultricies interdum ex ante sit amet tellus. Quisque faucibus iaculis quam a aliquet.</p>
+            <ul class="checklist">
+                <div class="list-left">
+                    <li><span>✔</span> Phasellus rutrum</li>
+                    <li><span>✔</span> Donec at quam</li>
+                    <li><span>✔</span> Phasellus tristique</li>
+                    <li><span>✔</span> Quisque rhoncus</li>
                 </div>
+                <div class="list-right">
+                    <li><span>✔</span> Phasellus rutrum</li>
+                    <li><span>✔</span> Donec at quam</li>
+                    <li><span>✔</span> Phasellus tristique</li>
+                    <li><span>✔</span> Quisque rhoncus</li>
+                </div>
+            </ul>
+        </div>
+        <div class="images">
+            <div class="image">
+                <img src="./images/ab1.jpg" alt="Mansion Interior 1">
             </div>
-        </div> -->
-         <!--	Banner   --->
-		 <!-- FOR MORE PROJECTS visit:  .com -->
-        <!--	About Our Company -->
-        <div class="full-row">
-            <div class="container">
-                
-				
-				<?php 
-					
-					$query=mysqli_query($con,"SELECT * FROM about");
-					while($row=mysqli_fetch_array($query))
-					{
-				?>
-				<div class="row">
-                    <div class="col-md-12 col-lg-12">
-                        <h3 class="double-down-line-left text-secondary position-relative pb-4 mb-4"><?php echo $row['1'];?></h3>
-                    </div>
-                </div>
-                <div class="row about-company">
-                    <div class="col-md-12 col-lg-7">
-                        <div class="about-content">
-                            <?php echo $row['2'];?>
-                        </div>
-                    </div>
-                    <div class="col-md-12 col-lg-5 mt-5">
-                        <div class="about-img"> <img src="admin/upload/<?php echo $row['3'];?>" alt="about image"> </div>
-                    </div>
-                </div>
-				
-				<?php } ?>
-				
+            <div class="image" style="margin-top:-50px;">
+                <img src="./images/ab2.jpg" alt="Mansion Interior 2">
             </div>
         </div>
-        <!--	About Our Company -->        
-        
-       <!--	Footer   start-->
+    </div>
+</section>
+
+ <!-- end details -->
+
+
+ <!-- counter -->
+ <section class="stats-section">
+    <div class="stat-box">
+        <h1 class="count" data-target="25000">0</h1>
+        <p>Happy Clients</p>
+    </div>
+    <div class="stat-box">
+        <h1 class="count" data-target="560">0</h1>
+        <p>Complete Projects</p>
+    </div>
+    <div class="stat-box">
+        <h1 class="count" data-target="100000">0</h1>
+        <p>Property Sales</p>
+    </div>
+    <div class="stat-box">
+        <h1 class="count" data-target="15">0</h1>
+        <p>Years Experience</p>
+    </div>
+</section>
+
+  <!-- end counter -->
+
+  <!-- vision & mission -->
+   <section class="vision-mission-section">
+    <div class="container1">
+        <div class="section-header">
+            <div class="section-title">
+                <h2>Vision & Mission</h2>
+            </div>
+            <div class="button-container">
+                <a href="#" class="btn1">Discover More</a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="image-box"></div>
+            <div class="text-boxes">
+                <div class="text-box">
+                    <h3>Vision</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nibh eu ullamcorper luctus.</p>
+                    <ul>
+                        <li><span>&#10003;</span> Phasellus rutrum</li>
+                        <li><span>&#10003;</span> Donec at quam</li>
+                        <li><span>&#10003;</span> Phasellus tristique</li>
+                        <li><span>&#10003;</span> Quisque rhoncus</li>
+                    </ul>
+                </div>
+                <div class="text-box">
+                    <h3>Mission</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nibh eu ullamcorper luctus, lacus ex consequat ipsum.</p>
+                    <ul>
+                        <li><span>&#10003;</span> Phasellus rutrum</li>
+                        <li><span>&#10003;</span> Donec at quam</li>
+                        <li><span>&#10003;</span> Phasellus tristique</li>
+                        <li><span>&#10003;</span> Quisque rhoncus</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+   <!-- end vision & mission -->
+
+
+   <!-- why chose us -->
+    <section class="why-choose-us">
+        <div class="container-whychoose">
+        <div class="title">
+                <h2>Why Choose Us</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nibh eu ullam corper luctus, lacus ex consequat ipsum, ultricies interdum ex ante sit amet tellus.</p>
+                <a href="#" class="discover-more">Discover More</a>
+            </div>
+            <div class="features">
+                <div class="feature-box reliable">
+                    <i class="icon building"></i>
+                    <h3>Reliable</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="feature-box comfortable">
+                    <i class="icon cloud"></i>
+                    <h3>Comfortable</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="feature-box guarantee">
+                    <i class="icon thumbs-up"></i>
+                    <h3>Guarantee</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="feature-box affordable">
+                    <i class="icon tag"></i>
+                    <h3>Affordable</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    <!-- why choose us -->
+
+ <!-- call to action -->
+ <section id="main-call">
+    <div class="call-to-action">
+        <div class="hero-section">
+            <div class="overlay">
+                <h2>Your Dream Home Awaits</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nibh eu ullam corper luctus, lacus ex consequat ipsum, ultricies interdum ex ante.</p>
+                <a href="#contact" class="btn">Contact Us</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    // Function to animate the counting
+    function animateCounter(element, target) {
+        let current = 0;
+        const increment = target / 200; // Adjust speed by changing 200
+
+        const updateCounter = () => {
+            current += increment;
+            if (current >= target) {
+                element.textContent = target.toLocaleString(); // Ensures the exact target value
+            } else {
+                element.textContent = Math.ceil(current).toLocaleString();
+                requestAnimationFrame(updateCounter); // Smooth animation
+            }
+        };
+
+        updateCounter();
+    }
+
+    // Detect when the stats section comes into view
+    const statSection = document.querySelector('.stats-section');
+    const statBoxes = document.querySelectorAll('.count');
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                statBoxes.forEach(box => {
+                    const target = +box.getAttribute('data-target');
+                    animateCounter(box, target);
+                });
+                observer.disconnect(); // Trigger only once
+            }
+        });
+    }, { threshold: 0.5 }); // 50% of the section must be in view
+
+    observer.observe(statSection);
+});
+
+</script>
+  <!-- end call to action -->
+
+  <!-- footer -->
+
+   <!--	Footer   start-->
 		<?php include("include/footer.php");?>
 		<!--	Footer   start-->
-        
-        <!-- Scroll to top --> 
-        <a href="#" class="bg-secondary text-white hover-text-secondary" id="scroll"><i class="fas fa-angle-up"></i></a> 
-        <!-- End Scroll To top --> 
-    </div><!-- FOR MORE PROJECTS visit:  .com -->
-</div>
-<!-- Wrapper End --> 
-
-<!--	Js Link
-============================================================--> 
-<script src="js/jquery.min.js"></script> 
-<!--jQuery Layer Slider --> 
-<script src="js/greensock.js"></script> 
-<script src="js/layerslider.transitions.js"></script> 
-<script src="js/layerslider.kreaturamedia.jquery.js"></script> 
-<!--jQuery Layer Slider --> 
-<script src="js/popper.min.js"></script> 
-<script src="js/bootstrap.min.js"></script> 
-<script src="js/owl.carousel.min.js"></script> 
-<script src="js/tmpl.js"></script> 
-<script src="js/jquery.dependClass-0.1.js"></script> 
-<script src="js/draggable-0.1.js"></script> 
-<script src="js/jquery.slider.js"></script> 
-<script src="js/wow.js"></script> 
-<script src="js/jquery.cookie.js"></script> 
-<script src="js/custom.js"></script>
+   <!-- end footer -->
 </body>
-
 </html>
