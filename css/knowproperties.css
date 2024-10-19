@@ -2,11 +2,12 @@
 body {
     margin: 0;
     font-family: 'Lexend', sans-serif; /* Replace with your font */
+    background-color: #050F17;
 }
 
 /* Navbar styling */
 .navbar {
-    background-color: #050f17; /* Adjust background color to your preference */
+    background-color: #050f17; 
     /* padding: 15px 20px; */
     height: 120px;
     /* width: 100px; */

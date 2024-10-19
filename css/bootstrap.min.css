@@ -69,7 +69,7 @@ body {
     line-height: 1.5;
     color: #212529;
     text-align: left;
-    background-color: #fff
+    background-color: #0c0808
 }
 
 [tabindex="-1"]:focus {
@@ -260,9 +260,9 @@ optgroup,
 select,
 textarea {
     margin: 0;
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit
+    font-family: 'Lexend';
+    font-size: 15px;
+    line-height: inherit;
 }
 
 button,

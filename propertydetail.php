@@ -92,27 +92,6 @@ include("config.php");
 				  
                     <div class="col-lg-8">
 
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div id="single-property" style="width:1200px; height:700px; margin:30px auto 50px;"> 
-                                    <!-- Slide 1-->
-                                    <!-- <div class="ls-slide" data-ls="duration:7500; transition2d:5; kenburnszoom:in; kenburnsscale:1.2;"> <img width="1920" height="1080"      class="ls-bg" alt="" /> </div> -->
-                                    
-                                    <!-- Slide 2-->
-                                    <div class="ls-slide" data-ls="duration:7500; transition2d:5; kenburnszoom:in; kenburnsscale:1.2;"> <img width="1920" height="1080" src="admin/property/<?php echo $row['19'];?>" class="ls-bg" alt="" /> </div>
-                                    
-                                    <!-- Slide 3-->
-                                    <div class="ls-slide" data-ls="duration:7500; transition2d:5; kenburnszoom:in; kenburnsscale:1.2;"> <img width="1920" height="1080" src="admin/property/<?php echo $row['20'];?>" class="ls-bg" alt="" /> </div>
-									
-									<!-- Slide 4-->
-									<div class="ls-slide" data-ls="duration:7500; transition2d:5; kenburnszoom:in; kenburnsscale:1.2;"> <img width="1920" height="1080" src="admin/property/<?php echo $row['21'];?>" class="ls-bg" alt="" /> </div>
-									
-									<!-- Slide 5-->
-									<div class="ls-slide" data-ls="duration:7500; transition2d:5; kenburnszoom:in; kenburnsscale:1.2;"> <img width="1920" height="1080" src="admin/property/<?php echo $row['22'];?>" class="ls-bg" alt="" /> </div>
-                                </div>
-                            </div>
-                        </div><!-- FOR MORE PROJECTS visit:  .com -->
-
 
                         
 
