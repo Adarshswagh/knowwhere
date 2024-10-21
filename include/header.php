@@ -19,23 +19,16 @@
                 </a>
             </div>
             <ul class="navbar-menu">
-                <li><a href="knowhome.php">Home</a></li>
-                <li><a href="knowabout.php">About</a></li>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="About.php">About</a></li>
                 <li class="dropdown">
-                    <a href="knowproperties.php">Property</a>
-                    <!-- <ul class="dropdown-menu">
-                        <li><a href="#">Property 1</a></li>
-                        <li><a href="#">Property 2</a></li>
-                    </ul> -->
+                    <a href="Properties.php">Property</a>
+                    
                 </li>
-                <li class="dropdown">
-                    <a href="#">Pages</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Page 1</a></li>
-                        <li><a href="#">Page 2</a></li>
-                    </ul>
+                <li>
+                    <a href="blog.php">Blog</a>
                 </li>
-                <li><a href="knowcontact.php">Contact</a></li>
+                <li><a href="Contact.php">Contact</a></li>
             </ul>
             <div class="navbar-investor">
                 <a href="#">FOR INVESTOR</a>
