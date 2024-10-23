@@ -174,7 +174,7 @@ if(isset($_POST['add']))
 											</div>
                                             <div class="col-xl-12">
                                                 <div class="form-group row">
-													<label class="col-lg-3 col-form-label">Property Type</label>
+													<label class="col-lg-3 col-form-label" style="max-width:16.5%">Property Type</label>
 													<div class="col-lg-9">
 														<select class="form-control" required id="property-type" name="property_type">
 															<option value="">Select Property Type</option>
@@ -187,34 +187,69 @@ if(isset($_POST['add']))
 												</div>
                                              </div>
                                              <hr style="width:100%">
+											<div class="col-xl-12">
+												<!-- <div class="col-xl-6"> -->
+												<div id="residential-fields" class="row hidden">
+													<!-- First Column -->
+													<div class="col-xl-6">
+														<div class="form-group row">
+														<div class="col-lg-6">
+																<label class="col-form-label">Selling Type</label>
+																<select class="form-control" required name="stype">
+																	<option value="">Select Status</option>
+																	<option value="rent">Rent</option>
+																	<option value="sale">Sale</option>
+																</select>
+															</div>
+															<div class="col-lg-6">
+																<label class="col-form-label">Total Towers</label>
+																<input type="text" class="form-control" name="total_towers" required placeholder="Total Towers">
+															</div>
+															
+														</div>
 
-                                            <div id="residential-fields" class="hidden">
-                                                <div class="col-xl-6">
-                                                    <div class="form-group row">
-                                                        <label class="col-lg-3 col-form-label fields-form">Property Type</label>
-                                                        <div class="col-lg-9">
-                                                            <select class="form-control" required id="property-type" name="property_type">
-                                                                <option value="">Select Property Type</option>
-                                                                <option value="RESIDENTIAL PROPERTY">RESIDENTIAL PROPERTY</option>
-                                                                <option value="COMMERCIAL PROPERTY">COMMERCIAL PROPERTY</option>
-                                                                <option value="PLOTTING PROPERTY">PLOTTING PROPERTY</option>
-                                                                
-                                                            </select>
-                                                        </div>
-                                                    </div>
+														<div class="form-group row">
+															<div class="col-lg-6">
+																<label class="col-form-label">Total Units</label>
+																<input type="text" class="form-control" name="total_towers" required placeholder="Total Towers">
+															</div>
+															<div class="col-lg-6">
+																<label class="col-form-label">Available Units For Sell</label>
+																<input type="text" class="form-control" name="total_towers" required placeholder="Available Units">
+															</div>
+														</div>
+													</div>
 
-                                                    <div class="form-group row">
-													<label class="col-lg-3 col-form-label">Selling Type</label>
-													<div class="col-lg-9">
-														<select class="form-control" required name="stype">
-															<option value="">Select Status</option>
-															<option value="rent">Rent</option>
-															<option value="sale">Sale</option>
-														</select>
+													<!-- Second Column -->
+													<div class="col-xl-6">
+													<div class="form-group row">
+															<div class="col-lg-6">
+																<label class="col-form-label">Address</label>
+																<input type="text" class="form-control" name="address" required placeholder="Enter Address">
+															</div>
+															<div class="col-lg-6">
+																<label class="col-form-label">Area Size</label>
+																<input type="text" class="form-control" name="asize" required placeholder="Enter Area Size (in sqrt)">
+															</div>
+														</div>
+														
+
+														<div class="form-group row">
+														<div class="col-lg-6">
+																<label class="col-form-label">Total Floor</label>
+																<input type="text" class="form-control" name="total_towers" required placeholder="Total Floor">
+															</div>
+															<div class="col-lg-6">
+																<label class="col-form-label">Area Size</label>
+																<input type="text" class="form-control" name="asize" required placeholder="Enter Area Size (in sqrt)">
+															</div>
+														</div>
 													</div>
 												</div>
-                                                </div>
-                                            </div>
+												</div>
+												
+											</div>
+										</div>
 
 
 
