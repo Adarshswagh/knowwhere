@@ -16,7 +16,7 @@ body {
 
 .container {
     display: flex;
-    width: 90%;
+    width: 100%;
     max-width: 1200px;
     height: 80vh;
     background-color: #111;
@@ -96,7 +96,7 @@ body {
 
 .image-section {
     flex: 1;
-    background: url('your-image-path.jpg') no-repeat center center/cover;
+    background: url('bannerabout.jpg') no-repeat center center/cover;
     display: flex;
     justify-content: center;
     align-items: center;

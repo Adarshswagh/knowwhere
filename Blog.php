@@ -130,7 +130,7 @@
                             errorMessage.innerText = '';  // Clear the error message
                             alert('Form submitted successfully with phone number: ' + phoneNumber);
                                     });
-                        </script>
+                        </script> 
 
 
                         </div>
@@ -139,6 +139,10 @@
         </div>
     </section>    
 <!-- end blog section -->
+
+ <!--	Footer   start-->
+ <?php include("include/footer.php");?>
+		<!--	Footer   start-->
     
 </body>
 </html>

@@ -34,7 +34,7 @@ include("config.php");
   <section id="banner-main">
     <div class="banner1" >
         <div class="banner-content">
-            <h2>About Us </h2>
+            <h2>About Us</h2>
             <p><a href="#" class="banner-bread">Home</a> &gt; <a href="#" class="banner-bread">About Us</a></p>
         </div>
     </div>

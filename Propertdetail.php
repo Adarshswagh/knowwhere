@@ -16,6 +16,16 @@ include("config.php");
     <link rel="stylesheet" href="css/knowpropdetail.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/layerslider.min.css">
+    <link rel="stylesheet" href="css/knowproperties.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="css/layerslider.css">
+<link rel="stylesheet" type="text/css" href="css/color.css" id="color-change">
+<link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="fonts/flaticon/flaticon.css">
+<!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
+<link rel="stylesheet" type="text/css" href="css/propstyle.css">
+<link rel="stylesheet" type="text/css" href="css/knowproperties.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Lexend&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js" crossorigin="anonymous"></script>
@@ -293,1065 +303,47 @@ html, body {
 	}
 
 
-
-/* GUI */
-
-
-
-	/* Common */
-
-	.ls-gui-element {
-		z-index: 40;
-	}
-
-	.ls-loading-container {
-		position: absolute !important;
-		display: none;
-		left: 50% !important;
-		top: 50% !important;
-	}
-
-	.ls-loading-indicator {
-		margin: 0 auto;
-	}
-
-
-
-	/* Media */
-
-	.ls-media-unmute {
-		visibility: hidden;
-		position: absolute;
-		left: 16px;
-		top: 16px;
-		width: 30px;
-		height: 30px;
-		cursor: pointer;
-		opacity: .65;
-	}
-
-	.ls-media-unmute-active {
-		visibility: visible;
-	}
-
-	.ls-media-unmute-bg {
-		position: absolute;
-		left: 0;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		border-radius: 30px;
-		border: 0 solid white;
-		transform: scale(0.1);
-		background: rgba(0,0,0,.25);
-		box-shadow: 0 3px 10px rgba(0,0,0,.2);
-	}
-
-	.ls-icon-muted, .ls-icon-unmuted {
-		position: absolute;
-		left: 0;
-		top: 0;
-		width: 100%;
-		height: 100%;
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: 20px;
-		transform: scale(0.1);
-	}
-
-	.ls-media-unmute-active .ls-media-unmute-bg {
-		border: 2px solid white;
-	}
-
-	.ls-media-unmute-active .ls-icon-muted,
-	.ls-media-unmute-active .ls-icon-unmuted,
-	.ls-media-unmute-active .ls-media-unmute-bg {
-		transform: scale(1) !important;
-	}
-
-	.ls-icon-muted {
-		background-image: url(../images/icon-muted-white.png);
-		opacity: 1;
-	}
-
-	.ls-icon-unmuted {
-		background-image: url(../images/icon-unmuted-white.png);
-		opacity: 0;
-	}
-
-	.ls-media-unmute:hover {
-		opacity: 1;
-	}
-
-	.ls-media-unmute:hover .ls-icon-muted {
-		opacity: 0;
-	}
-
-	.ls-media-unmute:hover .ls-icon-unmuted {
-		opacity: 1;
-	}
-
-	.ls-media-unmute-bg,
-	.ls-icon-unmuted,
-	.ls-media-unmute,
-	.ls-icon-muted {
-		transition: all .3s ease-in-out !important;
-	}
-
-
-
-	/* Navigation */
-
-		.ls-bottom-slidebuttons {
-			text-align: left;
-		}
-
-		.ls-bottom-nav-wrapper,
-		.ls-below-thumbnails {
-			height: 0;
-			position: relative;
-			text-align: center;
-			margin: 0 auto;
-		}
-
-		.ls-below-thumbnails {
-			display: none;
-		}
-
-		.ls-bottom-nav-wrapper a,
-		.ls-nav-prev,
-		.ls-nav-next {
-			outline: none;
-		}
-
-		.ls-bottom-slidebuttons {
-			position: relative;
-		}
-
-		.ls-bottom-slidebuttons,
-		.ls-nav-start,
-		.ls-nav-stop,
-		.ls-nav-sides {
-			position: relative;
-		}
-
-		.ls-nothumb {
-			text-align: center !important;
-		}
-
-		.ls-link,
-		.ls-link:hover {
-			position: absolute !important;
-			width: 100% !important;
-			height: 100% !important;
-			left: 0 !important;
-			top: 0 !important;
-		}
-
-		.ls-link {
-			display: none;
-		}
-
-		.ls-link-on-top {
-			z-index: 999999 !important;
-		}
-
-		.ls-link, .ls-wrapper > a > * {
-			background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7');
-		}
-
-		.ls-bottom-nav-wrapper,
-		.ls-thumbnail-wrapper,
-		.ls-nav-prev,
-		.ls-nav-next {
-			visibility: hidden;
-		}
-
-
-
-	/* Timers */
-
-		.ls-bar-timer {
-			position: absolute;
-			width: 0;
-			height: 2px;
-			background: white;
-			border-bottom: 2px solid #555;
-			opacity: .55;
-			top: 0;
-		}
-
-		.ls-circle-timer {
-			width: 16px;
-			height: 16px;
-			position: absolute;
-			right: 10px;
-			top: 10px;
-			opacity: .65;
-			display: none;
-		}
-
-		.ls-container .ls-circle-timer,
-		.ls-container .ls-circle-timer * {
-			box-sizing: border-box !important;
-		}
-
-		.ls-ct-half {
-			border: 4px solid white;
-		}
-
-		.ls-ct-left,
-		.ls-ct-right {
-			width: 50%;
-			height: 100%;
-			overflow: hidden;
-		}
-
-		.ls-ct-left,
-		.ls-ct-right {
-			position: absolute;
-		}
-
-		.ls-ct-left {
-			left: 0;
-		}
-
-		.ls-ct-right {
-			left: 50%;
-		}
-
-		.ls-ct-rotate {
-			width: 200%;
-			height: 100%;
-			position: absolute;
-			top: 0;
-		}
-
-		.ls-ct-left .ls-ct-rotate,
-		.ls-ct-right .ls-ct-hider,
-		.ls-ct-right .ls-ct-half {
-			left: 0;
-		}
-
-		.ls-ct-right .ls-ct-rotate,
-		.ls-ct-left .ls-ct-hider,
-		.ls-ct-left .ls-ct-half {
-			right: 0;
-		}
-
-		.ls-ct-hider,
-		.ls-ct-half {
-			position: absolute;
-			top: 0;
-		}
-
-		.ls-ct-hider {
-			width: 50%;
-			height: 100%;
-			overflow: hidden;
-		}
-
-		.ls-ct-half {
-			width: 200%;
-			height: 100%;
-		}
-
-		.ls-ct-center {
-			width: 100%;
-			height: 100%;
-			left: 0;
-			top: 0;
-			position: absolute;
-			border: 4px solid black;
-			opacity: 0.2;
-		}
-
-		.ls-ct-half,
-		.ls-ct-center {
-			border-radius: 100px;
-			-moz-border-radius: 100px;
-			-webkit-border-radius: 100px;
-		}
-
-		.ls-slidebar-container {
-			margin: 10px auto;
-		}
-
-		.ls-slidebar-container,
-		.ls-slidebar {
-			position: relative;
-		}
-
-		.ls-progressbar,
-		.ls-slidebar-slider-container {
-			position: absolute;
-			left: 0;
-			top: 0;
-		}
-
-		.ls-progressbar {
-			width: 0;
-			height: 100%;
-			z-index: 1;
-		}
-
-		.ls-slidebar-slider-container {
-			z-index: 2;
-		}
-
-		.ls-slidebar-slider {
-			position: static !important;
-			cursor: pointer;
-		}
-
-		/* slidebar default dark skin */
-
-		.ls-slidebar {
-			height: 10px;
-			background-color: #ddd;
-		}
-
-		.ls-slidebar,
-		.ls-progressbar {
-			border-radius: 10px;
-		}
-
-		.ls-progressbar {
-			background-color: #bbb;
-		}
-
-		.ls-slidebar-slider-container {
-			top: 50%;
-		}
-
-		.ls-slidebar-slider {
-			width: 20px;
-			height: 20px;
-			border-radius: 20px;
-			background-color: #999;
-		}
-
-		/* slidebar default light skin */
-
-		.ls-slidebar-light .ls-slidebar {
-			height: 8px;
-			background-color: white;
-			border: 1px solid #ddd;
-			border-top: 1px solid #ccc;
-		}
-
-		.ls-slidebar-light .ls-slidebar,
-		.ls-slidebar-light .ls-progressbar {
-			border-radius: 10px;
-		}
-
-		.ls-slidebar-light .ls-progressbar {
-			background-color: #eee;
-		}
-
-		.ls-slidebar-light .ls-slidebar-slider-container {
-			top: 50%;
-		}
-
-		.ls-slidebar-light .ls-slidebar-slider {
-			width: 18px;
-			height: 18px;
-			border-radius: 20px;
-			background-color: #eee;
-			border: 1px solid #bbb;
-			border-top: 1px solid #ccc;
-			border-bottom: 1px solid #999;
-		}
-
-
-
-
-	/* Thumbnails */
-
-		.ls-tn {
-			display: none !important;
-		}
-
-		.ls-thumbnail-hover {
-			display: none;
-			position: absolute;
-			left: 0;
-		}
-
-		.ls-thumbnail-hover-inner {
-			width: 100%;
-			height: 100%;
-			position: absolute;
-			left: 0;
-			top: 0;
-			display: none;
-		}
-
-		.ls-thumbnail-hover-bg {
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			left: 0;
-			top: 0;
-		}
-
-		.ls-thumbnail-hover-img {
-			position: absolute;
-			overflow: hidden;
-		}
-
-		.ls-thumbnail-hover img {
-			max-width: none !important;
-			position: absolute;
-			display: inline-block;
-			visibility: visible !important;
-			left: 50%;
-			top: 0;
-		}
-
-		.ls-thumbnail-hover span {
-			left: 50%;
-			top: 100%;
-			width: 0;
-			height: 0;
-			display: block;
-			position: absolute;
-			border-left-color: transparent !important;
-			border-right-color: transparent !important;
-			border-bottom-color: transparent !important;
-		}
-
-		.ls-thumbnail-wrapper {
-			position: relative;
-			width: 100%;
-			margin: 0 auto;
-		}
-
-		.ls-thumbnail {
-			position: relative;
-			margin: 0 auto;
-		}
-
-		.ls-thumbnail-inner,
-		.ls-thumbnail-slide-container {
-			width: 100%;
-		}
-
-		.ls-thumbnail-slide-container {
-			overflow: hidden !important;
-			position: relative;
-		}
-
-		.ls-thumbnail-slide {
-			text-align: center;
-			white-space: nowrap;
-			float: left;
-			position: relative;
-		}
-
-		.ls-thumbnail-slide a {
-			overflow: hidden;
-			display: inline-block;
-			width: 0;
-			height: 0;
-			position: relative;
-		}
-
-		.ls-thumbnail-slide img {
-			max-width: none !important;
-			max-height: 100% !important;
-			height: 100%;
-			visibility: visible !important;
-		}
-
-		.ls-touchscroll {
-			overflow-x: auto !important;
-		}
-
-
-
-	/* Shadow */
-
-		.ls-shadow {
-			display: none;
-			position: absolute;
-			z-index: 10 !important;
-			top: 100%;
-			width: 100%;
-			left: 0;
-			overflow: hidden !important;
-			visibility: hidden;
-		}
-
-		.ls-shadow img {
-			width: 100% !important;
-			height: auto !important;
-			position: absolute !important;
-			left: 0 !important;
-			bottom: 0 !important;
-		}
-
-
-
-/* Media */
-
-	.ls-media-layer {
-		overflow: hidden;
-	}
-
-	.ls-vpcontainer,
-	.ls-videopreview {
-		width : 100%;
-		height : 100%;
-		position : absolute;
-		left : 0;
-		top : 0;
-		cursor : pointer;
-	}
-
-	.ls-videopreview {
-		background-size: cover;
-		background-position: center center;
-	}
-
-	.ls-videopreview {
-		z-index: 1;
-	}
-
-	.ls-playvideo {
-		position: absolute;
-		left: 50%;
-		top: 50%;
-		cursor: pointer;
-		z-index: 2;
-	}
-
-	.ls-autoplay .ls-playvideo {
-		display: none !important;
-	}
-
-
-
-/* Mobile features */
-
-	.ls-forcehide {
-		display: none !important;
-	}
-
-
-
-/* YourLogo */
-
-	.ls-yourlogo {
-		position: absolute;
-		z-index: 50;
-	}
-
-
-
-/* Slide transitions */
-
-	/* .ls-lt-container */
-	.ls-slide-transition-wrapper {
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		left: 0;
-		top: 0;
-		z-index: 3;
-	}
-
-	.ls-slide-transition-wrapper,
-	.ls-slide-transition-wrapper * {
-		text-align: left !important;
-	}
-
-	.ls-slide-transition-tile {
-		position: relative;
-		float: left;
-	}
-
-	.ls-slide-transition-tile img {
-		visibility: visible;
-		margin: 0 !important;
-	}
-
-	.ls-curtiles {
-		overflow: hidden;
-	}
-
-	.ls-curtiles,
-	.ls-nexttiles {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		left: 0;
-		top: 0;
-	}
-
-	.ls-curtile, .ls-nexttile {
-		overflow: hidden;
-		width: 100% !important;
-		height: 100% !important;
-		-o-transform: translateZ(0);
-		-ms-transform: translateZ(0);
-		-moz-transform: translateZ(0);
-		-webkit-transform: translateZ(0);
-		transform: translateZ(0);
-	}
-
-	.ls-nexttile {
-		display: none;
-	}
-
-	.ls-3d-container {
-		position: relative;
-		overflow: visible !important;
-		-ms-perspective: none !important;
-		-moz-perspective: none !important;
-		-webkit-perspective: none !important;
-		perspective: none !important;
-	}
-
-	.ls-3d-box {
-		position: absolute;
-	}
-
-	.ls-3d-box div {
-		overflow: hidden;
-		margin: 0;
-		padding: 0;
-		position: absolute;
-		background-color: #888;
-	}
-
-	.ls-3d-box .ls-3d-top,
-	.ls-3d-box .ls-3d-bottom {
-		background-color: #555;
-	}
-
-	.ls-slide-transition-wrapper,
-	.ls-slide-transition-tile {
-		-ms-perspective: 1500px;
-		-moz-perspective: 1500px;
-		-webkit-perspective: 1500px;
-		perspective: 1500px;
-	}
-
-	.ls-slide-transition-tile,
-	.ls-3d-box,
-	.ls-curtiles,
-	.ls-nexttiles {
-		-ms-transform-style: preserve-3d;
-		-moz-transform-style: preserve-3d;
-		-webkit-transform-style: preserve-3d;
-		transform-style: preserve-3d;
-	}
-
-	.ls-curtile,
-	.ls-nexttile,
-	.ls-3d-box,
-	.ls-3d-box div {
-		-ms-backface-visibility: hidden;
-		-moz-backface-visibility: hidden;
-		-webkit-backface-visibility: hidden;
-		backface-visibility: hidden;
-	}
-
-
-
-
-/* Misc. */
-
-	.ls-visible {
-		overflow: visible !important;
-	}
-
-	.ls-unselectable {
-		user-select: none;
-		-o-user-select: none;
-		-ms-user-select: none;
-		-moz-user-select: none;
-		-webkit-user-select: none;
-	}
-
-	.ls-overflow-hidden {
-		overflow: hidden;
-	}
-
-	.ls-overflowx-hidden {
-		overflow-x: hidden;
-	}
-
-	.ls-overflow-visible {
-		overflow: visible !important;
-	}
-
-	.ls-overflowy-hidden {
-		overflow-y: hidden;
-	}
-
-	.ls-hidden {
-		width: 0px !important;
-		height: 0px !important;
-		position: absolute;
-		left: -5000px;
-		top: -5000px;
-		z-index: -1;
-		overflow: hidden !important;
-		visibility: hidden !important;
-		display: block !important;
-	}
-
-	.ls-slide {
-		display: block !important;
-		visibility: hidden !important;
-		position: absolute !important;
-		overflow: hidden;
-		top: 0 !important;
-		left: 0 !important;
-		bottom: auto !important;
-		right: auto !important;
-		background: none;
-		border: none !important;
-		margin: 0 !important;
-		padding: 0 !important;
-	}
-
-	.ls-slide > .ls-layer,
-	.ls-slide > .ls-l,
-	.ls-slide > .ls-bg,
-	.ls-slide > a > .ls-layer,
-	.ls-slide > a > .ls-l,
-	.ls-slide > a > .ls-bg {
-		position: absolute !important;
-		white-space: nowrap;
-	}
-
-	.ls-fullscreen {
-		margin: 0 !important;
-		padding: 0 !important;
-		width: auto !important;
-		height: auto !important;
-	}
-
-	.ls-fullscreen .ls-container {
-		background-color: black;
-		margin: 0 auto !important;
-	}
-
-	.ls-fullscreen .ls-fullscreen-wrapper {
-		width: 100% !important;
-		height: 100% !important;
-		margin: 0 !important;
-		padding: 0 !important;
-		border: 0 !important;
-		background-color: black;
-		overflow: hidden !important;
-		position: relative !important;
-	}
-
-	.ls-fullscreen .ls-fullscreen-wrapper .ls-container,
-	.ls-fullscreen .ls-fullscreen-wrapper .ls-wp-container {
-		position: absolute !important;
-		top: 50% !important;
-		left: 50% !important;
-		transform: translate(-50%,-50%) !important;
-	}
-
-	.ls-layer .split-item {
-		font-weight: inherit !important;
-		font-family: inherit !important;
-		font-size: inherit;
-		color: inherit;
-	}
-
-
-
-/* Removing all default global styles of WordPress themes */
-
-	html .ls-nav-prev,
-	body .ls-nav-prev,
-	#ls-global .ls-nav-prev,
-	html .ls-nav-next,
-	body .ls-nav-next,
-	#ls-global .ls-nav-next,
-	html .ls-container img,
-	body .ls-container img,
-	#ls-global .ls-container img,
-	html .ls-bottom-nav-wrapper a,
-	body .ls-bottom-nav-wrapper a,
-	#ls-global .ls-bottom-nav-wrapper a,
-	html .ls-container .ls-fullscreen,
-	body .ls-container .ls-fullscreen,
-	#ls-global .ls-container .ls-fullscreen,
-	html .ls-thumbnail a,
-	body .ls-thumbnail a,
-	#ls-global .ls-thumbnail a {
-		transition: none;
-		-ms-transition: none;
-		-webkit-transition: none;
-		line-height: normal;
-		outline: none;
-		padding: 0;
-		border: 0;
-	}
-
-	html .ls-wrapper > a,
-	body .ls-wrapper > a,
-	#ls-global .ls-wrapper > a,
-	html .ls-wrapper > p,
-	body .ls-wrapper > p,
-	#ls-global .ls-wrapper > p,
-	html .ls-wrapper > h1,
-	body .ls-wrapper > h1,
-	#ls-global .ls-wrapper > h1,
-	html .ls-wrapper > h2,
-	body .ls-wrapper > h2,
-	#ls-global .ls-wrapper > h2,
-	html .ls-wrapper > h3,
-	body .ls-wrapper > h3,
-	#ls-global .ls-wrapper > h3,
-	html .ls-wrapper > h4,
-	body .ls-wrapper > h4,
-	#ls-global .ls-wrapper > h4,
-	html .ls-wrapper > h5,
-	body .ls-wrapper > h5,
-	#ls-global .ls-wrapper > h5,
-	html .ls-wrapper > img,
-	body .ls-wrapper > img,
-	#ls-global .ls-wrapper > img,
-	html .ls-wrapper > div,
-	body .ls-wrapper > div,
-	#ls-global .ls-wrapper > div,
-	html .ls-wrapper > span,
-	body .ls-wrapper > span,
-	#ls-global .ls-wrapper > span,
-	html .ls-wrapper .ls-bg,
-	body .ls-wrapper .ls-bg,
-	#ls-global .ls-wrapper .ls-bg,
-	html .ls-wrapper .ls-layer,
-	body .ls-wrapper .ls-layer,
-	#ls-global .ls-wrapper .ls-layer,
-	html .ls-slide .ls-layer,
-	body .ls-slide .ls-layer,
-	#ls-global .ls-slide .ls-layer,
-	 html .ls-slide a .ls-layer,
-	body .ls-slide a .ls-layer,
-	#ls-global .ls-slide a .ls-layer {
-		transition: none;
-		-ms-transition: none;
-		-webkit-transition: none;
-		line-height: normal;
-		outline: none;
-		padding: 0;
-		margin: 0;
-		border-width: 0;
-	}
-
-	html .ls-container img,
-	body .ls-container img,
-	#ls-global .ls-container img {
-		background: none !important;
-		min-width: 0 !important;
-		max-width: none !important;
-		border-radius: 0;
-		box-shadow: none;
-		border: 0;
-		padding: 0;
-	}
-
-	html .ls-wp-container .ls-wrapper > a > *,
-	body .ls-wp-container .ls-wrapper > a > *,
-	#ls-global .ls-wp-container .ls-wrapper > a > * {
-		margin: 0;
-	}
-
-	html .ls-wp-container .ls-wrapper > a,
-	body .ls-wp-container .ls-wrapper > a,
-	#ls-global .ls-wp-container .ls-wrapper > a {
-		text-decoration: none;
-	}
-
-	.ls-wp-fullwidth-container,
-	.ls-wp-fullwidth-helper,
-	.ls-gui-element *,
-	.ls-gui-element,
-	.ls-container,
-	.ls-slide > *,
-	.ls-slide,
-	.ls-wrapper,
-	.ls-layer {
-		box-sizing: content-box !important;
-	}
-
-	html .ls-yourlogo,
-	body .ls-yourlogo,
-	#ls-global .ls-yourlogo {
-		margin: 0;
-	}
-
-	html .ls-tn,
-	body .ls-tn,
-	#ls-global .ls-tn {
-		display: none;
-	}
-
-	.ls-bottom-nav-wrapper,
-	.ls-bottom-nav-wrapper span,
-	.ls-bottom-nav-wrapper a {
-		line-height: 0;
-		font-size: 0;
-	}
-
-	html .ls-container video,
-	body .ls-container video,
-	#ls-global .ls-container video {
-		max-width: none !important;
-	}
-
-	/* direction: ltr */
-
-	html .ls-container,
-	body .ls-container,
-	#ls-global .ls-container,
-	html .ls-container .ls-slide-transition-wrapper,
-	body .ls-container .ls-slide-transition-wrapper,
-	#ls-global .ls-container .ls-slide-transition-wrapper,
-	html .ls-container .ls-slide-transition-wrapper *,
-	body .ls-container .ls-slide-transition-wrapper *,
-	#ls-global .ls-container .ls-slide-transition-wrapper *,
-	html .ls-container .ls-bottom-nav-wrapper,
-	body .ls-container .ls-bottom-nav-wrapper,
-	#ls-global .ls-container .ls-bottom-nav-wrapper,
-	html .ls-container .ls-bottom-nav-wrapper *,
-	body .ls-container .ls-bottom-nav-wrapper *,
-	#ls-global .ls-container .ls-bottom-nav-wrapper *,
-	html .ls-container .ls-bottom-nav-wrapper span *,
-	body .ls-container .ls-bottom-nav-wrapper span *,
-	#ls-global .ls-container .ls-bottom-nav-wrapper span *,
-	html .ls-direction-fix,
-	body .ls-direction-fix,
-	#ls-global .ls-direction-fix {
-		direction: ltr !important;
-	}
-
-	/* float: none */
-
-	html .ls-container,
-	body .ls-container,
-	#ls-global .ls-container {
-		float: none !important;
-	}
-
-
-
-/* Notification */
-
-	.ls-notification {
-		position: relative;
-		margin: 10px auto;
-		padding: 10px 10px 15px 88px;
-		border-radius: 5px;
-		min-height: 60px;
-		background: #de4528;
-		color: white !important;
-		font-family: 'Open Sans', arial, sans-serif !important;
-	}
-
-	.ls-notification a {
-		color: white !important;
-		text-decoration: underline !important;
-	}
-
-	.ls-notification-logo {
-		position: absolute;
-		top: 16px;
-		left: 17px;
-		width: 56px;
-		height: 56px;
-		font-size: 49px;
-		line-height: 53px;
-		border-radius: 56px;
-		background-color: white;
-		color: #de4528;
-		font-style: normal;
-		font-weight: 800;
-		text-align: center;
-	}
-
-	.ls-notification strong {
-		color: white !important;
-		display: block;
-		font-size: 20px;
-		line-height: 26px;
-		font-weight: normal !important;
-	}
-
-	.ls-notification span {
-		display: block;
-		font-size: 13px;
-		line-height: 16px;
-		text-align: justify !important;
-	}
-
-
-
-/* Device Responsiveness */
-
-@media screen and (max-width: 767px) {
-	.ls-container .ls-layers > .ls-hide-on-phone,
-	.ls-container .ls-background-videos .ls-hide-on-phone video,
-	.ls-container .ls-background-videos .ls-hide-on-phone audio,
-	.ls-container .ls-background-videos .ls-hide-on-phone iframe {
-		display: none !important;
-	}
+    table {
+  border-collapse: collapse;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+  background-color: transparent; /* Transparent background */
+  color: white; /* White text */
+  text-align: left;
+  width: 100%;
+  margin: 50px auto; /* Center the table */
+  padding: 0; /* Remove padding from table */
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-	.ls-container .ls-layers > .ls-hide-on-tablet,
-	.ls-container .ls-background-videos .ls-hide-on-tablet video,
-	.ls-container .ls-background-videos .ls-hide-on-tablet audio,
-	.ls-container .ls-background-videos .ls-hide-on-tablet iframe {
-		display: none !important;
-	}
+th {
+  background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent header */
+  color: white; /* Header text in white */
+  padding: 15px 20px; /* Increase padding for better spacing */
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 1.5rem;
+  font-weight: 900;
 }
 
-@media screen and (min-width: 1025px) {
-	.ls-container .ls-layers > .ls-hide-on-desktop,
-	.ls-container .ls-background-videos .ls-hide-on-desktop video,
-	.ls-container .ls-background-videos .ls-hide-on-desktop audio,
-	.ls-container .ls-background-videos .ls-hide-on-desktop iframe {
-		display: none !important;
-	}
+td {
+  padding: 15px 20px; /* Cell padding */
+  background-color: rgba(255, 255, 255, 0.05); /* Slight transparent background for cells */
+  color: white; /* Keep text in white */
+  border-bottom: 3px solid rgba(255, 255, 255, 0.2); /* Subtle border between rows */
+  font-size: 1.3rem;
 }
 
-.ls-container .ls-background-videos .ls-vpcontainer {
-	z-index: 10;
+tr:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Highlight row on hover */
 }
 
-.ls-container .ls-background-videos .ls-videopreview {
-	background-size: cover !important;
+/* Alternating row colors */
+tr:nth-child(even) {
+  background-color: #A8894D; /* Slightly transparent for even rows */
 }
 
-.ls-container .ls-background-videos video,
-.ls-container .ls-background-videos audio,
-.ls-container .ls-background-videos iframe {
-	position: relative;
-	z-index: 20;
+tr:nth-child(odd) {
+  background-color: transparent; /* Transparent for odd rows */
 }
-
-
-
-/* Hacks */
-
-	@media (transform-3d), (-ms-transform-3d), (-webkit-transform-3d) {
-		#ls-test3d {
-			position: absolute;
-			left: 9px;
-			height: 3px;
-		}
-	}
 
 
 </style>
@@ -1368,7 +360,7 @@ html, body {
     <div class="banner1" >
         <div class="banner-content">
             <h2>Property Details</h2>
-            <p><a href="#" class="banner-bread">Home</a> &gt; <a href="#" class="banner-bread">Proprty Details</a></p>
+            <p><a href="#" class="banner-bread">Home</a> &gt; <a href="#" class="banner-bread">Property Details</a></p>
         </div>
     </div>
 </section>
@@ -1376,29 +368,27 @@ html, body {
 <!-- Listing details section -->
 <section class="listing__details--section section--padding">
                 <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8">
+                    <div class="row"> 
+                    <div class="col-lg-8">
 
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div id="single-property" style="width:1200px; height:700px; margin:30px auto 50px;"> 
-                                    <!-- Slide 1-->
-                                    
-                                    
-                                    <!-- Slide 2-->
-                                    <div class="ls-slide" data-ls="duration:7500; transition2d:5; kenburnszoom:in; kenburnsscale:1.2;"> <img width="1920" height="1080" src="admin/property/<?php echo $row['19'];?>" class="ls-bg" alt="" /> </div>
-                                    
-                                    <!-- Slide 3-->
-                                    <div class="ls-slide" data-ls="duration:7500; transition2d:5; kenburnszoom:in; kenburnsscale:1.2;"> <img width="1920" height="1080" src="admin/property/<?php echo $row['20'];?>" class="ls-bg" alt="" /> </div>
-									
-									<!-- Slide 4-->
-									<div class="ls-slide" data-ls="duration:7500; transition2d:5; kenburnszoom:in; kenburnsscale:1.2;"> <img width="1920" height="1080" src="admin/property/<?php echo $row['21'];?>" class="ls-bg" alt="" /> </div>
-									
-									<!-- Slide 5-->
-									<div class="ls-slide" data-ls="duration:7500; transition2d:5; kenburnszoom:in; kenburnsscale:1.2;"> <img width="1920" height="1080" src="admin/property/<?php echo $row['22'];?>" class="ls-bg" alt="" /> </div>
-                                </div>
-                            </div>
-                        </div>
+<div class="row" style="color:#ffffff">
+    <div class="col-md-12">
+        <div id="single-property" style="width:1200px; height:700px; margin:30px auto 50px;"> 
+            
+            <!-- Slide 2-->
+            <div class="ls-slide" data-ls="duration:7500; transition2d:5; kenburnszoom:in; kenburnsscale:1.2;"> <img width="1920" height="1080" src="admin/property/<?php echo $row['19'];?>" class="ls-bg" alt="" /> </div>
+            
+            <!-- Slide 3-->
+            <div class="ls-slide" data-ls="duration:7500; transition2d:5; kenburnszoom:in; kenburnsscale:1.2;"> <img width="1920" height="1080" src="admin/property/<?php echo $row['20'];?>" class="ls-bg" alt="" /> </div>
+            
+            <!-- Slide 4-->
+            <div class="ls-slide" data-ls="duration:7500; transition2d:5; kenburnszoom:in; kenburnsscale:1.2;"> <img width="1920" height="1080" src="admin/property/<?php echo $row['21'];?>" class="ls-bg" alt="" /> </div>
+            
+            <!-- Slide 5-->
+            <div class="ls-slide" data-ls="duration:7500; transition2d:5; kenburnszoom:in; kenburnsscale:1.2;"> <img width="1920" height="1080" src="admin/property/<?php echo $row['22'];?>" class="ls-bg" alt="" /> </div>
+        </div>
+    </div>
+</div>
 
 
                             <div class="listing__details--wrapper">
@@ -1477,13 +467,13 @@ html, body {
                                     </div>
                                     <div class="listing__details--content__step">
                                         <h2 class="listing__details--title mb-25">House In Foxhall Ave, Kingston</h2>
-                                        <div class="listing__details--price__id d-flex align-items-center">
+                                        <!-- <div class="listing__details--price__id d-flex align-items-center">
                                             <div class="listing__details--price d-flex">
                                                 <span class="listing__details--price__new">$13000</span>
                                                 <span class="listing__details--price__old">$16000</span>
                                             </div>
-                                            <!-- <span class="listing__details--property__id">Property ID: HZ24</span> -->
-                                        </div>
+                                            <span class="listing__details--property__id">Property ID: HZ24</span>
+                                        </div> -->
                                         <p class="listing__details--location__text"><svg width="11" height="17" viewBox="0 0 11 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M5.48287 0C2.45013 0 0 2.4501 0 5.48288C0 5.85982 0.0343013 6.21958 0.102785 6.57945C0.514031 9.69783 4.42055 11.9767 5.51712 16.4144C6.5966 12.0452 11 8.824 11 5.48288H10.9657C10.9657 2.45013 8.51548 0 5.48282 0H5.48287ZM5.48287 2.17592C7.21338 2.17592 8.61839 3.58097 8.61839 5.31144C8.61839 7.04191 7.21335 8.44696 5.48287 8.44696C3.7524 8.44696 2.34736 7.04191 2.34736 5.31144C2.34736 3.58097 3.75228 2.17592 5.48287 2.17592Z" fill="#A8894D"/>
                                             </svg>
@@ -1502,25 +492,25 @@ html, body {
                                                 to block the readable content of a page when looking at its layout. It is a long established fact</p>
                                             <div class="apartment__info listing__d--info">
                                                 <div class="apartment__info--wrapper d-flex">
-                                                    <div class="apartment__info--list">
+                                                    <!-- <div class="apartment__info--list">
                                                         <span class="apartment__info--icon"><img src="images/bed.png" alt="img"></span>
                                                         <p>
                                                             <span class="apartment__info--count">3</span>
-                                                            <span class="apartment__info--title">Bedrooms</span>
+                                                            <span class="apartment__info--title">Price</span>
                                                         </p>
-                                                    </div>
+                                                    </div> -->
                                                     <div class="apartment__info--list">
                                                         <span class="apartment__info--icon"><img src="images/modern-car.png" alt="img"></span>
                                                         <p>
                                                             <span class="apartment__info--count">3</span>
-                                                            <span class="apartment__info--title"> Car Parking</span>
+                                                            <span class="apartment__info--title">Location</span>
                                                         </p>
                                                     </div>
                                                     <div class="apartment__info--list">
                                                         <span class="apartment__info--icon"><img src="images/set-square.png" alt="img"></span>
                                                         <p>
                                                             <span class="apartment__info--count">3</span>
-                                                            <span class="apartment__info--title">1249 Sqft</span>
+                                                            <span class="apartment__info--title">Land Area</span>
                                                         </p>
                                                     </div>
                                                 </div>
@@ -1532,35 +522,78 @@ html, body {
                                         <h3 class="listing__details--content__title mb-40">Properties Details:</h3>
                                         <ul class="properties__details--info__wrapper d-flex">
                                             <li class="properties__details--info__list d-flex justify-content-between">
-                                                <span class="properties__details--info__title">Price:</span>
-                                                <span class="properties__details--info__subtitle">$268,000</span>
+                                                <span class="properties__details--info__title">Total Floor :</span>
+                                                <span class="properties__details--info__subtitle">22 FLOOR</span>
                                             </li>
                                             <li class="properties__details--info__list d-flex justify-content-between">
-                                                <span class="properties__details--info__title">Property ID:</span>
+                                                <span class="properties__details--info__title">Total Towers :</span>
                                                 <span class="properties__details--info__subtitle">Th26157096</span>
                                             </li>
                                             <li class="properties__details--info__list d-flex justify-content-between">
-                                                <span class="properties__details--info__title">Area Size:</span>
+                                                <span class="properties__details--info__title">Total Units :</span>
                                                 <span class="properties__details--info__subtitle">400 SqFt</span>
                                             </li>
                                             <li class="properties__details--info__list d-flex justify-content-between">
-                                                <span class="properties__details--info__title">Land Area Size:</span>
+                                                <span class="properties__details--info__title">Possession :</span>
                                                 <span class="properties__details--info__subtitle">1300 Sq Ft</span>
                                             </li>
                                             <li class="properties__details--info__list d-flex justify-content-between">
-                                                <span class="properties__details--info__title">Rooms:</span>
+                                                <span class="properties__details--info__title">Project area :</span>
                                                 <span class="properties__details--info__subtitle">03</span>
                                             </li>
                                             <li class="properties__details--info__list d-flex justify-content-between">
-                                                <span class="properties__details--info__title">Washroom:</span>
+                                                <span class="properties__details--info__title">Status :</span>
                                                 <span class="properties__details--info__subtitle">03</span>
                                             </li>
                                             <li class="properties__details--info__list d-flex justify-content-between">
-                                                <span class="properties__details--info__title">Garage:</span>
+                                                <span class="properties__details--info__title">Contact Person :</span>
                                                 <span class="properties__details--info__subtitle">04</span>
                                             </li>
+                                            <!-- <li class="properties__details--info__list d-flex justify-content-between">
+                                                <span class="properties__details--info__title">ROI Investment :</span>
+                                                <span class="properties__details--info__subtitle">04</span>
+                                            </li> -->
+                                            <li class="properties__details--info__list d-flex justify-content-between">
+                                                <span class="properties__details--info__title">Contact Numbers :</span>
+                                                <span class="properties__details--info__subtitle">04</span>
+                                            </li>
+                                            <!-- <li class="properties__details--info__list d-flex justify-content-between">
+                                                <span class="properties__details--info__title">PSF :</span>
+                                                <span class="properties__details--info__subtitle">04</span>
+                                            </li> -->
                                         </ul>
                                     </div>
+                                    <h3 class="listing__details--content__title mb-40">Unit Details</h3>
+                                    <table>
+        <thead>
+      <tr>
+        <th>Unit Name </th>
+        <th>Unit Price</th>
+        <th>Unit size</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <!-- <td>The Making</td> -->
+        <td>May 23</td>
+        <td>Drama</td>
+        <td>4.2</td>
+      </tr>
+      <tr>
+        <!-- <td>Final Hour</td> -->
+        <td>May 28</td>
+        <td>Thriller</td>
+        <td>3.8</td>
+      </tr>
+      <tr>
+        <!-- <td>Springland</td> -->
+        <td>June 2</td>
+        <td>Comedy</td>
+        <td>4.4</td>
+</tr>
+    </tbody>
+  </table>
+
                                     <div class="listing__details--content__step properties__amenities mb-80">
                                         <h3 class="listing__details--content__title mb-40">Properties Amenities</h3>
                                         <div class="properties__amenities--wrapper d-flex">
@@ -1656,7 +689,7 @@ html, body {
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="listing__details--content__step mb-80">
+                                    <!-- <div class="listing__details--content__step mb-80">
                                         <div class="properties__floor--plans d-flex">
                                             <div class="properties__floor--plans__content">
                                                 <h3 class="listing__details--content__title mb-40">Floor Plans</h3>
@@ -1718,7 +751,7 @@ html, body {
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
                                     <div class="listing__details--content__step mb-80">
                                         <div class="listing__details--location__header d-flex justify-content-between mb-40">
                                             <div class="listing__details--location__header--left">
@@ -1758,7 +791,7 @@ html, body {
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="listing__details--content__step mb-80">
+                                    <!-- <div class="listing__details--content__step mb-80">
                                         <h3 class="listing__details--content__title mb-40">Video</h3>
                                         <div class="listing__details--video__thumbnail position-relative">
                                             <img src="images/property-video-thumbnail.png" alt="img">
@@ -1771,7 +804,7 @@ html, body {
                                                 </a>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
                                     <!-- <div class="listing__details--content__step mb-80">
                                         <h3 class="listing__details--content__title mb-40">Property Review</h3>
                                         <div class="listing__details--review d-flex">
@@ -2228,7 +1261,7 @@ html, body {
                                     </div>
                                 </div>
 
-                                <div class="widget__step mb-30">
+                                <!-- <div class="widget__step mb-30">
                                     <h2 class="widget__step--title">Mortage Calculator</h2>
                                     <div class="widget__form calculator">
                                         <form action="#">
@@ -2273,7 +1306,7 @@ html, body {
                                             <button class="widget__form--btn solid__btn" type="submit">Calculate Interest</button>
                                         </form>
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="widget__step mb-30">
                                     <h2 class="widget__step--title">Featured Properties</h2>
                                     <div class="widget__featured--properties">
@@ -2350,8 +1383,7 @@ html, body {
                                                 <a class="widget__featured--thumb__link" href="listing-details.html"><img class="widget__featured--media" src="assets/img/property/featured1.jpg" alt="img"></a>
                                             </div>
                                             <div class="widget__featured--content">
-                                                <h3 class="widget__featured--title"><a href="listing-details.html">am tempus turpis at
-                                                    metus</a></h3>
+                                                <h3 class="widget__featured--title"><a href="listing-details.html">am tempus turpis ametus</a></h3>
                                                 <span class="widget__featured--price">$2,745 /mo</span>
                                             </div>
                                         </div>
@@ -2383,8 +1415,8 @@ html, body {
         <!-- Listing page section . -->
 
 
-        <!--	Footer   start-->
+         <!--	Footer   start-->
 		<?php include("include/footer.php");?>
-		<!--	Footer   start-->
-   <!-- end footer -->
-
+		<!--	Footer   start--> 
+</body>
+</html>

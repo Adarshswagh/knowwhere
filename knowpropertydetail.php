@@ -299,7 +299,7 @@ include("config.php");
                                             <ul class="nav floor__plans--tab__btn">
                                                 <li class="nav-item floor__plans--tab__btn--list">
                                                     <button class="floor__plans--tab__btn--field active" data-bs-toggle="tab" data-bs-target="#floor1" type="button"> 
-                                                        First Floor                                               
+                                                        1st Floor                                               
                                                     </button>
                                                 </li>
                                                 <li class="nav-item floor__plans--tab__btn--list">
@@ -309,7 +309,7 @@ include("config.php");
                                                 </li>
                                                 <li class="nav-item floor__plans--tab__btn--list">
                                                     <button class="floor__plans--tab__btn--field " data-bs-toggle="tab" data-bs-target="#floor3" type="button">
-                                                        3nd Floor
+                                                        3rd Floor
                                                     </button>
                                                 </li>
                                             </ul>
