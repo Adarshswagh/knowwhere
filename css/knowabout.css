@@ -710,3 +710,147 @@ html, body {
 }
 
 /* end why choose us  */
+
+
+/* team */
+/* Section Title and Introduction */
+
+.custom-team-section{
+    background-color: #050F17;
+    height: 500px;
+    /* margin-bottom: 50px; */
+}
+
+
+.custom-section-title {
+    font-family: 'Playfair Display', serif;
+    color: #050F17;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 36px;
+}
+
+.custom-intro-text {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #A5B0B9;
+}
+
+/* Container for the Team Section */
+.custom-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Grid Layout for Team Members */
+.custom-team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Individual Team Member Card */
+.custom-team-card {
+    background-color: tra;
+    text-align: center;
+    /* padding: 20px; */
+    /* border-radius: 10px; */
+    transition: transform 0.3s;
+    padding-bottom: 20px;
+    border-color: #fff;
+    border: solid;
+    border-width: 0.5px;
+}
+
+.custom-team-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Image of Team Member */
+.custom-team-img {
+    width: 100%;
+    height: auto;
+     /* border-radius: 10px; */
+}
+
+/* Team Member's Name */
+.custom-team-name {
+    font-family: 'Italiana', serif;
+    color: #E4E6EB;
+    font-size: 28px;
+    margin: 10px 0;
+}
+
+/* Team Member's Role */
+.custom-team-role {
+    font-family: 'Lexend', serif;
+    color: #A5B0B9;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Social Media Icons for Team Member */
+.custom-social-icons a {
+    color: #FFD700;
+    font-size: 18px;
+    margin: 0 5px;
+    transition: color 0.3s;
+}
+
+.custom-social-icons a:hover {
+    color: #E4E6EB;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .custom-team-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+.project-section {
+    background-color: #050f17;
+    padding: 60px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.content-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.section-title {
+    color: #E8E8E8;
+    font-family: "Italiana", Sans-serif;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 1.3em;
+}
+
+.section-description {
+    font-size: 14px;
+    font-family: 'Lexend', sans-serif; /* A simple, clean font for the description */
+    
+    line-height: 1.6;
+    color: #a9a9a9;
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 28px;
+    }
+
+    .section-description {
+        font-size: 14px;
+    }
+}
+
+/* end team */

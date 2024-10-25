@@ -135,45 +135,6 @@ if(isset($_POST['add']))
 						</div>
 					</div>
 					<!-- /Page Header -->
-
-					<?php
-						if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-							if (isset($_FILES['bulk_file']) && $_FILES['bulk_file']['error'] == 0) {
-								$file = $_FILES['bulk_file']['tmp_name'];
-								$handle = fopen($file, 'r');
-								while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
-									// Assuming CSV format: id, name, price, city, state, etc.
-									$id = $data[0];
-									$name = $data[1];
-									$price = $data[2];
-									$city = $data[3];
-									$state = $data[4];
-									// Process and save the data
-									// Example: Insert into database
-									$sql = "INSERT INTO properties (id, name, price, city, state) VALUES ('$id', '$name', '$price', '$city', '$state')";
-									// Execute the query
-								}
-								fclose($handle);
-								echo "Properties added successfully.";
-							} else {
-								echo "File upload failed.";
-							}
-						}
-						?>
-
-
-					<form id="bulkUploadForm" method="post" enctype="multipart/form-data">
-						<div class="form-group row">
-							<label class="col-lg-3 col-form-label">Upload CSV File</label>
-							<div class="col-lg-9">
-								<input type="file" class="form-control" name="bulk_file" accept=".csv" required>
-							</div>
-						</div>
-						<input type="submit" value="Upload" class="btn btn-primary">
-					</form>
-
-						
-
 					
 					<div class="row">
 						<div class="col-md-12">
@@ -209,12 +170,12 @@ if(isset($_POST['add']))
 													<div class="col-lg-9">
 														<select class="form-control" required name="ptype">
 															<option value="">Select Type</option>
-															<option value="RESIDENTIAL PROPERTY">RESIDENTIAL PROPERTY</option>
-															<option value="COMMERCIAL PROPERTY">COMMERCIAL PROPERTY</option>
-															<option value="PLOTTING PROPERTY">PLOTTING PROPERTY</option>
-															<!-- <option value="house">House</option>
+															<option value="apartment">Apartment</option>
+															<option value="flat">Flat</option>
+															<option value="building">Building</option>
+															<option value="house">House</option>
 															<option value="villa">Villa</option>
-															<option value="office">Office</option> -->
+															<option value="office">Office</option>
 														</select>
 													</div>
 												</div>

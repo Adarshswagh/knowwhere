@@ -3,7 +3,7 @@ ini_set('session.cache_limiter','public');
 session_cache_limiter(false);
 session_start();
 include("config.php");
-								
+
 ?>
 
 <!DOCTYPE html>
@@ -11,61 +11,108 @@ include("config.php");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Property List</title>
 
     <link rel="stylesheet" href="css/knowproperties.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-
     <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Lexend&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js" crossorigin="anonymous"></script>'
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 
 </head>
 <body>
 
 <!-- navbar -->
-    
 <?php include("include/header.php");?>
+<!-- end navbar -->
 
- <!-- end navbar -->
-
- <!-- banner -->
- <section id="banner-main">
-    <div class="banner" >
+<!-- banner -->
+<section id="banner-main">
+    <div class="banner">
         <div class="banner-content">
             <h2>Property List</h2>
-            <p><a href="#" class="banner-bread">Home</a> &gt; <a href="#" class="banner-bread">Services</a></p>
+            <p class="banner-bread"><a href="#" class="banner-bread">Home</a> &gt; <a href="#" class="banner-bread">Services</a></p>
         </div>
     </div>
 </section>
-
-<!--end banner  -->
-
+<!--end banner -->
 
 <!-- properties -->
-<!-- <section class="properties-header">
-    <div class="properties-div">
-        <h2>Properties by Mantision</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nibh eu ullam corper luctus, lacus ex consequat ipsum, ultricies interdum ex ante.</p>
-    </div>
-</section> -->
-
-
 <section id="properties">
     <div class="container">
         <!-- Left Section (Property Listings) -->
         <div class="left-section">
             <div class="row">
+
+                <!-- Residential Properties -->
+                <!-- <h3>Residential Properties</h3> -->
                 <?php 
-                    // Fetching properties from the database
-                    $query = mysqli_query($con, "SELECT property.*, user.uname, user.utype, user.uimage FROM `property`, `user` WHERE property.uid=user.uid");
-                    while ($row = mysqli_fetch_array($query)) {
+                    // Fetching residential properties from the database
+                    $residential_query = mysqli_query($con, "SELECT * FROM `residential_projects`");
+                    while ($row = mysqli_fetch_array($residential_query)) {
+                ?>
+                <br><div class="col-md-6 col-sm-10">
+                        <div class="property-card">
+                            <div class="overlay-black">
+                                <img src="admin/property/<?php echo $row['14'];?>" alt="Residential Property Image">
+                                <div class="promo-badge">Residential Projects</div>
+                            </div>
+                            <div class="property-info">
+                                <h3 class="property-title">
+                                    <a href="propertydetail.php?pid=<?php echo $row['0']; ?>" class="property-title">
+                                        <?php echo $row['1']; ?>
+                                    </a>
+                                </h3>
+                                <div class="property-meta">
+                                    <span class="location card-location"><i class="fas fa-map-marker-alt"></i> <?php echo $row['3'];?></span>
+                                    <span class="land-area card-location"><i class="fas fa-vector-square"></i> <?php echo $row['4']; ?></span>
+                                    <span class="land-area card-location"><i class="fa-solid fa-building" style="color: #a8894d;"></i> <?php echo $row['5']; ?>Towers</span>
+
+                                    
+                                </div>
+                                <div class="property-meta">
+                                    <span class="total-units card-location1">Total Units: <?php echo $row['total_units']; ?></span>
+                                    
+                                </div>
+                                <div class="button-container">
+                                    <!-- "Know More" button -->
+                                    <a href="Prodetail.php?pid=<?php echo $row['0']; ?>" class="view-more-btn">Know More</a>
+
+                                    <!-- WhatsApp Button -->
+                                    <a href="https://wa.me/1234567890" target="_blank" class="btn-icon whatsapp-btn">
+                                        <i class="fab fa-whatsapp"></i>
+                                    </a>
+
+                                    <!-- Call Button -->
+                                    <a href="tel:+1234567890" class="btn-icon call-btn">
+                                        <i class="fas fa-phone"></i>
+                                    </a>
+                                </div>
+
+
+                                
+                                <!-- <a href="propertydetail.php?pid=<?php echo $row['0']; ?>" class="view-more-btn">VIEW MORE</a> -->
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                <?php } ?>
+
+                <!-- Commercial Properties -->
+                <!-- <h3>Commercial Properties</h3><br> -->
+                <?php 
+                    // Fetching commercial properties from the database
+                    $commercial_query = mysqli_query($con, "SELECT * FROM `commercial_projects`");
+                    while ($row = mysqli_fetch_array($commercial_query)) {
                 ?>
                 <div class="col-md-6 col-sm-10">
                     <div class="property-card">
                         <div class="overlay-black">
-                            <img src="admin/property/<?php echo $row['18']; ?>" alt="Property Image">
-                            <div class="promo-badge">END YEAR PROMO</div>
+                            <img src="admin/property/<?php echo $row['17']; ?>" alt="Commercial Property Image">
+                            <div class="promo-badge">Commercial Projects</div>
                         </div>
                         <div class="property-info">
                             <h3 class="property-title">
@@ -73,14 +120,80 @@ include("config.php");
                                     <?php echo $row['1']; ?>
                                 </a>
                             </h3>
-                            <p class="price">$<?php echo $row['13']; ?></p>
-                            <p class="property-details"><?php echo $row['14']; ?>, <?php echo $row['12']; ?> Sq ft</p>
-                            <div class="property-meta">
-                                <span><i class="fas fa-bed"></i> 4 Bedrooms</span>
-                                <span><i class="fas fa-bath"></i> 2 Bathrooms</span>
-                            </div>
-                            <a href="Propertdetail.php?pid=<?php echo $row['0']; ?>" class="view-more-btn">VIEW MORE</a>
+                                <div class="property-meta">
+                                    <span class="location card-location"><i class="fa-solid fa-indian-rupee-sign" style="color: #a8894d;"></i> <?php echo $row['8'];?></span>
+                                    <span class="location card-location"><i class="fas fa-map-marker-alt"></i> <?php echo $row['3'];?></span>
+                                    <span class="land-area card-location"><i class="fas fa-vector-square"></i> <?php echo $row['4']; ?></span>
+
+                                    
+                                </div>
+                                <div class="property-meta">
+                                    <span class="total-units card-location1">Typology : <?php echo $row['5']; ?></span>
+                                    
+                                </div>    
+                                <div class="button-container">
+                                    <!-- "Know More" button -->
+                                    <a href="comprodetail.php?pid=<?php echo $row['0']; ?>" class="view-more-btn">Know More</a>
+
+                                    <!-- WhatsApp Button -->
+                                    <a href="https://wa.me/1234567890" target="_blank" class="btn-icon whatsapp-btn">
+                                        <i class="fab fa-whatsapp"></i>
+                                    </a>
+
+                                    <!-- Call Button -->
+                                    <a href="tel:+1234567890" class="btn-icon call-btn">
+                                        <i class="fas fa-phone"></i>
+                                    </a>
+                                </div>
+                                                    </div>
+                    </div>
+                </div>
+                <?php } ?>
+
+                <!-- Plotting Properties -->
+                <!-- <h3>Plotting Properties</h3> -->
+                <?php 
+                    // Fetching plotting properties from the database
+                    $plotting_query = mysqli_query($con, "SELECT * FROM `plotting_projects`");
+                    while ($row = mysqli_fetch_array($plotting_query)) {
+                ?>
+                <div class="col-md-6 col-sm-10">
+                    <div class="property-card">
+                        <div class="overlay-black">
+                            <img src="admin/property/<?php echo $row['13']; ?>" alt="Plotting Property Image">
+                            <div class="promo-badge">Plotting Project</div>
                         </div>
+                        <div class="property-info">
+                            <h3 class="property-title">
+                                <a href="propertydetail.php?pid=<?php echo $row['0']; ?>">
+                                    <?php echo $row['1']; ?>
+                                </a>
+                            </h3>
+                                <div class="property-meta">
+                                    <span class="location card-location"><i class="fa-solid fa-indian-rupee-sign" style="color: #a8894d;"></i> <?php echo $row['6'];?></span>
+                                    <span class="location card-location"><i class="fas fa-map-marker-alt"></i> <?php echo $row['3'];?></span>
+                                    <span class="land-area card-location"><i class="fas fa-vector-square"></i> <?php echo $row['5']; ?></span>
+                                </div>
+                                <div class="property-meta">
+                                    <span class="total-units card-location1">Land Area : <?php echo $row['4']; ?></span>
+                                    
+                                </div>  
+                            
+                                <div class="button-container">
+                                    <!-- "Know More" button -->
+                                    <a href="ploprodetail.php?pid=<?php echo $row['0']; ?>" class="view-more-btn">Know More</a>
+
+                                    <!-- WhatsApp Button -->
+                                    <a href="https://wa.me/1234567890" target="_blank" class="btn-icon whatsapp-btn">
+                                        <i class="fab fa-whatsapp"></i>
+                                    </a>
+
+                                    <!-- Call Button -->
+                                    <a href="tel:+1234567890" class="btn-icon call-btn">
+                                        <i class="fas fa-phone"></i>
+                                    </a>
+                                </div>
+                                                    </div>
                     </div>
                 </div>
                 <?php } ?>
@@ -90,28 +203,25 @@ include("config.php");
         <!-- Right Section (Sticky Installment Calculator) -->
         <div class="right-section">
             <div class="sticky">
-                <h3>Installment Calculator</h3>
-                <form>
-                    <label for="price">Property Price</label>
-                    <input type="number" id="price" name="price" placeholder="$500,000">
-                    
-                    <label for="duration">Duration (Years)</label>
-                    <input type="number" id="duration" name="duration" placeholder="30">
-                    
-                    <label for="interest">Interest Rate</label>
-                    <input type="number" id="interest" name="interest" placeholder="3.5%">
-                    
-                    <button type="submit">Calculate Installment</button>
-                </form>
+                    <div class="form-container">
+                        <h3 class="form-heading">Connect with Us for Tailored Solutions!</h3>
+                            <form style="text-align:center">
+                                <div class="input-group" style="width:102%">
+                                    <input type="text" name="first-name" placeholder="First Name" required>
+                                    
+                                </div>
+                                <input type="email" name="email" placeholder="Email" required class="email-group">
+                                <textarea name="message" placeholder="Message" required></textarea>
+                                <button type="submit" style="margin-top:30px">SEND MESSAGE</button>
+                            </form>
+                    </div>
             </div>
         </div>
     </div>
-
 </section>
- <!-- end properties -->
+<!-- end properties -->
 
-
- <!-- call to action -->
+<!-- call to action -->
 <section id="main-call">
     <div class="call-to-action">
         <div class="hero-section">
@@ -123,13 +233,11 @@ include("config.php");
         </div>
     </div>
 </section>
-  <!-- end call to action -->
+<!-- end call to action -->
 
-  <!-- footer -->
+<!-- footer -->
+<?php include("include/footer.php");?>
+<!-- end footer -->
 
-   <!--	Footer   start-->
-		<?php include("include/footer.php");?>
-		<!--	Footer   start-->
-   <!-- end footer -->
 </body>
 </html>

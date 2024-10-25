@@ -105,12 +105,11 @@ if(!isset($_SESSION['auser']))
                                         
                                         
                                             <tbody>
-												<?php
-													
-													$query=mysqli_query($con,"select * from property");
-													while($row=mysqli_fetch_row($query))
-													{
-												?>
+											<?php 
+												// Fetching residential properties from the database
+												$residential_query = mysqli_query($con, "SELECT * FROM `residential_projects`");
+												while ($row = mysqli_fetch_array($residential_query)) {
+											?>
 											
                                                 <tr>
                                                     <!-- <td><?php echo $row['0']; ?></td> -->

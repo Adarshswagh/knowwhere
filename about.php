@@ -179,6 +179,117 @@ include("config.php");
     </section>
     <!-- why choose us -->
 
+
+<!-- team -->
+
+<section class="project-section">
+    <div class="content-wrapper">
+        <h2 class="section-title">Expert Team Behind knowhere</h2>
+        <p class="section-description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nibh eu ullamcorper luctus, lacus ex consequat ipsum, ultricies interdum ex ante.
+        </p>
+    </div>
+
+</section>
+<section class="custom-team-section">
+        <div class="custom-container">
+            
+            <div class="custom-team-grid">
+                <div class="custom-team-card">
+                    <img src="./images/girl.jpg" alt="Sarah Jhon" class="custom-team-img">
+                    <h3 class="custom-team-name">Sarah Jhon</h3>
+                    <p class="custom-team-role">Mansion Team</p>
+                    <div class="custom-social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="custom-team-card">
+                    <img src="./images/boy.jpg" alt="Mike Morales" class="custom-team-img">
+                    <h3 class="custom-team-name">Mike Morales</h3>
+                    <p class="custom-team-role">Mansion Team</p>
+                    <div class="custom-social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="custom-team-card">
+                    <img src="./images/girl.jpg" alt="Steve Irwin" class="custom-team-img">
+                    <h3 class="custom-team-name">Steve Irwin</h3>
+                    <p class="custom-team-role">Mansion Team</p>
+                    <div class="custom-social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="custom-team-card">
+                    <img src="./images/boy.jpg" alt="Manda Jean" class="custom-team-img">
+                    <h3 class="custom-team-name">Manda Jean</h3>
+                    <p class="custom-team-role">Mansion Team</p>
+                    <div class="custom-social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="custom-team-section">
+        <div class="custom-container">
+            
+            <div class="custom-team-grid">
+                <div class="custom-team-card">
+                    <img src="./images/girl.jpg" alt="Sarah Jhon" class="custom-team-img">
+                    <h3 class="custom-team-name">Sarah Jhon</h3>
+                    <p class="custom-team-role">Mansion Team</p>
+                    <div class="custom-social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="custom-team-card">
+                    <img src="./images/boy.jpg" alt="Mike Morales" class="custom-team-img">
+                    <h3 class="custom-team-name">Mike Morales</h3>
+                    <p class="custom-team-role">Mansion Team</p>
+                    <div class="custom-social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="custom-team-card">
+                    <img src="./images/girl.jpg" alt="Steve Irwin" class="custom-team-img">
+                    <h3 class="custom-team-name">Steve Irwin</h3>
+                    <p class="custom-team-role">Mansion Team</p>
+                    <div class="custom-social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="custom-team-card">
+                    <img src="./images/boy.jpg" alt="Manda Jean" class="custom-team-img">
+                    <h3 class="custom-team-name">Manda Jean</h3>
+                    <p class="custom-team-role">Mansion Team</p>
+                    <div class="custom-social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ <!-- end team -->
+
+
+
  <!-- call to action -->
  <section id="main-call">
     <div class="call-to-action">

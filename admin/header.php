@@ -8,18 +8,15 @@ if(!isset($_SESSION['auser']))
 	header("location:index.php");
 }
 ?>  
-
-
-
   <div class="header">
 			
 				<!-- Logo -->
                 <div class="header-left">
                     <a href="dashboard.php" class="logo">
-						<img src="assets/img/logo.png" alt="Logo" style= "max-height: 65px; width: 133px;">
+					<img src="assets\img\logomain.png" alt="Mantision Real Estate logo" class="img-fluid logo">
 					</a>
 					<a href="dashboard.php" class="logo logo-small">
-						<img src="assets/img/logo.png" alt="Logo" width="30" height="30">
+						<img src="assets/img/logo-small.png" alt="Logo" width="30" height="30">
 					</a>
                 </div>
 				<!-- /Logo -->
@@ -124,13 +121,15 @@ if(!isset($_SESSION['auser']))
 							</li>
 						
 							<li class="menu-title"> 
-								<span>Property Management</span>
+								<span>Projects Management</span>
 							</li>
 							<li class="submenu">
-								<a href="#"><i class="fe fe-map"></i> <span> Property</span> <span class="menu-arrow"></span></a>
+								<a href="#"><i class="fe fe-map"></i> <span> Projects</span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
-									<li><a href="propertyadd.php"> Add Property</a></li>
-									<li><a href="propertyview.php"> View Property </a></li>
+									<li><a href="knowpropertyadd.php">Residential Project </a></li>
+									<li><a href="commercial.php"> Commercial Projects</a></li>
+									<li><a href="plotting.php"> Plotting Projects</a></li>
+									<li><a href="propertyview.php"> View Projects </a></li>
 									
 								</ul>
 							</li>

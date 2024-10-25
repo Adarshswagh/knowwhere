@@ -16,20 +16,22 @@ if(isset($_POST['add']))
 	$project_description=$_POST['project_description'];
 	$project_location=$_POST['project_location'];
 	$project_area=$_POST['project_area'];
-	$total_towers=$_POST['total_towers'];
-	$total_units=$_POST['total_units'];
-	$possession=$_POST['possession'];
+	$typology=$_POST['typology'];
+	$scheme	=$_POST['scheme'];
+	$size=$_POST['size'];
+	$price=$_POST['price'];
+	$roi=$_POST['roi'];
+	$tag=$_POST['tag'];
+	$component=$_POST['component'];
+	$usp=$_POST['usp'];
 	$contact_person=$_POST['contact_person'];
-	$contact_no=$_POST['contact_no'];
+	$number=$_POST['number'];
+	$psf=$_POST['psf'];
+	$possession=$_POST['possession'];
 	$status=$_POST['status'];
-	$total_floor=$_POST['total_floor'];
-	$feature=$_POST['feature'];
+	$featured=$_POST['featured'];
 
-	    // Initialize unit arrays
-		$unit_names = isset($_POST['unit_name']) ? $_POST['unit_name'] : [];
-		$unit_sizes = isset($_POST['unit_size']) ? $_POST['unit_size'] : [];
-		$unit_prices = isset($_POST['unit_price']) ? $_POST['unit_price'] : [];
-
+	
 
 	$image1=$_FILES['image1']['name'];
 	$image2=$_FILES['image2']['name'];
@@ -54,22 +56,10 @@ if(isset($_POST['add']))
 	move_uploaded_file($temp_name4,"property/$image5");
 
 
-	
-
-// Prepare unit details as JSON
-$unit_details = [];
-for ($i = 0; $i < count($unit_names); $i++) {
-	$unit_details[] = [
-		'name' => $unit_names[$i],
-		'size' => $unit_sizes[$i],
-		'price' => $unit_prices[$i]
-	];
-}
-$unit_details_json = json_encode($unit_details); // Convert to JSON
 
 // Insert into residential_projects table
-$sql = "INSERT INTO residential_projects (project_title, project_description, project_location, project_area, total_towers, total_units, possession, contact_person, contact_no, feature, total_floor, status,image1,image2,image3,image4,image5,featured, unit_details)
-		VALUES ('$project_title', '$project_description', '$project_location', '$project_area', '$total_towers', '$total_units', '$possession', '$contact_person', '$contact_no', '$feature', '$total_floor', '$status','$image1','$image2','$image3','$image4','$image5','$featured', '$unit_details_json')";
+$sql = "INSERT INTO commercial_projects (project_title, project_description, project_location, project_area, typology, scheme, size, price, roi, tag, component, usp, contact_person, phone, psf, possession, status,image1,image2,image3,image4,image5,featured)
+		VALUES ('$project_title', '$project_description', '$project_location', '$project_area', '$typology', '$scheme', '$size', '$price', '$roi', '$tag', '$component', '$usp', '$contact_person', '$number', '$psf', '$possession', '$status','$image1','$image2','$image3','$image4','$image5','$featured')";
 
 $result = mysqli_query($con, $sql);
 if ($result) {
@@ -84,7 +74,7 @@ if ($result) {
 <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-        <title>LM HOMES | Property</title>
+        <title>KNOWWHERE | PROJECTS</title>
 		
 		<!-- Favicon -->
         <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
@@ -119,7 +109,7 @@ if ($result) {
 					<div class="page-header">
 						<div class="row">
 							<div class="col">
-								<h3 class="page-title">Residential Project</h3>
+								<h3 class="page-title">Commercial Project</h3>
 								<ul class="breadcrumb">
 									<li class="breadcrumb-item"><a href="dashboard.php">Dashboard</a></li>
 									<li class="breadcrumb-item active">Property</li>
@@ -138,7 +128,7 @@ if ($result) {
 						<div class="col-md-12">
 							<div class="card">
 								<div class="card-header">
-									<h4 class="card-title">Add Residential Project Details</h4>
+									<h4 class="card-title">Add Commercial Project Details</h4>
 								</div>
 								<form method="post" enctype="multipart/form-data">
 								<div class="card-body">
@@ -157,7 +147,7 @@ if ($result) {
 												<div class="form-group row">
 													<label class="col-lg-2 col-form-label">Content</label>
 													<div class="col-lg-9">
-														<textarea class=" form-control" name="project_description" rows="10" cols="30"></textarea>
+														<textarea class="tinymce form-control" name="project_description" rows="10" cols="30"></textarea>
 													</div>
 												</div>
 												
@@ -175,15 +165,33 @@ if ($result) {
 													</div>
 												</div>
 												<div class="form-group row">
-													<label class="col-lg-3 col-form-label">Total Towers</label>
+													<label class="col-lg-3 col-form-label">Typology</label>
 													<div class="col-lg-9">
-														<input type="text" class="form-control" name="total_towers"      placeholder="Enter Total Towers">
+														<input type="text" class="form-control" name="typology"      placeholder="Enter Typology">
 													</div>
 												</div>
 												<div class="form-group row">
 													<label class="col-lg-3 col-form-label">Possession</label>
 													<div class="col-lg-9">
 														<input type="text" class="form-control" name="possession"      placeholder="Enter Possession">
+													</div>
+												</div>
+												<div class="form-group row">
+													<label class="col-lg-3 col-form-label">Scheme</label>
+													<div class="col-lg-9">
+														<input type="text" class="form-control" name="scheme"      placeholder=" Enter Scheme">
+													</div>
+												</div>
+                                                <div class="form-group row">
+													<label class="col-lg-3 col-form-label">Tag</label>
+													<div class="col-lg-9">
+														<input type="text" class="form-control" name="tag"      placeholder=" Enter Tag">
+													</div>
+												</div>
+                                                <div class="form-group row">
+													<label class="col-lg-3 col-form-label">PSF</label>
+													<div class="col-lg-9">
+														<input type="text" class="form-control" name="psf"      placeholder=" Enter PSF">
 													</div>
 												</div>
 												<div class="form-group row">
@@ -202,77 +210,53 @@ if ($result) {
 													</div>
 												</div>
 												<div class="form-group row">
-													<label class="col-lg-3 col-form-label">Total Units</label>
+													<label class="col-lg-3 col-form-label">Typology Size</label>
 													<div class="col-lg-9">
-														<input type="text" class="form-control" name="total_units"      placeholder="Enter Total Units">
-													</div>
-												</div>
-
-												<div class="form-group row">
-													<label class="col-lg-3 col-form-label">Total Floor</label>
-													<div class="col-lg-9">
-														<input type="text" class="form-control" name="<div class="form-group row">
-													<label class="col-lg-3 col-form-label">Total Units</label>
-													<div class="col-lg-9">
-														<input type="text" class="form-control" name="total_units"      placeholder="Enter Total Units">
-													</div>
-												</div>"      placeholder="Enter Total Units">
+														<input type="text" class="form-control" name="size"      placeholder="Enter Typology Size">
 													</div>
 												</div>
 											
 												<div class="form-group row">
-													<label class="col-lg-3 col-form-label">Contact Number</label>
+													<label class="col-lg-3 col-form-label">Price</label>
 													<div class="col-lg-9">
-														<input type="text" class="form-control" name="contact_no"      placeholder="Enter Contact Number">
+														<input type="text" class="form-control" name="price"      placeholder="Enter Price">
 													</div>
 												</div>
 
-												
+                                                <div class="form-group row">
+													<label class="col-lg-3 col-form-label">ROI</label>
+													<div class="col-lg-9">
+														<input type="text" class="form-control" name="roi"      placeholder="Enter ROI">
+													</div>
+												</div>
+
+                                                <div class="form-group row">
+													<label class="col-lg-3 col-form-label">Compponent</label>
+													<div class="col-lg-9">
+														<input type="text" class="form-control" name="component"      placeholder=" Enter Compponent">
+													</div>
+												</div>
+
+                                                <div class="form-group row">
+													<label class="col-lg-3 col-form-label">USP</label>
+													<div class="col-lg-9">
+														<input type="text" class="form-control" name="usp"      placeholder=" Enter USP">
+													</div>
+												</div>
+
+												<div class="form-group row">
+													<label class="col-lg-3 col-form-label">Contact No</label>
+													<div class="col-lg-9">
+														<input type="text" class="form-control" name="number"      placeholder=" Enter Contact Number">
+													</div>
+												</div>
+
+                                                
 
 											</div>
 										</div>
 
-										<h4 class="card-title">Per Units Detail</h4>
-										<div class="row">
-											<div class="col-xl-12">
-												<!-- Container for dynamic units -->
-												<div id="units-container">
-													<!-- First unit fields -->
-													<div class="unit-detail">
-														<div class="form-group row">
-															<label class="col-lg-3 col-form-label">Unit One</label>
-															<div class="col-lg-7">
-																<input type="text" class="form-control" name="unit_name[]"      placeholder="Enter Unit Name">
-															</div>
-															<div class="col-lg-2">
-																<button type="button" class="btn btn-danger remove-unit-btn">Remove</button>
-															</div>
-														</div>
-														<div class="form-group row">
-															<label class="col-lg-3 col-form-label">Unit One Size</label>
-															<div class="col-lg-7">
-																<input type="text" class="form-control" name="unit_size[]"      placeholder="Enter Unit Size">
-															</div>
-														</div>
-														
-														<div class="form-group row">
-															<label class="col-lg-3 col-form-label">Unit One Price</label>
-															<div class="col-lg-7">
-																<input type="text" class="form-control" name="unit_price[]"      placeholder="Enter Unit Price">
-															</div>
-															
-														</div>
-
-																												
-														<hr>
-													</div>
-												</div>
-												<!-- Add More Button -->
-												<button type="button" id="add-unit-btn" class="btn btn-primary">Add More Units</button>
-
-												
-											</div>
-										</div><br><br><br><br><br>
+										
 
 
 										
@@ -321,19 +305,36 @@ if ($result) {
 												<div class="form-group row">
 													<label class="col-lg-3 col-form-label">Image1</label>
 													<div class="col-lg-9">
-														<input class="form-control" name="image1" type="file"     ="">
+														<input class="form-control" name="image1" type="file"  >
 													</div>
 												</div>
 												<div class="form-group row">
 													<label class="col-lg-3 col-form-label">Image 3</label>
 													<div class="col-lg-9">
-														<input class="form-control" name="image3" type="file"     ="">
+														<input class="form-control" name="image3" type="file"  >
 													</div>
 												</div>
 												<div class="form-group row">
 													<label class="col-lg-3 col-form-label">Image 5</label>
 													<div class="col-lg-9">
-														<input class="form-control" name="image4" type="file"     ="">
+														<input class="form-control" name="image4" type="file"  >
+													</div>
+												</div>
+												
+												
+											</div>
+											<div class="col-xl-6">
+												
+												<div class="form-group row">
+													<label class="col-lg-3 col-form-label">Image 2</label>
+													<div class="col-lg-9">
+														<input class="form-control" name="image2" type="file"  >
+													</div>
+												</div>
+												<div class="form-group row">
+													<label class="col-lg-3 col-form-label">image 4</label>
+													<div class="col-lg-9">
+														<input class="form-control" name="image5" type="file"  >
 													</div>
 												</div>
 												<div class="form-group row">
@@ -346,23 +347,12 @@ if ($result) {
 														</select>
 													</div>
 												</div>
-												
-											</div>
-											<div class="col-xl-6">
-												
-												<div class="form-group row">
-													<label class="col-lg-3 col-form-label">Image 2</label>
+												<!-- <div class="form-group row">
+													<label class="col-lg-3 col-form-label">Uid</label>
 													<div class="col-lg-9">
-														<input class="form-control" name="image2" type="file"     ="">
+														<input type="text" class="form-control" name="uid"      placeholder="Enter User Id (only number)">
 													</div>
-												</div>
-												<div class="form-group row">
-													<label class="col-lg-3 col-form-label">image 4</label>
-													<div class="col-lg-9">
-														<input class="form-control" name="image5" type="file"     ="">
-													</div>
-												</div>
-												
+												</div> -->
 												
 											</div>
 										</div>

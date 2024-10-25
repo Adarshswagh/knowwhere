@@ -81,56 +81,56 @@
                     <div class="right-sidebar">
                         <div class="sticky-box">
                         
-                        <div class="form-container">
-                        <h3 class="form-heading">Connect with Us for Tailored Solutions!</h3>
-                            <form style="text-align:center">
-                                <div class="input-group" style="width:102%">
-                                    <input type="text" name="first-name" placeholder="First Name" required>
-                                    
-                                </div>
-                                <input type="email" name="email" placeholder="Email" required class="email-group">
-                                <textarea name="message" placeholder="Message" required></textarea>
-                                <button type="submit" style="margin-top:30px">SEND MESSAGE</button>
-                            </form>
-                        </div>
+                            <div class="form-container">
+                            <h3 class="form-heading">Connect with Us for Tailored Solutions!</h3>
+                                <form style="text-align:center">
+                                    <div class="input-group" style="width:102%">
+                                        <input type="text" name="first-name" placeholder="First Name" required>
+                                        
+                                    </div>
+                                    <input type="email" name="email" placeholder="Email" required class="email-group">
+                                    <textarea name="message" placeholder="Message" required></textarea>
+                                    <button type="submit" style="margin-top:30px">SEND MESSAGE</button>
+                                </form>
+                            </div>
 
 
-                        <script>
-                            // Initialize intl-tel-input for the phone input field
-                            var phoneInput = document.querySelector("#phone");
+                            <script>
+                                // Initialize intl-tel-input for the phone input field
+                                var phoneInput = document.querySelector("#phone");
 
-                            var iti = window.intlTelInput(phoneInput, {
-                                initialCountry: "auto",  // Automatically set the user's country
-                                geoIpLookup: function(success, failure) {
-                                    fetch('https://ipinfo.io/json', {headers: {'Accept': 'application/json'}})
-                                    .then((resp) => resp.json())
-                                    .then((resp) => { success(resp.country); })
-                                    .catch(() => { success('us'); });
-                                },
-                                separateDialCode: true,  // Show the country code separately
-                                utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js", // Required for validation/formatting
-                            });
+                                var iti = window.intlTelInput(phoneInput, {
+                                    initialCountry: "auto",  // Automatically set the user's country
+                                    geoIpLookup: function(success, failure) {
+                                        fetch('https://ipinfo.io/json', {headers: {'Accept': 'application/json'}})
+                                        .then((resp) => resp.json())
+                                        .then((resp) => { success(resp.country); })
+                                        .catch(() => { success('us'); });
+                                    },
+                                    separateDialCode: true,  // Show the country code separately
+                                    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js", // Required for validation/formatting
+                                });
 
-                            document.getElementById('contactForm').addEventListener('submit', function(event) {
-                            event.preventDefault();
+                                document.getElementById('contactForm').addEventListener('submit', function(event) {
+                                event.preventDefault();
 
-                            var phoneNumber = iti.getNumber();  // Get the full international number
-                            var email = document.getElementById('email').value;
-                            var errorMessage = document.getElementById('error-message');
+                                var phoneNumber = iti.getNumber();  // Get the full international number
+                                var email = document.getElementById('email').value;
+                                var errorMessage = document.getElementById('error-message');
 
-                            // Validate the phone number
-                            if (!iti.isValidNumber()) {
-                                errorMessage.innerText = 'Please enter a valid phone number.';
-                                return;
-                            }
+                                // Validate the phone number
+                                if (!iti.isValidNumber()) {
+                                    errorMessage.innerText = 'Please enter a valid phone number.';
+                                    return;
+                                }
 
-                            // Additional validation logic for email, etc.
+                                // Additional validation logic for email, etc.
 
-                            // If valid, send the form data
-                            errorMessage.innerText = '';  // Clear the error message
-                            alert('Form submitted successfully with phone number: ' + phoneNumber);
-                                    });
-                        </script> 
+                                // If valid, send the form data
+                                errorMessage.innerText = '';  // Clear the error message
+                                alert('Form submitted successfully with phone number: ' + phoneNumber);
+                                        });
+                            </script> 
 
 
                         </div>

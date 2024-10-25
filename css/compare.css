@@ -1,0 +1,73 @@
+       /* Basic Page Styling */
+       body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f8f8f8;
+    }
+
+    .page-title {
+        text-align: center;
+        color: #333;
+        padding: 20px 0;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .comparison-container {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    /* Table Styling */
+    .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .table-header {
+        background-color: #f2f2f2;
+        color: #333;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    .table-header th {
+        padding: 15px;
+    }
+
+    .table-row td {
+        padding: 15px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .table-row .property-info {
+        display: flex;
+        align-items: center;
+    }
+
+    .table-row .property-info img {
+        width: 100px;
+        height: auto;
+        margin-right: 10px;
+    }
+
+    .table-row .action-cell {
+        text-align: center;
+    }
+
+    .delete-btn {
+        background-color: #e74c3c;
+        color: #fff;
+        border: none;
+        padding: 8px 16px;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+
+    .delete-btn:hover {
+        background-color: #c0392b;
+    }
