@@ -99,7 +99,7 @@ include("config.php");
                         <div><strong class="field-title">Total Towers :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo htmlspecialchars($row['5']); ?></span></div>
                         <div><strong class="field-title">Total Units :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo htmlspecialchars($row['6']); ?></span></div>
                         <div><strong class="field-title">Possession :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo htmlspecialchars($row['7']); ?></span></div>
-                        <div><strong class="field-title">Project area :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo htmlspecialchars($row['3']); ?></span></div>
+                        <div><strong class="field-title">Project area :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo htmlspecialchars($row['4']); ?></span></div>
                         <div><strong class="field-title">Status :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo htmlspecialchars($row['20']); ?></span></div>
                         <div><strong class="field-title">Contact Person :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo htmlspecialchars($row['8']); ?></span></div>
                         <div><strong class="field-title">Contact Numbers :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo htmlspecialchars($row['9']); ?></span></div>
@@ -203,7 +203,11 @@ function addToCompare() {
     const propertyName = "<?php echo htmlspecialchars($row['1']); ?>"; // Optional: get the property name
     const propertlocation = "<?php echo htmlspecialchars($row['3']); ?>";
     const properttotalunits = "<?php echo htmlspecialchars($row['6']); ?>";
-    const propertyimg = "<?php echo htmlspecialchars($row['14']); ?>";
+    const propertytotaltowers = "<?php echo htmlspecialchars($row['5']); ?>";
+    const propertyarea = "<?php echo htmlspecialchars($row['4']); ?>";
+    const propertypossession = "<?php echo htmlspecialchars($row['7']); ?>";
+
+    
 
 
     // Retrieve existing comparison list from localStorage
@@ -216,7 +220,7 @@ function addToCompare() {
         alert("Property already added to comparison list!");
     } else {
         // Add new property to the comparison list
-        comparisonList.push({ id: propertyId, name: propertyName, location: propertlocation, totalunits: properttotalunits, image: propertyimg });
+        comparisonList.push({ id: propertyId, name: propertyName, location: propertlocation, totalunits: properttotalunits, towers: propertytotaltowers, area: propertyarea, possession: propertypossession });
 
         // Save updated comparison list to localStorage
         localStorage.setItem("comparisonList", JSON.stringify(comparisonList));

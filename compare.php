@@ -38,7 +38,8 @@ include("config.php");
 <!-- end banner -->
 
 <!-- compare -->
-<div class="comparison-container">
+<section id="compare-table">
+    <div class="comparison-container">
         <div id="comparisonTable" class="comparison-table-container"></div>
     </div>
 
@@ -59,45 +60,44 @@ include("config.php");
 
         function displayComparisonTable() {
             let tableHTML = `
-                <table class="comparison-table">
+            <table class="comparison-table">
+                <thead>
                     <tr class="table-header">
-                        <th>Image</th>
                         <th>Name</th>
                         <th>Location</th>
                         <th>Total Units</th>
-                        <th>Size</th>
-                        <th>Price</th>
+                        <th>Total Towers</th>
+                        <th>Land Area</th>
                         <th>Possession</th>
                         <th>Action</th>
                     </tr>
-            `;
+                </thead>
+                <tbody>`;
 
             compareList.forEach(property => {
                 tableHTML += `
                     <tr class="table-row">
-                        <td class="property-info">
-                            <img src="${property.image}" alt="${property.name}">
-                        </td>
                         <td>${property.name}</td>
                         <td>${property.location}</td>
                         <td>${property.totalunits}</td>
-                        <td>${property.size}</td>
-                        <td>${property.price}</td>
-                        <td>${property.possession}</td>
+                        <td>${property.towers || 'N/A'} Towers</td>
+                        <td>${property.area || 'N/A'}</td>
+                        <td>${property.possession || 'N/A'}</td>
                         <td class="action-cell">
                             <button class="delete-btn" onclick="deleteProperty('${property.id}')">Delete</button>
                         </td>
-                    </tr>
-                `;
+                    </tr>`;
             });
 
-            tableHTML += `</table>`;
+            tableHTML += `</tbody></table>`;
             document.getElementById("comparisonTable").innerHTML = tableHTML;
         }
 
         // Call function on page load
         displayComparisonTable();
     </script>
+</section>
+
  <!-- end compare -->
 
 

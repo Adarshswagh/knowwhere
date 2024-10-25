@@ -1,73 +1,192 @@
-       /* Basic Page Styling */
-       body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f8f8f8;
+/* Basic Page Styling */
+body {
+    font-family: 'Lexend', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #222;
+    color: #f0f0f0;
+}
+
+/* Table Styling */
+.comparison-container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse; /* Ensures borders don't have space between them */
+    background-color: #333;
+    color: #f0f0f0;
+}
+
+.table-header {
+    background-color: #1b1b1b;
+    color: #f0f0f0;
+}
+
+.table-header th {
+    padding: 15px;
+    text-align: center;
+    font-weight: 200;
+    font-family: 'Italiana', sans-serif;
+    border: 1px solid #555; /* Add borders for header cells */
+    font-size: 40px;
+}
+
+.table-row td {
+    
+
+    padding: 15px;
+    text-align: center;
+    font-weight: 100;
+    font-family: 'Lexend', sans-serif;
+    border: 1px solid #555; /* Add borders for header cells */
+    font-size: 20px;
+}
+
+/* Add vertical borders between columns */
+.comparison-table th, .comparison-table td {
+    border-left: 1px solid #555; /* Left border for each cell */
+    border-right: 1px solid #555; /* Right border for each cell */
+}
+
+/* Action Cell Styling */
+.action-cell {
+    text-align: center;
+}
+
+.delete-btn {
+    background-color: #d4af37;
+    color: #000;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.delete-btn:hover {
+    background-color: #b08934;
+}
+
+
+#compare-table{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+
+/* banner */
+/* Banner styling */
+
+#banner-main{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    background-color: #000000;
+
+}
+
+.banner {
+    height: 400px; /* Ensure height is set */
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the image */
+    display: flex; /* Flex for centering content */
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally center content */
+    color: white; /* Text color */
+    background-image: url('../images/logo/newbanner.png');
+    opacity: 0.8;
+}
+
+.banner {
+    background-size: cover;
+    background-position: center;
+    height: 400px; /* Adjust height as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: relative;
+}
+
+/* Overlay for better text visibility */
+.banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(0 0 0 / 73%);    /* Dark overlay */
+    z-index: 1;
+}
+
+/* Content inside the banner */
+.banner-content {
+    position: relative;
+    text-align: center;
+    z-index: 2; /* Ensures content is above the overlay */
+}
+
+
+
+/* Heading styling */
+.banner h2 {
+    color: #E8E8E8;
+    font-family: "Italiana", Sans-serif;
+    font-size: 80px;
+    font-weight: 400;
+    line-height: 1.3em;
+}
+
+/* Breadcrumb styling */
+.banner p {
+    font-size: 14px; /* Set font size to 14px */
+    font-family: 'Lexend', sans-serif; /* Lexend font for breadcrumbs */
+    margin: 10px 0 0; /* Space below the heading */
+    text-align: center;
+}
+
+/* Links inside the breadcrumbs */
+.banner p a {
+    color: #e8e8e8; /* Gold color for links */
+    text-decoration: none;
+    font-family: 'Lexend', sans-serif;
+}
+
+/* Hover effect for links */
+.banner p a:hover {
+    text-decoration: underline; /* Underline on hover */
+    color: #A8894D;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .banner {
+        height: 300px; /* Reduce height for smaller screens */
     }
 
-    .page-title {
-        text-align: center;
-        color: #333;
-        padding: 20px 0;
-        font-size: 24px;
-        font-weight: bold;
+    .banner h1 {
+        font-size: 36px; /* Smaller font for mobile */
     }
 
-    .comparison-container {
-        width: 90%;
-        margin: 0 auto;
+    .banner p {
+        font-size: 12px; /* Adjust breadcrumb text size on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .banner h1 {
+        font-size: 28px; /* Further reduction for very small screens */
     }
 
-    /* Table Styling */
-    .comparison-table {
-        width: 100%;
-        border-collapse: collapse;
-        margin: 20px 0;
-        background-color: #fff;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    .banner p {
+        font-size: 12px; /* Breadcrumb font size */
     }
+}
 
-    .table-header {
-        background-color: #f2f2f2;
-        color: #333;
-        font-weight: bold;
-        text-align: left;
-    }
+/* end banner */
 
-    .table-header th {
-        padding: 15px;
-    }
 
-    .table-row td {
-        padding: 15px;
-        border-bottom: 1px solid #ddd;
-    }
-
-    .table-row .property-info {
-        display: flex;
-        align-items: center;
-    }
-
-    .table-row .property-info img {
-        width: 100px;
-        height: auto;
-        margin-right: 10px;
-    }
-
-    .table-row .action-cell {
-        text-align: center;
-    }
-
-    .delete-btn {
-        background-color: #e74c3c;
-        color: #fff;
-        border: none;
-        padding: 8px 16px;
-        cursor: pointer;
-        border-radius: 4px;
-    }
-
-    .delete-btn:hover {
-        background-color: #c0392b;
-    }
+/* property detail */
