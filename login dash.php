@@ -47,7 +47,8 @@ if(isset($_REQUEST['login']))
     
 
         <!-- new code -->
-
+        <div class="page-wrappers login-body full-row bg-gray">
+        <div class="login-wrapper">
         <div class="container">
         <div class="form-section">
             <div class="sign-in-box">
