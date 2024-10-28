@@ -1,0 +1,433 @@
+/* General body styles */
+body {
+    margin: 0;
+    font-family: 'Lexend', sans-serif; /* Replace with your font */
+}
+
+html, body {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    }
+/* banner */
+/* Banner styling */
+
+#banner-main{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    background-color: #050f17;
+
+}
+.banner1 {
+    height: 400px; /* Ensure height is set */
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the image */
+    display: flex; /* Flex for centering content */
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally center content */
+    color: #FFFFFF; /* Set text color to pure white */
+    background-image: url('../images/bannerabout.jpg');
+    background-color: #000; /* Fallback color if image fails to load */
+    position: relative; /* Position relative for overlay */
+}
+
+/* Overlay for better text visibility */
+.banner1::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for better contrast */
+    z-index: 1;
+}
+
+.banner-content {
+    position: relative;
+    text-align: center;
+    z-index: 2; /* Ensures content is above the overlay */
+}
+
+/* Heading styling */
+.banner-bread {
+    color: #fff; /* Keep breadcrumb links white */
+}
+
+.banner h2 {
+    color: #FFFFFF; /* Set heading color to pure white */
+    font-family: "Italiana", Sans-serif;
+    font-size: 80px;
+    font-weight: 400;
+    line-height: 1.3em;
+}
+
+/* Breadcrumb styling */
+.banner p {
+    font-size: 14px; /* Set font size to 14px */
+    font-family: 'Lexend', sans-serif; /* Lexend font for breadcrumbs */
+    margin: 10px 0 0; /* Space below the heading */
+}
+
+/* Links inside the breadcrumbs */
+.banner p a {
+    color: #FFFFFF; /* Set breadcrumb link color to pure white */
+    text-decoration: none;
+    font-family: 'Lexend', sans-serif;
+}
+
+/* Hover effect for links */
+.banner p a:hover {
+    text-decoration: underline; /* Underline on hover */
+    color: #A8894D; /* Change color on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .banner {
+        height: 300px; /* Reduce height for smaller screens */
+    }
+
+    .banner h1 {
+        font-size: 36px; /* Smaller font for mobile */
+    }
+
+    .banner p {
+        font-size: 12px; /* Adjust breadcrumb text size on smaller screens */
+    }
+}
+
+
+/* end banner */
+
+/* why choose us */
+
+.why-choose-us {
+    text-align: center;
+    max-width: 100%;
+    padding: 10px;
+    background-color: #020101;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.why-choose-us h2 {
+    font-size: 40px;
+    color: #A8894D;
+    margin-bottom: 20px;
+    padding-top: 100px;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+}
+
+.feature {
+    flex: 1;
+    padding: 20px;
+    max-width: 250px;
+}
+
+.icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.feature h3 {
+    font-size: 18px;
+    color: #A8894D;
+    margin: 10px 0;
+}
+
+.feature p {
+    font-size: 14px;
+    color: #ffffff;
+    line-height: 1.5;
+}
+
+/* why choose us end */
+
+/* about section */
+
+.business-loan {
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    background-color: #110909;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    width: 100%;
+    margin: 20px;
+    padding: 50px 100px;
+    padding-top: 100px;
+}
+
+.image-container {
+    flex: 1;
+}
+
+.image-container img {
+    /* width: 100%; */
+    height: 100%;
+    object-fit: cover;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.content h2 {
+    font-size: 40px;
+    color:#A8894D;
+    margin: 0 0 10px;
+}
+
+.content p {
+    font-size: 14px;
+    color: #ffffff;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 12px 24px;
+    background-color: #ff9900;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #e68a00;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .business-loan {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image-container {
+        width: 100%;
+    }
+
+    .content {
+        padding: 15px;
+    }
+
+    .content h2 {
+        font-size: 20px;
+    }
+
+    .content p {
+        font-size: 13px;
+    }
+}
+
+/* about section end */
+
+
+.checklist {
+    /* display: flex; */
+    justify-content: space-between;
+    margin-bottom: 30px;
+    margin-left: -40px;
+    margin-top: 35px;
+}
+
+.checklist li {
+    list-style: none;
+    margin-bottom: 10px;
+    color: #E8E8E8;
+    font-family: "Lexend", Sans-serif;
+    font-size: 14px;
+}
+
+.checklist li span {
+    color: #d2a679; /* Gold-like color for check marks */
+    margin-right: 10px;
+}
+
+
+/* faq section */
+
+.faq-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+}
+
+.faq-content {
+    flex: 1;
+}
+
+.faq-content h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.faq-content p {
+    font-size: 16px;
+    color: #fefbfb;
+    margin-bottom: 20px;
+}
+
+.faq-questions .question {
+    font-size: 18px;
+    color: #f2f0f0;
+    background: #0a0909;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+.answer {
+    display: none;
+    font-size: 16px;
+    color: #ffffff;
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+.faq-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.faq-image img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .faq-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .faq-image {
+        order: 1;
+    }
+    
+    .faq-content {
+        order: 2;
+    }
+}
+
+/* faq section end */
+
+/* Basic styles */
+.loan-section {
+    font-family: 'Lexend', sans-serif;
+    padding: 86px 0px 20px 136px;
+    width: 90%;
+    
+    
+}
+
+.loan-section h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #A8894D;
+}
+
+.loan-card {
+    background: #101111;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 30px 20px 30px;
+    border: 1px solid #A8894D;
+}
+
+.loan-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.loan-icon i {
+    font-size: 24px;
+    color: #ffffff;
+    margin-right: 10px;
+}
+
+.loan-icon{
+    color: #A8894D;
+}
+
+.loan-info h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+    color: #e0e0e0;
+}
+
+.apply-btn {
+    background-color: #A8894D;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.loan-terms {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-top: 1px solid #e0e0e0;
+    font-size: 14px;
+}
+
+.term {
+    flex: 1;
+    text-align: center;
+}
+
+.term span:first-child {
+    display: block;
+    color: #ffffff;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.term span:last-child {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .loan-terms {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .apply-btn {
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+}

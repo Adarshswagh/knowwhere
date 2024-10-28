@@ -11,7 +11,7 @@ include("config.php");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Knowhere</title>
 
     <link rel="stylesheet" href="css/knowhome1.css">
     <link rel="stylesheet" href="js/knowscript.js">
@@ -48,7 +48,7 @@ include("config.php");
         <section class="hero-section1">
             <div class="content1">
                 <h1 class="banner-heading">The Keys to Your Home</h1>
-                <p class="banner-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nibh eu ullam corper luctus, lacus ex consequat ipsum, ultricies interdum ex ante sit amet tellus. Quisque faucibus iaculis quam a aliquet.</p>
+                <p class="banner-para">Welcome to Knowhere, your trusted property consultant.</p>
                 <a href="#" class="btn-home">View Our Projects</a>
                 <a id="headerCompareButton" onclick="window.location.href='compare.php'" style="display: none;">
     Compare Properties
@@ -95,7 +95,8 @@ include("config.php");
     <div class="content-wrapper">
         <h2 class="section-title">Explore Properties</h2>
         <p class="section-description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nibh eu ullamcorper luctus, lacus ex consequat ipsum, ultricies interdum ex ante.
+        At Knowhere, we offer a comprehensive range of real estate services to cater to the
+        diverse needs of our clients. Our services include
         </p>
     </div>
 
@@ -147,9 +148,15 @@ include("config.php");
             </div>
         </div>
         <div class="main-content">
-            <h1>Real Estate Without the Hassle</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euis mod, nibh eu ullam corper luctus, lacus ex consequat ipsum, ultricies interdum ex ante sit amet tellus. Quisque faucibus iaculis quam a aliquet.</p>
-            <p>Etiam a justo lectus. Donec eu nisl vel nibh vehicula tincidunt nec ut mi. Morbi porta felis sit amet quam efficitur condimentum. Donec porta.</p>
+            <h1>Real Estate Without the Knowhere</h1>
+            <p>At Knowhere, we understand that buying or selling a property can be a daunting task. That&#39;s why
+we strive to make the process as smooth and stress-free as possible. We have a team of highly
+experienced professionals who are dedicated to providing you with personalized solutions that
+cater to your unique needs.</p>
+            <p>Our expertise lies in providing end-to-end real estate services, including property search, legal
+documentation, property valuation, and much more. We work closely with our clients to
+understand their requirements and offer them customized solutions that are tailored to their
+needs.</p>
             <a href="#" class="view-projects-btn">View All Projects</a>
         </div>
     </div>
@@ -163,9 +170,10 @@ include("config.php");
  <!-- property crad carousel -->
  <section class="project-section">
     <div class="content-wrapper">
-        <h2 class="section-title">Projects by Mansion</h2>
+        <h2 class="section-title">Projects by Knowhere</h2>
         <p class="section-description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nibh eu ullamcorper luctus, lacus ex consequat ipsum, ultricies interdum ex ante.
+            Welcome to Knowhere, your trusted property consultant. We are committed to providing you with
+exceptional services and helping you find your dream home.
         </p>
     </div>
 
@@ -339,7 +347,7 @@ include("config.php");
     <div class="content-wrapper">
         <h2 class="section-title">Best Sellers</h2>
         <p class="section-description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nibh eu ullamcorper luctus, lacus ex consequat ipsum, ultricies interdum ex ante.
+        Explore our Best Sellers – the top choices trusted by customers for quality and value. Find your perfect fit among our most popular picks, crafted to meet every need!
         </p>
     </div>
 
@@ -510,7 +518,7 @@ include("config.php");
         <div class="hero-section">
             <div class="overlay">
                 <h2>Your Dream Home Awaits</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nibh eu ullam corper luctus, lacus ex consequat ipsum, ultricies interdum ex ante.</p>
+                <p style ="text-align:center;">Knowhere: Your Trusted Path to Dream Homes</p>
                 <a href="#contact" class="btn">Contact Us</a>
             </div>
         </div>
@@ -523,7 +531,7 @@ include("config.php");
     <div class="content-wrapper">
         <h2 class="section-title">Best ROI Investment</h2>
         <p class="section-description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nibh eu ullamcorper luctus, lacus ex consequat ipsum, ultricies interdum ex ante.
+        Unlock top-performing investments with our Best ROI picks, designed to maximize returns and secure your financial future. Discover smart opportunities tailored for growth and stability!
         </p>
     </div>
 
@@ -702,12 +710,12 @@ include("config.php");
         </div>
         <div class="contact-info">
             <h2>Get In Touch</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nibh eu ullamcorper luctus, lacus ex consequat ipsum.</p>
+            <p>Ready to make your real estate dreams a reality? Get in touch with Knowhere for trusted guidance, tailored solutions, and a seamless property experience.</p>
             <ul>
-                <li><i class="fas fa-map-marker-alt"></i> 918 Abner Road, Hudson</li>
+                <li><i class="fas fa-map-marker-alt"></i> Wakad, Pimpri-Chinchwad, Maharashtra 411057</li>
                 <li><i class="fas fa-envelope"></i> example@mail.com</li>
-                <li><i class="fas fa-phone-alt"></i> +1 234 567 890</li>
-                <li><i class="fas fa-clock"></i> 07.00 AM - 23.00 PM</li>
+                <li><i class="fas fa-phone-alt"></i>+91 91122 11291</li>
+                <!-- <li><i class="fas fa-clock"></i> 07.00 AM - 23.00 PM</li> -->
             </ul>
         </div>
     </div>

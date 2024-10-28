@@ -54,12 +54,12 @@
         </div>
         <div class="contact-info">
             <h2>Get In Touch</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nibh eu ullamcorper luctus, lacus ex consequat ipsum.</p>
+            <p style="color: white;">Ready to make your real estate dreams a reality? Get in touch with Knowhere for trusted guidance, tailored solutions, and a seamless property experience.</p>
             <ul>
-                <li><i class="fas fa-map-marker-alt"></i> 918 Abner Road, Hudson</li>
+                <li><i class="fas fa-map-marker-alt"></i> Wakad, Pimpri-Chinchwad, Pune 411057</li>
                 <li><i class="fas fa-envelope"></i> example@mail.com</li>
-                <li><i class="fas fa-phone-alt"></i> +1 234 567 890</li>
-                <li><i class="fas fa-clock"></i> 07.00 AM - 23.00 PM</li>
+                <li><i class="fas fa-phone-alt"></i> +91 91122 11291</li>
+                <!-- <li><i class="fas fa-clock"></i> 07.00 AM - 23.00 PM</li> -->
             </ul>
             <div class="social-icon facebook">
                 <i class="fab fa-facebook-f"></i>

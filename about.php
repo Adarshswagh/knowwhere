@@ -46,20 +46,20 @@ include("config.php");
 <section class="about-section">
     <div class="content">
         <div class="text">
-            <h1>About Mansion</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nibh eu ullamcorper luctus, lacus ex consequat ipsum, ultricies interdum ex ante sit amet tellus. Quisque faucibus iaculis quam a aliquet.</p>
+            <h1>About Knowhere</h1>
+            <p>At Knowhere, we prioritize your unique needs, providing tailored solutions and fostering lasting client relationships. Our commitment to transparency, integrity, and professionalism has established us as one of the industry’s most trusted consultants.</p>
             <ul class="checklist">
                 <div class="list-left">
-                    <li><span>✔</span> Phasellus rutrum</li>
-                    <li><span>✔</span> Donec at quam</li>
-                    <li><span>✔</span> Phasellus tristique</li>
-                    <li><span>✔</span> Quisque rhoncus</li>
+                    <li><span>✔</span> Turning Dreams into Reality</li>
+                    <li><span>✔</span> Industry Leadership</li>
+                    <li><span>✔</span> Lasting Relationships</li>
+                    <li><span>✔</span> Client-Centered Approach</li>
                 </div>
                 <div class="list-right">
-                    <li><span>✔</span> Phasellus rutrum</li>
-                    <li><span>✔</span> Donec at quam</li>
-                    <li><span>✔</span> Phasellus tristique</li>
-                    <li><span>✔</span> Quisque rhoncus</li>
+                    <li><span>✔</span> Transparency and Trust </li>
+                    <li><span>✔</span> Trusted Property Consultant</li>
+                    <li><span>✔</span> Core Values</li>
+                    <li><span>✔</span> Experienced Professionals</li>
                 </div>
             </ul>
         </div>
@@ -115,22 +115,22 @@ include("config.php");
             <div class="text-boxes">
                 <div class="text-box">
                     <h3>Vision</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nibh eu ullamcorper luctus.</p>
+                    <p>To be a leading real estate consultancy, known for exceptional client service, continuous innovation, and adapting to evolving client needs</p>
                     <ul>
-                        <li><span>&#10003;</span> Phasellus rutrum</li>
-                        <li><span>&#10003;</span> Donec at quam</li>
-                        <li><span>&#10003;</span> Phasellus tristique</li>
-                        <li><span>&#10003;</span> Quisque rhoncus</li>
+                        <li><span>&#10003;</span> Adaptability</li>
+                        <li><span>&#10003;</span> Value-Added Services</li>
+                        <li><span>&#10003;</span> Sustainability</li>
+                        <li><span>&#10003;</span> Innovative Solutions</li>
                     </ul>
                 </div>
                 <div class="text-box">
                     <h3>Mission</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nibh eu ullamcorper luctus, lacus ex consequat ipsum.</p>
+                    <p>To empower clients with informed, personalized, and transparent property solutions tailored to their unique needs</p>
                     <ul>
-                        <li><span>&#10003;</span> Phasellus rutrum</li>
-                        <li><span>&#10003;</span> Donec at quam</li>
-                        <li><span>&#10003;</span> Phasellus tristique</li>
-                        <li><span>&#10003;</span> Quisque rhoncus</li>
+                        <li><span>&#10003;</span> Informed Decisions</li>
+                        <li><span>&#10003;</span> Personalized Service</li>
+                        <li><span>&#10003;</span> Transparency</li>
+                        <li><span>&#10003;</span> Client Empowerment </li>
                     </ul>
                 </div>
             </div>
@@ -149,29 +149,29 @@ include("config.php");
         <div class="container-whychoose">
         <div class="title">
                 <h2>Why Choose Us</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nibh eu ullam corper luctus, lacus ex consequat ipsum, ultricies interdum ex ante sit amet tellus.</p>
+                <p>At Knowhere, we prioritize your unique needs, providing tailored solutions and fostering lasting client relationships. Our commitment to transparency, integrity, and professionalism has established us as one of the industry’s most trusted consultants.</p>
                 <a href="#" class="discover-more">Discover More</a>
             </div>
             <div class="features">
                 <div class="feature-box reliable">
                     <i class="icon building"></i>
                     <h3>Reliable</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
                 </div>
                 <div class="feature-box comfortable">
                     <i class="icon cloud"></i>
                     <h3>Comfortable</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
                 </div>
                 <div class="feature-box guarantee">
                     <i class="icon thumbs-up"></i>
                     <h3>Guarantee</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                     <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
                 </div>
                 <div class="feature-box affordable">
                     <i class="icon tag"></i>
                     <h3>Affordable</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
                 </div>
             </div>
             
@@ -296,7 +296,7 @@ include("config.php");
         <div class="hero-section">
             <div class="overlay">
                 <h2>Your Dream Home Awaits</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nibh eu ullam corper luctus, lacus ex consequat ipsum, ultricies interdum ex ante.</p>
+                <p>Thank you for choosing Knowhere. Let us turn your real estate dreams into reality.</p>
                 <a href="#contact" class="btn">Contact Us</a>
             </div>
         </div>
