@@ -30,11 +30,12 @@
                 <li style="margin-top: 10px;"><a href="plotting.php">Plotting Project</a></li>
             </ul>
         </li>
+        <li><a href="emicalculator.php">Emi Calculator</a></li>
         <li><a href="blog.php">Blog</a></li>
         <li><a href="Contact.php">Contact</a></li>
     </ul>
     <div class="navbar-investor">
-        <a href="emicalculator.php ">EMI CALCULATOR</a>
+        <a href="compare.php ">COMPARE</a>
     </div>
 
     <!-- In header.php -->

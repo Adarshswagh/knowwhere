@@ -59,39 +59,27 @@ include("config.php");
         }
 
         function displayComparisonTable() {
-            let tableHTML = `
-            <table class="comparison-table">
-                <thead>
-                    <tr class="table-header">
-                        <th>Name</th>
-                        <th>Location</th>
-                        <th>Total Units</th>
-                        <th>Total Towers</th>
-                        <th>Land Area</th>
-                        <th>Possession</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>`;
+            let tableHTML = "";
 
             compareList.forEach(property => {
                 tableHTML += `
-                    <tr class="table-row">
-                        <td>${property.name}</td>
-                        <td>${property.location}</td>
-                        <td>${property.totalunits}</td>
-                        <td>${property.towers || 'N/A'} Towers</td>
-                        <td>${property.area || 'N/A'}</td>
-                        <td>${property.possession || 'N/A'}</td>
-                        <td class="action-cell">
+                    <div class="property-card">
+                        <div class="property-detail"><strong>Name:</strong> ${property.name}</div>
+                        <div class="property-detail"><strong>Location:</strong> ${property.location}</div>
+                        <div class="property-detail"><strong>Total Units:</strong> ${property.totalunits}</div>
+                        <div class="property-detail"><strong>Total Towers:</strong> ${property.towers || 'N/A'} Towers</div>
+                        <div class="property-detail"><strong>Land Area:</strong> ${property.area || 'N/A'}</div>
+                        <div class="property-detail"><strong>Possession:</strong> ${property.possession || 'N/A'}</div>
+                        <div class="property-action">
                             <button class="delete-btn" onclick="deleteProperty('${property.id}')">Delete</button>
-                        </td>
-                    </tr>`;
+                        </div>
+                    </div>`;
             });
 
-            tableHTML += `</tbody></table>`;
             document.getElementById("comparisonTable").innerHTML = tableHTML;
         }
+
+
 
         // Call function on page load
         displayComparisonTable();
