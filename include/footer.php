@@ -93,7 +93,7 @@
                 <p>Welcome to Knowhere, your trusted partner in finding your dream home with exceptional, stress-free service.</p>
                 <div class="social-icons">
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-x-twitter"></i></a>
+                    <!-- <a href="#"><i class="fab fa-x-twitter"></i></a> -->
                     <a href="#"><i class="fab fa-youtube"></i></a>
                     <a href="#"><i class="fab fa-linkedin-in"></i></a>
                 </div>

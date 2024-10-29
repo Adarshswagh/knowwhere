@@ -1,0 +1,368 @@
+/* General body styles */
+body {
+    margin: 0;
+    font-family: 'Lexend', sans-serif; /* Replace with your font */
+}
+
+html, body {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    }
+/* banner */
+/* Banner styling */
+
+#banner-main{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    background-color: #050f17;
+
+}
+.banner1 {
+    height: 400px; /* Ensure height is set */
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the image */
+    display: flex; /* Flex for centering content */
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally center content */
+    color: #FFFFFF; /* Set text color to pure white */
+    background-image: url('../images/bannerabout.jpg');
+    background-color: #000; /* Fallback color if image fails to load */
+    position: relative; /* Position relative for overlay */
+}
+
+/* Overlay for better text visibility */
+.banner1::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for better contrast */
+    z-index: 1;
+}
+
+.banner-content {
+    position: relative;
+    text-align: center;
+    z-index: 2; /* Ensures content is above the overlay */
+}
+
+/* Heading styling */
+.banner-bread {
+    color: #fff; /* Keep breadcrumb links white */
+}
+
+.banner h2 {
+    color: #FFFFFF; /* Set heading color to pure white */
+    font-family: "Italiana", Sans-serif;
+    font-size: 80px;
+    font-weight: 400;
+    line-height: 1.3em;
+}
+
+/* Breadcrumb styling */
+.banner p {
+    font-size: 14px; /* Set font size to 14px */
+    font-family: 'Lexend', sans-serif; /* Lexend font for breadcrumbs */
+    margin: 10px 0 0; /* Space below the heading */
+}
+
+/* Links inside the breadcrumbs */
+.banner p a {
+    color: #FFFFFF; /* Set breadcrumb link color to pure white */
+    text-decoration: none;
+    font-family: 'Lexend', sans-serif;
+}
+
+/* Hover effect for links */
+.banner p a:hover {
+    text-decoration: underline; /* Underline on hover */
+    color: #A8894D; /* Change color on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .banner {
+        height: 300px; /* Reduce height for smaller screens */
+    }
+
+    .banner h1 {
+        font-size: 36px; /* Smaller font for mobile */
+    }
+
+    .banner p {
+        font-size: 12px; /* Adjust breadcrumb text size on smaller screens */
+    }
+}
+
+
+/* end banner */
+
+/* about section */
+
+.about-section {
+    display: flex;
+    flex-direction: row;
+    background-color: #050f17;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 100%;
+    color: #f1f1f1;
+    padding: 70px;
+}
+
+.experience {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.experience-years {
+    text-align: center;
+    color: #fbbf7b;
+}
+
+.experience-years span {
+    font-size: 3rem;
+    font-weight: bold;
+    display: block;
+}
+
+.experience-years p {
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #f1f1f1;
+}
+
+.about-content {
+    flex: 2;
+    padding-left: 20px;
+}
+
+.about-content h3 {
+    color: #fbbf7b;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.about-content h1 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #b3b3b3;
+    margin-bottom: 20px;
+}
+
+.about-content button {
+    background-color: #333;
+    color: #f1f1f1;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.about-content button:hover {
+    background-color: #fbbf7b;
+    color: #1d1f27;
+}
+
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .about-content {
+        padding-left: 0;
+        margin-top: 20px;
+    }
+}
+/* card section */
+
+.collection-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px; /* This controls the maximum width */
+    padding: 50px;
+    background-color: #050f17;
+    margin: 0 auto; /* Centers the section horizontally */
+}
+
+
+.collection-card {
+    position: relative;
+    width: 100%;
+    max-width: 250px;
+    overflow: hidden;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.collection-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.collection-card:hover img {
+    transform: scale(1.1);
+}
+
+.card-content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+}
+
+.card-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    font-size: 0.9rem;
+    color: #b3b3b3;
+    text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+    .collection-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .collection-card {
+        max-width: 90%;
+    }
+}
+
+/* why choose us */
+
+.why-choose-us {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #050f17;
+}
+
+.why-choose-us h2 {
+    font-size: 2em;
+    color: #f4b400;
+    margin-bottom: 10px;
+}
+
+.why-choose-us p {
+    font-size: 1.2em;
+    color: #ccc;
+    margin-bottom: 40px;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.feature {
+    background-color: #333;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 250px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.feature:hover {
+    background-color: #444;
+}
+
+.icon {
+    font-size: 2em;
+    color: #f4b400;
+    margin-bottom: 15px;
+}
+
+.feature h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #f4b400;
+}
+
+.feature p {
+    font-size: 0.9em;
+    color: #aaa;
+}
+
+@media (max-width: 768px) {
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature {
+        max-width: 100%;
+    }
+}
+
+
+/* amenities */
+.room-facilities {
+    text-align: center;
+    /* max-width: 800px; */
+    padding: 20px;
+    background-color: #050f17;
+    border-radius: 8px;
+    max-width: 100%;
+    padding: 50px;
+}
+
+.room-facilities h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #f0e68c;
+}
+
+.room-facilities p {
+    font-size: 1.2em;
+    color: #d3d3d3;
+}
+
+.facilities-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.facility-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+}
+
+.facility-item span {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #f0e68c;
+}
+
+.facility-item p {
+    font-size: 1em;
+    text-align: center;
+    color: #d3d3d3;
+}
