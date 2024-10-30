@@ -35,8 +35,8 @@ include("config.php");
   <section id="banner-main">
     <div class="banner1" >
         <div class="banner-content">
-            <h2>Interior Design</h2>
-            <p><a href="#" class="banner-bread">Home</a> &gt; <a href="#" class="banner-bread">Interior Design</a></p>
+            <h2>Construction</h2>
+            <p><a href="#" class="banner-bread">Home</a> &gt; <a href="#" class="banner-bread">Construction</a></p>
         </div>
     </div>
 </section>
@@ -131,6 +131,9 @@ include("config.php");
         </div>
     </div>
 </div>
+
+
+
 
 <!--	Footer   start-->
 <?php include("include/footer.php");?>
