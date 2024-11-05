@@ -91,7 +91,7 @@ if(!isset($_SESSION['auser']))
 							</div>
 						</div>
 						<div class="col-xl-3 col-sm-6 col-12">
-							<div class="card">
+							<div class="card"> 
 								<div class="card-body">
 									<div class="dash-widget-header">
 										<span class="dash-widget-icon bg-success">

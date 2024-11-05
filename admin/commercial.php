@@ -21,11 +21,8 @@ if(isset($_POST['add']))
 	$size=$_POST['size'];
 	$price=$_POST['price'];
 	$roi=$_POST['roi'];
-	$tag=$_POST['tag'];
-	$component=$_POST['component'];
 	$usp=$_POST['usp'];
-	$contact_person=$_POST['contact_person'];
-	$number=$_POST['number'];
+	
 	$psf=$_POST['psf'];
 	$possession=$_POST['possession'];
 	$status=$_POST['status'];
@@ -58,8 +55,8 @@ if(isset($_POST['add']))
 
 
 // Insert into residential_projects table
-$sql = "INSERT INTO commercial_projects (project_title, project_description, project_location, project_area, typology, scheme, size, price, roi, tag, component, usp, contact_person, phone, psf, possession, status,image1,image2,image3,image4,image5,featured)
-		VALUES ('$project_title', '$project_description', '$project_location', '$project_area', '$typology', '$scheme', '$size', '$price', '$roi', '$tag', '$component', '$usp', '$contact_person', '$number', '$psf', '$possession', '$status','$image1','$image2','$image3','$image4','$image5','$featured')";
+$sql = "INSERT INTO commercial_projects (project_title, project_description, project_location, project_area, typology, scheme, size, price, roi, usp, psf, possession, status,image1,image2,image3,image4,image5,featured)
+		VALUES ('$project_title', '$project_description', '$project_location', '$project_area', '$typology', '$scheme', '$size', '$price', '$roi','$usp', '$psf', '$possession', '$status','$image1','$image2','$image3','$image4','$image5','$featured')";
 
 $result = mysqli_query($con, $sql);
 if ($result) {
@@ -182,24 +179,14 @@ if ($result) {
 														<input type="text" class="form-control" name="scheme"      placeholder=" Enter Scheme">
 													</div>
 												</div>
-                                                <div class="form-group row">
-													<label class="col-lg-3 col-form-label">Tag</label>
-													<div class="col-lg-9">
-														<input type="text" class="form-control" name="tag"      placeholder=" Enter Tag">
-													</div>
-												</div>
+                                                
                                                 <div class="form-group row">
 													<label class="col-lg-3 col-form-label">PSF</label>
 													<div class="col-lg-9">
 														<input type="text" class="form-control" name="psf"      placeholder=" Enter PSF">
 													</div>
 												</div>
-												<div class="form-group row">
-													<label class="col-lg-3 col-form-label">Contact Person</label>
-													<div class="col-lg-9">
-														<input type="text" class="form-control" name="contact_person"      placeholder=" Enter Contact Person">
-													</div>
-												</div>
+												
 							
 											</div>
 											<div class="col-xl-6">
@@ -230,12 +217,7 @@ if ($result) {
 													</div>
 												</div>
 
-                                                <div class="form-group row">
-													<label class="col-lg-3 col-form-label">Compponent</label>
-													<div class="col-lg-9">
-														<input type="text" class="form-control" name="component"      placeholder=" Enter Compponent">
-													</div>
-												</div>
+                                               
 
                                                 <div class="form-group row">
 													<label class="col-lg-3 col-form-label">USP</label>
@@ -244,12 +226,7 @@ if ($result) {
 													</div>
 												</div>
 
-												<div class="form-group row">
-													<label class="col-lg-3 col-form-label">Contact No</label>
-													<div class="col-lg-9">
-														<input type="text" class="form-control" name="number"      placeholder=" Enter Contact Number">
-													</div>
-												</div>
+												
 
                                                 
 
@@ -270,27 +247,21 @@ if ($result) {
 												<!---feature area start--->
 												<div class="col-md-4">
 														<ul>
-														<li class="mb-3"><span class="text-secondary font-weight-bold">Property Age : </span>10 Years</li>
-														<li class="mb-3"><span class="text-secondary font-weight-bold">Swiming Pool : </span>Yes</li>
 														<li class="mb-3"><span class="text-secondary font-weight-bold">Parking : </span>Yes</li>
 														<li class="mb-3"><span class="text-secondary font-weight-bold">GYM : </span>Yes</li>
 														</ul>
 													</div>
 													<div class="col-md-4">
 														<ul>
-														<li class="mb-3"><span class="text-secondary font-weight-bold">Type : </span>Apartment</li>
 														<li class="mb-3"><span class="text-secondary font-weight-bold">Security : </span>Yes</li>
 														<li class="mb-3"><span class="text-secondary font-weight-bold">Dining Capacity : </span>10 People</li>
-														<li class="mb-3"><span class="text-secondary font-weight-bold">Church/Temple  : </span>No</li>
 														
 														</ul>
 													</div>
 													<div class="col-md-4">
 														<ul>
-														<li class="mb-3"><span class="text-secondary font-weight-bold">3rd Party : </span>No</li>
 														<li class="mb-3"><span class="text-secondary font-weight-bold">Alivator : </span>Yes</li>
 														<li class="mb-3"><span class="text-secondary font-weight-bold">CCTV : </span>Yes</li>
-														<li class="mb-3"><span class="text-secondary font-weight-bold">Water Supply : </span>Ground Water / Tank</li>
 														</ul>
 													</div>
 												<!---feature area end---->
@@ -342,8 +313,10 @@ if ($result) {
 													<div class="col-lg-9">
 														<select class="form-control"       name="status">
 															<option value="">Select Status</option>
-															<option value="available">Available</option>
-															<option value="sold out">Sold Out</option>
+															<option value="Ready To Move">Ready To Move</option>
+															<option value="New Launch">New Launch</option>
+															<option value="Early Possession">Early Possession</option>
+															<option value="Pre Launch">Pre Launch</option>
 														</select>
 													</div>
 												</div>
@@ -362,7 +335,7 @@ if ($result) {
 										<div class="row">
 											<div class="col-md-6">
 												<div class="form-group row">
-													<label class="col-lg-3 col-form-label"><b>Is Featured?</b></label>
+													<label class="col-lg-3 col-form-label"><b>Best Sale?</b></label>
 													<div class="col-lg-9">
 														<select class="form-control"       name="featured">
 															<option value="">Select...</option>
@@ -389,45 +362,7 @@ if ($result) {
 
 
 
-			<script>
-				$(document).ready(function() {
-					// Function to add new unit detail fields dynamically
-					$('#add-unit-btn').click(function() {
-						var newUnit = `
-						<div class="unit-detail">
-							<div class="form-group row">
-								<label class="col-lg-3 col-form-label">Unit Name</label>
-								<div class="col-lg-7">
-									<input type="text" class="form-control" name="unit_name[]"      placeholder="Enter Unit Name">
-								</div>
-								<div class="col-lg-2">
-									<button type="button" class="btn btn-danger remove-unit-btn">Remove</button>
-								</div>
-							</div>
-							<div class="form-group row">
-								<label class="col-lg-3 col-form-label">Unit Size</label>
-								<div class="col-lg-7">
-									<input type="text" class="form-control" name="unit_size[]"      placeholder="Enter Unit Size">
-								</div>
-							</div>
-							<div class="form-group row">
-								<label class="col-lg-3 col-form-label">Unit Price</label>
-								<div class="col-lg-7">
-									<input type="text" class="form-control" name="unit_price[]"      placeholder="Enter Unit Price">
-								</div>
-								
-							</div>
-							<hr>
-						</div>`;
-						$('#units-container').append(newUnit);
-					});
-
-					// Function to remove unit details
-					$(document).on('click', '.remove-unit-btn', function() {
-						$(this).closest('.unit-detail').remove(); // Remove the closest unit-detail div
-					});
-				});
-			</script>
+			
 
 		
 		<!-- jQuery -->

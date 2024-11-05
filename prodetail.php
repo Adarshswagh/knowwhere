@@ -57,13 +57,31 @@ include("config.php");
     <div class="container">
         <!-- Left Side: Property Content -->
         <div class="left-content">
-            <div class="w3-content w3-section" style="max-width:100%; height:auto;">
-                <?php for ($i = 14; $i <= 18; $i++): ?>
-                    <?php if (!empty($row[$i])): ?>
-                        <img class="mySlides" src="admin/property/<?php echo htmlspecialchars($row[$i]); ?>" style="width:100%">
-                    <?php endif; ?>
-                <?php endfor; ?>
-            </div>
+
+
+
+        <div class="w3-content w3-section" style="max-width:100%;">
+            <?php if (!empty($row['9'])): ?>
+                <img class="mySlides" src="admin/property/<?php echo $row['9']; ?>" style="width:100%">
+            <?php endif; ?>
+            
+            <?php if (!empty($row['10'])): ?>
+                <img class="mySlides" src="admin/property/<?php echo $row['10']; ?>" style="width:100%">
+            <?php endif; ?>
+            
+            <?php if (!empty($row['11'])): ?>
+                <img class="mySlides" src="admin/property/<?php echo $row['11']; ?>" style="width:100%">
+            <?php endif; ?>
+            
+            <?php if (!empty($row['12'])): ?>
+                <img class="mySlides" src="admin/property/<?php echo $row['12']; ?>" style="width:100%">
+            <?php endif; ?>
+            
+            <?php if (!empty($row['13'])): ?>
+                <img class="mySlides" src="admin/property/<?php echo $row['13']; ?>" style="width:100%">
+            <?php endif; ?>
+        </div>
+
 
             <h1 class="prodetail-heading">
                 <?php echo htmlspecialchars($row['1']); ?>
@@ -95,14 +113,13 @@ include("config.php");
                 <div class="properties-details">
                     <h3>Project Details :</h3>
                     <div class="detail-grid">
-                        <div><strong class="field-title">Total Floor :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo htmlspecialchars($row['24']); ?></span></div>
+                        <div><strong class="field-title">Total Floor :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo htmlspecialchars($row['18']); ?></span></div>
                         <div><strong class="field-title">Total Towers :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo htmlspecialchars($row['5']); ?></span></div>
                         <div><strong class="field-title">Total Units :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo htmlspecialchars($row['6']); ?></span></div>
                         <div><strong class="field-title">Possession :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo htmlspecialchars($row['7']); ?></span></div>
                         <div><strong class="field-title">Project area :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo htmlspecialchars($row['4']); ?></span></div>
-                        <div><strong class="field-title">Status :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo htmlspecialchars($row['20']); ?></span></div>
-                        <div><strong class="field-title">Contact Person :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo htmlspecialchars($row['8']); ?></span></div>
-                        <div><strong class="field-title">Contact Numbers :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo htmlspecialchars($row['9']); ?></span></div>
+                        <div><strong class="field-title">Status :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo htmlspecialchars($row['14']); ?></span></div>
+
                     </div>
                 </div>
 
@@ -160,7 +177,6 @@ include("config.php");
                 </div>
             </div>
 
-            <button id="compareButton" onclick="addToCompare()">Like/Compare</button>
         </div>
 
         <!-- Right Side: Form -->
@@ -180,6 +196,7 @@ include("config.php");
     </div>
 </section>
 <!-- end property detail -->
+
 
 <script>
     let slideIndex = 0;
