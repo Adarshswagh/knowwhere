@@ -136,12 +136,12 @@ include("config.php");
                                     <a href="comprodetail.php?pid=<?php echo $row['0']; ?>" class="view-more-btn">Know More</a>
 
                                     <!-- WhatsApp Button -->
-                                    <a href="https://wa.me/1234567890" target="_blank" class="btn-icon whatsapp-btn">
+                                    <a href="https://wa.me/91122 11291" target="_blank" class="btn-icon whatsapp-btn">
                                         <i class="fab fa-whatsapp"></i>
                                     </a>
 
                                     <!-- Call Button -->
-                                    <a href="tel:+1234567890" class="btn-icon call-btn">
+                                    <a href="tel:+91 91122 11291" class="btn-icon call-btn">
                                         <i class="fas fa-phone"></i>
                                     </a>
                                 </div>
