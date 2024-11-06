@@ -19,8 +19,6 @@ if(isset($_POST['add']))
 	$total_towers=$_POST['total_towers'];
 	$total_units=$_POST['total_units'];
 	$possession=$_POST['possession'];
-	$contact_person=$_POST['contact_person'];
-	$contact_no=$_POST['contact_no'];
 	$status=$_POST['status'];
 	$total_floor=$_POST['total_floor'];
 	$feature=$_POST['feature'];
@@ -68,8 +66,8 @@ for ($i = 0; $i < count($unit_names); $i++) {
 $unit_details_json = json_encode($unit_details); // Convert to JSON
 
 // Insert into residential_projects table
-$sql = "INSERT INTO residential_projects (project_title, project_description, project_location, project_area, total_towers, total_units, possession, contact_person, contact_no, feature, total_floor, status,image1,image2,image3,image4,image5,featured, unit_details)
-		VALUES ('$project_title', '$project_description', '$project_location', '$project_area', '$total_towers', '$total_units', '$possession', '$contact_person', '$contact_no', '$feature', '$total_floor', '$status','$image1','$image2','$image3','$image4','$image5','$featured', '$unit_details_json')";
+$sql = "INSERT INTO residential_projects (project_title, project_description, project_location, project_area, total_towers, total_units, possession,  feature, total_floor, status,image1,image2,image3,image4,image5,featured, unit_details)
+		VALUES ('$project_title', '$project_description', '$project_location', '$project_area', '$total_towers', '$total_units', '$possession',  '$feature', '$total_floor', '$status','$image1','$image2','$image3','$image4','$image5','$featured', '$unit_details_json')";
 
 $result = mysqli_query($con, $sql);
 if ($result) {
@@ -186,12 +184,7 @@ if ($result) {
 														<input type="text" class="form-control" name="possession"      placeholder="Enter Possession">
 													</div>
 												</div>
-												<div class="form-group row">
-													<label class="col-lg-3 col-form-label">Contact Person</label>
-													<div class="col-lg-9">
-														<input type="text" class="form-control" name="contact_person"      placeholder=" Enter Contact Person">
-													</div>
-												</div>
+												
 							
 											</div>
 											<div class="col-xl-6">
@@ -211,21 +204,11 @@ if ($result) {
 												<div class="form-group row">
 													<label class="col-lg-3 col-form-label">Total Floor</label>
 													<div class="col-lg-9">
-														<input type="text" class="form-control" name="<div class="form-group row">
-													<label class="col-lg-3 col-form-label">Total Units</label>
-													<div class="col-lg-9">
-														<input type="text" class="form-control" name="total_units"      placeholder="Enter Total Units">
-													</div>
-												</div>"      placeholder="Enter Total Units">
+														<input type="text" class="form-control" name="total_floor"      placeholder="Enter Total Floor">
 													</div>
 												</div>
 											
-												<div class="form-group row">
-													<label class="col-lg-3 col-form-label">Contact Number</label>
-													<div class="col-lg-9">
-														<input type="text" class="form-control" name="contact_no"      placeholder="Enter Contact Number">
-													</div>
-												</div>
+												
 
 												
 
@@ -286,7 +269,7 @@ if ($result) {
 												<!---feature area start--->
 												<div class="col-md-4">
 														<ul>
-														<li class="mb-3"><span class="text-secondary font-weight-bold">Property Age : </span>10 Years</li>
+														
 														<li class="mb-3"><span class="text-secondary font-weight-bold">Swiming Pool : </span>Yes</li>
 														<li class="mb-3"><span class="text-secondary font-weight-bold">Parking : </span>Yes</li>
 														<li class="mb-3"><span class="text-secondary font-weight-bold">GYM : </span>Yes</li>
@@ -336,16 +319,7 @@ if ($result) {
 														<input class="form-control" name="image4" type="file"     ="">
 													</div>
 												</div>
-												<div class="form-group row">
-													<label class="col-lg-3 col-form-label">Status</label>
-													<div class="col-lg-9">
-														<select class="form-control"       name="status">
-															<option value="">Select Status</option>
-															<option value="available">Available</option>
-															<option value="sold out">Sold Out</option>
-														</select>
-													</div>
-												</div>
+												
 												
 											</div>
 											<div class="col-xl-6">
@@ -362,6 +336,19 @@ if ($result) {
 														<input class="form-control" name="image5" type="file"     ="">
 													</div>
 												</div>
+
+												<div class="form-group row">
+													<label class="col-lg-3 col-form-label">Status</label>
+													<div class="col-lg-9">
+														<select class="form-control"       name="status">
+															<option value="">Select Status</option>
+															<option value="Ready To Move">Ready To Move</option>
+															<option value="New Launch">New Launch</option>
+															<option value="Early Possession">Early Possession</option>
+															<option value="Pre Launch">Pre Launch</option>
+														</select>
+													</div>
+												</div>
 												
 												
 											</div>
@@ -372,7 +359,7 @@ if ($result) {
 										<div class="row">
 											<div class="col-md-6">
 												<div class="form-group row">
-													<label class="col-lg-3 col-form-label"><b>Is Featured?</b></label>
+													<label class="col-lg-3 col-form-label"><b>Best Sale?</b></label>
 													<div class="col-lg-9">
 														<select class="form-control"       name="featured">
 															<option value="">Select...</option>

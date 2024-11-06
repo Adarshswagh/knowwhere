@@ -77,7 +77,7 @@ include("config.php");
 
 
 
-        <div class="w3-content w3-section" style="max-width:100%;">
+        <div class="w3-content w3-section" style="max-width:100%; height :50p%;">
             <?php if (!empty($row['17'])): ?>
                 <img class="mySlides" src="admin/property/<?php echo $row['17']; ?>" style="width:100%">
             <?php endif; ?>
@@ -107,11 +107,18 @@ include("config.php");
                 <button class="badge for-sale">For Sale</button>
             </div> -->
 
-            <h1 class="prodetail-heading"><?php echo $row['1']; ?></h1>
-                <!-- <p class="location">1421 San Pedro St, Los Angeles, CA</p>
-                <div class="price-info">
-                    <h2>$13,000 <span class="discount">$16,000</span></h2>
-                </div> -->
+            <h1 class="prodetail-heading">
+                <?php echo htmlspecialchars($row['1']); ?>
+                <span class="action-buttons">
+                    <button id="compareButton" onclick="addToCompare()" class="icon-btn">
+                        <i class="fa fa-heart"></i> Shortlist
+                    </button>
+                    <button id="shareButton" onclick="copyShareUrl()" class="icon-btn">
+                        <i class="fa fa-share"></i> Share
+                    </button>
+                </span>
+            </h1>            
+
                 <div class="detail-item1">
                 <h3 class="prodetail-heading3">Description :</h3>
                 <p><?php echo $row['2']; ?></p>
@@ -138,13 +145,11 @@ include("config.php");
                         <div><strong class="field-title">Typology Price :</strong><span style="color:#A8894D; font-size:20px;"> <?php echo $row['8']; ?></span></div>
                         <div><strong class="field-title">Typology PSF :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo $row['15']; ?></span></div>
                         <div><strong class="field-title">Scheme :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo $row['6']; ?></span></div>
-                        <div><strong class="field-title">Tag :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo $row['10']; ?></span></div>
                         <div><strong class="field-title">ROI :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo $row['9']; ?></span></div>
-                        <div><strong class="field-title">Component :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo $row['11']; ?></span></div>
                         <div><strong class="field-title">USP :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo $row['12']; ?></span></div>
                         <div><strong class="field-title">Possession :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo $row['16']; ?></span></div>
-                        <div><strong class="field-title">Contact Person :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo $row['13']; ?></span></div>
-                        <div><strong class="field-title">Contact Numbers :</strong><span style="color:#A8894D; font-size:20px;"> <?php echo $row['14']; ?></span></div>
+                        <div><strong class="field-title">Status :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo htmlspecialchars($row['22']); ?></span></div>
+
                     </div>
                 </div>
 
@@ -210,6 +215,20 @@ include("config.php");
     </div>
 </section>
 <!-- end property detail -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

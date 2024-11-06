@@ -7,89 +7,32 @@ body {
     color: #f0f0f0;
 }
 
-/* Table Styling */
-/* Comparison container styling */
-.comparison-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 90%;
-    margin: 0 auto;
-}
-
-/* Property card styling */
-.property-card {
-    display: flex;
-    flex-direction: column;
-    background-color: #333;
-    padding: 20px;
-    border-radius: 8px;
-    color: #f0f0f0;
-}
-
-.property-detail {
-    margin: 10px 0;
-    font-size: 18px;
-    border-bottom: 1px solid #555;
-    padding-bottom: 8px;
-}
-
-/* Action button styling */
-.property-action {
-    text-align: center;
-    margin-top: 15px;
-}
-
-.delete-btn {
-    background-color: #d4af37;
-    color: #000;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 4px;
-}
-
-.delete-btn:hover {
-    background-color: #b08934;
-}
-
-
 .comparison-table {
     width: 100%;
-    border-collapse: collapse; /* Ensures borders don't have space between them */
+    margin-bottom: 20px;
+    border-collapse: collapse;
     background-color: #333;
     color: #f0f0f0;
 }
 
-.table-header {
-    background-color: #1b1b1b;
-    color: #f0f0f0;
+.comparison-table th, .comparison-table td {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #555;
 }
 
-.table-header th {
-    padding: 15px;
-    text-align: center;
+.comparison-table th {
+    background-color: #1b1b1b;
+    width: 200px;
     font-weight: 200;
     font-family: 'Italiana', sans-serif;
-    border: 1px solid #555; /* Add borders for header cells */
-    font-size: 40px;
-}
-
-.table-row td {
-    
-
-    padding: 15px;
-    text-align: center;
-    font-weight: 100;
-    font-family: 'Lexend', sans-serif;
-    border: 1px solid #555; /* Add borders for header cells */
     font-size: 20px;
 }
 
-/* Add vertical borders between columns */
-.comparison-table th, .comparison-table td {
-    border-left: 1px solid #555; /* Left border for each cell */
-    border-right: 1px solid #555; /* Right border for each cell */
+.comparison-table td {
+    font-family: 'Lexend', sans-serif;
+    font-size: 18px;
+    font-weight: 100;
 }
 
 /* Action Cell Styling */
@@ -110,11 +53,11 @@ body {
     background-color: #b08934;
 }
 
-
-#compare-table{
+#compare-table {
     margin-top: 100px;
     margin-bottom: 100px;
 }
+
 
 
 /* banner */
@@ -231,3 +174,93 @@ body {
 
 
 /* property detail */
+
+
+/* enquire button */
+
+
+/* Modal and form container styling */
+#enquiryModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+#enquiryModal .form-container {
+    position: relative;
+    max-width: 500px;
+    margin: 40px auto;
+    background: #5c5c5c;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#enquiryModal h3 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #333333;
+}
+
+/* Input fields styling */
+#enquiryForm input[type="text"],
+#enquiryForm input[type="email"],
+#enquiryForm input[type="tel"],
+#enquiryForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+/* Focus effect on input fields */
+#enquiryForm input[type="text"]:focus,
+#enquiryForm input[type="email"]:focus,
+#enquiryForm input[type="tel"]:focus,
+#enquiryForm textarea:focus {
+    border-color: #007bff;
+    background-color: #fff;
+    outline: none;
+}
+
+/* Submit and close buttons styling */
+#enquiryForm button[type="submit"],
+#enquiryForm button#closeModal {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#enquiryForm button[type="submit"] {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+#enquiryForm button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+#enquiryForm button#closeModal {
+    background-color: #ccc;
+    color: #333;
+    margin-left: 10px;
+}
+
+#enquiryForm button#closeModal:hover {
+    background-color: #999;
+}
+
+/* end enquire */
