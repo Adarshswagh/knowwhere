@@ -106,28 +106,31 @@ html, body {
 /* end banner */
 
 /* calculator */
+/* calculator */
 #emi-calculator {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh; /* Full height of the viewport */
+    min-height: 80vh; /* Adjust for smaller screens */
     background-color: #050f17;
 }
 
 .container-emi {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column; /* Stack columns on smaller screens */
     background-color: #A8894D;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 1000px;
-    max-width: 100%; /* Ensure it doesn't overflow on smaller screens */
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 20px; /* Adjust side margins for smaller screens */
 }
 
-.calculator {
-    width: 50%;
+.calculator, .result {
+    width: 100%; /* Full width in smaller screens */
     padding: 20px;
+    margin-top: 20px; /* Add space between sections */
 }
 
 .header {
@@ -135,7 +138,6 @@ html, body {
     align-items: center;
     margin-bottom: 20px;
 }
-
 
 .header i {
     font-size: 20px;
@@ -145,7 +147,7 @@ html, body {
 
 .header h1 {
     font-family: "Lexend", Sans-serif;
-    font-size: 30px;
+    font-size: 24px;
     color: #050f17;
 }
 
@@ -179,6 +181,7 @@ button {
     border-radius: 5px;
     font-size: 14px;
     cursor: pointer;
+    width: 100%;
 }
 
 button:hover {
@@ -186,7 +189,6 @@ button:hover {
 }
 
 .result {
-    width: 45%;
     background-color: #050f17;
     border-radius: 10px;
     padding: 20px;
@@ -198,8 +200,8 @@ h2 {
     margin-bottom: 20px;
 }
 
-.result-heading{
-    font-size: 35px;
+.result-heading {
+    font-size: 30px;
     color: #f3f3f3;
 }
 
@@ -239,7 +241,6 @@ ul {
     list-style-type: none;
     color: #f3f3f3;
     margin-left: -40px;
-
 }
 
 ul li {
@@ -248,4 +249,73 @@ ul li {
     margin-top: 15px;
 }
 
+/* Responsive Design */
+/* Tablet view adjustments */
+@media (max-width: 991px) {
+    .container-emi {
+        flex-direction: column;
+    }
+    
+    .calculator, .result {
+        width: 100%;
+    }
+
+    .header h1 {
+        font-size: 24px;
+    }
+
+    .result-heading {
+        font-size: 28px;
+    }
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+    .container-emi {
+        padding: 10px;
+    }
+
+    .header h1 {
+        font-size: 20px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    .emi-form {
+        padding: 8px;
+    }
+
+    .result-heading {
+        font-size: 25px;
+    }
+
+    .amounts p, ul li {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .header h1 {
+        font-size: 18px;
+    }
+
+    .result-heading {
+        font-size: 22px;
+    }
+
+    .promo h3 {
+        font-size: 20px;
+    }
+
+    ul li {
+        font-size: 13px;
+    }
+
+    button {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
 /* end calculatpor */

@@ -84,8 +84,8 @@
                 <p class="loan-amount" id="display-loan-amount">₹0.00</p>
                 <p class="interest-amount" id="display-interest-amount">₹0.00</p>
             </div>
-            <div class="details">
-                <p>Loan Amount</p>
+            <div class="details" style = "color: white;">
+                <p >Loan Amount</p>
                 <p>Interest Amount</p>
             </div>
             <div class="promo">

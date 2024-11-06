@@ -56,7 +56,7 @@ include("config.php");
                 <br><div class="col-md-6 col-sm-10">
                         <div class="property-card">
                             <div class="overlay-black">
-                                <img src="admin/property/<?php echo $row['14'];?>" alt="Residential Property Image">
+                                <img src="admin/property/<?php echo $row['9'];?>" alt="Residential Property Image">
                                 <div class="promo-badge">Residential Projects</div>
                             </div>
                             <div class="property-info">
