@@ -105,9 +105,9 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .navbar-container {
+    /* .navbar-container {
         flex-direction: column;
-    }
+    } */
 
     .navbar-menu {
         display: none;

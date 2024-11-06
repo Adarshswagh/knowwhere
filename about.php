@@ -145,38 +145,46 @@ include("config.php");
 
 
    <!-- why chose us -->
-    <section class="why-choose-us">
-        <div class="container-whychoose">
+   <section class="why-choose-us">
+    <div class="container-whychoose">
         <div class="title">
-                <h2>Why Choose Us</h2>
-                <p>At Knowhere, we prioritize your unique needs, providing tailored solutions and fostering lasting client relationships. Our commitment to transparency, integrity, and professionalism has established us as one of the industry’s most trusted consultants.</p>
-                <a href="#" class="discover-more">Discover More</a>
-            </div>
-            <div class="features">
-                <div class="feature-box reliable">
-                    <i class="icon building"></i>
-                    <h3>Reliable</h3>
-                    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
-                </div>
-                <div class="feature-box comfortable">
-                    <i class="icon cloud"></i>
-                    <h3>Comfortable</h3>
-                    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
-                </div>
-                <div class="feature-box guarantee">
-                    <i class="icon thumbs-up"></i>
-                    <h3>Guarantee</h3>
-                     <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
-                </div>
-                <div class="feature-box affordable">
-                    <i class="icon tag"></i>
-                    <h3>Affordable</h3>
-                    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
-                </div>
-            </div>
-            
+            <h2>Why Choose Us</h2>
+            <p>At Knowhere, we prioritize your unique needs, providing tailored solutions and fostering lasting client relationships. Our commitment to transparency, integrity, and professionalism has established us as one of the industry’s most trusted consultants.</p>
+            <a href="#" class="discover-more">Discover More</a>
         </div>
-    </section>
+        <div class="features">
+            <div class="feature-box reliable">
+                <i class="fas fa-building" style="color: #A8894D;
+    size: 20px;
+    font-size: 25px;
+    padding: 10px;"></i> <!-- FontAwesome icon -->
+                <h3>Reliable</h3>
+            </div>
+            <div class="feature-box comfortable">
+                <i class="fas fa-cloud" style="color: #A8894D;
+    size: 20px;
+    font-size: 25px;
+    padding: 10px;"></i> <!-- FontAwesome icon -->
+                <h3>Comfortable</h3>
+            </div>
+            <div class="feature-box guarantee">
+                <i class="fas fa-thumbs-up" style="color: #A8894D;
+    size: 20px;
+    font-size: 25px;
+    padding: 10px;"></i> <!-- FontAwesome icon -->
+                <h3>Guarantee</h3>
+            </div>
+            <div class="feature-box affordable">
+                <i class="fas fa-tag" style="color: #A8894D;
+    size: 20px;
+    font-size: 25px;
+    padding: 10px;"></i> <!-- FontAwesome icon -->
+                <h3>Affordable</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
     <!-- why choose us -->
 
 
@@ -226,8 +234,8 @@ include("config.php");
                     </div>
                 </div>
                 <div class="custom-team-card">
-                    <img src="./images/boy.jpg" alt="Manda Jean" class="custom-team-img">
-                    <h3 class="custom-team-name">Manda Jean</h3>
+                    <img src="./images/girl.jpg" alt="Steve Irwin" class="custom-team-img">
+                    <h3 class="custom-team-name">Steve Irwin</h3>
                     <p class="custom-team-role">Mansion Team</p>
                     <div class="custom-social-icons">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -235,6 +243,7 @@ include("config.php");
                         <a href="#"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -274,8 +283,8 @@ include("config.php");
                     </div>
                 </div>
                 <div class="custom-team-card">
-                    <img src="./images/boy.jpg" alt="Manda Jean" class="custom-team-img">
-                    <h3 class="custom-team-name">Manda Jean</h3>
+                    <img src="./images/girl.jpg" alt="Steve Irwin" class="custom-team-img">
+                    <h3 class="custom-team-name">Steve Irwin</h3>
                     <p class="custom-team-role">Mansion Team</p>
                     <div class="custom-social-icons">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
