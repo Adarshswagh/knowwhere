@@ -22,7 +22,87 @@ include("config.php");
 
 
 </head>
+<style>
+    .loan-offer-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #050f17; /* Dark background color */
+    padding: 50px;
+    color: #fff; /* White text color for contrast */
+    margin-left: 150px;
+    padding-top: 100px;
+}
+
+.content-wrapper {
+    max-width: 600px;
+}
+
+h1 {
+    font-size: 32px;
+    line-height: 1.2;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: #615dfa; /* Highlight color for 'Home Loan Offers' */
+    font-weight: bold;
+}
+
+.input-group {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.input-field {
+    padding: 12px;
+    font-size: 16px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.checkbox-wrapper label {
+    margin-left: 10px;
+    color: #ccc;
+}
+
+.checkbox-wrapper a {
+    color: #615dfa;
+    text-decoration: underline;
+}
+
+.get-quote-button {
+    padding: 15px 30px;
+    background-color: #615dfa; /* Button color */
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.get-quote-button:hover {
+    background-color: #4b49e1; /* Darker shade on hover */
+}
+
+.image-wrapper img {
+    max-width: 400px;
+}
+
+</style>
 <body>
+
 
 <!-- navbar -->
 
@@ -332,6 +412,58 @@ include("config.php");
     </div>
 </div>
 
+<!-- form -->
+
+<div class="loan-offer-section">
+    <div class="content-wrapper">
+        <h1>Unlock Best <span class="highlight">Home Loan Offers</span><br />From 10+ Lenders</h1>
+        
+        <div class="input-group">
+            <input type="text" placeholder="Required Loan Amount" class="input-field" />
+            <input type="text" placeholder="Monthly Net Salary" class="input-field" />
+        </div>
+
+        <div class="input-group">
+            <select class="input-field">
+                <option>Select</option>
+                <!-- Add more options here -->
+            </select>
+            <select class="input-field">
+                <option>Choose City</option>
+                <!-- Add more options here -->
+            </select>
+        </div>
+
+        <div class="checkbox-wrapper">
+            <input type="checkbox" id="authorize" />
+            <label for="authorize">
+                I hereby appoint UrbanMoney as my authorised representative to receive my credit information from CIBIL. I hereby accept terms & conditions. <a href="#">Read More.</a>
+            </label>
+        </div>
+
+        <button class="get-quote-button">Get Quotes →</button>
+    </div>
+    
+    <div class="image-wrapper">
+        <img src="images/blog3.jpg" alt="Home illustration" />
+    </div>
+</div>
+ <!-- form end -->
+
+
+<!-- call to action -->
+<section id="main-call">
+    <div class="call-to-action">
+        <div class="hero-section">
+            <div class="overlay">
+                <h2>Your Dream Home Awaits</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nibh eu ullam corper luctus, lacus ex consequat ipsum, ultricies interdum ex ante.</p>
+                <a href="#contact" class="btn">Contact Us</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end call to action -->
 
 <script>
 function toggleAnswer(element) {

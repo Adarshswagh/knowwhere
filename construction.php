@@ -133,6 +133,20 @@ include("config.php");
 </div>
 
 
+<!-- call to action -->
+<section id="main-call">
+    <div class="call-to-action">
+        <div class="hero-section">
+            <div class="overlay">
+                <h2>Your Dream Home Awaits</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nibh eu ullam corper luctus, lacus ex consequat ipsum, ultricies interdum ex ante.</p>
+                <a href="#contact" class="btn">Contact Us</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end call to action -->
+
 
 
 <!--	Footer   start-->
