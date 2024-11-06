@@ -207,6 +207,7 @@ h1 {
             <div class="loan-icon">
                 <i class="fas fa-university"></i>
             </div>
+
             <div class="loan-info">
                 <h3>Reliance Capital Home Loan</h3>
             </div>
