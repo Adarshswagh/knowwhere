@@ -160,7 +160,7 @@ include("config.php");
                 <div class="col-md-6 col-sm-10">
                     <div class="property-card">
                         <div class="overlay-black">
-                            <img src="admin/property/<?php echo $row['11']; ?>" alt="Plotting Property Image">
+                            <img src="admin/property/<?php echo $row['13']; ?>" alt="Plotting Property Image">
                             <div class="promo-badge">Plotting Project</div>
                         </div>
                         <div class="property-info">
@@ -181,7 +181,7 @@ include("config.php");
                             
                                 <div class="button-container">
                                     <!-- "Know More" button -->
-                                    <a href="plotdetail.php?pid=<?php echo $row['0']; ?>" class="view-more-btn">Know More</a>
+                                    <a href="ploprodetail.php?pid=<?php echo $row['0']; ?>" class="view-more-btn">Know More</a>
 
                                     <!-- WhatsApp Button -->
                                     <a href="https://wa.me/1234567890" target="_blank" class="btn-icon whatsapp-btn">

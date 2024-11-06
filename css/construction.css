@@ -106,12 +106,13 @@ html, body {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    max-width: 100%;
+    max-width: 1400px;
     margin: 20px;
     background-color: #050f17;
     padding: 50px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: 150px;
 }
 
 .text-content {
@@ -278,7 +279,7 @@ html, body {
 
 /* Main section styling */
 .service-section {
-    background-color: #000;
+    background-color: #050f17;
     color: #110f0f;
     padding: 50px;
     width: 100%;
@@ -286,9 +287,9 @@ html, body {
 
 .service-container {
     display: flex;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
-    gap: 20px;
+    gap: 30px;
     padding: 0 20px;
     align-items: flex-start;
     padding: 50px;
@@ -383,4 +384,80 @@ html, body {
         margin: 0 auto;
     }
 }
+
+
+/* call to action */
+
+#main-call{
+
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: #050f17;
+    padding-top: 150px;
+    padding-bottom: 100px;
+}
+
+.call-to-action {
+    /* background-color: #050f17; */
+    position: relative;
+    background-image: url('../images/bannerf.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    max-width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    /* max-height: 700px; */
+}
+
+.hero-section {
+    
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+}
+
+.overlay {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 50px;
+    /* border-radius: 10px; */
+}
+
+h2 {
+    color: #E8E8E8;
+    font-family: "Italiana", Sans-serif;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 1.3em;
+}
+
+p {
+    text-align: left;
+    color: #e8e8e8;
+    font-size: 14px;
+    font-family: "Lexend", Sans-serif;
+    /* max-width: 700px; */
+}
+
+.btn {
+    background-color: #A8894d;
+    color: #050f17;
+    padding: 15px 30px;
+    /* text-decoration: none; */
+    font-size: 15px;
+    /* font-weight: bold; */
+    font-family: 'Lexend'sans-serif;
+    border-radius: 0px;
+
+}
+
+.btn:hover {
+    background-color: #fff;
+}
+
+/* end call to action */
 
