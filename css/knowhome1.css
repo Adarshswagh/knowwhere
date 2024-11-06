@@ -87,6 +87,91 @@ body {
     text-decoration: none;
     /* color: #fff; */
 }
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* background-color: #f5f5f5; */
+    padding: 10px 15px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    flex: 1;
+}
+
+.input-group input {
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    flex: 1;
+}
+
+.input-group .near-me-btn {
+    padding: 10px;
+    background-color: #f0e9ff;
+    border: none;
+    color: #6b4fa1;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border-radius: 0;
+}
+
+.input-group .mic-btn {
+    padding: 10px;
+    background-color: #f0e9ff;
+    border: none;
+    color: #6b4fa1;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.search-bar select {
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #333;
+    width: 150px;
+}
+
+.search-bar .search-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.search-bar .search-btn:hover {
+    background-color: #45a049;
+}
+
+.search-bar button i, .search-bar .mic-btn i {
+    font-size: 14px;
+}
+
+
 /* end hero section */
 
 /* services */

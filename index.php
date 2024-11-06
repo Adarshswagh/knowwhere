@@ -44,18 +44,38 @@ include("config.php");
  <!-- end navbar -->
 
  <!-- banner -->
-    <section id="hero-main">
-        <section class="hero-section1">
-            <div class="content1">
-                <h1 class="banner-heading">The Keys to Your Home</h1>
-                <p class="banner-para">Welcome to Knowhere, your trusted property consultant.</p>
-                <a href="#" class="btn-home">View Our Projects</a>
-                <a id="headerCompareButton" onclick="window.location.href='compare.php'" style="display: none;">
-    Compare Properties
-</a>
-            </div>
-        </section>
+ <section id="hero-main">
+    <section class="hero-section1">
+        <div class="content1">
+            <h1 class="banner-heading">The Keys to Your Home</h1>
+            <p class="banner-para">Welcome to Knowhere, your trusted property consultant.</p>
+
+            <!-- Search Bar -->
+            <form action="prolist.php" method="GET" class="search-bar">
+                <div class="input-group">
+                    <input type="text" name="location" placeholder="Search by City (e.g., Gurgaon)" required>
+                    
+                </div>
+                
+                <select name="project_type" required>
+                    <option value="">Property Type</option>
+                    <option value="residential">Residential</option>
+                    <option value="commercial">Commercial</option>
+                    <option value="plotting">Plotting</option>
+                </select>
+                <button type="submit" class="search-btn">
+                    <i class="fas fa-search"></i> Search
+                </button>
+            </form>
+
+            <!-- <a href="#" class="btn-home">View Our Projects</a>
+            <a id="headerCompareButton" onclick="window.location.href='compare.php'" style="display: none;">
+                Compare Properties
+            </a> -->
+        </div>
     </section>
+</section>
+
 <!--end banner  -->
 
 
