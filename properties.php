@@ -181,7 +181,7 @@ include("config.php");
                             
                                 <div class="button-container">
                                     <!-- "Know More" button -->
-                                    <a href="plotdetail.php?pid=<?php echo $row['0']; ?>" class="view-more-btn">Know More</a>
+                                    <a href="ploprodetail.php?pid=<?php echo $row['0']; ?>" class="view-more-btn">Know More</a>
 
                                     <!-- WhatsApp Button -->
                                     <a href="https://wa.me/1234567890" target="_blank" class="btn-icon whatsapp-btn">
