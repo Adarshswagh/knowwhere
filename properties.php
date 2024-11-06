@@ -160,7 +160,7 @@ include("config.php");
                 <div class="col-md-6 col-sm-10">
                     <div class="property-card">
                         <div class="overlay-black">
-                            <img src="admin/property/<?php echo $row['13']; ?>" alt="Plotting Property Image">
+                            <img src="admin/property/<?php echo $row['11']; ?>" alt="Plotting Property Image">
                             <div class="promo-badge">Plotting Project</div>
                         </div>
                         <div class="property-info">

@@ -42,6 +42,7 @@ include("config.php");
     </div>
 
     <script>
+        // Retrieve properties from localStorage
         let compareList = JSON.parse(localStorage.getItem("comparisonList")) || [];
 
         function saveToLocalStorage() {
@@ -49,63 +50,68 @@ include("config.php");
         }
 
         function deleteProperty(id) {
+            // Remove the property with the matching ID
             compareList = compareList.filter(property => property.id !== id);
             saveToLocalStorage();
             displayComparisonTable();
         }
 
         function displayComparisonTable() {
-            let tableHTML = '';
-
-            compareList.forEach(property => {
-                tableHTML += `
-                <table class="comparison-table">
-                    <tbody>
-                        <tr><th>Name</th><td>${property.name}</td></tr>
-                        <tr><th>Location</th><td>${property.location}</td></tr>
-                        <tr><th>Total Units</th><td>${property.totalunits}</td></tr>
-                        <tr><th>Total Towers</th><td>${property.towers || 'N/A'} Towers</td></tr>
-                        <tr><th>Land Area</th><td>${property.area || 'N/A'}</td></tr>
-                        <tr><th>Possession</th><td>${property.possession || 'N/A'}</td></tr>
-                        <tr>
-                            <th>Action</th>
+            let tableHTML = `
+            <table class="comparison-table">
+                <tbody>
+                    <tr>
+                        <th>Name</th>
+                        ${compareList.map(property => `<td>${property.name}</td>`).join('')}
+                    </tr>
+                    <tr>
+                        <th>Location</th>
+                        ${compareList.map(property => `<td>${property.location}</td>`).join('')}
+                    </tr>
+                    <tr>
+                        <th>Total Units</th>
+                        ${compareList.map(property => `<td>${property.totalunits || 'N/A'}</td>`).join('')}
+                    </tr>
+                    <tr>
+                        <th>Total Towers</th>
+                        ${compareList.map(property => `<td>${property.towers || 'N/A'}</td>`).join('')}
+                    </tr>
+                    <tr>
+                        <th>Land Area</th>
+                        ${compareList.map(property => `<td>${property.area || 'N/A'}</td>`).join('')}
+                    </tr>
+                    <tr>
+                        <th>Possession</th>
+                        ${compareList.map(property => `<td>${property.possession || 'N/A'}</td>`).join('')}
+                    </tr>
+                    <tr>
+                        <th>Action</th>
+                        ${compareList.map(property => `
                             <td class="action-cell">
                                 <button class="delete-btn" onclick="deleteProperty('${property.id}')">Delete</button>
                             </td>
-                        </tr>
-                    </tbody>
-                </table><br/>`;
-            });
-
+                        `).join('')}
+                    </tr>
+                </tbody>
+            </table>`;
             document.getElementById("comparisonTable").innerHTML = tableHTML;
             updateComparisonDetails();
         }
 
-        function updateComparisonDetails() {
-            const comparisonDetailsElement = document.getElementById('comparisonDetails');
-            if (comparisonDetailsElement) {
-                const comparisonDetails = compareList.map(property => {
-                    return `Name: ${property.name}, Location: ${property.location}, Units: ${property.totalunits}, Towers: ${property.towers || 'N/A'}, Area: ${property.area || 'N/A'}, Possession: ${property.possession || 'N/A'}`;
-                }).join('\n');
-                
-                comparisonDetailsElement.value = comparisonDetails;
-            } else {
-                console.warn("comparisonDetails element not found.");
-            }
-        }
-
+        // Call function on page load
         displayComparisonTable();
     </script>
 </section>
 
 <!-- end compare -->
-
 <!-- Enquire Button -->
-<!-- <div style="position: sticky; top: 20px;">
-    <button id="enquireButton" style="padding: 10px 20px; background-color: #333; color: #fff; border: none; cursor: pointer; border-radius: 5px;">
-        Enquire Now
+<div style="position: fixed; top: 50%; right: -60px; transform: translateY(-50%) rotate(90deg); transform-origin: center;">
+    <button id="enquireButton" style="padding: 10px 20px; background-color: #A8894d; color: #fff; border: none; cursor: pointer; border-radius: 0px; font-weight: 100; font-family: Arial, sans-serif;">
+        Book A Demo
     </button>
-</div> -->
+</div>
+
+
 
 <!-- Enquiry Modal -->
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
@@ -118,30 +124,24 @@ include("config.php");
 </script>
 
 <div id="enquiryModal" style="display:none;">
-    <div class="form-container">
+    <div class="form-container" style="position: relative; padding: 20px; background: #fff; border-radius: 8px;">
         <span id="closeModal" style="position: absolute; top: 10px; right: 15px; cursor: pointer; font-size: 20px;">&times;</span>
         <h3>Enquiry Form</h3>
         
         <!-- Feedback Message -->
         <div id="feedbackMessage" style="color: #007bff; font-size: 14px; margin-bottom: 10px; display: none;"></div>
         
-        <form id="enquiryForm" method="POST" >
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <input type="text" name="contact" placeholder="Your Contact Number" required>
-
-            <!-- Hidden field for favorite projects -->
-            <input type="hidden" name="comparisonDetails" id="comparisonDetails" value="">
-
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            
-            <button type="submit">Submit Enquiry</button>
-        </form>
-
+        <form id="enquiryForm" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <input type="text" name="contact" placeholder="Your Contact Number" required>
+    <!-- Hidden field for favorite projects -->
+    <input type="hidden" name="comparisonDetails" id="comparisonDetails" value="">
+    <textarea name="message" id="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Comparison Data</button>
+</form>
     </div>
 </div>
-]
-
 
 <script>
 // Show modal
@@ -155,15 +155,16 @@ document.getElementById("closeModal").onclick = function() {
     document.getElementById("feedbackMessage").style.display = "none"; // Hide feedback on close
 };
 
+// Form submission
 document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('contact-form');
+    const form = document.getElementById('enquiryForm'); // Corrected form ID
     if (form) {
         form.addEventListener('submit', function(event) {
             event.preventDefault(); // Prevent default form submission
 
             const name = this.name.value;
             const email = this.email.value;
-            const phone = this.phone.value;
+            const phone = this.contact.value; // Corrected to use contact input
             const message = this.message.value;
 
             // Collect comparison data
@@ -189,9 +190,34 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
         });
     } else {
-        console.warn("contact-form element not found.");
+        console.warn("enquiryForm element not found.");
     }
 });
+
+
+
+
+
+   // Show modal and populate the message field with comparison data
+   document.getElementById("enquireButton").onclick = function() {
+        let compareList = JSON.parse(localStorage.getItem("comparisonList")) || [];
+
+        // Format the comparison data
+        let formattedMessage = compareList.map(property => {
+            return `Name: ${property.name}\nLocation: ${property.location}\nTotal Units: ${property.totalunits}\nTowers: ${property.towers}\nArea: ${property.area}\nPossession: ${property.possession}\n`;
+        }).join('\n----------------\n');
+
+        // Assign formatted data to the message field
+        document.getElementById("message").value = formattedMessage;
+
+        // Display the enquiry form modal
+        document.getElementById("enquiryModal").style.display = "block";
+    };
+
+    // Hide modal
+    document.getElementById("closeModal").onclick = function() {
+        document.getElementById("enquiryModal").style.display = "none";
+    };
 
 
 </script>

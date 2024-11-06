@@ -25,22 +25,38 @@ include("config.php");
 <?php include("include/header.php");?>
 <!-- end navbar -->
 
+
+
 <?php
-    // Get the pid from the request
+         // Get the pid from the request
     $id = $_REQUEST['pid'];
 
     // Fetch from the residential_projects table
     $query = mysqli_query($con, "SELECT * FROM plotting_projects WHERE pid='$id'");
 
-  
-?>
+    // Check if any data is found
+    if(mysqli_num_rows($query) > 0) {
+        // Data found, fetch the row
+        $row = mysqli_fetch_array($query);
+        
+       
+        // You can now use $row and $unit_details as needed
+    } else {
+        // No data found in residential_projects
+        echo "No project found with the given pid.";
+        exit;
+    }
+
+        
+
+        ?>
 
 <!-- banner -->
 <section id="banner-main">
     <div class="banner">
         <div class="banner-content">
-            <h2><?php echo htmlspecialchars($row['1']); ?></h2>
-            <p><a href="#" class="banner-bread">Home</a> &gt; <a href="#" class="banner-bread">Services</a></p>
+        <h2> <?php echo $row['1']; ?></h2>
+        <p><a href="#" class="banner-bread">Home</a> &gt; <a href="#" class="banner-bread">Services</a></p>
         </div>
     </div>
 </section>
@@ -55,6 +71,14 @@ include("config.php");
 
 
         <div class="w3-content w3-section" style="max-width:100%;">
+            <?php if (!empty($row['11'])): ?>
+                <img class="mySlides" src="admin/property/<?php echo $row['11']; ?>" style="width:100%">
+            <?php endif; ?>
+            
+            <?php if (!empty($row['12'])): ?>
+                <img class="mySlides" src="admin/property/<?php echo $row['12']; ?>" style="width:100%">
+            <?php endif; ?>
+            
             <?php if (!empty($row['13'])): ?>
                 <img class="mySlides" src="admin/property/<?php echo $row['13']; ?>" style="width:100%">
             <?php endif; ?>
@@ -65,14 +89,6 @@ include("config.php");
             
             <?php if (!empty($row['15'])): ?>
                 <img class="mySlides" src="admin/property/<?php echo $row['15']; ?>" style="width:100%">
-            <?php endif; ?>
-            
-            <?php if (!empty($row['16'])): ?>
-                <img class="mySlides" src="admin/property/<?php echo $row['16']; ?>" style="width:100%">
-            <?php endif; ?>
-            
-            <?php if (!empty($row['17'])): ?>
-                <img class="mySlides" src="admin/property/<?php echo $row['17']; ?>" style="width:100%">
             <?php endif; ?>
         </div>
 
@@ -89,8 +105,11 @@ include("config.php");
                 </span>
             </h1>
 
-            <h3 class="prodetail-heading3">Description :</h3>
-            <p class="description"><?php echo  htmlspecialchars($row['2']); ?></p>
+            <div class="detail-item1">
+                <h3 class="prodetail-heading3">Description :</h3>
+                <p><?php echo $row['2']; ?></p>
+                </div>
+
             <div class="property-details">
                 <div class="detail-item">
                     <i class="fa-solid fa-map-pin" style="color: #a8894d; height:30px;"></i>
@@ -107,41 +126,21 @@ include("config.php");
                 <div class="properties-details">
                     <h3>Project Details :</h3>
                     <div class="detail-grid">
-                        <div><strong class="field-title">Total Floor :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo htmlspecialchars($row['18']); ?></span></div>
-                        <div><strong class="field-title">Total Towers :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo htmlspecialchars($row['5']); ?></span></div>
-                        <div><strong class="field-title">Total Units :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo htmlspecialchars($row['6']); ?></span></div>
-                        <div><strong class="field-title">Possession :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo htmlspecialchars($row['7']); ?></span></div>
-                        <div><strong class="field-title">Project area :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo htmlspecialchars($row['4']); ?></span></div>
-                        <div><strong class="field-title">Status :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo htmlspecialchars($row['14']); ?></span></div>
+                        <div><strong class="field-title">Plot Size :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo htmlspecialchars($row['5']); ?></span></div>
+                        <div><strong class="field-title">Price :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo htmlspecialchars($row['6']); ?></span></div>
+                        <div><strong class="field-title">Per Square Feet (PSF) :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo htmlspecialchars($row['7']); ?></span></div>
+                        <div><strong class="field-title">Possession :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo htmlspecialchars($row['8']); ?></span></div>
+                        <div><strong class="field-title">USP :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo htmlspecialchars($row['9']); ?></span></div>
+                        <div><strong class="field-title">Status :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo htmlspecialchars($row['16']); ?></span></div>
+                        <div><strong class="field-title">FSI :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo htmlspecialchars($row['19']); ?></span></div>
+                        <div><strong class="field-title">Permissible Floor :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo htmlspecialchars($row['20']); ?></span></div>
+                        <div><strong class="field-title">Type :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo htmlspecialchars($row['21']); ?></span></div>
+
 
                     </div>
                 </div>
 
-                <div class="unit-details">
-                    <h3>Unit Details :</h3>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>UNIT NAME</th>
-                                <th>UNIT PRICE</th>
-                                <th>UNIT SIZE</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php if (!empty($unit_details)): ?>
-                                <?php foreach ($unit_details as $unit): ?>
-                                    <tr>
-                                        <td><?php echo htmlspecialchars($unit['name']); ?></td>
-                                        <td><?php echo htmlspecialchars($unit['price']); ?></td>
-                                        <td><?php echo htmlspecialchars($unit['size']); ?></td>
-                                    </tr>
-                                <?php endforeach; ?>
-                            <?php else: ?>
-                                <tr><td colspan="3">No units available</td></tr>
-                            <?php endif; ?>
-                        </tbody>
-                    </table>
-                </div>
+                
             </div>
 
             <div class="amenities-container">

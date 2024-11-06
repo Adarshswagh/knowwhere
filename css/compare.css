@@ -7,35 +7,39 @@ body {
     color: #f0f0f0;
 }
 
+/* Table Styling */
+.comparison-container {
+    width: 90%;
+    margin: 0 auto;
+}
+
 .comparison-table {
     width: 100%;
-    margin-bottom: 20px;
     border-collapse: collapse;
     background-color: #333;
     color: #f0f0f0;
 }
 
-.comparison-table th, .comparison-table td {
-    padding: 15px;
-    text-align: left;
-    border: 1px solid #555;
-}
-
 .comparison-table th {
     background-color: #1b1b1b;
-    width: 200px;
+    padding: 15px;
+    text-align: left;
     font-weight: 200;
     font-family: 'Italiana', sans-serif;
+    border: 1px solid #555;
     font-size: 20px;
+    width: 20%; /* Adjust width for label column */
 }
 
 .comparison-table td {
-    font-family: 'Lexend', sans-serif;
-    font-size: 18px;
+    padding: 15px;
+    text-align: center;
     font-weight: 100;
+    font-family: 'Lexend', sans-serif;
+    border: 1px solid #555;
+    font-size: 20px;
 }
 
-/* Action Cell Styling */
 .action-cell {
     text-align: center;
 }
@@ -58,7 +62,7 @@ body {
     margin-bottom: 100px;
 }
 
-
+/* end table */
 
 /* banner */
 /* Banner styling */
@@ -215,11 +219,11 @@ body {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
-    border: 1px solid #ddd;
+    border: 1px solid #000000;
     border-radius: 5px;
     font-size: 16px;
     color: #333;
-    background-color: #f9f9f9;
+    /* background-color: #f9f9f9; */
     transition: border-color 0.3s ease;
 }
 
@@ -228,8 +232,8 @@ body {
 #enquiryForm input[type="email"]:focus,
 #enquiryForm input[type="tel"]:focus,
 #enquiryForm textarea:focus {
-    border-color: #007bff;
-    background-color: #fff;
+    border-color: #000000;
+    /* background-color: #fff; */
     outline: none;
 }
 
@@ -245,16 +249,18 @@ body {
 }
 
 #enquiryForm button[type="submit"] {
-    background-color: #007bff;
+    background-color: #A8894D;
     color: #ffffff;
+    width: 100%;
 }
 
 #enquiryForm button[type="submit"]:hover {
-    background-color: #0056b3;
+    background-color: #050F17;
+    
 }
 
 #enquiryForm button#closeModal {
-    background-color: #ccc;
+    /* background-color: #ccc; */
     color: #333;
     margin-left: 10px;
 }
