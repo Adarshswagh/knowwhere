@@ -22,7 +22,12 @@ include("config.php");
 
 
 </head>
+
 <style>
+.body{
+    font-family: "Lexend", Sans-serif;
+}
+
     .loan-offer-section {
     display: flex;
     justify-content: space-between;
@@ -125,30 +130,30 @@ h1 {
 
 <!-- why choose us -->
 <body>
-    <section class="why-choose-us">
+    <section class="why-choose-us" style = "background-color: #050f17;">
         <h2>WHY CHOOSE US?</h2>
         <div class="features">
             <div class="feature">
                 <div class="icon" style="color: green;">&#37;</div>
                 <h3>GREAT RATES</h3>
-                <p>There are many variations of passages of Lorem Ipsum available, alteration in some form.</p>
+                <p style = "text-align:center;">There are many variations of passages of Lorem Ipsum available, alteration in some form.</p>
             </div>
             <div class="feature">
                 <div class="icon" style="color: orange;">&#9679;</div>
                 <h3>CONVENIENT</h3>
-                <p>There are many variations of passages of Lorem Ipsum available, alteration in some form.</p>
+                <p style = "text-align:center;">There are many variations of passages of Lorem Ipsum available, alteration in some form.</p>
             </div>
             <div class="feature">
                 <div class="icon" style="color: blue;">&#128187;</div>
                 <h3>SIMPLE</h3>
-                <p>There are many variations of passages of Lorem Ipsum available, alteration in some form.</p>
+                <p style = "text-align:center;">There are many variations of passages of Lorem Ipsum available, alteration in some form.</p>
             </div>
         </div>
     </section>
 </body>
 
 <!-- about section -->
-<section class="business-loan">
+<section class="business-loan" style = "background-color: #050f17;">
         <div class="image-container" style="height:400px;">
             <img src="images/bannerabout.jpg" alt="People in a business setting">
         </div>
@@ -198,220 +203,6 @@ h1 {
 </div> -->
 
 <!-- faq section end -->
-
-
-<div class="loan-section">
-    <h2>Top Private Banks For Home Loan - October 2024</h2>
-    <div class="loan-card">
-        <div class="loan-details">
-            <div class="loan-icon">
-                <i class="fas fa-university"></i>
-            </div>
-
-            <div class="loan-info">
-                <h3>Reliance Capital Home Loan</h3>
-            </div>
-            <button class="apply-btn">Apply Now</button>
-        </div>
-        <div class="loan-terms">
-            <div class="term">
-                <span>Interest Rate</span>
-                <span>9.75% - 13%</span>
-            </div>
-            <div class="term">
-                <span>Loan Amount</span>
-                <span>₹7.5L</span>
-            </div>
-            <div class="term">
-                <span>EMI Per Lakh</span>
-                <span>₹2,112 - ₹2,275</span>
-            </div>
-            <div class="term">
-                <span>Processing Fees</span>
-                <span>--</span>
-            </div>
-            <div class="term">
-                <span>Pre-Payment Charges</span>
-                <span>--</span>
-            </div>
-        </div>
-    </div>
-    <br>
-    <br>
-    <div class="loan-card">
-        <div class="loan-details">
-            <div class="loan-icon">
-                <i class="fas fa-university"></i>
-            </div>
-            <div class="loan-info">
-                <h3>Reliance Capital Home Loan</h3>
-            </div>
-            <button class="apply-btn">Apply Now</button>
-        </div>
-        <div class="loan-terms">
-            <div class="term">
-                <span>Interest Rate</span>
-                <span>9.75% - 13%</span>
-            </div>
-            <div class="term">
-                <span>Loan Amount</span>
-                <span>₹7.5L</span>
-            </div>
-            <div class="term">
-                <span>EMI Per Lakh</span>
-                <span>₹2,112 - ₹2,275</span>
-            </div>
-            <div class="term">
-                <span>Processing Fees</span>
-                <span>--</span>
-            </div>
-            <div class="term">
-                <span>Pre-Payment Charges</span>
-                <span>--</span>
-            </div>
-        </div>
-    </div>
-    <br>
-    <br>    
-    <div class="loan-card">
-        <div class="loan-details">
-            <div class="loan-icon">
-                <i class="fas fa-university"></i>
-            </div>
-            <div class="loan-info">
-                <h3>Reliance Capital Home Loan</h3>
-            </div>
-            <button class="apply-btn">Apply Now</button>
-        </div>
-        <div class="loan-terms">
-            <div class="term">
-                <span>Interest Rate</span>
-                <span>9.75% - 13%</span>
-            </div>
-            <div class="term">
-                <span>Loan Amount</span>
-                <span>₹7.5L</span>
-            </div>
-            <div class="term">
-                <span>EMI Per Lakh</span>
-                <span>₹2,112 - ₹2,275</span>
-            </div>
-            <div class="term">
-                <span>Processing Fees</span>
-                <span>--</span>
-            </div>
-            <div class="term">
-                <span>Pre-Payment Charges</span>
-                <span>--</span>
-            </div>
-        </div>
-    </div>
-    <br>
-    <br>
-    <div class="loan-card">
-        <div class="loan-details">
-            <div class="loan-icon">
-                <i class="fas fa-university"></i>
-            </div>
-            <div class="loan-info">
-                <h3>Reliance Capital Home Loan</h3>
-            </div>
-            <button class="apply-btn">Apply Now</button>
-        </div>
-        <div class="loan-terms">
-            <div class="term">
-                <span>Interest Rate</span>
-                <span>9.75% - 13%</span>
-            </div>
-            <div class="term">
-                <span>Loan Amount</span>
-                <span>₹7.5L</span>
-            </div>
-            <div class="term">
-                <span>EMI Per Lakh</span>
-                <span>₹2,112 - ₹2,275</span>
-            </div>
-            <div class="term">
-                <span>Processing Fees</span>
-                <span>--</span>
-            </div>
-            <div class="term">
-                <span>Pre-Payment Charges</span>
-                <span>--</span>
-            </div>
-        </div>
-    </div>
-    <br>
-    <br>
-    <div class="loan-card">
-        <div class="loan-details">
-            <div class="loan-icon">
-                <i class="fas fa-university"></i>
-            </div>
-            <div class="loan-info">
-                <h3>Reliance Capital Home Loan</h3>
-            </div>
-            <button class="apply-btn">Apply Now</button>
-        </div>
-        <div class="loan-terms">
-            <div class="term">
-                <span>Interest Rate</span>
-                <span>9.75% - 13%</span>
-            </div>
-            <div class="term">
-                <span>Loan Amount</span>
-                <span>₹7.5L</span>
-            </div>
-            <div class="term">
-                <span>EMI Per Lakh</span>
-                <span>₹2,112 - ₹2,275</span>
-            </div>
-            <div class="term">
-                <span>Processing Fees</span>
-                <span>--</span>
-            </div>
-            <div class="term">
-                <span>Pre-Payment Charges</span>
-                <span>--</span>
-            </div>
-        </div>
-    </div>
-    <br>
-    <br>
-    <div class="loan-card">
-        <div class="loan-details">
-            <div class="loan-icon">
-                <i class="fas fa-university"></i>
-            </div>
-            <div class="loan-info">
-                <h3>Reliance Capital Home Loan</h3>
-            </div>
-            <button class="apply-btn">Apply Now</button>
-        </div>
-        <div class="loan-terms">
-            <div class="term">
-                <span>Interest Rate</span>
-                <span>9.75% - 13%</span>
-            </div>
-            <div class="term">
-                <span>Loan Amount</span>
-                <span>₹7.5L</span>
-            </div>
-            <div class="term">
-                <span>EMI Per Lakh</span>
-                <span>₹2,112 - ₹2,275</span>
-            </div>
-            <div class="term">
-                <span>Processing Fees</span>
-                <span>--</span>
-            </div>
-            <div class="term">
-                <span>Pre-Payment Charges</span>
-                <span>--</span>
-            </div>
-        </div>
-    </div>
-</div>
 
 <!-- form -->
 
