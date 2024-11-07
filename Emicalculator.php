@@ -54,8 +54,8 @@
 <!--end banner  -->
 
 <!-- calculator -->
-<section id="emi-calculator">
-    <div class="container-emi">
+<section id="emi-calculator" style ="padding:40px;">
+    <div class="container-emi" style ="flex-direction: row; ">
         <div class="calculator">
             <div class="header">
                 <i class="fa fa-calculator" style="height:22px; margin-top:-5px;"></i>&nbsp

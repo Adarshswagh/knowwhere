@@ -40,13 +40,13 @@
                      
                     <div class="blog-list">
                             <div class="blog-column">
-                                <h1 class="blog-heading">LATEST POST :</h1>
+                                <h1 class="blog-heading" style = "font-size: 40px; color: #A8894D;" >LATEST POST :</h1>
                                 <br><hr><br>
                             </div>
 
                             <a href="#" class="blog-link">
                                 <div class="blog-post">
-                                    <img src="./images/blog1.jpg" alt="Blog 2">
+                                    <img src="./images/blog1.jpg" alt="Blog 2" style = "width:100%">
                                     <h2>‘Best beach in Australia’ to shake QLD coastal records</h2>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
                                     <a href="#" class="read-link">Read More →</a>
@@ -56,7 +56,7 @@
 
                             <a href="#" class="blog-link">
                                 <div class="blog-post">
-                                    <img src="./images/blog2.jpg" alt="Blog 1">
+                                    <img src="./images/blog2.jpg" alt="Blog 1" style = "width:100%">
                                     <h2>Burnt house in shocking condition gets the top price</h2>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
                                     <a href="#" class="read-link">Read More →</a>
@@ -66,7 +66,7 @@
 
                             <a href="#" class="blog-link">
                                 <div class="blog-post">
-                                    <img src="./images/blog3.jpg" alt="Blog 3">
+                                    <img src="./images/blog3.jpg" alt="Blog 3" style = "width:100%">
                                     <h2>QLD’s hoarder house attracts 39 registered bidders</h2>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
                                     <a href="#" class="read-link">Read More →</a>
@@ -81,7 +81,7 @@
                     <div class="right-sidebar">
                         <div class="sticky-box">
                         
-                            <div class="form-container">
+                            <div class="form-container" style ="max-width: 80%;">
                             <h3 class="form-heading">Connect with Us for Tailored Solutions!</h3>
                                 <form style="text-align:center">
                                     <div class="input-group" style="width:102%">

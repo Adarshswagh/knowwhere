@@ -117,7 +117,7 @@ html, body {
 
 .container-emi {
     display: flex;
-    flex-direction: column; /* Stack columns on smaller screens */
+    flex-direction: row; /* Stack columns on smaller screens */
     background-color: #A8894D;
     padding: 20px;
     border-radius: 10px;

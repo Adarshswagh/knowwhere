@@ -131,9 +131,9 @@
 }
 
 .blog-post img {
-    width: 50%;
+    width: 100%;
     height: auto;
-    max-height: 500px;
+    max-height: 1500px;
     margin-bottom: 10px;
     border-radius: 8px;
 }
@@ -268,7 +268,7 @@ button:hover {
 /* Mobile view adjustments */
 @media (max-width: 768px) {
     .blog-heading {
-        font-size: 30px;
+        font-size: 25px;
     }
 
     .blog-post h2 {
