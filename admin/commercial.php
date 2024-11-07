@@ -144,7 +144,7 @@ if ($result) {
 												<div class="form-group row">
 													<label class="col-lg-2 col-form-label">Content</label>
 													<div class="col-lg-9">
-														<textarea class="tinymce form-control" name="project_description" rows="10" cols="30"></textarea>
+														<textarea class=" form-control" name="project_description" placeholder="Enter Description" rows="10" cols="30"></textarea>
 													</div>
 												</div>
 												
@@ -191,9 +191,9 @@ if ($result) {
 											</div>
 											<div class="col-xl-6">
 												<div class="form-group row">
-													<label class="col-lg-3 col-form-label">Land Area</label>
+													<label class="col-lg-3 col-form-label">Project Area</label>
 													<div class="col-lg-9">
-														<input type="text" class="form-control" name="project_area"      placeholder="Enter Land Area">
+														<input type="text" class="form-control" name="project_area"      placeholder="Enter Project Area">
 													</div>
 												</div>
 												<div class="form-group row">

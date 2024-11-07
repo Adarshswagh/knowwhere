@@ -35,6 +35,15 @@ include("config.php");
 </section>
 <!-- end banner -->
 
+
+
+
+
+
+
+
+
+
 <!-- compare -->
 <section id="compare-table">
     <div class="comparison-container">
@@ -56,47 +65,62 @@ include("config.php");
             displayComparisonTable();
         }
 
-        function displayComparisonTable() {
-            let tableHTML = `
-            <table class="comparison-table">
-                <tbody>
-                    <tr>
-                        <th>Name</th>
-                        ${compareList.map(property => `<td>${property.name}</td>`).join('')}
-                    </tr>
-                    <tr>
-                        <th>Location</th>
-                        ${compareList.map(property => `<td>${property.location}</td>`).join('')}
-                    </tr>
-                    <tr>
-                        <th>Total Units</th>
-                        ${compareList.map(property => `<td>${property.totalunits || 'N/A'}</td>`).join('')}
-                    </tr>
-                    <tr>
-                        <th>Total Towers</th>
-                        ${compareList.map(property => `<td>${property.towers || 'N/A'}</td>`).join('')}
-                    </tr>
-                    <tr>
-                        <th>Land Area</th>
-                        ${compareList.map(property => `<td>${property.area || 'N/A'}</td>`).join('')}
-                    </tr>
-                    <tr>
-                        <th>Possession</th>
-                        ${compareList.map(property => `<td>${property.possession || 'N/A'}</td>`).join('')}
-                    </tr>
-                    <tr>
-                        <th>Action</th>
-                        ${compareList.map(property => `
-                            <td class="action-cell">
-                                <button class="delete-btn" onclick="deleteProperty('${property.id}')">Delete</button>
-                            </td>
-                        `).join('')}
-                    </tr>
-                </tbody>
-            </table>`;
-            document.getElementById("comparisonTable").innerHTML = tableHTML;
-            updateComparisonDetails();
-        }
+        // This function will display the comparison table from the comparisonList in localStorage
+            function displayComparisonTable() {
+                let compareList = JSON.parse(localStorage.getItem("comparisonList")) || [];
+
+                // If no properties are added, display a message
+                if (compareList.length === 0) {
+                document.getElementById("comparisonTable").innerHTML = "<p class='no-properties'>No properties to compare</p>";
+                return;
+            }
+
+
+                let tableHTML = `
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                ${compareList.map(property => `<td>${property.name}</td>`).join('')}
+                            </tr>
+                            <tr>
+                                <th>Location</th>
+                                ${compareList.map(property => `<td>${property.location}</td>`).join('')}
+                            </tr>
+                            <tr>
+                                <th>Total Units</th>
+                                ${compareList.map(property => `<td>${property.totalunits || 'N/A'}</td>`).join('')}
+                            </tr>
+                            <tr>
+                                <th>Total Towers</th>
+                                ${compareList.map(property => `<td>${property.towers || 'N/A'}</td>`).join('')}
+                            </tr>
+                            <tr>
+                                <th>Land Area</th>
+                                ${compareList.map(property => `<td>${property.area || 'N/A'}</td>`).join('')}
+                            </tr>
+                            <tr>
+                                <th>Possession</th>
+                                ${compareList.map(property => `<td>${property.possession || 'N/A'}</td>`).join('')}
+                            </tr>
+                            <tr>
+                                <th>Action</th>
+                                ${compareList.map(property => `
+                                    <td class="action-cell">
+                                        <button class="delete-btn" onclick="deleteProperty('${property.id}')">Delete</button>
+                                    </td>`).join('')}
+                            </tr>
+                        </thead>
+                    </table>`;
+
+                document.getElementById("comparisonTable").innerHTML = tableHTML;
+            }
+
+            // Call this function when the page loads to display the comparison table
+            displayComparisonTable();
+
+
+
 
         // Call function on page load
         displayComparisonTable();
@@ -105,8 +129,8 @@ include("config.php");
 
 <!-- end compare -->
 <!-- Enquire Button -->
-<div style="position: fixed; top: 50%; right: -60px; transform: translateY(-50%) rotate(90deg); transform-origin: center;">
-    <button id="enquireButton" style="padding: 10px 20px; background-color: #A8894d; color: #fff; border: none; cursor: pointer; border-radius: 0px; font-weight: 100; font-family: Arial, sans-serif;">
+<div id="enquireButtonContainer">
+    <button id="enquireButton">
         Book A Demo
     </button>
 </div>
@@ -124,7 +148,7 @@ include("config.php");
 </script>
 
 <div id="enquiryModal" style="display:none;">
-    <div class="form-container" style="position: relative; padding: 20px; background: #fff; border-radius: 8px;">
+    <div class="form-container" style="position: relative; padding: 20px; background: #eaeaea; border-radius: 8px;">
         <span id="closeModal" style="position: absolute; top: 10px; right: 15px; cursor: pointer; font-size: 20px;">&times;</span>
         <h3>Enquiry Form</h3>
         

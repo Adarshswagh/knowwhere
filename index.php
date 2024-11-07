@@ -51,22 +51,26 @@ include("config.php");
             <p class="banner-para">Welcome to Knowhere, your trusted property consultant.</p>
 
             <!-- Search Bar -->
-            <form action="prolist.php" method="GET" class="search-bar">
-                <div class="input-group">
-                    <input type="text" name="location" placeholder="Search by City (e.g., Gurgaon)" required>
-                    
+            <form action="prolist.php" method="GET" class="property-search-bar">
+                <div class="property-input-group">
+                    <input type="text" name="location" class="property-input" placeholder="Search by City (e.g., Hinjewadi)" required>
                 </div>
-                
-                <select name="project_type" required>
-                    <option value="">Property Type</option>
-                    <option value="residential">Residential</option>
-                    <option value="commercial">Commercial</option>
-                    <option value="plotting">Plotting</option>
-                </select>
-                <button type="submit" class="search-btn">
+
+                <div class="property-select-group">
+                    <select name="project_type" class="property-select" required>
+                        <option value="" disabled selected>Property Type</option>
+                        <option value="residential">Residential</option>
+                        <option value="commercial">Commercial</option>
+                        <option value="plotting">Plotting</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="property-search-btn">
                     <i class="fas fa-search"></i> Search
                 </button>
             </form>
+
+
 
             <!-- <a href="#" class="btn-home">View Our Projects</a>
             <a id="headerCompareButton" onclick="window.location.href='compare.php'" style="display: none;">
@@ -123,12 +127,12 @@ include("config.php");
 </section>
     <section class="property-section">
         <div class="property-container">
+        
             <div class="property-card1 property-card-small property-info1">
                 <img src="./images/commercial_property.png" alt="Property 1">
                 <div class="property-overlay">
                     <div class="property-details1">
-                        <h2 class="property-type-detail">Residential Property</h2>
-                        <p>25 Property</p>
+                    <a href="residential.php"  style="text-decoration:none;">  <h2 class="property-type-detail">Residential Projects</h2></a>
                     </div>
                 </div>
             </div>
@@ -136,8 +140,7 @@ include("config.php");
                 <img src="./images/residential_property.png" alt="Property 2">
                 <div class="property-overlay">
                     <div class="property-details1">
-                        <h2 class="property-type-detail">Commercial Property</h2>
-                        <p>25 Property</p>
+                    <a href="commercial.php"  style="text-decoration:none;"> <h2 class="property-type-detail">Commercial Projects</h2></a>
                     </div>
                 </div>
             </div>
@@ -145,8 +148,7 @@ include("config.php");
                 <img src="./images/plotting_property.png" alt="Property 3">
                 <div class="property-overlay">
                     <div class="property-details1">
-                        <h2 class="property-type-detail">Plots/ Vills Property</h2>
-                        <p>25 Property</p>
+                    <a href="plotting.php"  style="text-decoration:none;">   <h2 class="property-type-detail">Plots/ Vills Projects</h2></a>
                     </div>
                 </div>
             </div>
@@ -170,13 +172,13 @@ include("config.php");
         <div class="main-content">
             <h1>Real Estate Without the Knowhere</h1>
             <p>At Knowhere, we understand that buying or selling a property can be a daunting task. That&#39;s why
-we strive to make the process as smooth and stress-free as possible. We have a team of highly
-experienced professionals who are dedicated to providing you with personalized solutions that
-cater to your unique needs.</p>
-            <p>Our expertise lies in providing end-to-end real estate services, including property search, legal
-documentation, property valuation, and much more. We work closely with our clients to
-understand their requirements and offer them customized solutions that are tailored to their
-needs.</p>
+                we strive to make the process as smooth and stress-free as possible. We have a team of highly
+                experienced professionals who are dedicated to providing you with personalized solutions that
+                cater to your unique needs.</p>
+                            <p>Our expertise lies in providing end-to-end real estate services, including property search, legal
+                documentation, property valuation, and much more. We work closely with our clients to
+                understand their requirements and offer them customized solutions that are tailored to their
+                needs.</p>
             <a href="#" class="view-projects-btn">View All Projects</a>
         </div>
     </div>
@@ -213,7 +215,7 @@ exceptional services and helping you find your dream home.
         ?>
             <div class="card-entry">
                             <div class="overlay-black">
-                                <img src="admin/property/<?php echo $row['14'];?>" alt="Residential Property Image">
+                                <img src="admin/property/<?php echo $row['9'];?>" alt="Residential Property Image">
                                 <div class="promo-badge">Residential Projects</div>
                                 </div>
                             <div class="property-info">
@@ -235,7 +237,7 @@ exceptional services and helping you find your dream home.
                                 </div>
                                 <div class="button-container">
                                     <!-- "Know More" button -->
-                                    <a href="Propertdetail.php?pid=<?php echo $row['0']; ?>" class="view-more-btn">Know More</a>
+                                    <a href="Prodetail.php?pid=<?php echo $row['0']; ?>" class="view-more-btn">Know More</a>
 
                                     <!-- WhatsApp Button -->
                                     <a href="https://wa.me/1234567890" target="_blank" class="btn-icon whatsapp-btn">
@@ -285,7 +287,7 @@ exceptional services and helping you find your dream home.
                                 </div>  
                                 <div class="button-container">
                                     <!-- "Know More" button -->
-                                    <a href="Propertdetail.php?pid=<?php echo $row['0']; ?>" class="view-more-btn">Know More</a>
+                                    <a href="comprodetail.php?pid=<?php echo $row['0']; ?>" class="view-more-btn">Know More</a>
 
                                     <!-- WhatsApp Button -->
                                     <a href="https://wa.me/1234567890" target="_blank" class="btn-icon whatsapp-btn">
@@ -333,7 +335,7 @@ exceptional services and helping you find your dream home.
                                 </div> 
                                 <div class="button-container">
                                     <!-- "Know More" button -->
-                                    <a href="Propertdetail.php?pid=<?php echo $row['0']; ?>" class="view-more-btn">Know More</a>
+                                    <a href="plotdetail.php?pid=<?php echo $row['0']; ?>" class="view-more-btn">Know More</a>
 
                                     <!-- WhatsApp Button -->
                                     <a href="https://wa.me/1234567890" target="_blank" class="btn-icon whatsapp-btn">
@@ -387,7 +389,7 @@ exceptional services and helping you find your dream home.
         ?>
             <div class="card-entry">
                             <div class="overlay-black">
-                                <img src="admin/property/<?php echo $row['14'];?>" alt="Residential Property Image">
+                                <img src="admin/property/<?php echo $row['9'];?>" alt="Residential Property Image">
                                 <div class="promo-badge">Residential Projects</div>
                                 </div>
                             <div class="property-info">
@@ -409,7 +411,7 @@ exceptional services and helping you find your dream home.
                                 </div>
                                 <div class="button-container">
                                     <!-- "Know More" button -->
-                                    <a href="Propertdetail.php?pid=<?php echo $row['0']; ?>" class="view-more-btn">Know More</a>
+                                    <a href="Prodetail.php?pid=<?php echo $row['0']; ?>" class="view-more-btn">Know More</a>
 
                                     <!-- WhatsApp Button -->
                                     <a href="https://wa.me/1234567890" target="_blank" class="btn-icon whatsapp-btn">
@@ -459,7 +461,7 @@ exceptional services and helping you find your dream home.
                                 </div>  
                                 <div class="button-container">
                                     <!-- "Know More" button -->
-                                    <a href="Propertdetail.php?pid=<?php echo $row['0']; ?>" class="view-more-btn">Know More</a>
+                                    <a href="comprodetail.php?pid=<?php echo $row['0']; ?>" class="view-more-btn">Know More</a>
 
                                     <!-- WhatsApp Button -->
                                     <a href="https://wa.me/1234567890" target="_blank" class="btn-icon whatsapp-btn">
@@ -507,7 +509,7 @@ exceptional services and helping you find your dream home.
                                 </div> 
                                 <div class="button-container">
                                     <!-- "Know More" button -->
-                                    <a href="Propertdetail.php?pid=<?php echo $row['0']; ?>" class="view-more-btn">Know More</a>
+                                    <a href="plotdetail.php?pid=<?php echo $row['0']; ?>" class="view-more-btn">Know More</a>
 
                                     <!-- WhatsApp Button -->
                                     <a href="https://wa.me/1234567890" target="_blank" class="btn-icon whatsapp-btn">
@@ -594,7 +596,7 @@ exceptional services and helping you find your dream home.
                                 </div>  
                                 <div class="button-container">
                                     <!-- "Know More" button -->
-                                    <a href="Propertdetail.php?pid=<?php echo $row['0']; ?>" class="view-more-btn">Know More</a>
+                                    <a href="comprodetail.php?pid=<?php echo $row['0']; ?>" class="view-more-btn">Know More</a>
 
                                     <!-- WhatsApp Button -->
                                     <a href="https://wa.me/1234567890" target="_blank" class="btn-icon whatsapp-btn">
@@ -642,7 +644,7 @@ exceptional services and helping you find your dream home.
                                 </div> 
                                 <div class="button-container">
                                     <!-- "Know More" button -->
-                                    <a href="Propertdetail.php?pid=<?php echo $row['0']; ?>" class="view-more-btn">Know More</a>
+                                    <a href="plotdetail.php?pid=<?php echo $row['0']; ?>" class="view-more-btn">Know More</a>
 
                                     <!-- WhatsApp Button -->
                                     <a href="https://wa.me/1234567890" target="_blank" class="btn-icon whatsapp-btn">
@@ -743,6 +745,93 @@ exceptional services and helping you find your dream home.
 
 
  <!-- end get iin touch -->
+
+
+
+
+ <!-- Enquire Button -->
+<div id="enquireButtonContainer">
+    <button id="enquireButton">
+        Book A Demo
+    </button>
+</div>
+
+<!-- Enquiry Modal -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "T0yb7stlayE2PO5Hv",
+      });
+   })();
+</script>
+
+<div id="enquiryModal" style="display:none;">
+    <div class="form-container" style="position: relative; padding: 20px; background: #eaeaea; border-radius: 8px;">
+        <span id="closeModal" style="position: absolute; top: 10px; right: 15px; cursor: pointer; font-size: 20px;">&times;</span>
+        <h3>Enquiry Form</h3>
+        
+        <!-- Feedback Message -->
+        <div id="feedbackMessage" style="color: #007bff; font-size: 14px; margin-bottom: 10px; display: none;"></div>
+        
+        <form id="enquiryForm" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="text" name="contact" placeholder="Your Contact Number" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</div>
+
+<script>
+// Show modal
+document.getElementById("enquireButton").onclick = function() {
+    document.getElementById("enquiryModal").style.display = "block";
+};
+
+// Hide modal
+document.getElementById("closeModal").onclick = function() {
+    document.getElementById("enquiryModal").style.display = "none";
+    document.getElementById("feedbackMessage").style.display = "none"; // Hide feedback on close
+};
+
+// Form submission
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('enquiryForm');
+    if (form) {
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const name = this.name.value;
+            const email = this.email.value;
+            const phone = this.contact.value;
+            const message = this.message.value;
+
+            const templateParams = {
+                to_name: 'attendancedigitalizetheglobe@gmail.com', // Replace with the recipient's email
+                from_name: name,
+                user_email: email,
+                user_number: phone,
+                message: message
+            };
+
+            emailjs.send("service_whdabtl", "template_fufrp06", templateParams)
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    alert('Email sent successfully!');
+                    document.getElementById("enquiryModal").style.display = "none"; // Close modal on success
+                }, function(error) {
+                    console.log('FAILED...', error);
+                    alert('Error sending email. Please try again.');
+                });
+        });
+    } else {
+        console.warn("enquiryForm element not found.");
+    }
+});
+</script>
+<!-- end enquirty -->
 
 
  <!--	Footer   start-->

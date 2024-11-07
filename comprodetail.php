@@ -216,60 +216,90 @@ include("config.php");
 </section>
 <!-- end property detail -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <script>
     let slideIndex = 0;
-showSlides();
+    showSlides();
 
-function plusSlides(n) {
-    showSlides(slideIndex += n);
-}
-
-function showSlides() {
-    let slides = document.getElementsByClassName("mySlides");
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}    
-    slides[slideIndex-1].style.display = "block";  
-    setTimeout(showSlides, 3000); // Change image every 3 seconds
-}
-
-
-var myIndex = 0;
-        carousel();
-
-        function carousel() {
-            var i;
-            var x = document.getElementsByClassName("mySlides");
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            myIndex++;
-            if (myIndex > x.length) {
-                myIndex = 1
-            }
-            x[myIndex - 1].style.display = "block";
-            setTimeout(carousel, 3000); // Change image every 2 seconds
+    function showSlides() {
+        let slides = document.getElementsByClassName("mySlides");
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
         }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
 
-    </script>
+    function addToCompare() {
+    // Extract project type from the URL (assuming the URL follows the pattern)
+    const urlSegments = window.location.pathname.split('/');
+    const projectType = urlSegments[2];  // This gets 'residential', 'commercial', or 'plotting'
+
+    const propertyId = "<?php echo htmlspecialchars($id); ?>";
+    const propertyName = "<?php echo htmlspecialchars($row['1']); ?>";
+    const propertyLocation = "<?php echo htmlspecialchars($row['3']); ?>";
+    const propertyTotalUnits = "<?php echo htmlspecialchars($row['6']); ?>";
+    const propertyTotalTowers = "<?php echo htmlspecialchars($row['5']); ?>";
+    const propertyArea = "<?php echo htmlspecialchars($row['4']); ?>";
+    const propertyPossession = "<?php echo htmlspecialchars($row['7']); ?>";
+
+    // Retrieve existing comparison list from localStorage
+    let comparisonList = JSON.parse(localStorage.getItem("comparisonList")) || [];
+
+    // If there are already properties in the comparison list, we check the first property type
+    if (comparisonList.length > 0) {
+        const firstPropertyType = comparisonList[0].type;
+
+        // Check if the selected property type matches the first property's type
+        if (firstPropertyType !== projectType) {
+            alert("You can only compare properties of the same type (Residential, Commercial, or Plotting).");
+            return;  // Stop the function execution if types don't match
+        }
+    }
+
+    // Check if the property is already in the comparison list
+    const exists = comparisonList.some(item => item.id === propertyId);
+
+    if (exists) {
+        alert("Property already added to comparison list!");
+    } else {
+        // Add new property to the comparison list with the inferred project type
+        comparisonList.push({
+            id: propertyId,
+            name: propertyName,
+            location: propertyLocation,
+            totalunits: propertyTotalUnits,
+            towers: propertyTotalTowers,
+            area: propertyArea,
+            possession: propertyPossession,
+            type: projectType  // Add the project type to the comparison list
+        });
+
+        // Save updated comparison list to localStorage
+        localStorage.setItem("comparisonList", JSON.stringify(comparisonList));
+
+        alert("Property added to comparison list. Type: Commercial Project ");
+    }
+}
+
+
+
+function copyShareUrl() {
+    const shareUrl = window.location.href; // Get the current page URL
+
+    // Create a temporary input element to copy the URL
+    const tempInput = document.createElement("input");
+    document.body.appendChild(tempInput);
+    tempInput.value = shareUrl;
+    tempInput.select();
+    document.execCommand("copy");
+    document.body.removeChild(tempInput);
+
+    alert("Project URL copied to clipboard!");
+}
+
+</script>
 <!-- footer -->
 <?php include("include/footer.php");?>
 <!-- end footer -->

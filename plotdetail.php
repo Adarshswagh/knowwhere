@@ -1,3 +1,4 @@
+
 <?php 
 ini_set('session.cache_limiter','public');
 session_cache_limiter(false);
@@ -32,7 +33,7 @@ include("config.php");
     $id = $_REQUEST['pid'];
 
     // Fetch from the residential_projects table
-    $query = mysqli_query($con, "SELECT * FROM plotting_projects WHERE pid='$id'");
+    $query = mysqli_query($con, "SELECT * FROM plotting_projects WHERE id='$id'");
 
     // Check if any data is found
     if(mysqli_num_rows($query) > 0) {
@@ -71,14 +72,6 @@ include("config.php");
 
 
         <div class="w3-content w3-section" style="max-width:100%;">
-            <?php if (!empty($row['11'])): ?>
-                <img class="mySlides" src="admin/property/<?php echo $row['11']; ?>" style="width:100%">
-            <?php endif; ?>
-            
-            <?php if (!empty($row['12'])): ?>
-                <img class="mySlides" src="admin/property/<?php echo $row['12']; ?>" style="width:100%">
-            <?php endif; ?>
-            
             <?php if (!empty($row['13'])): ?>
                 <img class="mySlides" src="admin/property/<?php echo $row['13']; ?>" style="width:100%">
             <?php endif; ?>
@@ -89,6 +82,14 @@ include("config.php");
             
             <?php if (!empty($row['15'])): ?>
                 <img class="mySlides" src="admin/property/<?php echo $row['15']; ?>" style="width:100%">
+            <?php endif; ?>
+            
+            <?php if (!empty($row['16'])): ?>
+                <img class="mySlides" src="admin/property/<?php echo $row['16']; ?>" style="width:100%">
+            <?php endif; ?>
+            
+            <?php if (!empty($row['17'])): ?>
+                <img class="mySlides" src="admin/property/<?php echo $row['17']; ?>" style="width:100%">
             <?php endif; ?>
         </div>
 
@@ -208,36 +209,58 @@ include("config.php");
 
     // Function to handle the "Like/Compare" button click
    // Function to handle the "Like/Compare" button click
-function addToCompare() {
+   function addToCompare() {
+    // Extract project type from the URL (assuming the URL follows the pattern)
+    const urlSegments = window.location.pathname.split('/');
+    const projectType = urlSegments[2];  // This gets 'residential', 'commercial', or 'plotting'
+
     const propertyId = "<?php echo htmlspecialchars($id); ?>";
-    const propertyName = "<?php echo htmlspecialchars($row['1']); ?>"; // Optional: get the property name
-    const propertlocation = "<?php echo htmlspecialchars($row['3']); ?>";
-    const properttotalunits = "<?php echo htmlspecialchars($row['6']); ?>";
-    const propertytotaltowers = "<?php echo htmlspecialchars($row['5']); ?>";
-    const propertyarea = "<?php echo htmlspecialchars($row['4']); ?>";
-    const propertypossession = "<?php echo htmlspecialchars($row['7']); ?>";
-
-    
-
+    const propertyName = "<?php echo htmlspecialchars($row['1']); ?>";
+    const propertyLocation = "<?php echo htmlspecialchars($row['3']); ?>";
+    const propertyTotalUnits = "<?php echo htmlspecialchars($row['6']); ?>";
+    const propertyTotalTowers = "<?php echo htmlspecialchars($row['5']); ?>";
+    const propertyArea = "<?php echo htmlspecialchars($row['4']); ?>";
+    const propertyPossession = "<?php echo htmlspecialchars($row['7']); ?>";
 
     // Retrieve existing comparison list from localStorage
     let comparisonList = JSON.parse(localStorage.getItem("comparisonList")) || [];
 
-    // Check if the property already exists in the comparison list
+    // If there are already properties in the comparison list, we check the first property type
+    if (comparisonList.length > 0) {
+        const firstPropertyType = comparisonList[0].type;
+
+        // Check if the selected property type matches the first property's type
+        if (firstPropertyType !== projectType) {
+            alert("You can only compare properties of the same type (Residential, Commercial, or Plotting).");
+            return;  // Stop the function execution if types don't match
+        }
+    }
+
+    // Check if the property is already in the comparison list
     const exists = comparisonList.some(item => item.id === propertyId);
 
     if (exists) {
         alert("Property already added to comparison list!");
     } else {
-        // Add new property to the comparison list
-        comparisonList.push({ id: propertyId, name: propertyName, location: propertlocation, totalunits: properttotalunits, towers: propertytotaltowers, area: propertyarea, possession: propertypossession });
+        // Add new property to the comparison list with the inferred project type
+        comparisonList.push({
+            id: propertyId,
+            name: propertyName,
+            location: propertyLocation,
+            totalunits: propertyTotalUnits,
+            towers: propertyTotalTowers,
+            area: propertyArea,
+            possession: propertyPossession,
+            type: projectType  // Add the project type to the comparison list
+        });
 
         // Save updated comparison list to localStorage
         localStorage.setItem("comparisonList", JSON.stringify(comparisonList));
 
-        alert("Property added to comparison list!");
+        alert("Property added to comparison list. Type: Plotting Project ");
     }
 }
+
 
 
 function copyShareUrl() {

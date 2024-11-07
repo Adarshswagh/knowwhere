@@ -56,7 +56,7 @@ include("config.php");
                 <br><div class="col-md-6 col-sm-10">
                         <div class="property-card">
                             <div class="overlay-black">
-                                <img src="admin/property/<?php echo $row['14'];?>" alt="Residential Property Image">
+                                <img src="admin/property/<?php echo $row['9'];?>" alt="Residential Property Image">
                                 <div class="promo-badge">Residential Projects</div>
                             </div>
                             <div class="property-info">
@@ -78,7 +78,7 @@ include("config.php");
                                 </div>
                                 <div class="button-container">
                                     <!-- "Know More" button -->
-                                    <a href="Propertdetail.php?pid=<?php echo $row['0']; ?>" class="view-more-btn">Know More</a>
+                                    <a href="Prodetail.php?pid=<?php echo $row['0']; ?>" class="view-more-btn">Know More</a>
 
                                     <!-- WhatsApp Button -->
                                     <a href="https://wa.me/1234567890" target="_blank" class="btn-icon whatsapp-btn">
@@ -108,22 +108,20 @@ include("config.php");
         <!-- Right Section (Sticky Installment Calculator) -->
         <div class="right-section">
             <div class="sticky">
-                <h3>Installment Calculator</h3>
-                <form>
-                    <label for="price">Property Price</label>
-                    <input type="number" id="price" name="price" placeholder="$500,000">
-                    
-                    <label for="duration">Duration (Years)</label>
-                    <input type="number" id="duration" name="duration" placeholder="30">
-                    
-                    <label for="interest">Interest Rate</label>
-                    <input type="number" id="interest" name="interest" placeholder="3.5%">
-                    
-                    <button type="submit">Calculate Installment</button>
-                </form>
+                    <div class="form-container">
+                        <h3 class="form-heading">Connect with Us for Tailored Solutions!</h3>
+                            <form style="text-align:center">
+                                <div class="input-group" style="width:102%">
+                                    <input type="text" name="first-name" placeholder="First Name" required>
+                                    
+                                </div>
+                                <input type="email" name="email" placeholder="Email" required class="email-group">
+                                <textarea name="message" placeholder="Message" required></textarea>
+                                <button type="submit" style="margin-top:30px">SEND MESSAGE</button>
+                            </form>
+                    </div>
             </div>
         </div>
-    </div>
 </section>
 <!-- end properties -->
 

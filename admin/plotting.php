@@ -145,7 +145,7 @@ if ($result) {
 												<div class="form-group row">
 													<label class="col-lg-2 col-form-label">Content</label>
 													<div class="col-lg-9">
-														<textarea class="tinymce form-control" name="project_description" rows="10" cols="30"></textarea>
+														<textarea class=" form-control" name="project_description" placeholder="Enter Description" rows="10" cols="30"></textarea>
 													</div>
 												</div>
 												
@@ -165,7 +165,7 @@ if ($result) {
 												<div class="form-group row">
 													<label class="col-lg-3 col-form-label">Plot Size</label>
 													<div class="col-lg-9">
-														<input type="text" class="form-control" name="plot_size"      placeholder="Enter Total Towers">
+														<input type="text" class="form-control" name="plot_size"      placeholder="Enter Plot Size">
 													</div>
 												</div>
 												<div class="form-group row">
@@ -227,14 +227,14 @@ if ($result) {
 												<div class="form-group row">
 													<label class="col-lg-3 col-form-label">ROI</label>
 													<div class="col-lg-9">
-														<input type="text" class="form-control" name="roi"      placeholder="Enter Contact Number">
+														<input type="text" class="form-control" name="roi"      placeholder="Enter ROI">
 													</div>
 												</div>
 
 												<div class="form-group row">
 													<label class="col-lg-3 col-form-label">Permissible Floor</label>
 													<div class="col-lg-9">
-														<input type="text" class="form-control" name="floor"      placeholder="Enter Contact Number">
+														<input type="text" class="form-control" name="floor"      placeholder="Enter Permissible Floor">
 													</div>
 												</div>
 

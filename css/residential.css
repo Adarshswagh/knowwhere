@@ -320,56 +320,74 @@ body {
 .sticky {
     position: sticky;
     top: 20px;
-    background-color: #222;
+    /* background-color: #222; */
     color: #fff;
     padding: 20px;
-    border-radius: 1px;
+    border: 1px solid #6c6c6c;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.sticky h3 {
-    font-size: 24px;
+.input-group {
+    display: flex;
+    gap: 20px; /* Adjust the gap between first and last name fields */
+    margin-bottom: 20px;
+    
+}
+
+.email-group{
     margin-bottom: 20px;
 }
 
-.sticky label {
-    margin-bottom: 5px;
-    display: block;
+.form-heading {
+    color: #e8e8e8;
+    font-family: 'Lexend', sans-serif;
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: center; /* This centers the text */
 }
 
-.sticky input {
+
+.input-group input {
+    width: 97%; /* Make both input fields take up equal space */
+    font-size: 14px;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 300;
+    line-height: 1.7em;
+}
+
+input, textarea {
     width: 100%;
     padding: 10px;
-    margin-bottom: 20px;
+    margin: 10px 0;
+    background: transparent;
     border: none;
-    border-radius: 5px;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    font-family: 'Lexend', sans-serif;
+    font-size: 14px;
 }
 
-.sticky button {
-    width: 100%;
-    padding: 10px;
-    background-color: #d63031;
+input::placeholder, textarea::placeholder {
     color: #fff;
+}
+
+textarea {
+    height: 120px; /* Adjust the height of the message box */
+    resize: vertical; /* Make the textarea resizable */
+}
+
+button {
+    padding: 15px 30px; /* Increase the padding for a larger button */
+    background-color: #a38755;
+    color: #050F17;
     border: none;
     cursor: pointer;
-    border-radius: 5px;
-    font-size: 16px;
+    margin-top: 20px; /* Adjust margin for space between form elements */
+    font-family: 'Lexend', sans-serif;
 }
 
-.sticky button:hover {
-    background-color: #e74c3c;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
-
-    .left-section,
-    .right-section {
-        width: 100%;
-    }
+button:hover {
+    background-color: #fff;
 }
 /* end properties */
 
