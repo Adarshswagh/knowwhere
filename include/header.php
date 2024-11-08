@@ -42,6 +42,18 @@
                         <li><a href="plotting.php">Plotting Project</a></li>
                     </ul>
                 </li>
+                <li class="dropdown">
+                    <a href="Properties.php">Services</a>
+                    <!-- Dropdown Menu -->
+                    <ul class="dropdown-menu">
+                        <li><a href="home-loan.php">Home Loan</a></li>
+                        <li><a href="rent.php">Rent Agreement</a></li>
+                        <li><a href="sale-rent.php">Sale Or Rent</a></li>
+                        <li><a href="bamboo.php">Bamboo</a></li>
+                        <li><a href="construction.php">Construction</a></li>
+                        <li><a href="interior.php">Interior</a></li>
+                    </ul>
+                </li>
                 <li><a href="emicalculator.php">Emi Calculator</a></li>
                 <li><a href="blog.php">Blog</a></li>
                 <li><a href="Contact.php">Contact</a></li>

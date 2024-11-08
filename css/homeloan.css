@@ -149,7 +149,7 @@ html, body {
 /* why choose us end */
 
 /* about section */
-
+/* Default styles (for desktop view) */
 .business-loan {
     display: flex;
     align-items: center;
@@ -181,7 +181,7 @@ html, body {
 
 .content h2 {
     font-size: 40px;
-    color:#A8894D;
+    color: #A8894D;
     margin: 0 0 10px;
 }
 
@@ -207,29 +207,77 @@ button:hover {
     background-color: #e68a00;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
+/* Responsive Styles for Tablet */
+@media (max-width: 1024px) {
     .business-loan {
         flex-direction: column;
+        padding: 30px 50px;
         text-align: center;
     }
 
     .image-container {
         width: 100%;
-    }
-
-    .content {
-        padding: 15px;
+        height: 300px;
     }
 
     .content h2 {
-        font-size: 20px;
+        font-size: 30px;
+    }
+
+    .content p {
+        font-size: 14px;
+    }
+
+    .checklist {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .checklist .list-left, .checklist .list-right {
+        display: inline-block;
+        text-align: left;
+    }
+}
+
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+    .business-loan {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .image-container {
+        width: 100%;
+        height: 250px;
+    }
+
+    .content h2 {
+        font-size: 24px;
     }
 
     .content p {
         font-size: 13px;
     }
+
+    .checklist {
+        display: block;
+        text-align: left;
+        padding-left: 0;
+    }
+
+    .checklist .list-left, .checklist .list-right {
+        display: block;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+    }
 }
+
 
 /* about section end */
 
