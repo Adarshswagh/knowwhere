@@ -52,6 +52,7 @@
                         <li><a href="bamboo.php">Bamboo</a></li>
                         <li><a href="construction.php">Construction</a></li>
                         <li><a href="interior.php">Interior</a></li>
+                        <li><a href="digital.php">DIgital Marketing</a></li>
                     </ul>
                 </li>
                 <li><a href="emicalculator.php">Emi Calculator</a></li>

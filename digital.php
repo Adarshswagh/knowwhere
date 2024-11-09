@@ -44,7 +44,7 @@ include("config.php");
 
 <section class="business-loan" style = "background-color: #050f17;">
         <div class="image-container" style="height:400px;">
-            <img src="images/home.jpg" alt="People in a business setting">
+            <img src="images/digital.jpg" alt="People in a business setting">
         </div>
         <div class="content">
             <h2 style ="color: #A8894D;

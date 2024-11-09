@@ -393,7 +393,7 @@ button:hover {
     font-family: 'Italiana', Sans-serif;
     font-size: 50px;
     font-weight: 400;
-    line-height: 1.3em; ">25</span>
+    line-height: 1.3em; text-align: left;">25</span>
             <p>Years<br>experience<br>working</p>
         </div>
     </div>
@@ -401,7 +401,7 @@ button:hover {
         <h3 style= " color: #A8894D;
     font-family: 'Italiana', Sans-serif;
     font-size: 35px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1.3em;">ABOUT US</h3>
         <h1>Creative solutions by professional designers</h1>
         <p>Your kitchen is an expression of who you are, and its design should match your lifestyle. Whether you have traditional tastes or desire a modern feel, we can design your dream kitchen to suit any purpose.</p>

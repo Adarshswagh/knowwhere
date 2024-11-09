@@ -416,13 +416,12 @@ html, body {
   .interior-box-p{
     padding-top: 20px;
     font-size:25px;
-
     text-align: center;
     color: #050F17;
     font-family: "Lexend", Sans-serif;
     font-weight: 100;
     line-height: 1em;
-    margin: 0;
+    margin: 5px;
   }
   
   /* Tablet View */
