@@ -288,8 +288,7 @@ button:hover {
             </div>
             <div class="feature">
             <div style= ""><img src="images/simple-data-format.png" alt="" style="width: 50px; margin-bottom: 10PX;
-    height: 50px;
-    "></div>
+    height: 50px;"></div>
                 <h3>SIMPLE</h3>
                 <p style = "text-align:center; font-size:16px;">There are many variations of passages of Lorem Ipsum available, alteration in some form.</p>
             </div>

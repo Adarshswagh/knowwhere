@@ -77,34 +77,34 @@ button:hover {
     </div>
     <div class="post-guide-grid">
         <div class="post-step">
-            <img src="images/h1.png" alt="Show off your property">
+            <img src="images/biodegradable.png" alt="Show off your property">
             <h3 style ="color: #A8894D;">Comprehensive Eco-Friendly Solutions</h3>
-            <pstyle="text-align:center;">Our holistic approach extends beyond bamboo, integrating mud architecture and solar energy to offer sustainable solutions that cater to the needs of modern living.  </p>
+            <p style="text-align:center;">Our holistic approach extends beyond bamboo, integrating mud architecture and solar energy to offer sustainable solutions that cater to the needs of modern living.  </p>
         </div>
         <div class="post-step">
-            <img src="images/h2.png" alt="Property Proposal">
+            <img src="images/artist.png" alt="Property Proposal">
             <h3 style ="color: #A8894D;">Artistic Excellence</h3>
             <p style="text-align:center;">To attract buyers or renters, you have to put your best info forward. Jot down all the advantages and benefits of your property that the renter or buyer may want to avail.</p>
         </div>
         <div class="post-step">
-            <img src="images/h3.png" alt="Needful Negotiations">
+            <img src="images/house.png" alt="Needful Negotiations">
             <h3 style ="color: #A8894D;">Innovative Design and Construction</h3>
             <p style="text-align:center;">We merge traditional craftsmanship with modern sustainability principles, delivering innovative bamboo constructions that are as visually stunning as they are unique.</p>
         </div>
         
         <div class="post-guide-grid">
         <div class="post-step">
-            <img src="images/h1.png" alt="Show off your property">
+            <img src="images/quality.png" alt="Show off your property">
             <h3 style ="color: #A8894D;">Focus on Quality and Sustainability</h3>
             <p style="text-align:center;">Every material sourced, every technique employed, and every design created reflects our dedication to environmental responsibility and excellence.</p>
         </div>
         <div class="post-step">
-            <img src="images/h2.png" alt="Property Proposal">
+            <img src="images/partners.png" alt="Property Proposal">
             <h3 style ="color: #A8894D;">Community Empowerment</h3>
             <p style="text-align:center;">We provide fair wages, training, and growth opportunities to bamboo farmers and artisans, fostering social and economic development.</p>
         </div>
         <div class="post-step">
-            <img src="images/h3.png" alt="Needful Negotiations">
+            <img src="images/education.png" alt="Needful Negotiations">
             <h3 style ="color: #A8894D;">Educational Outreach
             and Advocacy</h3>
             <p style="text-align:center;">We are a movement. Through educational outreach and advocacy, we promote the benefits of bamboo and sustainable living, inspiring a wave of eco-friendly change.</p>
@@ -151,7 +151,7 @@ button:hover {
 
 
 <div class="main-verticals-section" >
-    <div class="content-wrapper" style="flex-direction:row-reverse; padding-top:100px;">
+    <div class="content-wrapper" style="flex-direction:row-reverse; padding-top:100px; gap: 120px;">
         <div class="text-content">
             <!-- <p class="section-intro">···· Our Main Verticals ····</p> -->
             <!-- <h2>We blend traditional craftsmanship with modern design to transform bamboo into functional art and architecture.</h2> -->
@@ -260,9 +260,9 @@ button:hover {
             <h2>Get In Touch</h2>
             <p>Ready to make your real estate dreams a reality? Get in touch with Knowhere for trusted guidance, tailored solutions, and a seamless property experience.</p>
             <ul>
-                <li><i class="fas fa-map-marker-alt"></i> Wakad, Pimpri-Chinchwad, Maharashtra 411057</li>
-                <li><i class="fas fa-envelope"></i> example@mail.com</li>
-                <li><i class="fas fa-phone-alt"></i>+91 91122 11291</li>
+                <li style="text-align:left;"><i class="fas fa-map-marker-alt"></i> Wakad, Pimpri-Chinchwad, Maharashtra 411057</li>
+                <li style="text-align:left;"><i class="fas fa-envelope"></i> example@mail.com</li>
+                <li style="text-align:left;"><i class="fas fa-phone-alt"></i>+91 91122 11291</li>
                 
             </ul>
         </div>
@@ -275,7 +275,7 @@ button:hover {
         <div class="hero-section">
             <div class="overlay">
                 <h2>Your Dream Home Awaits</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nibh eu ullam corper luctus, lacus ex consequat ipsum, ultricies interdum ex ante.</p>
+                <p style="text-align:center;">Thank you for choosing Knowhere. Let us turn your real estate dreams into reality.</p>
                 <a href="#contact" class="btn">Contact Us</a>
             </div>
         </div>

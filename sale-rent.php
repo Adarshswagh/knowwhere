@@ -51,23 +51,23 @@ include("config.php");
     font-family: 'Italiana', Sans-serif;
     font-size: 50px;
     font-weight: 400;
-    line-height: 1.3em; color:#A8894D;">How to post to get the most?</h2>
+    line-height: 1.3em; color:#A8894D; font size: 20px;">How to post to get the most?</h2>
         <p>Selling/renting property is no more a challenge with Square Yards. Renting / Selling a house has become easy with the internet and easier with us! We will handle the process of selling your property from start to finish. Follow these steps to begin your home selling journey.</p>
     </div>
     <div class="post-guide-grid">
         <div class="post-step">
-            <img src="images/h1.png" alt="Show off your property">
-            <h3 style="color:#A8894D;">Show off your property</h3>
+            <img src="images/house (1).png" alt="Show off your property" >
+            <h3 style="color:#A8894D; font-size: 20px;">Show off your property</h3>
             <p>Sign up or log in to Square Yards and create a free property ad post with good pictures, detailed video, and other important information like the type, price, size, location, etc.</p>
         </div>
         <div class="post-step">
-            <img src="images/h2.png" alt="Property Proposal">
-            <h3 style="color:#A8894D;">Property Proposal</h3>
+            <img src="images/assets.png" alt="Property Proposal">
+            <h3 style="color:#A8894D; font-size: 20px;">Property Proposal</h3>
             <p>To attract buyers or renters, you have to put your best info forward. Jot down all the advantages and benefits of your property that the renter or buyer may want to avail.</p>
         </div>
         <div class="post-step">
-            <img src="images/h3.png" alt="Needful Negotiations">
-            <h3 style="color:#A8894D;">Needful Negotiations</h3>
+            <img src="images/property.png" alt="Needful Negotiations">
+            <h3 style="color:#A8894D; font-size: 20px;">Needful Negotiations</h3>
             <p>No one can sell your property better than you. Price is the most important factor. We suggest you inspect, negotiate, and seal the deal. Do Not Under-Price!</p>
         </div>
     </div>
@@ -85,14 +85,14 @@ include("config.php");
     font-size: 40px;
     font-weight: 400;
     line-height: 1.3em;">Let Us Show Off Your Property.</h2>
-            <p style = "text-align:left; font-size:17px;">Millions of property buyers and renters check listings on Square Yards every day! We will highlight your property to them and if they find your property suitable, they can contact you immediately and directly. Tip: Clients love true info on listings.</p>
+            <p style = "text-align:left; font-size:15px;">Millions of property buyers and renters check listings on Square Yards every day! We will highlight your property to them and if they find your property suitable, they can contact you immediately and directly. Tip: Clients love true info on listings.</p>
             
-            <button class="get-quote-button">APPLY FOR A LOAN →</button>
+            <button class="get-quote-button" style="border-radius:0">APPLY FOR A LOAN →</button>
         </div>
     </section>
 
 
-    <section class="business-loan" style = "background-color: #050f17; flex-direction:row-reverse;">
+    <section class="business-loan" style = "background-color: #050f17; flex-direction:row-reverse; gap: 100px;">
         <div class="image-container" style="height:400px;">
             <img src="images/bannerabout.jpg" alt="People in a business setting">
         </div>
@@ -102,9 +102,9 @@ include("config.php");
     font-size: 40px;
     font-weight: 400;
     line-height: 1.3em;">Create a Killer Property Listing.</h2>
-            <p style = "text-align:left; font-size:17px;">For Rocket Fast Deals, create a listing with every detail, like the property type, your expected price and other advantages of the property. Property pictures are very important. Tip: Listings with at least 5 great pics get maximum enquiries.</p>
+            <p style = "text-align:left; font-size:15px;">For Rocket Fast Deals, create a listing with every detail, like the property type, your expected price and other advantages of the property. Property pictures are very important. Tip: Listings with at least 5 great pics get maximum enquiries.</p>
             
-            <button class="get-quote-button">APPLY FOR A LOAN →</button>
+            <button class="get-quote-button" style="border-radius:0">APPLY FOR A LOAN →</button>
         </div>
     </section>
 
@@ -119,14 +119,14 @@ include("config.php");
     font-size: 40px;
     font-weight: 400;
     line-height: 1.3em;">Your Property. Your Proposal.</h2>
-            <p style = "text-align:left; font-size:17px;">When an interested party finds your listed property truly suitable and shows deep interest to buy or rent it out, we will share the client’s detail with you over phone or email instantly. Tip: When property owners make proposals, deals happen faster.</p>
+            <p style = "text-align:left; font-size:15px; ">When an interested party finds your listed property truly suitable and shows deep interest to buy or rent it out, we will share the client’s detail with you over phone or email instantly. Tip: When property owners make proposals, deals happen faster.</p>
             
-            <button class="get-quote-button">APPLY FOR A LOAN →</button>
+            <button class="get-quote-button" style="border-radius:0">APPLY FOR A LOAN →</button>
         </div>
     </section>
 
 
-    <section class="business-loan" style = "background-color: #050f17; flex-direction:row-reverse;">
+    <section class="business-loan" style = "background-color: #050f17; flex-direction:row-reverse; gap: 100px;">
         <div class="image-container" style="height:400px;">
             <img src="images/bannerabout.jpg" alt="People in a business setting">
         </div>
@@ -136,9 +136,9 @@ include("config.php");
     font-size: 40px;
     font-weight: 400;
     line-height: 1.3em;">Showing, Negotiating, Closing.</h2>
-            <p style = "text-align:left; font-size:17px;">We know that no one can sell your property better than you. After all, only you know everything that a buyer or renter needs to know to close the deal. Its time for site inspections, negotiations, paperwork checks and deal closure. Tip: Don’t under-price.</p>
+            <p style = "text-align:left; font-size:15px;">We know that no one can sell your property better than you. After all, only you know everything that a buyer or renter needs to know to close the deal. Its time for site inspections, negotiations, paperwork checks and deal closure. Tip: Don’t under-price.</p>
             
-            <button class="get-quote-button">APPLY FOR A LOAN →</button>
+            <button class="get-quote-button" style="border-radius:0">APPLY FOR A LOAN →</button>
         </div>
         </section>
 
@@ -152,9 +152,9 @@ include("config.php");
     font-size: 40px;
     font-weight: 400;
     line-height: 1.3em;">Sell or Rent with Square Yards</h2>
-            <p style = "text-align:left; font-size:17px;">Our property listing site allows you to post property profiles ad for free or you can sell property online and close deals at lightning speed! So, what are you waiting for? Just follow these simple steps, and voila, your property is sold or rented.</p>
+            <p style = "text-align:left; font-size:15px;">Our property listing site allows you to post property profiles ad for free or you can sell property online and close deals at lightning speed! So, what are you waiting for? Just follow these simple steps, and voila, your property is sold or rented.</p>
             
-            <button class="get-quote-button">APPLY FOR A LOAN →</button>
+            <button class="get-quote-button" style="border-radius:0">APPLY FOR A LOAN →</button>
         </div>
     </section>
 </section>
@@ -173,7 +173,11 @@ include("config.php");
             </form>
         </div>
         <div class="contact-info">
-            <h2>Get In Touch</h2>
+            <h2 style="color: #A8894D;
+    font-family: 'Italiana', Sans-serif;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 1.3em;">Get In Touch</h2>
             <p>Ready to make your real estate dreams a reality? Get in touch with Knowhere for trusted guidance, tailored solutions, and a seamless property experience.</p>
             <ul>
                 <li><i class="fas fa-map-marker-alt"></i> Wakad, Pimpri-Chinchwad, Maharashtra 411057</li>

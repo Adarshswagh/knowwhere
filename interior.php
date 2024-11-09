@@ -206,63 +206,6 @@ include("config.php");
 
 /* turnkey serives end */
 
-
-/* gallery */
-
-/* General Styles */
-.section-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  background-color: #050f17; /* Light blue background */
-  padding: 20px;
- 
-}
-
-.item {
-  flex: 1 1 200px; /* Default item size */
-  max-width: 300px; /* Restrict max size */
-  text-align: center;
-  padding: 10px;
-  background-color: #A8894D;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  Width: 250px;
-}
-
-.item img {
-  max-width: 100%;
-  border-radius: 8px;
-}
-
-/* Tablet View */
-@media (max-width: 768px) {
-  .section-container {
-    gap: 15px;
-  }
-
-  .item {
-    flex: 1 1 150px;
-    max-width: 150px;
-  }
-}
-
-/* Mobile View */
-@media (max-width: 480px) {
-  .section-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .item {
-    flex: 1 1 100%;
-    max-width: 300px;
-  }
-}
-
-
 .about-content button {
     background-color: #A8894D    ;
     color: #140f0f;
@@ -510,40 +453,40 @@ button:hover {
     font-weight: 400;
     line-height: 1.3em; text-align:center; padding-top:100px;">Discover Your Dream Home: Dive into Our Decor & Furniture Collection!</h2>
 <div class="section-container">
-  <div class="item">
+  <div class="item" style="border-raius:0px;">
     <img src="images/sofa.png" alt="Sofas">
-    <p style ="padding-top: 10px; font-size:20px;">Sofas</p>
+    <p class="interior-box-p" >Sofas</p>
   </div>
-  <div class="item">
+  <div class="item" style="border-raius:0px;">
     <img src="images/coffee table.png" alt="Coffee Tables">
-    <p style ="padding-top: 10px; font-size:20px;">Coffee Tables</p>
+    <p class="interior-box-p" >Coffee Tables</p>
   </div>
-  <div class="item">
+  <div class="item" style="border-raius:0px;">
     <img src="images/bed.png" alt="Beds">
-    <p style ="padding-top: 10px; font-size:20px;">Beds</p>
+    <p class="interior-box-p" >Beds</p>
   </div>
-  <div class="item">
+  <div class="item" style="border-raius:0px;">
     <img src="images/tv unit.png" alt="Beds">
-    <p style ="padding-top: 10px; font-size:20px;">Tv Units</p>
+    <p class="interior-box-p" >Tv Units</p>
   </div>
 </div>
 
 <div class="section-container">
-<div class="item">
+<div class="item" style="border-raius:0px;">
     <img src="images/kids.png" alt="Beds">
-    <p style ="padding-top: 10px; font-size:20px;">Kids Storage</p>
+    <p class="interior-box-p">Kids Storage</p>
   </div>
-  <div class="item">
+  <div class="item" style="border-raius:0px;">
     <img src="images/chair.png" alt="Coffee Tables">
-    <p style ="padding-top: 10px; font-size:20px;">Lounges Chairs</p>
+    <p class="interior-box-p">Lounges Chairs</p>
   </div>
-  <div class="item">
+  <div class="item" style="border-raius:0px;">
     <img src="images/kids2.png" alt="Beds">
-    <p style ="padding-top: 10px; font-size:20px;">Kids Beds</p>
+    <p class="interior-box-p">Kids Beds</p>
   </div>
-  <div class="item">
+  <div class="item" style="border-raius:0;">
     <img src="images/wall.png" alt="Beds">
-    <p style ="padding-top: 10px; font-size:20px;">Wall Scones</p>
+    <p class="interior-box-p">Wall Scones</p>
   </div>
   
 </div>
