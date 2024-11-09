@@ -22,6 +22,9 @@ if(isset($_POST['add']))
 	$status=$_POST['status'];
 	$total_floor=$_POST['total_floor'];
 	$feature=$_POST['feature'];
+	$city=$_POST['city'];
+	$psf=$_POST['psf'];
+	$developer=$_POST['developer'];
 
 	    // Initialize unit arrays
 		$unit_names = isset($_POST['unit_name']) ? $_POST['unit_name'] : [];
@@ -66,8 +69,8 @@ for ($i = 0; $i < count($unit_names); $i++) {
 $unit_details_json = json_encode($unit_details); // Convert to JSON
 
 // Insert into residential_projects table
-$sql = "INSERT INTO residential_projects (project_title, project_description, project_location, project_area, total_towers, total_units, possession,  feature, total_floor, status,image1,image2,image3,image4,image5,featured, unit_details)
-		VALUES ('$project_title', '$project_description', '$project_location', '$project_area', '$total_towers', '$total_units', '$possession',  '$feature', '$total_floor', '$status','$image1','$image2','$image3','$image4','$image5','$featured', '$unit_details_json')";
+$sql = "INSERT INTO residential_projects (project_title, project_description, project_location, project_area, total_towers, total_units, possession,  feature, total_floor, status,image1,image2,image3,image4,image5,featured, unit_details, city, psf, developer)
+		VALUES ('$project_title', '$project_description', '$project_location', '$project_area', '$total_towers', '$total_units', '$possession',  '$feature', '$total_floor', '$status','$image1','$image2','$image3','$image4','$image5','$featured', '$unit_details_json', '$city', '$psf', '$developer')";
 
 $result = mysqli_query($con, $sql);
 if ($result) {
@@ -167,6 +170,12 @@ if ($result) {
 											<div class="col-xl-6">
 												
 												<div class="form-group row">
+													<label class="col-lg-3 col-form-label">Project Developer</label>
+													<div class="col-lg-9">
+														<input type="text" class="form-control" name="developer"      placeholder="Enter Project Developer">
+													</div>
+												</div>
+												<div class="form-group row">
 													<label class="col-lg-3 col-form-label">Address</label>
 													<div class="col-lg-9">
 														<input type="text" class="form-control" name="project_location"      placeholder="Enter Address">
@@ -182,6 +191,12 @@ if ($result) {
 													<label class="col-lg-3 col-form-label">Possession</label>
 													<div class="col-lg-9">
 														<input type="text" class="form-control" name="possession"      placeholder="Enter Possession">
+													</div>
+												</div>
+												<div class="form-group row">
+													<label class="col-lg-3 col-form-label">City</label>
+													<div class="col-lg-9">
+														<input type="text" class="form-control" name="cuty"      placeholder="Enter City">
 													</div>
 												</div>
 												
@@ -205,6 +220,13 @@ if ($result) {
 													<label class="col-lg-3 col-form-label">Total Floor</label>
 													<div class="col-lg-9">
 														<input type="text" class="form-control" name="total_floor"      placeholder="Enter Total Floor">
+													</div>
+												</div>
+
+												<div class="form-group row">
+													<label class="col-lg-3 col-form-label">PSF</label>
+													<div class="col-lg-9">
+														<input type="text" class="form-control" name="psf"      placeholder="Enter PSF">
 													</div>
 												</div>
 											
