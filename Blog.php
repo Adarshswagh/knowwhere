@@ -49,7 +49,7 @@
                                     <img src="./images/blog1.jpg" alt="Blog 2" style = "width:100%">
                                     <h2>‘Best beach in Australia’ to shake QLD coastal records</h2>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-                                    <a href="#" class="read-link">Read More →</a>
+                                    <a href="blog1.php" class="read-link">Read More →</a>
                                 </div>
                             </a>                     
                             <hr><br>
