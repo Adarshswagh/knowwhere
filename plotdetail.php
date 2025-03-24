@@ -33,7 +33,7 @@ include("config.php");
     $id = $_REQUEST['pid'];
 
     // Fetch from the residential_projects table
-    $query = mysqli_query($con, "SELECT * FROM plotting_projects WHERE id='$id'");
+    $query = mysqli_query($con, "SELECT * FROM plotting_projects WHERE pid='$id'");
 
     // Check if any data is found
     if(mysqli_num_rows($query) > 0) {
@@ -114,7 +114,7 @@ include("config.php");
             <div class="property-details">
                 <div class="detail-item">
                     <i class="fa-solid fa-map-pin" style="color: #a8894d; height:30px;"></i>
-                    <p class="project-detail"><?php echo htmlspecialchars($row['3']); ?></p>
+                    <p class="project-detail"><?php echo htmlspecialchars($row['3']); ?>, <?php echo htmlspecialchars($row['24']); ?></p>
                 </div>
                 <div class="divider"></div>
                 <div class="detail-item">
@@ -127,24 +127,26 @@ include("config.php");
                 <div class="properties-details">
                     <h3>Project Details :</h3>
                     <div class="detail-grid">
+                        <div><strong class="field-title">Project Developer :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo htmlspecialchars($row['25']); ?></span></div>
+                        <div><strong class="field-title">Type :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo htmlspecialchars($row['23']); ?></span></div>
                         <div><strong class="field-title">Plot Size :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo htmlspecialchars($row['5']); ?></span></div>
                         <div><strong class="field-title">Price :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo htmlspecialchars($row['6']); ?></span></div>
                         <div><strong class="field-title">Per Square Feet (PSF) :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo htmlspecialchars($row['7']); ?></span></div>
                         <div><strong class="field-title">Possession :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo htmlspecialchars($row['8']); ?></span></div>
                         <div><strong class="field-title">USP :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo htmlspecialchars($row['9']); ?></span></div>
-                        <div><strong class="field-title">Status :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo htmlspecialchars($row['16']); ?></span></div>
-                        <div><strong class="field-title">FSI :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo htmlspecialchars($row['19']); ?></span></div>
-                        <div><strong class="field-title">Permissible Floor :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo htmlspecialchars($row['20']); ?></span></div>
-                        <div><strong class="field-title">Type :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo htmlspecialchars($row['21']); ?></span></div>
+                        <div><strong class="field-title">Status :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo htmlspecialchars($row['18']); ?></span></div>
+                        <div><strong class="field-title">FSI :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo htmlspecialchars($row['21']); ?></span></div>
+                        <div><strong class="field-title">Permissible Floor :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo htmlspecialchars($row['22']); ?></span></div>
 
 
                     </div>
                 </div>
 
-                
+                <div><strong style="color:#050f17" >Type :</strong> <span style="color:#050f17; font-size:20px;"><?php echo htmlspecialchars($row['26']); ?></span></div>
+
             </div>
 
-            <div class="amenities-container">
+            <!-- <div class="amenities-container">
                 <h3 class="amenities-heading">Project Amenities :</h3>
                 
                 <div class="amenities-list-wrapper">
@@ -169,7 +171,7 @@ include("config.php");
 
                     
                 </div>
-            </div>
+            </div> -->
 
         </div>
 
@@ -192,6 +194,20 @@ include("config.php");
 <!-- end property detail -->
 
 
+
+<!-- Popup Modal -->
+<div id="comparePopup" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 1000;">
+    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 20px; border-radius: 8px; width: 400px; max-width: 90%;">
+        <div style="text-align: right;">
+            <button onclick="closePopup()" style="background: transparent; border: none; font-size: 20px; cursor: pointer;">&times;</button>
+        </div>
+        <h4 id="popupTitle" style="text-align: center; margin: 10px 0;">Property Added to Comparison</h4>
+        <p id="popupContent" style="text-align: center;"></p>
+    </div>
+</div>
+
+
+
 <script>
     let slideIndex = 0;
     showSlides();
@@ -209,73 +225,88 @@ include("config.php");
 
     // Function to handle the "Like/Compare" button click
    // Function to handle the "Like/Compare" button click
-   function addToCompare() {
-    // Extract project type from the URL (assuming the URL follows the pattern)
-    const urlSegments = window.location.pathname.split('/');
-    const projectType = urlSegments[2];  // This gets 'residential', 'commercial', or 'plotting'
+  
+    // plotdetail.php (Plotting Page)
+    function addToCompare() {
+        const propertyId = "<?php echo htmlspecialchars($id); ?>";
+        const propertyName = "<?php echo htmlspecialchars($row['1']); ?>";
+        const propertyLocation = "<?php echo htmlspecialchars($row['3']); ?>";
+        const propertyArea = "<?php echo htmlspecialchars($row['4']); ?>";
+        const propertyPossession = "<?php echo htmlspecialchars($row['8']); ?>";
+        const propertyDeveloper = "<?php echo htmlspecialchars($row['25']); ?>";
+        const propertyType = "<?php echo htmlspecialchars($row['23']); ?>";
+        const plotSize = "<?php echo htmlspecialchars($row['5']); ?>";
+        const price = "<?php echo htmlspecialchars($row['6']); ?>";
+        const propertyPsf = "<?php echo htmlspecialchars($row['7']); ?>";
+        const usp = "<?php echo htmlspecialchars($row['9']); ?>";
+        const fsi = "<?php echo htmlspecialchars($row['21']); ?>";
+        const floor = "<?php echo htmlspecialchars($row['22']); ?>";
+        const status = "<?php echo htmlspecialchars($row['18']); ?>";
+        const projectType = "Plotting";
 
-    const propertyId = "<?php echo htmlspecialchars($id); ?>";
-    const propertyName = "<?php echo htmlspecialchars($row['1']); ?>";
-    const propertyLocation = "<?php echo htmlspecialchars($row['3']); ?>";
-    const propertyTotalUnits = "<?php echo htmlspecialchars($row['6']); ?>";
-    const propertyTotalTowers = "<?php echo htmlspecialchars($row['5']); ?>";
-    const propertyArea = "<?php echo htmlspecialchars($row['4']); ?>";
-    const propertyPossession = "<?php echo htmlspecialchars($row['7']); ?>";
+        let comparisonList = JSON.parse(localStorage.getItem("comparisonList")) || [];
 
-    // Retrieve existing comparison list from localStorage
-    let comparisonList = JSON.parse(localStorage.getItem("comparisonList")) || [];
-
-    // If there are already properties in the comparison list, we check the first property type
-    if (comparisonList.length > 0) {
-        const firstPropertyType = comparisonList[0].type;
-
-        // Check if the selected property type matches the first property's type
-        if (firstPropertyType !== projectType) {
-            alert("You can only compare properties of the same type (Residential, Commercial, or Plotting).");
-            return;  // Stop the function execution if types don't match
+        if (comparisonList.length > 0 && comparisonList[0].type !== projectType) {
+            alert("You can only compare properties of the same type.");
+            return; // Prevent adding the property
         }
-    }
 
-    // Check if the property is already in the comparison list
-    const exists = comparisonList.some(item => item.id === propertyId);
+        const exists = comparisonList.some(item => item.id === propertyId);
+        if (exists) {
+            alert("Property already added to comparison list!");
+            return;
+        }
 
-    if (exists) {
-        alert("Property already added to comparison list!");
-    } else {
-        // Add new property to the comparison list with the inferred project type
         comparisonList.push({
             id: propertyId,
             name: propertyName,
             location: propertyLocation,
-            totalunits: propertyTotalUnits,
-            towers: propertyTotalTowers,
             area: propertyArea,
             possession: propertyPossession,
-            type: projectType  // Add the project type to the comparison list
+            developer: propertyDeveloper,
+            plotType: propertyType,
+            plotSize: plotSize,
+            price: price,
+            psf: propertyPsf,
+            usp: usp,
+            fsi: fsi,
+            floor: floor,
+            status: status,
+            type: projectType
         });
 
-        // Save updated comparison list to localStorage
         localStorage.setItem("comparisonList", JSON.stringify(comparisonList));
-
-        alert("Property added to comparison list. Type: Plotting Project ");
+        alert("Property added to comparison list.");
     }
-}
+
+
+    // Function to show the popup
+    function showPopup(content) {
+        document.getElementById("popupContent").innerHTML = content;
+        document.getElementById("comparePopup").style.display = "block";
+    }
+
+    // Function to close the popup
+    function closePopup() {
+        document.getElementById("comparePopup").style.display = "none";
+    }
 
 
 
-function copyShareUrl() {
-    const shareUrl = window.location.href; // Get the current page URL
 
-    // Create a temporary input element to copy the URL
-    const tempInput = document.createElement("input");
-    document.body.appendChild(tempInput);
-    tempInput.value = shareUrl;
-    tempInput.select();
-    document.execCommand("copy");
-    document.body.removeChild(tempInput);
+    function copyShareUrl() {
+        const shareUrl = window.location.href; // Get the current page URL
 
-    alert("Project URL copied to clipboard!");
-}
+        // Create a temporary input element to copy the URL
+        const tempInput = document.createElement("input");
+        document.body.appendChild(tempInput);
+        tempInput.value = shareUrl;
+        tempInput.select();
+        document.execCommand("copy");
+        document.body.removeChild(tempInput);
+
+        alert("Project URL copied to clipboard!");
+    }
 
 </script>
 

@@ -198,10 +198,10 @@ html, body {
 }
 
 /* Card Styles */
-.card {
+.card1 {
     background-color: #050f17;
     padding: 30px;
-    border-radius: 8px;
+    /* border-radius: 8px; */
     border: 1px solid #A8894D;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -212,7 +212,7 @@ html, body {
     padding: 40px;
 }
 
-.card:hover {
+.card1:hover {
     background-color: #A8894D;
 }
 
@@ -370,9 +370,7 @@ html, body {
 
 /* faq section */
 
-/* General styles for FAQ section */
-/* FAQ Section Styling */
-/* FAQ Section Styling */
+
 /* FAQ Section Styling */
 .faq-section {
     background-color: #050f17;
@@ -406,7 +404,7 @@ html, body {
 
 .faq-text h2 span {
     color: #A8894D;
-    text-decoration: underline;
+    /* text-decoration: underline; */
 }
 
 .faq-text p {
@@ -424,7 +422,7 @@ html, body {
 
 .faq-item {
     background-color: #1c1c1c;
-    border-radius: 8px;
+    /* border-radius: 8px; */
     overflow: hidden;
 }
 
@@ -454,7 +452,7 @@ html, body {
     font-size: 16px;
     color: #ffffff;
     line-height: 1.6;
-    padding: 0 20px 15px 36px;
+    padding: 0 20px 15px 18px;
     display: none; /* Hide initially */
 }
 
@@ -466,8 +464,8 @@ html, body {
 
 .faq-image img {
     max-width: 100%;
-    height: auto;
-    border-radius: 8px;
+    height: 550px;
+    /* border-radius: 8px; */
 }
 
 /* Responsive Styling */
@@ -496,7 +494,7 @@ html, body {
     padding: 50px 20px;
     text-align: center;
     font-family: Arial, sans-serif;
-    padding-top: 80px;
+    padding-top: 0px;
 }
 
 .how-it-works-section h2 {
@@ -518,12 +516,12 @@ html, body {
 .how-it-works-item {
     background-color: #050f17;
     padding: 20px;
-    border-radius: 10px;
-    width: 250px;
+    /* border-radius: 10px; */
+    width: 280px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s ease;
-    border: 1px solid #A8894D;
+    border: 1px solid #a8894d52;
 }
 
 .how-it-works-item:hover {
@@ -567,19 +565,27 @@ html, body {
 
 
 /* Client Success Section */
+/* Centering the full section */
+#rent-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full viewport height */
+    background-color: #050f17; /* Optional background color */
+    padding: 20px; /* Optional padding for spacing */
+    box-sizing: border-box;
+    margin-top: 50px;
+}
 
 .client-success-section {
     display: flex;
     flex-direction: row;
-    max-width: 1400px;
+    max-width: 1200px; /* Adjust as needed */
     width: 100%;
-    margin: 40px auto;
     background-color: #050f17;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
+    /* border-radius: 8px; */
     overflow: hidden;
-    padding-top: 40px;
-    margin-left: 250px;
 }
 
 .client-success-image {
@@ -592,30 +598,35 @@ html, body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 50%;
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center text within the content area */
+    width: 60%;
 }
 
 .client-success-content h2 {
-    font-size: 2.0em;
-    margin-bottom: 10px;
-    color: #fff9f9;
+    color: #A8894D;
+    font-family: "Italiana", Sans-serif;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 1.3em;
+    align-self: flex-start; /* Aligns the heading to the left within the content */
 }
 
 .client-success-content p {
-    font-size: 1em;
-    color: #aba4a4;
-    line-height: 2.0;
+    color: #E8E8E8;
+    font-family: "Lexend", Sans-serif;
+    font-size: 16px;
+    font-weight: 100;
+    line-height: 1.8em;
+    margin-top: 20px;
 }
 
-.client-success-content h2 span {
-    color: #A8894D; /* Highlight color */
-}
+
 
 /* Tablet View */
 @media (max-width: 1024px) {
     .client-success-section {
         flex-direction: column;
-        margin-left: 0;
         max-width: 100%;
     }
 
@@ -647,7 +658,6 @@ html, body {
         line-height: 1.6;
     }
 }
-
   
 
   /* para */
@@ -698,7 +708,7 @@ html, body {
     padding-left: 30px;
     padding-right: 30px;
     background-color: #050f17;
-    padding-top: 150px;
+    padding-top: 50px;
     padding-bottom: 100px;
 }
 
@@ -756,7 +766,7 @@ p {
     font-size: 15px;
     /* font-weight: bold; */
     font-family: 'Lexend'sans-serif;
-    /* border-radius: 0px; */
+    border-radius: 0px;
 
 }
 
@@ -765,3 +775,208 @@ p {
 }
 
 /* end call to action */
+
+
+
+
+/* enquire button */
+
+
+/* Modal and form container styling */
+#enquiryModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+#enquiryModal .form-container {
+    position: relative;
+    max-width: 500px;
+    margin: 40px auto;
+    background: #5c5c5c;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#enquiryModal h3 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #333333;
+    text-align: center; /* Centering the h3 */
+}
+
+/* Input fields styling with black placeholder */
+#enquiryForm input[type="text"],
+#enquiryForm input[type="email"],
+#enquiryForm input[type="tel"],
+#enquiryForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+/* Placeholder color styling */
+#enquiryForm input::placeholder,
+#enquiryForm textarea::placeholder {
+    color: #000000; /* Black placeholder text */
+    opacity: 1; /* Ensures placeholder is fully opaque */
+}
+
+/* Focus effect on input fields */
+#enquiryForm input[type="text"]:focus,
+#enquiryForm input[type="email"]:focus,
+#enquiryForm input[type="tel"]:focus,
+#enquiryForm textarea:focus {
+    border-color: #000000;
+    outline: none;
+}
+
+/* Submit and close buttons styling */
+#enquiryForm button[type="submit"],
+#enquiryForm button#closeModal {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#enquiryForm button[type="submit"] {
+    background-color: #A8894D;
+    color: #ffffff;
+    width: 100%;
+}
+
+#enquiryForm button[type="submit"]:hover {
+    background-color: #050F17;
+}
+
+#enquiryForm button#closeModal {
+    color: #333;
+    margin-left: 10px;
+}
+
+#enquiryForm button#closeModal:hover {
+    background-color: #999;
+}
+
+/* button */
+/* Container for the button */
+#enquireButtonContainer {
+    position: fixed;
+    top: 50%;
+    right: -60px;
+    transform: translateY(-50%) rotate(90deg);
+    transform-origin: center;
+    z-index: 999;
+}
+
+/* Button styling */
+#enquireButton {
+    padding: 10px 20px;
+    background-color: #A8894d;
+    color: #000000;
+    border: none;
+    cursor: pointer;
+    border-radius: 0px;
+    font-weight: 100;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+/* Hover effect */
+#enquireButton:hover {
+    background-color: #f5f5f5; /* Darker shade of the original color */
+}
+
+
+.home-loan-button {
+    border-radius: 0;
+    font-size: 13px;
+    color: #050f17;
+    background-color: #a8894d;
+    font-weight: 200;
+    padding: 15px 26px;
+}
+
+.home-loan-button:hover {
+    background-color: #fff;
+}
+
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #A8894D;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    min-width: 400px;
+}
+
+.popup-content {
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+
+.popup-para{
+    text-align: center;
+    color: #fff;
+}
+
+/* Captcha Container */
+.captcha-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* margin-top: 10px; */
+    height: 30px;
+}
+
+.captcha-container label {
+    font-size: 16px;
+    font-weight: bold;
+    width: 85px;
+}
+
+.captcha-container input {
+    width: 100% !important;
+    padding: 5px;
+    text-align: center;
+}
+
+/* Error message */
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+    display: block;
+}
+
+
+/* end enquire */

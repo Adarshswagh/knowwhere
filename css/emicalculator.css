@@ -26,7 +26,7 @@ html, body {
     align-items: center; /* Vertically center content */
     justify-content: center; /* Horizontally center content */
     color: #FFFFFF; /* Set text color to pure white */
-    background-image: url('../images/bannerabout.jpg');
+    background-image: url('../images/banner/5.png');
     background-color: #000; /* Fallback color if image fails to load */
     position: relative; /* Position relative for overlay */
 }
@@ -39,7 +39,7 @@ html, body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for better contrast */
+    background-color: rgba(0, 0, 0, 0.7); /* Dark overlay for better contrast */
     z-index: 1;
 }
 
@@ -111,26 +111,40 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 80vh; /* Adjust for smaller screens */
+    min-height: 100vh;
     background-color: #050f17;
+    padding: 20px;
 }
 
 .container-emi {
     display: flex;
-    flex-direction: row; /* Stack columns on smaller screens */
+    flex-direction: row;
     background-color: #A8894D;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     width: 100%;
-    max-width: 1000px;
-    margin: 0 20px; /* Adjust side margins for smaller screens */
+    max-width: 1200px;
+    align-items: center;
 }
 
 .calculator, .result {
-    width: 100%; /* Full width in smaller screens */
+    width: 50%;
     padding: 20px;
-    margin-top: 20px; /* Add space between sections */
+    margin-top: 0;
+}
+
+.calculator {
+    /* background-color: #FFF; */
+    border-radius: 10px;
+    /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
+}
+
+.result {
+    background-color: #050f17;
+    border-radius: 10px;
+    /* color: white; */
+    width: 60%;
 }
 
 .header {
@@ -139,76 +153,36 @@ html, body {
     margin-bottom: 20px;
 }
 
-.header i {
-    font-size: 20px;
-    color: #D94D3E;
-    margin-right: 10px;
-}
-
 .header h1 {
     font-family: "Lexend", Sans-serif;
     font-size: 24px;
     color: #050f17;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-label {
-    font-family: "Lexend", Sans-serif;
-    margin-bottom: 5px;
-    font-size: 16px;
-    color: #000000;
-    margin-top: 20px;
-}
-
 .emi-form {
+    width: 80%;
     padding: 10px;
-    margin-bottom: 20px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    border: 1px solid #050f17;
-    background-color: transparent;
-    color: #000;
+    background-color: #f9f9f9;
 }
 
-button {
-    background-color: #D94D3E;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    font-size: 14px;
-    cursor: pointer;
-    width: 100%;
-}
-
-button:hover {
-    background-color: #bf3f34;
-}
-
-.result {
-    background-color: #050f17;
-    border-radius: 10px;
-    padding: 20px;
-}
-
-h2 {
-    color: #D94D3E;
-    font-size: 20px;
-    margin-bottom: 20px;
+.details-p{
+    color: #fff;
 }
 
 .result-heading {
-    font-size: 30px;
-    color: #f3f3f3;
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #D94D3E;
+    font-family:  'Lexend', sans-serif;
 }
 
 .amounts {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
     margin-top: 20px;
 }
 
@@ -225,62 +199,48 @@ h2 {
     color: #A67C00;
 }
 
-.details {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
+.promo {
+    margin-top: 20px;
+    text-align: center;
 }
 
 .promo h3 {
-    color: #A8894D;
-    font-size: 25px;
-    margin-bottom: 20px;
+    font-size: 18px;
+    color: #FFD700;
+    text-align: left;
 }
 
 ul {
-    list-style-type: none;
-    color: #f3f3f3;
-    margin-left: -40px;
+    list-style: none;
+    padding: 0;
+
 }
 
 ul li {
-    margin-bottom: 10px;
-    font-size: 15px;
-    margin-top: 15px;
+    margin: 10px 0;
+    font-size: 14px;
+    color: #FFF;
+    text-align: left;
 }
 
 /* Responsive Design */
-/* Tablet view adjustments */
-@media (max-width: 991px) {
-    .container-emi {
-        flex-direction: column;
-    }
-    
-    .calculator, .result {
-        width: 100%;
-    }
-
-    .header h1 {
-        font-size: 24px;
-    }
-
-    .result-heading {
-        font-size: 28px;
-    }
-}
-
-/* Mobile view adjustments */
 @media (max-width: 768px) {
     .container-emi {
-        padding: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .calculator, .result {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .result{
+        width: 95% !important;
     }
 
     .header h1 {
         font-size: 20px;
-    }
-
-    label {
-        font-size: 14px;
     }
 
     .emi-form {
@@ -288,34 +248,48 @@ ul li {
     }
 
     .result-heading {
-        font-size: 25px;
-    }
-
-    .amounts p, ul li {
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 576px) {
-    .header h1 {
-        font-size: 18px;
-    }
-
-    .result-heading {
         font-size: 22px;
     }
 
-    .promo h3 {
-        font-size: 20px;
-    }
-
     ul li {
-        font-size: 13px;
+        font-size: 12px;
     }
 
-    button {
-        padding: 8px;
-        font-size: 14px;
+    .promo h3 {
+        font-size: 16px;
     }
 }
+
+
+
+.amounts-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.amount-block {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    color: #ffffff; /* Text color for clarity */
+}
+
+.amount-block label {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.amount-block p {
+    /* margin-top: 10px; */
+    font-size: 18px;
+    font-family: 'Lexend', sans-serif; /* Match existing design */
+}
+
+
 /* end calculatpor */

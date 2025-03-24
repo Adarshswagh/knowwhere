@@ -121,12 +121,14 @@ html, body {
 .features {
     display: flex;
     justify-content: space-around;
+  
 }
 
 .feature {
     flex: 1;
     padding: 20px;
-    max-width: 250px;
+    max-width: 400px;
+    border: 1px solid #ffffff14;
 }
 
 .icon {
@@ -186,25 +188,25 @@ html, body {
 }
 
 .content p {
+    color: #E8E8E8;
+    font-family: "Lexend", Sans-serif;
     font-size: 14px;
-    color: #ffffff;
-    line-height: 1.5;
-    margin-bottom: 20px;
+    font-weight: 100;
+    line-height: 1.5em;
+    margin-top: 20px;
 }
 
-button {
-    padding: 12px 24px;
-    background-color: #ff9900;
-    color: #ffffff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: bold;
+.home-loan-button {
+    border-radius: 0;
+    font-size: 13px;
+    color: #050f17;
+    background-color: #a8894d;
+    font-weight: 200;
+    padding: 15px 26px;
 }
 
-button:hover {
-    background-color: #e68a00;
+.home-loan-button:hover {
+    background-color: #fff;
 }
 
 /* Responsive Styles for Tablet */
@@ -593,7 +595,7 @@ h1 {
     padding: 12px;
     font-size: 16px;
     width: 100%;
-    border-radius: 5px;
+    /* border-radius: 5px; */
     border: 1px solid #ccc;
 }
 
@@ -615,20 +617,388 @@ h1 {
 }
 
 .get-quote-button {
-    padding: 15px 30px;
-    background-color: #615dfa; /* Button color */
-    color: #fff;
-    font-size: 18px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    font-family: "Lexend", Sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 1.5rem;
+    background-color: #A8894d;
+    color: #050f17;
+    padding: 15px 25px;
+    font-size: 15px;
     transition: background-color 0.3s ease;
+    border: none;
 }
 
 .get-quote-button:hover {
-    background-color: #4b49e1; /* Darker shade on hover */
+    background-color: #fff; /* Darker shade on hover */
 }
 
 .image-wrapper img {
     max-width: 400px;
+}
+
+
+
+
+/* enquire button */
+
+
+/* Modal and form container styling */
+#enquiryModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+#enquiryModal .form-container {
+    position: relative;
+    max-width: 500px;
+    margin: 40px auto;
+    background: #5c5c5c;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#enquiryModal h3 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #333333;
+    text-align: center; /* Centering the h3 */
+}
+
+/* Input fields styling with black placeholder */
+#enquiryForm input[type="text"],
+#enquiryForm input[type="email"],
+#enquiryForm input[type="tel"],
+#enquiryForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+/* Placeholder color styling */
+#enquiryForm input::placeholder,
+#enquiryForm textarea::placeholder {
+    color: #000000; /* Black placeholder text */
+    opacity: 1; /* Ensures placeholder is fully opaque */
+}
+
+/* Focus effect on input fields */
+#enquiryForm input[type="text"]:focus,
+#enquiryForm input[type="email"]:focus,
+#enquiryForm input[type="tel"]:focus,
+#enquiryForm textarea:focus {
+    border-color: #000000;
+    outline: none;
+}
+
+/* Submit and close buttons styling */
+#enquiryForm button[type="submit"],
+#enquiryForm button#closeModal {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#enquiryForm button[type="submit"] {
+    background-color: #A8894D;
+    color: #ffffff;
+    width: 100%;
+}
+
+#enquiryForm button[type="submit"]:hover {
+    background-color: #050F17;
+}
+
+#enquiryForm button#closeModal {
+    color: #333;
+    margin-left: 10px;
+}
+
+#enquiryForm button#closeModal:hover {
+    background-color: #999;
+}
+
+
+
+
+
+
+
+
+
+
+/* button */
+/* Container for the button */
+#enquireButtonContainer {
+    position: fixed;
+    top: 50%;
+    right: -50px;
+    transform: translateY(-50%) rotate(90deg);
+    transform-origin: center;
+    z-index: 999;
+}
+
+/* Button styling */
+#enquireButton {
+    padding: 10px 20px;
+    background-color: #A8894d;
+    color: #000000;
+    border: none;
+    cursor: pointer;
+    border-radius: 0px;
+    font-weight: 100;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+/* Hover effect */
+#enquireButton:hover {
+    background-color: #f5f5f5; /* Darker shade of the original color */
+}
+
+/* end enquire */
+
+
+/* banks */
+.loan-container {
+    max-width: 1400px;
+    margin: 20px auto;
+    padding: 20px;
+    /* background-color: #fff; */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    max-width: 540px;
+}
+
+.tab-button {
+    flex: 1;
+    padding: 10px 20px;
+    text-align: center;
+    border: none;
+    background-color: #e8e8e8;
+    color: #333;
+    cursor: pointer;
+    font-weight: 400;
+    /* border-radius: 5px; */
+    margin: 0 5px;
+}
+
+.tab-button.active {
+    background-color: #a8894d;
+    color: #050F17;
+}
+
+button:hover {
+    background-color: #a8894d;
+}
+
+.loan-heading {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.loan-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0px;
+    margin-bottom: 15px;
+    background-color: #0a1a28; /* Matches Knowhere theme */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #ffffff; /* Text color for better contrast */
+}
+
+.loan-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.loan-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff; /* Slightly different shade for header */
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.loan-title {
+    font-size: 18px;
+    font-weight: 300;
+    color: #050F17; /* Title color */
+    display: flex;
+    align-items: center;
+}
+
+.loan-title img {
+    margin-right: 10px; /* Space for any icon next to title */
+}
+
+.action-button {
+    background-color: #a8894d;
+    color: #ffffff;
+    padding: 8px 16px;
+    /* border-radius: 20px; */
+    border: 2px solid #a8894d;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.action-button:hover {
+    background-color: #fff;
+    color: #050f17;
+    border-color: #050F17;
+    text-decoration: none;
+}
+
+.loan-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        font-size: 14px;
+        color: #c0c0c0;
+        padding-left: 35px;
+        padding-right: 35px;
+        padding-bottom: 15px;
+}
+
+.loan-info div {
+    text-align: left;
+    flex: 1; /* Equal spacing for each block */
+    max-width: 165px;
+}
+
+
+.status-bar {
+    width: 4px;
+    border-radius: 4px;
+}
+
+.status-private {
+    background-color: #5c6bc0;
+}
+
+.status-nationalized {
+    background-color: #d32f2f;
+}
+
+.status-nbfc {
+    background-color: #388e3c;
+}
+
+/* end banks */
+
+
+/* Popup Styling */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 500px;
+    text-align: center;
+}
+
+.popupform-heading{
+    color: #A8894D;
+}
+
+.popup-para{
+    color: #000;
+    text-align: center;
+}
+
+.popup-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.close-btn {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    font-size: 20px;
+}
+
+.input-field, #detailsForm input, #detailsForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    background: #A8894D;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #876f3d;
+}
+
+/* Error Popup */
+#errorPopup {
+    display: none;
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 400px;
+    text-align: center;
+}
+
+#errorMessage {
+    color: #a8894d;
+    font-weight: bold;
+}
+
+
+.error-heading{
+    color: #a8894d;
+    font-size: 20px;
+    font-weight: 600;
 }

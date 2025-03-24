@@ -62,7 +62,7 @@ body {
     color: #A8894D;
     font-family: "Italiana", Sans-serif;
     font-size: 40px;
-    font-weight: 400;
+    font-weight: 600;
     line-height: 1.3em;
 }
 
@@ -73,13 +73,32 @@ body {
     margin-bottom: 20px;
 }
 
+
+.main-content img{
+    max-width: 100%;
+    border:  1px solid #fff;
+}
+
 /* Text content styling */
-p {
+.main-p {
     font-size: 18px;
     line-height: 1.6;
     color: #c4c4c4;
     margin-bottom: 20px;
-    font-family: "Lexend", Sans-serif;    
+    font-family: "Lexend", Sans-serif;   
+    margin-top: 60px; 
+    text-align: justify;
+
+}
+
+.main-p2{
+    font-size: 18px;
+    line-height: 1.6;
+    color: #c4c4c4;
+    margin-bottom: 20px;
+    font-family: "Lexend", Sans-serif;  
+    text-align: justify; 
+    
 
 }
 
@@ -94,13 +113,14 @@ ol {
 
 li {
     margin-bottom: 10px;
-    color: #c4c4c4;
+    color: #d9bc84;
     line-height: 1.8em;
+    font-size: 25px;
     
 }
 
 .blog-heading {
-    color: #e8e8e8; /* Set heading color to pure white */
+    color: #d9bc84; /* Set heading color to pure white */
     font-family: "Lexend", Sans-serif;    
     font-size: 25px;
     font-weight: 200;
@@ -110,9 +130,9 @@ li {
 
 
 .blog-conslusion{
-    color: #E8E8E8;
+    color: #d9bc84;
     font-family: "lexend", Sans-serif;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 200;
     line-height: 1.3em;
 }
@@ -124,6 +144,14 @@ li {
     padding: 20px;
     border: 1px solid #6c6c6c;
     max-width: 80%;
+    text-align: center;
+}
+
+.form-heading-blog{
+    font-size: 24px;
+    font-family: 'Lexend', sans-serif;
+    color: #fff !important;
+    margin-bottom: 20px;
     text-align: center;
 }
 

@@ -25,7 +25,7 @@ body {
     align-items: center; /* Vertically center content */
     justify-content: center; /* Horizontally center content */
     color: #FFFFFF; /* Set text color to pure white */
-    background-image: url('../images/bannerabout.jpg');
+    background-image: url('../images/banner/5.png');
     background-color: #000; /* Fallback color if image fails to load */
     position: relative; /* Position relative for overlay */
 }
@@ -38,7 +38,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for better contrast */
+    background-color: rgba(0, 0, 0, 0.7); /* Dark overlay for better contrast */
     z-index: 1;
 }
 

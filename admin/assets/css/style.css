@@ -1420,14 +1420,20 @@ button.bg-danger:hover {
   z-index: 1;
   transition: all 0.2s ease-in-out;
 }
-.header .header-left .logo {
-  display: inline-block;
-  line-height: 60px;
+.header .header-left {
+  height: 100px; /* Set desired height for the logo container */
+  display: flex;
+  align-items: center;
 }
+
 .header .header-left .logo img {
-  max-height: 40px;
-  width: auto;
+  height: 207px;
+  width: 100%;
+  max-width: 190px;
+  max-height: 100%;
+  margin-top: -35px;
 }
+
 .header-left .logo.logo-small {
   display: none;
 }
@@ -1891,6 +1897,7 @@ html.menu-opened body {
 }
 .page-header {
   margin-bottom: 1.875rem;
+  margin-top: 35px;
 }
 .page-header .breadcrumb {
   background-color: transparent;

@@ -66,143 +66,26 @@ if(!isset($_SESSION['auser']))
 					</div>
 					<!-- /Page Header -->
 
-					<div class="row">
-						<div class="col-xl-3 col-sm-6 col-12">
-							<div class="card">
-								<div class="card-body">
-									<div class="dash-widget-header">
-										<span class="dash-widget-icon bg-primary">
-											<i class="fe fe-users"></i>
-										</span>
-										
-									</div>
-									<div class="dash-widget-info">
-										
-										<h3><?php $sql = "SELECT * FROM user WHERE utype = 'user'";
-										$query = $con->query($sql);
-                						echo "$query->num_rows";?></h3>
-										
-										<h6 class="text-muted">Registered Users</h6>
-										<div class="progress progress-sm">
-											<div class="progress-bar bg-primary w-50"></div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-xl-3 col-sm-6 col-12">
-							<div class="card"> 
-								<div class="card-body">
-									<div class="dash-widget-header">
-										<span class="dash-widget-icon bg-success">
-											<i class="fe fe-users"></i>
-										</span>
-										
-									</div>
-									<div class="dash-widget-info">
-										
-									<h3><?php $sql = "SELECT * FROM user WHERE utype = 'agent'";
-										$query = $con->query($sql);
-                						echo "$query->num_rows";?></h3>
-										
-										<h6 class="text-muted">Agents</h6>
-										<div class="progress progress-sm">
-											<div class="progress-bar bg-success w-50"></div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-xl-3 col-sm-6 col-12">
-							<div class="card">
-								<div class="card-body">
-									<div class="dash-widget-header">
-										<span class="dash-widget-icon bg-danger">
-											<i class="fe fe-user"></i>
-										</span>
-										
-									</div>
-									<div class="dash-widget-info">
-										
-									<h3><?php $sql = "SELECT * FROM user WHERE utype = 'builder'";
-										$query = $con->query($sql);
-                						echo "$query->num_rows";?></h3>
-										
-										<h6 class="text-muted">Builder</h6>
-										<div class="progress progress-sm">
-											<div class="progress-bar bg-danger w-50"></div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-xl-3 col-sm-6 col-12">
-							<div class="card">
-								<div class="card-body">
-									<div class="dash-widget-header">
-										<span class="dash-widget-icon bg-info">
-											<i class="fe fe-home"></i>
-										</span>
-										
-									</div>
-									<div class="dash-widget-info">
-										
-									<h3><?php $sql = "SELECT * FROM property";
-										$query = $con->query($sql);
-                						echo "$query->num_rows";?></h3>
-										
-										<h6 class="text-muted">Properties</h6>
-										<div class="progress progress-sm">
-											<div class="progress-bar bg-info w-50"></div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+					
 
 
 					<div class="row">
-						<div class="col-xl-3 col-sm-6 col-12">
+						<div class="col-xl-4 col-sm-6 col-12">
 							<div class="card">
 								<div class="card-body">
 									<div class="dash-widget-header">
 										<span class="dash-widget-icon bg-warning">
-											<i class="fe fe-table"></i>
-										</span>
-										
-									</div>
-									<div class="dash-widget-info">
-										
-									<h3><?php $sql = "SELECT * FROM property where type = 'apartment'";
-										$query = $con->query($sql);
-                						echo "$query->num_rows";?></h3>
-										
-										<h6 class="text-muted">No. of Apartments</h6>
-										<div class="progress progress-sm">
-											<div class="progress-bar bg-info w-50"></div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-xl-3 col-sm-6 col-12">
-							<div class="card">
-								<div class="card-body">
-									<div class="dash-widget-header">
-										<span class="dash-widget-icon bg-info">
 											<i class="fe fe-home"></i>
 										</span>
 										
 									</div>
 									<div class="dash-widget-info">
 										
-									<h3><?php $sql = "SELECT * FROM property where type = 'house'";
+									<h3><?php $sql = "SELECT * FROM residential_projects";
 										$query = $con->query($sql);
                 						echo "$query->num_rows";?></h3>
 										
-										<h6 class="text-muted">No. of Houses</h6>
+										<h6 class="text-muted">Residential Projects</h6>
 										<div class="progress progress-sm">
 											<div class="progress-bar bg-info w-50"></div>
 										</div>
@@ -211,22 +94,22 @@ if(!isset($_SESSION['auser']))
 							</div>
 						</div>
 
-						<div class="col-xl-3 col-sm-6 col-12">
+						<div class="col-xl-4 col-sm-6 col-12">
 							<div class="card">
 								<div class="card-body">
 									<div class="dash-widget-header">
-										<span class="dash-widget-icon bg-secondary">
+										<span class="dash-widget-icon bg-info">
 											<i class="fe fe-building"></i>
 										</span>
 										
 									</div>
 									<div class="dash-widget-info">
 										
-									<h3><?php $sql = "SELECT * FROM property where type = 'building'";
+									<h3><?php $sql = "SELECT * FROM commercial_projects";
 										$query = $con->query($sql);
                 						echo "$query->num_rows";?></h3>
 										
-										<h6 class="text-muted">No. of Buildings</h6>
+										<h6 class="text-muted">Commercial Projects</h6>
 										<div class="progress progress-sm">
 											<div class="progress-bar bg-info w-50"></div>
 										</div>
@@ -235,48 +118,114 @@ if(!isset($_SESSION['auser']))
 							</div>
 						</div>
 
-						<div class="col-xl-3 col-sm-6 col-12">
+						<div class="col-xl-4 col-sm-6 col-12">
 							<div class="card">
 								<div class="card-body">
 									<div class="dash-widget-header">
-										<span class="dash-widget-icon bg-primary">
-											<i class="fe fe-tablet"></i>
+										<span class="dash-widget-icon bg-secondary">
+											<i class="fe fe-table"></i>
 										</span>
 										
 									</div>
 									<div class="dash-widget-info">
 										
-									<h3><?php $sql = "SELECT * FROM property where type = 'flat'";
+									<h3><?php $sql = "SELECT * FROM plotting_projects";
 										$query = $con->query($sql);
                 						echo "$query->num_rows";?></h3>
 										
-										<h6 class="text-muted">No. of Flat</h6>
+										<h6 class="text-muted">PLotting Projects</h6>
 										<div class="progress progress-sm">
 											<div class="progress-bar bg-info w-50"></div>
 										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						
+					</div>
+
+					<div class="row">
+					<div class="col-xl-4 col-sm-6 col-12">
+						<div class="card">
+							<div class="card-body">
+								<div class="dash-widget-header">
+									<span class="dash-widget-icon bg-success">
+										<i class="fe fe-quote-left"></i>
+									</span>
+								</div>
+								<div class="dash-widget-info">
+									<?php 
+										// Query to get the total number of projects from all three tables
+										$sql = "SELECT 
+													(SELECT COUNT(*) FROM residential_projects) + 
+													(SELECT COUNT(*) FROM commercial_projects) + 
+													(SELECT COUNT(*) FROM plotting_projects) AS total_projects";
+										
+										$query = $con->query($sql);
+										$row = $query->fetch_assoc();
+										echo "<h3>" . $row['total_projects'] . "</h3>";
+									?>
+									<h6 class="text-muted">Total Projects</h6>
+									<div class="progress progress-sm">
+										<div class="progress-bar bg-info w-50"></div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 
-					<div class="row">
-						<div class="col-xl-3 col-sm-6 col-12">
+
+					<div class="col-xl-4 col-sm-6 col-12">
+						<div class="card">
+							<div class="card-body">
+								<div class="dash-widget-header">
+									<span class="dash-widget-icon bg-success">
+										<i class="fe fe-quote-left"></i>
+									</span>
+								</div>
+								<div class="dash-widget-info">
+									<?php 
+										// Query to get the total number of featured (best sale) projects from all three tables
+										$sql = "SELECT 
+													(SELECT COUNT(*) FROM residential_projects WHERE featured = 1) + 
+													(SELECT COUNT(*) FROM commercial_projects WHERE featured = 1) + 
+													(SELECT COUNT(*) FROM plotting_projects WHERE featured = 1) AS best_sale_projects";
+										
+										$query = $con->query($sql);
+										$row = $query->fetch_assoc();
+										echo "<h3>" . $row['best_sale_projects'] . "</h3>";
+									?>
+									<h6 class="text-muted">Best Sale Projects</h6>
+									<div class="progress progress-sm">
+										<div class="progress-bar bg-info w-50"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+						<div class="col-xl-4 col-sm-6 col-12">
 							<div class="card">
 								<div class="card-body">
 									<div class="dash-widget-header">
 										<span class="dash-widget-icon bg-success">
 											<i class="fe fe-quote-left"></i>
 										</span>
-										
 									</div>
 									<div class="dash-widget-info">
-										
-									<h3><?php $sql = "SELECT * FROM property where stype = 'sale'";
-										$query = $con->query($sql);
-                						echo "$query->num_rows";?></h3>
-										
-										<h6 class="text-muted">On Sale</h6>
+										<?php 
+											// Query to get the total number of projects from all three tables
+											$sql = "SELECT 
+														
+														(SELECT COUNT(*) FROM commercial_projects) + 
+														(SELECT COUNT(*) FROM plotting_projects) AS total_projects";
+											
+											$query = $con->query($sql);
+											$row = $query->fetch_assoc();
+											echo "<h3>" . $row['total_projects'] . "</h3>";
+										?>
+										<h6 class="text-muted">Best ROI INvestment Projects</h6>
 										<div class="progress progress-sm">
 											<div class="progress-bar bg-info w-50"></div>
 										</div>
@@ -285,61 +234,12 @@ if(!isset($_SESSION['auser']))
 							</div>
 						</div>
 
-						<div class="col-xl-3 col-sm-6 col-12">
-							<div class="card">
-								<div class="card-body">
-									<div class="dash-widget-header">
-										<span class="dash-widget-icon bg-info">
-											<i class="fe fe-quote-right"></i>
-										</span>
-										
-									</div>
-									<div class="dash-widget-info">
-										
-									<h3><?php $sql = "SELECT * FROM property where stype = 'rent'";
-										$query = $con->query($sql);
-                						echo "$query->num_rows";?></h3>
-										
-										<h6 class="text-muted">Rentals</h6>
-										<div class="progress progress-sm">
-											<div class="progress-bar bg-info w-50"></div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
+						
+						
+
 					</div>
 
-					<!-- <div class="row">
-						<div class="col-md-12 col-lg-6">
-						
-							
-							<div class="card card-chart">
-								<div class="card-header">
-									<h4 class="card-title">Sales Overview</h4>
-								</div>
-								<div class="card-body">
-									<div id="morrisArea"></div>
-								</div>
-							</div>
-							
-							
-						</div>
-						<div class="col-md-12 col-lg-6">
-						
-							
-							<div class="card card-chart">
-								<div class="card-header">
-									<h4 class="card-title">Order Status</h4>
-								</div>
-								<div class="card-body">
-									<div id="morrisLine"></div>
-								</div>
-							</div>
-							
-							
-						</div>	
-					</div> -->
+					
 				</div>			
 			</div>
 			<!-- /Page Wrapper -->

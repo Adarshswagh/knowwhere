@@ -54,40 +54,45 @@
 <!--end banner  -->
 
 <!-- calculator -->
-<section id="emi-calculator" style ="padding:40px;">
-    <div class="container-emi" style ="flex-direction: row; ">
+<section id="emi-calculator" style="padding: 40px;">
+    <div class="container-emi">
         <div class="calculator">
             <div class="header">
-                <i class="fa fa-calculator" style="height:22px; margin-top:-5px;"></i>&nbsp
+                <i class="fa fa-calculator" style="height: 22px; margin-top: -5px;"></i>&nbsp;
                 <h1>EMI Calculator</h1>
             </div>
             <form id="emi-form">
-                <label for="loan-amount">Loan Amount</label>
-                <input class="emi-form" type="number" id="loan-amount" value="0" oninput="calculateEMI()">
-                
-                <label for="loan-tenure">Loan Tenure (years)</label>
+                <label for="loan-amount">Loan Amount</label><br>
+                <input class="emi-form" type="number" id="loan-amount" value="0" oninput="calculateEMI()"><br>
+
+                <label for="loan-tenure">Loan Tenure (years)</label><br>
                 <select class="emi-form" id="loan-tenure" onchange="calculateEMI()">
                     <option value="5">5 years</option>
                     <option value="10">10 years</option>
                     <option value="15">15 years</option>
                     <option value="20">20 years</option>
-                </select>
+                </select><br>
 
-                <label for="interest-rate">Interest Rate (%)</label>
-                <input class="emi-form"  type="number" id="interest-rate" value="8.5" oninput="calculateEMI()">
+                <label for="interest-rate">Interest Rate (%)</label><br>
+                <input class="emi-form" type="number" id="interest-rate" value="8.5" oninput="calculateEMI()">
             </form>
         </div>
-        
+
         <div class="result">
             <h2 class="result-heading">EMI Amount: ₹<span id="emi-amount">0.00</span></h2>
-            <div class="amounts">
-                <p class="loan-amount" id="display-loan-amount">₹0.00</p>
-                <p class="interest-amount" id="display-interest-amount">₹0.00</p>
+            <div class="amounts-container">
+                <div class="amount-block">
+                    <label for="loan-amount">Loan Amount</label><br>
+                    <!-- <input class="emi-form" type="number" id="loan-amount" value="0" oninput="calculateEMI()"><br> -->
+                    <p class="details-p"><span id="display-loan-amount">0.00</span></p>
+                </div>
+                <div class="amount-block">
+                    <label for="interest-rate">Interest Rate (%)</label><br>
+                    <!-- <input class="emi-form" type="number" id="interest-rate" value="8.5" oninput="calculateEMI()"><br> -->
+                    <p class="details-p"><span id="display-interest-amount">0.00</span></p>
+                </div>
             </div>
-            <div class="details" style = "color: white;">
-                <p >Loan Amount</p>
-                <p>Interest Amount</p>
-            </div>
+
             <div class="promo">
                 <h3>Empowering Business Growth with Affordable EMI Plans</h3>
                 <ul>
@@ -98,7 +103,6 @@
             </div>
         </div>
     </div>
-
 </section>
 
 

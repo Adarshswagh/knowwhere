@@ -23,223 +23,6 @@ include("config.php");
 
 </head>
 <style>
-    /* get in touch */
-.contact-section {
-    padding: 115px 0;
-    background-color: #050F17;
-}
-
-.contact-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.form-container {
-    flex: 1;
-    padding: 40px;
-    border: 1px solid #6c6c6c;
-    max-width: 550px;
-}
-
-.input-group {
-    display: flex;
-    gap: 20px; /* Adjust the gap between first and last name fields */
-    margin-bottom: 20px;
-    
-}
-
-.email-group{
-    margin-bottom: 20px;
-}
-
-.input-group input {
-    width: 47%; /* Make both input fields take up equal space */
-    font-size: 14px;
-    font-family: 'Lexend', sans-serif;
-    font-weight: 300;
-    line-height: 1.7em;
-}
-
-input, textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid #fff;
-    color: #fff;
-    font-family: 'Lexend', sans-serif;
-    font-size: 14px;
-}
-
-input::placeholder, textarea::placeholder {
-    color: #fff;
-}
-
-textarea {
-    height: 120px; /* Adjust the height of the message box */
-    resize: vertical; /* Make the textarea resizable */
-}
-
-button {
-    padding: 15px 30px; /* Increase the padding for a larger button */
-    background-color: #a38755;
-    color: #050F17;
-    border: none;
-    cursor: pointer;
-    margin-top: 20px; /* Adjust margin for space between form elements */
-    font-family: 'Lexend', sans-serif;
-}
-
-button:hover {
-    background-color: #fff;
-}
-
-.contact-info {
-    flex: 1;
-    padding: 20px;
-    max-width: 555px;
-}
-
-.contact-info h2 {
-    font-size: 50px;
-    font-weight: 400;
-    line-height: 1.3em;
-    margin-bottom: 20px;
-    color: #e8e8e8;
-    font-family: "Italiana", Sans-serif;
-}
-
-.contact-info p {
-    margin-bottom: 20px;
-    font-size: 14px;
-    line-height: 1.7em;
-    font-weight: 300;
-    font-family: "Lexend", Sans-serif;
-    text-align: left;
-}
-
-.contact-info ul {
-    list-style: none;
-    padding-left: 0;
-
-}
-
-.contact-info ul li {
-    color: #e8e8e8  ;
-    margin-bottom: 10px;
-    font-size: 14px;
-    font-family: "Lexend", Sans-serif;
-    font-weight: 300;
-    line-height: 1.7em;
-}
-
-.contact-info ul li i {
-    margin-right: 10px;
-}
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-    .contact-container {
-        flex-direction: column;
-    }
-
-    .form-container, .contact-info {
-        width: 100%;
-    }
-
-    .input-group {
-        flex-direction: column; /* Make first and last name stack on top of each other on mobile */
-    }
-
-    .contact-info h2 {
-        font-size: 28px;
-    }
-}
-
-
-/* residential and commercial */
-
-/* Section Styling */
-.construction-section {
-    background-color: #050f17;
-    color: #ffffff;
-    text-align: center;
-    padding-top: 100px;
-    padding-bottom: 100px;
-}
-
-.construction-content h2 {
-    font-size: 40px; /* Increase heading size */
-    /* font-weight: bold; */
-    color: #A8894D;
-    margin-bottom: 10px;
-}
-
-.construction-content p {
-    color: #ffffff;
-    font-size: 1.3rem; /* Increase paragraph size */
-    margin-bottom: 40px;
-}
-
-/* Construction Cards Styling */
-.construction-cards {
-    display: flex;
-    justify-content: center;
-    gap: 40px; /* Increase space between cards */
-}
-
-.construction-card {
-    position: relative;
-    width: 500px; /* Larger card width */
-    overflow: hidden;
-    border-radius: 12px;
-}
-
-.construction-card img {
-    width: 100%;
-    height: 300px; /* Larger image height */
-    object-fit: cover;
-    border-radius: 12px;
-    transition: transform 0.3s ease;
-}
-
-.construction-card:hover img {
-    transform: scale(1.05);
-}
-
-.construction-card-title {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: #ffffff;
-    padding: 18px;
-    font-size: 1.3rem; /* Increase text size */
-    font-weight: bold;
-    text-align: center;
-    border-bottom-left-radius: 12px;
-    border-bottom-right-radius: 12px;
-}
-
-/* Responsive styles for mobile */
-@media (max-width: 768px) {
-    .construction-cards {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .construction-card {
-        width: 95%; /* Full width on mobile */
-    }
-}
-
 
 .service-card:hover{
     background-color: #A8894D;
@@ -270,164 +53,358 @@ button:hover {
 
 
 <!-- about section -->
-<section class="interior-section">
-        <div class="text-content">
-            <h1 style = "color: #A8894D;
-    font-family: 'Italiana', Sans-serif;
-    font-size: 40px;
-    font-weight: 400;
-    line-height: 1.3em;">We construct your dream home</h1>
-            <p>Track house construction project progress, raise queries, view inspection reports and more.</p>
-            <div class="features">
-                <ul style = " list-style: none;
-    color: white;
-    font-size: 25px;
-    margin-left: -20px;">
-                    <li><span style= "color:#A8894D;">✔</span> View packages, floor plans, design recommendations</li>
-                    <li><span style= "color:#A8894D;">✔</span> Capture house construction progress in 3D</li>
-                    <li><span style= "color:#A8894D;">✔</span> Realtime tracking until project completion</li>
-                </ul>
-                <!-- <ul>
-                    <li>✔ Faucibus mattis aptent ac</li>
-                    <li>✔ Mauris cursus dapibus dictumst</li>
-                    <li>✔ Non nisl amet dolor</li>
-                </ul> -->
-            </div>
-        </div>
-        <div class="image-content">
-            <div class="image-wrapper">
-                <!-- <div class="play-button">▶</div> -->
-                <img src="images/blog1.jpg" alt="Interior design">
-            </div>
-        </div>
-    </section>
+<section class="premium-section">
+    <div class="premium-content">
+        <h2>About Construction</h2>
+        <p>
+        Experience the future of construction with Pune's leading tech-driven building innovators. At Knowhere, we don't just construct buildings; we craft dreams into tangible realities. As India's premier tech-enabled construction firm, we seamlessly blend cutting-edge technology with timeless craftsmanship to redefine the art of building.
+        </p>
+        <!-- <ul class="premium-checklist">
+            <div class="checklist-column">
+                <li><span>✔</span> Turning Dreams into Reality</li>
+                <li><span>✔</span> Industry Leadership</li>
+                <li><span>✔</span> Lasting Relationships</li>
+                <li><span>✔</span> Client-Centered Approach</li>
+                <li><span>✔</span> Transparency and Trust</li>
 
-    <!-- how we work -->
-
-    <section class="how-we-work">
-        <h2 style = "color: #A8894D;
-    font-family: 'Italiana', Sans-serif;
-    font-size: 40px;
-    font-weight: 400;
-    line-height: 1.3em; padding-top:100px;" >How We Work</h2>
-        <p style = "text-align:center;">We ensure peace of mind, trust, and transparent house construction services.</p>
-        <div class="work-steps">
-            <div class="step">
-                <span class="number">01</span>
-                <h3>Safe Money Transaction</h3>
-                <p style = "text-align:center;">No Advance. Contractor is paid only once the work is complete.</p>
             </div>
-            <div class="step">
-                <span class="number">02</span>
-                <h3>Absolute Transparency</h3>
-                <p style = "text-align:center;">Clear and Detailed Quotation. Online tracking of projects</p>
-            </div>
-            <div class="step">
-                <span class="number">03</span>
-                <h3>Assured Quality Controls</h3>
-                <p style = "text-align:center;">470+ Quality (QASCON) Checks performed by team of experts</p>
-            </div>
-            <div class="step">
-                <span class="number">04</span>
-                <h3>Zero Delays</h3>
-                <p style = "text-align:center;">Zero tolerance for delays</p>
-            </div>
-        </div>
-    </section>
-
-
-<!-- residential and commercial -->
-
-<section class="construction-section">
-    <div class="construction-content">
-        <h2 style = "color: #A8894D;
-    font-family: 'Italiana', Sans-serif;
-    font-size: 40px;
-    font-weight: 400;
-    line-height: 1.3em;" >Home Construction Services In Pune</h2>
-        <p style = "text-align: center; font-family:'lexend', sans-serif;">Flawless construction powered by deep expertise.</p>
+            
+        </ul> -->
+        <a href="#construction" class="banner-bread"><button class="apply-btn">Read More →</button></a>
     </div>
-    <div class="construction-cards">
-        <div class="construction-card">
-            <img src="images/blog1.jpg" alt="House Construction">
-            <div class="construction-card-title">Residential Properties</div>
+
+        <div class="premium-form-container" style="height:400px;">
+            <img src="images/construction.png" alt="People in a business setting">
         </div>
-        <div class="construction-card">
-            <img src="images/blog2.jpg" alt="Construction for Business">
-            <div class="construction-card-title">Commercial Properties</div>
-        </div>
-    </div>
 </section>
 
+    <!-- how we work -->
+    <div class="timeline-container">
+        <h2 class="timeline-heading">Our Construction Process</h2>
+        <div class="timeline">
+            <div class="timeline-step" data-step="1">
+                <div class="step-circle">1</div>
+                <div class="step-content">
+                    <h3>consultation of your vision with expert architects of our own firm
+                    </h3>
+                    <p>Discuss your vision with our expert architects and bring your dream project to life.</p>
+                </div>
+            </div>
+            <div class="timeline-step" data-step="2">
+                <div class="step-circle">2</div>
+                <div class="step-content">
+                    <h3>booking amount of 1% of the project cost
+                    </h3>
+                    <p>Secure your project with a booking amount of just 1% of the total cost.</p>
+                </div>
+            </div>
+            <div class="timeline-step" data-step="3">
+                <div class="step-circle">3</div>
+                <div class="step-content">
+                    <h3>Designing and planning by our expert architects 
+                    </h3>
+                    <p>Our expert architects craft detailed designs and plans tailored to your needs.</p>
+                </div>
+            </div>
+            <div class="timeline-step" data-step="4">
+                <div class="step-circle">4</div>
+                <div class="step-content">
+                    <h3>Construction with live tracking activities 
+                    </h3>
+                    <p>Experience seamless construction with live tracking of all activities.</p>
+                </div>
+            </div>
+            <div class="timeline-step" data-step="5">
+                <div class="step-circle">5</div>
+                <div class="step-content">
+                    <h3>Move in with structural warranty of 10 years</h3>
+                    <p>Enjoy your new space with a structural warranty of 10 years.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<!-- residential and commercial end-->
+
+
+    <script>
+        // Add animation for timeline steps
+        document.addEventListener('DOMContentLoaded', () => {
+            const steps = document.querySelectorAll('.timeline-step');
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('show');
+                        }
+                    });
+                },
+                { threshold: 0.5 }
+            );
+
+            steps.forEach((step) => observer.observe(step));
+        });
+    </script>
+
+    <!-- end how we wrork -->
+
+
+
+
+
+
+
+    <!-- property type -->
+    <div class="construction-section" id="construction">
+        <div class="construction-content">
+            <h2>Home Construction Services In Pune</h2>
+            <p>Flawless construction powered by deep expertise.</p>
+        </div>
+        <div class="construction-cards">
+            <!-- Residential Property -->
+            <div class="construction-card" id="consultationButton">
+                <img src="images/blog1.jpg" alt="Residential Property">
+                <div class="construction-overlay">
+                    <div class="circle-arrow">
+                        <span class="arrow">↗</span>
+                        <span class="explore-text">Explore More</span>
+                    </div>
+                    <div class="text-content">
+                        <h3>Residential Properties</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Commercial Property -->
+            <div class="construction-card" id="consultationButton1">
+                <img src="images/blog2.jpg" alt="Commercial Property">
+                <div class="construction-overlay">
+                    <div class="circle-arrow">
+                        <span class="arrow">↗</span>
+                        <span class="explore-text">Explore More</span>
+                    </div>
+                    <div class="text-content">
+                        <h3>Commercial Properties</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+ <!-- end property type -->
+
+
+
+
+
+
+
+
+
+
 
     <!-- service -->
 
     <div class="service-section">
-    <div class="service-container">
-        <div class="service-text">
-            <h5 style = "color: #A8894D;
-    font-family: 'Italiana', Sans-serif;
-    font-size: 30px;
-    font-weight: 400;
-    line-height: 1.3em; ">Our Service</h5>
-            <h2>Solutions for every corner</h2>
-            <p>Dapibus fames vitae interdum nascetur facilisi rhoncus felis libero. Placerat leo conubia dapibus tristique integer auctor eget ac.</p>
-            <button class="discover-btn">Discover More</button>
-        </div>
-        <div class="service-cards">
-            <div class="service-card">
-                <div class="icon">🏛️</div>
-                <h3>Architecture</h3>
-                <p>Sollicitudin lobortis luctus semper accumsan ultrices risus eros parturient. Tristique proin interdum purus in dapibus dui.</p>
+        <div class="service-container">
+            <div class="service-text">
+                <h5 style = "color: #A8894D;
+        font-family: 'Italiana', Sans-serif;
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 1.3em; ">Our Service</h5>
+                <h2>Solutions for every corner</h2>
+                <p>At Knowhere, we offer comprehensive design and construction solutions to transform your space from concept to reality. Our expert team brings creativity, precision, and innovation to every project, ensuring your vision comes to life in the most spectacular way.</p>
             </div>
-            <div class="service-card">
-                <div class="icon">🛋️</div>
-                <h3>Interior</h3>
-                <p>Sollicitudin lobortis luctus semper accumsan ultrices risus eros parturient. Tristique proin interdum purus in dapibus dui.</p>
-            </div>
-            <div class="service-card">
-                <div class="icon">🪑</div>
-                <h3>Furniture</h3>
-                <p>Sollicitudin lobortis luctus semper accumsan ultrices risus eros parturient. Tristique proin interdum purus in dapibus dui.</p>
-            </div>
-            <div class="service-card">
-                <div class="icon">📐</div>
-                <h3>3D Modelling</h3>
-                <p>Sollicitudin lobortis luctus semper accumsan ultrices risus eros parturient. Tristique proin interdum purus in dapibus dui.</p>
+            <div class="service-cards">
+                <div class="service-card">
+                    <div class="icon">🏛️</div>
+                    <h3>Architecture</h3>
+                    <p>Our architectural services blend form and function to create stunning, sustainable structures. From conceptual design to construction documentation, we craft spaces that inspire and endure, tailored to your unique needs and site specifications.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">🛋️</div>
+                    <h3>Interior</h3>
+                    <p>Transform your interiors into captivating environments that reflect your style and enhance your daily life. Our interior design team specializes in creating harmonious, functional spaces that balance aesthetics with practicality, from residential to commercial projects.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">🪑</div>
+                    <h3>Furniture</h3>
+                    <p>Elevate your space with bespoke furniture solutions that combine comfort, style, and functionality. Our custom furniture design and manufacturing services ensure each piece perfectly complements your interior, creating a cohesive and personalized environment.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">📐</div>
+                    <h3>3D Modelling</h3>
+                    <p>Visualize your project before it's built with our advanced 3D modeling services. We bring your ideas to life in stunning detail, allowing for precise planning, design refinement, and immersive virtual walkthroughs of your future space.</p>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
 
 
-<section class="contact-section">
-    <div class="contact-container">
-        <div class="form-container">
-            <form style="text-align:center">
-                <div class="input-group" style="width:100%">
-                    <input type="text" name="first-name" placeholder="First Name" required>
-                    <input type="text" name="last-name" placeholder="Last Name" required>
-                </div>
-                <input type="email" name="email" placeholder="Email" required class="email-group">
-                <textarea name="message" placeholder="Message" required></textarea>
-                <button type="submit" style="margin-top:30px">SEND MESSAGE</button>
-            </form>
-        </div>
-        <div class="contact-info">
-            <h2>Get In Touch</h2>
-            <p>Ready to make your real estate dreams a reality? Get in touch with Knowhere for trusted guidance, tailored solutions, and a seamless property experience.</p>
-            <ul>
-                <li><i class="fas fa-map-marker-alt"></i> Wakad, Pimpri-Chinchwad, Maharashtra 411057</li>
-                <li><i class="fas fa-envelope"></i> example@mail.com</li>
-                <li><i class="fas fa-phone-alt"></i>+91 91122 11291</li>
-                
-            </ul>
+
+
+<!-- gallery -->
+<section class="gallery-section">
+<h3>Our Gallery</h3>
+<h2>Don't just take our word for it</h2>
+    <div class="gallery-slider">
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <img src="./images/digital/d1.png" alt="Gallery Image 1" data-index="0">
+            </div>
+            <div class="gallery-item">
+                <img src="./images/digital/d2.png" alt="Gallery Image 2" data-index="1">
+            </div>
+            <div class="gallery-item">
+                <img src="./images/digital/d3.png" alt="Gallery Image 3" data-index="2">
+            </div>
+            <div class="gallery-item">
+                <img src="./images/digital/d4.png" alt="Gallery Image 4" data-index="3">
+            </div>
+            <div class="gallery-item">
+                <img src="./images/digital/d5.png" alt="Gallery Image 5" data-index="4">
+            </div>
         </div>
     </div>
 </section>
+
+
+<!-- Modal for Fullscreen View -->
+<div class="modal" id="imageModal">
+    <div class="modal-content">
+        <div class="main-image">
+            <img id="largeImage" src="" alt="Large Image">
+        </div>
+        <div class="thumbnails">
+            <div class="thumbnail-slider">
+                <img src="./images/digital/d1.png" alt="Thumbnail 1" data-index="0">
+                <img src="./images/digital/d2.png" alt="Thumbnail 2" data-index="1">
+                <img src="./images/digital/d3.png" alt="Thumbnail 3" data-index="2">
+                <img src="./images/digital/d4.png" alt="Thumbnail 4" data-index="3">
+                <img src="./images/digital/d5.png" alt="Thumbnail 5" data-index="4">
+            </div>
+        </div>
+    </div>
+    <button class="close-modal">✖</button>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const galleryContainer = document.querySelector('.gallery-container');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    const modal = document.getElementById('imageModal');
+    const largeImage = document.getElementById('largeImage');
+    const thumbnailImages = document.querySelectorAll('.thumbnail-slider img');
+    const closeModal = document.querySelector('.close-modal');
+
+    let currentIndex = 0;
+
+    // Clone gallery items for infinite scroll
+    galleryItems.forEach((item) => {
+        const clone = item.cloneNode(true);
+        galleryContainer.appendChild(clone);
+    });
+
+    // Modal Functionality
+    galleryItems.forEach((item, index) => {
+        item.addEventListener('click', () => {
+            modal.style.display = 'flex';
+            largeImage.src = item.querySelector('img').src;
+            currentIndex = index;
+            updateActiveThumbnail();
+        });
+    });
+
+    // Close Modal
+    closeModal.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+
+    // Thumbnail Click in Modal
+    thumbnailImages.forEach((thumbnail, index) => {
+        thumbnail.addEventListener('click', () => {
+            largeImage.src = thumbnail.src;
+            currentIndex = index;
+            updateActiveThumbnail();
+        });
+    });
+
+    // Update Active Thumbnail in Modal
+    function updateActiveThumbnail() {
+        thumbnailImages.forEach((img, idx) => {
+            img.classList.toggle('active', idx === currentIndex);
+        });
+    }
+
+    // Automatic Sliding in Modal
+    setInterval(() => {
+        if (modal.style.display === 'flex') {
+            currentIndex = (currentIndex + 1) % galleryItems.length;
+            largeImage.src = galleryItems[currentIndex].querySelector('img').src;
+            updateActiveThumbnail();
+        }
+    }, 3000); // 3-second interval
+});
+
+    </script>
+ <!-- end gallery -->
+
+
+
+
+
+
+
+<!-- testimonial section -->
+<section class="testimonials-section">
+    <h3>Our Clients</h3>
+    <h2>Don't just take our word for it</h2>
+    <div class="testimonials-slider">
+        <div class="testimonials-container">
+            <div class="testimonial">
+                <div class="stars">★★★★★</div>
+                <p>The DTG team has been a reliable partner for a variety of needs as my business has developed...</p>
+                <h4>Radiovision Diagnostics</h4>
+                <p class="title">CEO/Founder</p>
+            </div>
+            <div class="testimonial">
+                <div class="stars">★★★★★</div>
+                <p>Our whole digital marketing plan is executed by DTG with remarkable competence...</p>
+                <h4>Motilal Talera English Medium School, Moshi</h4>
+                <p class="title">CEO/Founder</p>
+            </div>
+            <div class="testimonial">
+                <div class="stars">★★★★★</div>
+                <p>Due to DTG's creativity and willingness to take on challenges, we hired them...</p>
+                <h4>Choose realtywise, Pune</h4>
+                <p class="title">CEO/Founder</p>
+            </div>
+            <!-- Additional testimonials can be added here -->
+        </div>
+    </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const container = document.querySelector('.testimonials-container');
+    const cards = document.querySelectorAll('.testimonial');
+
+    // Clone cards for seamless infinite scroll
+    cards.forEach((card) => {
+        const clone = card.cloneNode(true);
+        container.appendChild(clone);
+    });
+});
+
+</script>
+
+
+
+
+
 
 <!-- call to action -->
 <section id="main-call">
@@ -442,6 +419,170 @@ button:hover {
     </div>
 </section>
 <!-- end call to action -->
+
+
+ <!-- Enquire Button -->
+ <div id="enquireButtonContainer">
+    <button id="enquireButton">
+        Book A Demo
+    </button>
+</div>
+
+<!-- Enquiry Modal -->
+<div id="enquiryModal" style="display:none;">
+    <div class="form-container" style="position: relative; padding: 20px; background: #eaeaea; border-radius: 8px;">
+        <span id="closeModal" style="position: absolute; top: 10px; color:#000; right: 15px; cursor: pointer; font-size: 20px;">&times;</span>
+        <h3>Enquiry Form</h3>
+        
+        <div id="feedbackMessage" style="color: #007bff; font-size: 14px; margin-bottom: 10px; display: none;"></div>
+        
+        <form id="enquiryForm" method="POST">
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <small class="error-message" id="nameError"></small>
+
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            <small class="error-message" id="emailError"></small>
+
+            <input type="text" id="contact" name="contact" placeholder="Your Contact Number" required maxlength="10">
+            <small class="error-message" id="contactError"></small>
+
+            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+            <small class="error-message" id="messageError"></small>
+
+            <div style="position: relative; display: flex; align-items: center;">
+                <select id="type" name="type" required>
+                    <option value="">Select Type</option>
+                    <option value="Residential">Residential</option>
+                    <option value="Commercial">Commercial</option>
+                </select>
+                <i class="fas fa-angle-down" style="position: absolute; top: 15px; right: 10px; color: #555;"></i>
+            </div>
+            <small class="error-message" id="typeError"></small>
+
+            <!-- CAPTCHA Section -->
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom:20px;">
+                <span id="captchaQuestion" style="font-size: 16px; color:#000; font-weight: bold; width : 18%; align:center;"></span>
+                <input type="text" id="captchaAnswer" name="captchaAnswer" placeholder="Enter Answer" required style="width: 100%;  margin-bottom:0px;">
+            </div>
+            <small class="error-message" id="captchaError"></small>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</div>
+
+<style>
+    .error-message {
+        color: red;
+        font-size: 12px;
+        display: none;
+    }
+</style>
+
+<script>
+    let correctCaptchaAnswer = 0;
+
+    function generateCaptcha() {
+        let num1 = Math.floor(Math.random() * 10) + 1;
+        let num2 = Math.floor(Math.random() * 10) + 1;
+        correctCaptchaAnswer = num1 + num2;
+        document.getElementById("captchaQuestion").innerText = `${num1} + ${num2} = `;
+    }
+
+    function openModal() {
+        generateCaptcha();
+        document.getElementById("enquiryModal").style.display = "block";
+    }
+    document.getElementById("enquireButton").onclick = openModal;
+    document.getElementById("consultationButton").onclick = openModal;  
+    document.getElementById("consultationButton1").onclick = openModal;
+    
+
+    document.getElementById("closeModal").onclick = function() {
+        document.getElementById("enquiryModal").style.display = "none";
+        document.getElementById("feedbackMessage").style.display = "none"; 
+    };
+
+    document.getElementById("enquiryForm").addEventListener("submit", function(event) {
+        event.preventDefault(); 
+
+        let isValid = true;
+
+        const name = document.getElementById("name").value.trim();
+        if (name === "") { showError("nameError", "Name is required"); isValid = false; } else { hideError("nameError"); }
+
+        const email = document.getElementById("email").value.trim();
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (email === "") { showError("emailError", "Email is required"); isValid = false; } 
+        else if (!emailPattern.test(email)) { showError("emailError", "Enter a valid email"); isValid = false; } 
+        else { hideError("emailError"); }
+
+        const contact = document.getElementById("contact").value.trim();
+        const contactPattern = /^[0-9]{10}$/;
+        if (contact === "") { showError("contactError", "Contact number is required"); isValid = false; } 
+        else if (!contactPattern.test(contact)) { showError("contactError", "Enter a valid 10-digit number"); isValid = false; } 
+        else { hideError("contactError"); }
+
+        const message = document.getElementById("message").value.trim();
+        if (message === "") { showError("messageError", "Message is required"); isValid = false; } 
+        else { hideError("messageError"); }
+
+        const type = document.getElementById("type").value;
+        if (type === "") { showError("typeError", "Please select a type"); isValid = false; } 
+        else { hideError("typeError"); }
+
+        // CAPTCHA Validation
+        const captchaInput = document.getElementById("captchaAnswer").value.trim();
+        if (captchaInput === "" || parseInt(captchaInput) !== correctCaptchaAnswer) {
+            showError("captchaError", "Incorrect CAPTCHA answer");
+            isValid = false;
+        } else {
+            hideError("captchaError");
+        }
+
+        if (!isValid) return;
+
+        const formData = new FormData(this);
+        fetch('construction_submit.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            const feedbackMessage = document.getElementById("feedbackMessage");
+            if (data.success) {
+                feedbackMessage.style.color = "green";
+                feedbackMessage.innerText = "Enquiry submitted successfully!";
+                this.reset();
+                generateCaptcha(); // Refresh CAPTCHA
+            } else {
+                feedbackMessage.style.color = "red";
+                feedbackMessage.innerText = "Error submitting enquiry. Please try again.";
+            }
+            feedbackMessage.style.display = "block";
+            setTimeout(() => { document.getElementById("enquiryModal").style.display = "none"; location.reload(); }, 2000);
+        })
+        .catch(error => {
+            console.error("Error:", error);
+            alert("Something went wrong. Please try again.");
+        });
+    });
+
+    function showError(elementId, message) {
+        const errorElement = document.getElementById(elementId);
+        errorElement.innerText = message;
+        errorElement.style.display = "block";
+    }
+
+    function hideError(elementId) {
+        const errorElement = document.getElementById(elementId);
+        errorElement.style.display = "none";
+    }
+</script>
+
+
+
+<!-- end enquirty -->
 
 
 

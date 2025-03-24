@@ -41,44 +41,44 @@ include("config.php");
     </div>
 </section>
 
+<!-- About section -->
+<section class="premium-section">
+    <div class="premium-content">
+        <h2>About Digitalize The Globe</h2>
+        <p>
+            Embrace complete digital transformation with our powerhouse digital marketing company. 
+            One of Pune’s top digital marketing agencies, we provide all services – Branding, Marketing, 
+            Advertising – that will propel your business towards success on full speed. 
+            We fuel comprehensive Online Presence, from SEO, SMM, and web development to graphic design, 
+            content, and email marketing.
+        </p>
+        <ul class="premium-checklist">
+            <div class="checklist-column">
+                <li><span>✔</span> Turning Dreams into Reality</li>
+                <li><span>✔</span> Industry Leadership</li>
+                <li><span>✔</span> Lasting Relationships</li>
+                <li><span>✔</span> Client-Centered Approach</li>
+                <li><span>✔</span> Transparency and Trust</li>
 
-<section class="business-loan" style = "background-color: #050f17;">
-        <div class="image-container" style="height:400px;">
-            <img src="images/digital.jpg" alt="People in a business setting">
-        </div>
-        <div class="content">
-            <h2 style ="color: #A8894D;
-    font-family: 'Italiana', Sans-serif;
-    font-size: 50px;
-    font-weight: 400;
-    line-height: 1.3em;">About Digitalize The Globe</h2>
-            <p>Embrace complete digital transformation with our
-powerhouse digital marketing company. One of Pune’s
-top digital marketing agencies, we provide all services
-– Branding, Marketing, Advertising – that will propel
-your business towards success on full speed. We fuel
-comprehensive Online Presence, from SEO, SMM, and
-web development to graphic design, content and email
-marketing</p>
-            <ul class="checklist" style="font-size:16px; color: white;">
-                <div class="list-left">
-                    <li><span></span> Search Engine Optimiztion</li>
-                    <li><span></span> IT Solutions</li>
-                    <li><span></span> Real Estate Marketing</li>
-                    <li><span></span> Strategic Solution</li>
-                </div>
-                <div class="list-right">
-                    <li><span>  </span> Product Sales </li>
-                    
-                </div>
-            </ul>
-            <button style= "border-radius: 0;
-    font-size: 15px;
-    color: #050f17;
-    background-color: #a8894d;
-    font-weight: 200;">APPLY FOR A LOAN →</button>
-        </div>
-    </section>
+            </div>
+            
+        </ul>
+        <button class="apply-btn">APPLY FOR A LOAN →</button>
+    </div>
+
+    <div class="premium-form-container">
+        <form>
+            <div class="form-group">
+                <input type="text" name="first-name" placeholder="First Name" required>
+                <input type="text" name="last-name" placeholder="Last Name" required>
+            </div>
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="message" placeholder="Message" required></textarea>
+            <button type="submit">SEND MESSAGE</button>
+        </form>
+    </div>
+</section>
+
 
 <!-- counter -->
 <section class="stats-section" style ="padding-bottom:0px;">
@@ -108,12 +108,12 @@ marketing</p>
     <div class="post-guide-header">
         <h2
         style = " color: #A8894D;
-    font-family: 'Italiana', Sans-serif;
-    font-size: 50px;
-    font-weight: 400;
-    line-height: 1.3em; padding-top:0px;">Our Speciality</h2>
-        <p>Adjust your design through a wide range of theme options in the
-        development and instantly.</p>
+        font-family: 'Italiana', Sans-serif;
+        font-size: 50px;
+        font-weight: 400;
+        line-height: 1.3em; padding-top:0px;">Our Speciality</h2>
+            <p>Adjust your design through a wide range of theme options in the
+            development and instantly.</p>
     </div>
     <div class="post-guide-grid">
         <div class="post-step">
@@ -149,72 +149,166 @@ marketing</p>
             <p style="text-align:center;">Our FB & Google ad expert is experienced in field and provides you the better conversion.</p>
         </div>
     </div>
-</div>
+</div></div>
 <!-- post guide section end-->
 
 
+
+<!-- gallery -->
+<section class="gallery-section">
+    <h3>Our Gallery</h3>
+    <h2>Don't just take our word for it</h2>
+        <div class="gallery-slider">
+            <div class="gallery-container">
+                <div class="gallery-item">
+                    <img src="./images/digital/d1.png" alt="Gallery Image 1" data-index="0">
+                </div>
+                <div class="gallery-item">
+                    <img src="./images/digital/d2.png" alt="Gallery Image 2" data-index="1">
+                </div>
+                <div class="gallery-item">
+                    <img src="./images/digital/d3.png" alt="Gallery Image 3" data-index="2">
+                </div>
+                <div class="gallery-item">
+                    <img src="./images/digital/d4.png" alt="Gallery Image 4" data-index="3">
+                </div>
+                <div class="gallery-item">
+                    <img src="./images/digital/d5.png" alt="Gallery Image 5" data-index="4">
+                </div>
+            </div>
+        </div>
+</section>
+
+
+<!-- Modal for Fullscreen View -->
+<div class="modal" id="imageModal">
+    <div class="modal-content">
+        <div class="main-image">
+            <img id="largeImage" src="" alt="Large Image">
+        </div>
+        <div class="thumbnails">
+            <div class="thumbnail-slider">
+                <img src="./images/digital/d1.png" alt="Thumbnail 1" data-index="0">
+                <img src="./images/digital/d2.png" alt="Thumbnail 2" data-index="1">
+                <img src="./images/digital/d3.png" alt="Thumbnail 3" data-index="2">
+                <img src="./images/digital/d4.png" alt="Thumbnail 4" data-index="3">
+                <img src="./images/digital/d5.png" alt="Thumbnail 5" data-index="4">
+            </div>
+        </div>
+    </div>
+    <button class="close-modal">✖</button>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const galleryContainer = document.querySelector('.gallery-container');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    const modal = document.getElementById('imageModal');
+    const largeImage = document.getElementById('largeImage');
+    const thumbnailImages = document.querySelectorAll('.thumbnail-slider img');
+    const closeModal = document.querySelector('.close-modal');
+
+    let currentIndex = 0;
+
+    // Clone gallery items for infinite scroll
+    galleryItems.forEach((item) => {
+        const clone = item.cloneNode(true);
+        galleryContainer.appendChild(clone);
+    });
+
+    // Modal Functionality
+    galleryItems.forEach((item, index) => {
+        item.addEventListener('click', () => {
+            modal.style.display = 'flex';
+            largeImage.src = item.querySelector('img').src;
+            currentIndex = index;
+            updateActiveThumbnail();
+        });
+    });
+
+    // Close Modal
+    closeModal.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+
+    // Thumbnail Click in Modal
+    thumbnailImages.forEach((thumbnail, index) => {
+        thumbnail.addEventListener('click', () => {
+            largeImage.src = thumbnail.src;
+            currentIndex = index;
+            updateActiveThumbnail();
+        });
+    });
+
+    // Update Active Thumbnail in Modal
+    function updateActiveThumbnail() {
+        thumbnailImages.forEach((img, idx) => {
+            img.classList.toggle('active', idx === currentIndex);
+        });
+    }
+
+    // Automatic Sliding in Modal
+    setInterval(() => {
+        if (modal.style.display === 'flex') {
+            currentIndex = (currentIndex + 1) % galleryItems.length;
+            largeImage.src = galleryItems[currentIndex].querySelector('img').src;
+            updateActiveThumbnail();
+        }
+    }, 3000); // 3-second interval
+});
+
+    </script>
+ <!-- end gallery -->
+
+
+
+
+
+
+
+<!-- testimonial section -->
 <section class="testimonials-section">
     <h3>Our Clients</h3>
     <h2>Don't just take our word for it</h2>
-    <div class="testimonials-container">
-        <div class="testimonial">
-            <div class="stars">★★★★★</div>
-            <p>The DTG team has been a reliable partner for a variety of needs as my business has developed.
-                        From online planning to
-                        social media management and sponsored ads. We also make use of their banner and hoarding
-                        designs, and we value the help
-                        with campaign implementation that was given.</p>
-            <h4>Radiovision Diagnostics</h4>
-            <p class="title">CEO/Founder</p>
-        </div>
-        <div class="testimonial">
-            <div class="stars">★★★★★</div>
-            <p>Our whole digital marketing plan is executed by DTG with remarkable competence and knowledge.
-                        In a constantly evolving
-                        digital landscape, their capacity to deliver reliable results and offer the newest strategies
-                        keeps our business one
-                        step ahead of the competition.</p>
-            <h4>Motilal Talera English Medium School, Moshi</h4>
-            <p class="title">CEO/Founder</p>
-        </div>
-        <div class="testimonial">
-            <div class="stars">★★★★★</div>
-            <p>Due to DTG's creativity and willingness to take on challenges, we hired them. They give us
-                        creative designs for our
-                        business and assist us in making videos. They are the ones with the edge and creative thinking
-                        who can make difficult
-                        tasks easy.</p>
-            <h4>Choose realtywise, Pune</h4>
-            <p class="title">CEO/Founder</p>
+    <div class="testimonials-slider">
+        <div class="testimonials-container">
+            <div class="testimonial">
+                <div class="stars">★★★★★</div>
+                <p>The DTG team has been a reliable partner for a variety of needs as my business has developed...</p>
+                <h4>Radiovision Diagnostics</h4>
+                <p class="title">CEO/Founder</p>
+            </div>
+            <div class="testimonial">
+                <div class="stars">★★★★★</div>
+                <p>Our whole digital marketing plan is executed by DTG with remarkable competence...</p>
+                <h4>Motilal Talera English Medium School, Moshi</h4>
+                <p class="title">CEO/Founder</p>
+            </div>
+            <div class="testimonial">
+                <div class="stars">★★★★★</div>
+                <p>Due to DTG's creativity and willingness to take on challenges, we hired them...</p>
+                <h4>Choose realtywise, Pune</h4>
+                <p class="title">CEO/Founder</p>
+            </div>
+            <!-- Additional testimonials can be added here -->
         </div>
     </div>
 </section>
 
-<section class="contact-section">
-    <div class="contact-container">
-        <div class="form-container">
-            <form style="text-align:center">
-                <div class="input-group" style="width:100%">
-                    <input type="text" name="first-name" placeholder="First Name" required>
-                    <input type="text" name="last-name" placeholder="Last Name" required>
-                </div>
-                <input type="email" name="email" placeholder="Email" required class="email-group">
-                <textarea name="message" placeholder="Message" required></textarea>
-                <button type="submit" style="margin-top:30px">SEND MESSAGE</button>
-            </form>
-        </div>
-        <div class="contact-info">
-            <h2>Get In Touch</h2>
-            <p>Ready to make your real estate dreams a reality? Get in touch with Knowhere for trusted guidance, tailored solutions, and a seamless property experience.</p>
-            <ul>
-                <li><i class="fas fa-map-marker-alt"></i> Wakad, Pimpri-Chinchwad, Maharashtra 411057</li>
-                <li><i class="fas fa-envelope"></i> example@mail.com</li>
-                <li><i class="fas fa-phone-alt"></i>+91 91122 11291</li>
-                
-            </ul>
-        </div>
-    </div>
-</section>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const container = document.querySelector('.testimonials-container');
+    const cards = document.querySelectorAll('.testimonial');
+
+    // Clone cards for seamless infinite scroll
+    cards.forEach((card) => {
+        const clone = card.cloneNode(true);
+        container.appendChild(clone);
+    });
+});
+
+</script>
+<!-- end testimonial -->
 
 <!-- call to action -->
 <section id="main-call">

@@ -78,6 +78,14 @@ include("config.php");
 
 
         <div class="w3-content w3-section" style="max-width:100%; height :50p%;">
+            <?php if (!empty($row['15'])): ?>
+                <img class="mySlides" src="admin/property/<?php echo $row['15']; ?>" style="width:100%">
+            <?php endif; ?>
+            
+            <?php if (!empty($row['16'])): ?>
+                <img class="mySlides" src="admin/property/<?php echo $row['16']; ?>" style="width:100%">
+            <?php endif; ?>
+            
             <?php if (!empty($row['17'])): ?>
                 <img class="mySlides" src="admin/property/<?php echo $row['17']; ?>" style="width:100%">
             <?php endif; ?>
@@ -88,14 +96,6 @@ include("config.php");
             
             <?php if (!empty($row['19'])): ?>
                 <img class="mySlides" src="admin/property/<?php echo $row['19']; ?>" style="width:100%">
-            <?php endif; ?>
-            
-            <?php if (!empty($row['20'])): ?>
-                <img class="mySlides" src="admin/property/<?php echo $row['20']; ?>" style="width:100%">
-            <?php endif; ?>
-            
-            <?php if (!empty($row['21'])): ?>
-                <img class="mySlides" src="admin/property/<?php echo $row['21']; ?>" style="width:100%">
             <?php endif; ?>
         </div>
 
@@ -127,7 +127,7 @@ include("config.php");
             <div class="property-details">
                 <div class="detail-item">
                     <i class="fa-solid fa-map-pin" style="color: #a8894d; height:30px;"></i>
-                    <p class="project-detail"><?php echo $row['3'];?></p>
+                    <p class="project-detail"><?php echo $row['3'];?>, <?php echo $row['22'];?></p>
                 </div>
                 <div class="divider"></div> <!-- Divider between the items -->
                 <div class="detail-item">
@@ -140,15 +140,17 @@ include("config.php");
                 <div class="properties-details">
                     <h3>Project Details :</h3>
                     <div class="detail-grid">
+                        <div><strong class="field-title">Project Developer :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo $row['23']; ?></span></div>
                         <div><strong class="field-title">Typology :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo $row['5']; ?></span></div>
                         <div><strong class="field-title">Typology Size :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo $row['7']; ?></span></div>
                         <div><strong class="field-title">Typology Price :</strong><span style="color:#A8894D; font-size:20px;"> <?php echo $row['8']; ?></span></div>
-                        <div><strong class="field-title">Typology PSF :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo $row['15']; ?></span></div>
+                        <div><strong class="field-title">Typology PSF :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo $row['13']; ?></span></div>
                         <div><strong class="field-title">Scheme :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo $row['6']; ?></span></div>
                         <div><strong class="field-title">ROI :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo $row['9']; ?></span></div>
                         <div><strong class="field-title">USP :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo $row['12']; ?></span></div>
-                        <div><strong class="field-title">Possession :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo $row['16']; ?></span></div>
-                        <div><strong class="field-title">Status :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo htmlspecialchars($row['22']); ?></span></div>
+                        <div><strong class="field-title">Possession :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo $row['14']; ?></span></div>
+                        <div><strong class="field-title">Status :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo htmlspecialchars($row['20']); ?></span></div>
+                        <div><strong class="field-title">Type :</strong> <span style="color:#A8894D; font-size:20px;"><?php echo htmlspecialchars($row['24']); ?></span></div>
 
                     </div>
                 </div>
@@ -157,7 +159,7 @@ include("config.php");
             </div>
 
            
-            <div class="amenities-container">
+            <!-- <div class="amenities-container">
                 <h3 class="amenities-heading">Project Amenities :</h3>
                 
                 <div class="amenities-list-wrapper">
@@ -182,7 +184,7 @@ include("config.php");
 
                     
                 </div>
-            </div>
+            </div> -->
 
             <!-- <div class="location-container">
                 <h3 class="location-heading">Location & Google Maps :</h3>
@@ -231,57 +233,59 @@ include("config.php");
         setTimeout(showSlides, 2000); // Change image every 2 seconds
     }
 
+    // comprodetail.php (Commercial Page)
     function addToCompare() {
-    // Extract project type from the URL (assuming the URL follows the pattern)
-    const urlSegments = window.location.pathname.split('/');
-    const projectType = urlSegments[2];  // This gets 'residential', 'commercial', or 'plotting'
+        const propertyId = "<?php echo htmlspecialchars($id); ?>";
+        const propertyName = "<?php echo htmlspecialchars($row['1']); ?>";
+        const propertyLocation = "<?php echo htmlspecialchars($row['3']); ?>";
+        const propertyArea = "<?php echo htmlspecialchars($row['4']); ?>";
+        const propertyPossession = "<?php echo htmlspecialchars($row['14']); ?>";
+        const propertyDeveloper = "<?php echo htmlspecialchars($row['23']); ?>";
+        const propertyTypology = "<?php echo htmlspecialchars($row['5']); ?>";
+        const propertyTypologySize = "<?php echo htmlspecialchars($row['7']); ?>";
+        const typologyPrice = "<?php echo htmlspecialchars($row['8']); ?>";
+        const typologyPsf = "<?php echo htmlspecialchars($row['13']); ?>";
+        const projectScheme = "<?php echo htmlspecialchars($row['6']); ?>";
+        const projectRoi = "<?php echo htmlspecialchars($row['9']); ?>";
+        const projectUsp = "<?php echo htmlspecialchars($row['12']); ?>";
+        const projectStatus = "<?php echo htmlspecialchars($row['20']); ?>";
+        const projectType = "Commercial";
 
-    const propertyId = "<?php echo htmlspecialchars($id); ?>";
-    const propertyName = "<?php echo htmlspecialchars($row['1']); ?>";
-    const propertyLocation = "<?php echo htmlspecialchars($row['3']); ?>";
-    const propertyTotalUnits = "<?php echo htmlspecialchars($row['6']); ?>";
-    const propertyTotalTowers = "<?php echo htmlspecialchars($row['5']); ?>";
-    const propertyArea = "<?php echo htmlspecialchars($row['4']); ?>";
-    const propertyPossession = "<?php echo htmlspecialchars($row['7']); ?>";
+        let comparisonList = JSON.parse(localStorage.getItem("comparisonList")) || [];
 
-    // Retrieve existing comparison list from localStorage
-    let comparisonList = JSON.parse(localStorage.getItem("comparisonList")) || [];
-
-    // If there are already properties in the comparison list, we check the first property type
-    if (comparisonList.length > 0) {
-        const firstPropertyType = comparisonList[0].type;
-
-        // Check if the selected property type matches the first property's type
-        if (firstPropertyType !== projectType) {
-            alert("You can only compare properties of the same type (Residential, Commercial, or Plotting).");
-            return;  // Stop the function execution if types don't match
+        if (comparisonList.length > 0 && comparisonList[0].type !== projectType) {
+            alert("You can only compare properties of the same type.");
+            return; // Prevent adding the property
         }
-    }
 
-    // Check if the property is already in the comparison list
-    const exists = comparisonList.some(item => item.id === propertyId);
+        const exists = comparisonList.some(item => item.id === propertyId);
+        if (exists) {
+            alert("Property already added to comparison list!");
+            return;
+        }
 
-    if (exists) {
-        alert("Property already added to comparison list!");
-    } else {
-        // Add new property to the comparison list with the inferred project type
         comparisonList.push({
             id: propertyId,
             name: propertyName,
             location: propertyLocation,
-            totalunits: propertyTotalUnits,
-            towers: propertyTotalTowers,
             area: propertyArea,
             possession: propertyPossession,
-            type: projectType  // Add the project type to the comparison list
+            developer: propertyDeveloper,
+            typology: propertyTypology,
+            typologySize: propertyTypologySize,
+            price: typologyPrice,
+            psf: typologyPsf,
+            scheme: projectScheme,
+            roi: projectRoi,
+            usp: projectUsp,
+            status: projectStatus,
+            type: projectType
         });
 
-        // Save updated comparison list to localStorage
         localStorage.setItem("comparisonList", JSON.stringify(comparisonList));
-
-        alert("Property added to comparison list. Type: Commercial Project ");
+        alert("Property added to comparison list.");
     }
-}
+
 
 
 

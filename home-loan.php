@@ -29,15 +29,13 @@ include("config.php");
     font-family: "Lexend", Sans-serif;
 }
 
-    .loan-offer-section {
+.loan-offer-section {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
-    background-color: #050f17; /* Dark background color */
+    /* background-color: #f7f8fc; */
     padding: 50px;
-    color: #fff; /* White text color for contrast */
-    /* margin-left: 150px; */
-    padding-top: 100px;
+    color: #1a1a1a;
 }
 
 .content-wrapper {
@@ -45,14 +43,15 @@ include("config.php");
 }
 
 h1 {
-    font-size: 32px;
-    line-height: 1.2;
+    font-size: 36px;
+    line-height: 1.4;
     font-weight: 400;
     margin-bottom: 20px;
+    color: #333;
 }
 
 .highlight {
-    color: #A8894D; /* Highlight color for 'Home Loan Offers' */
+    color: #4a3aff;
     font-weight: bold;
 }
 
@@ -60,51 +59,71 @@ h1 {
     display: flex;
     gap: 20px;
     margin-bottom: 20px;
+    color:#fff;
 }
 
 .input-field {
-    padding: 12px;
+    width: calc(50% - 10px);
+    padding: 10px 15px;
     font-size: 16px;
-    width: 100%;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+    background:transparent;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color:#fff;
+}
+
+.input-field:focus {
+    outline: none;
+    /* border-color: #4a3aff; */;
+    /* box-shadow: 0 0 5px rgba(74, 58, 255, 0.5); */;
+    color:#fff;
 }
 
 .checkbox-wrapper {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     font-size: 14px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    color: #666;
 }
 
-.checkbox-wrapper label {
-    margin-left: 10px;
-    color: #ccc;
+.checkbox-wrapper input {
+    margin-right: 10px;
+    margin-top: 2px;
 }
 
 .checkbox-wrapper a {
-    color: #A8894D;
+    color: #4a3aff;
+    text-decoration: none;
+}
+
+.checkbox-wrapper a:hover {
     text-decoration: underline;
 }
 
 .get-quote-button {
-    padding: 11px 18px;
-    background-color: #A8894D; /* Button color */
+    background-color: #4a3aff;
     color: #fff;
-    font-size: 18px;
     border: none;
+    padding: 10px 25px;
+    font-size: 16px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
 }
 
 .get-quote-button:hover {
-    background-color: white; /* Darker shade on hover */
-    color: black;
+    background-color: #382fcc;
 }
 
 .image-wrapper img {
-    max-width: 600px;
+    max-width: 650px;
+    height: auto;
 }
+
+
 
 
 /* business loan */
@@ -145,12 +164,7 @@ h1 {
     margin: 0 0 10px;
 }
 
-.content p {
-    font-size: 16px;
-    color: #ffffff;
-    line-height: 1.5;
-    margin-bottom: 20px;
-}
+
 
 button {
     padding: 12px 24px;
@@ -163,9 +177,9 @@ button {
     font-weight: bold;
 }
 
-button:hover {
+/* button:hover {
     background-color: #e68a00;
-}
+} */
 
 /* Responsive Styles for Tablet */
 @media (max-width: 1024px) {
@@ -265,36 +279,6 @@ button:hover {
 
 <!-- why choose us -->
 <body>
-    <section class="why-choose-us" style = "background-color: #050f17;">
-        <h3 style =  "color: #A8894D;
-    font-family: 'Italiana', Sans-serif;
-    font-size: 50px;
-    font-weight: 400;
-    line-height: 1.3em; padding-top:100px; padding-bottom:50PX;">Why Choose Us</h2>
-        <div class="features">
-            <div class="feature">
-            <div style= ""><img src="images/star.png" alt="" style="width: 50px; margin-bottom: 10PX;
-    height: 50px;
-    "></div>
-                <h3>GREAT RATES</h3>
-                <p style = "text-align:center; font-size:16px;">There are many variations of passages of Lorem Ipsum available, alteration in some form.</p>
-            </div>
-            <div class="feature">
-            <div style= ""><img src="images/convenience.png" alt="" style="width: 50px; margin-bottom: 10PX;
-    height: 50px;
-    "></div>
-                <h3>CONVENIENT</h3>
-                <p style = "text-align:center; font-size:16px;">There are many variations of passages of Lorem Ipsum available, alteration in some form.</p>
-            </div>
-            <div class="feature">
-            <div style= ""><img src="images/simple-data-format.png" alt="" style="width: 50px; margin-bottom: 10PX;
-    height: 50px;"></div>
-                <h3>SIMPLE</h3>
-                <p style = "text-align:center; font-size:16px;">There are many variations of passages of Lorem Ipsum available, alteration in some form.</p>
-            </div>
-        </div>
-    </section>
-
 
 <!-- about section -->
 <section class="business-loan" style = "background-color: #050f17;">
@@ -303,102 +287,256 @@ button:hover {
         </div>
         <div class="content">
             <h2 style ="color: #A8894D;
-    font-family: 'Italiana', Sans-serif;
-    font-size: 50px;
-    font-weight: 400;
-    line-height: 1.3em;">About Home Loan</h2>
-            <p>Make your dream home a reality with our leading home loan services. Urban Money has tied knots with an array of banks providing nimble and hassle-free mortgage loans. Unlock home credit loans with a host of benefits, like low housing loan interest rates and smaller EMIs to space out your payments over a longer tenure.</p>
+            font-size: 50px;
+            font-family: 'Italiana', Sans-serif;
+            font-weight: 400;
+            line-height: 1.3em;">About Home Loan</h2>
+            <p>Step into your dream home with Knowhere Money – where family laughter fills the air and pride of ownership swells in your heart. We understand that a home loan is more than a financial transaction; it's the key to your life's next exciting chapter.</p>
+            <p>At Knowhere Money, we craft personalized journeys towards homeownership. Our extensive network of trusted banks offers agile, hassle-free mortgage solutions tailored to your unique story. We're your committed partner from the first conversation to the final signature, ensuring a smooth, stress-free process.</p>
             <ul class="checklist" style="font-size:16px;">
                 <div class="list-left">
-                    <li><span>✔</span> Turning Dreams into Reality</li>
-                    <li><span>✔</span> Industry Leadership</li>
-                    <li><span>✔</span> Lasting Relationships</li>
-                    <li><span>✔</span> Client-Centered Approach</li>
+                    <li><span>✔</span> Competitive interest rates</li>
+                    <li><span>✔</span> Flexible EMIs</li>
+                    <li><span>✔</span> Streamlined application process</li>
+                    <li><span>✔</span> Personalized mortgage options</li>
+                    <li><span>✔</span> Access to reputable lenders</li>
+                    <li><span>✔</span> Expert guidance throughout</li>
+
                 </div>
                 <div class="list-right">
                     <li><span>✔</span> Transparency and Trust </li>
                     
                 </div>
             </ul>
-            <button style= "border-radius: 0;
-    font-size: 15px;
-    color: #050f17;
-    background-color: #a8894d;
-    font-weight: 200;">APPLY FOR A LOAN →</button>
+            <button id="consultationButton" class="home-loan-button" >APPLY FOR A LOAN →</button>
         </div>
+</section>
+
+<!-- emnd about -->
+
+<!-- why choose us -->
+
+    <section class="why-choose-us" style = "background-color: #050f17;">
+            <h3 style =  "color: #A8894D;
+                font-family: 'Italiana', Sans-serif;
+                font-size: 50px;
+                font-weight: 400;
+                line-height: 1.3em; padding-top:100px; padding-bottom:50PX;">Why Choose Us</h3>
+            <div class="features">
+                <div class="feature">
+                    <div style= ""><img src="images/star.png" alt="" style="width: 50px; margin-bottom: 10PX;
+                        height: 50px;
+                        "></div>
+                        <h3>GREAT RATES</h3>
+                        <p style = "text-align:center; font-size:16px;"><span style="font-weight:500;font-size:20px;">Looking for affordable home financing?</span><br><br><span style="font-size:15px;">Our extensive network of lenders offers competitive rates, helping you save money over the life of your loan. Compare optiGREAT RATES</span></p>
+                    </div>
+                <div class="feature">
+                <div style= ""><img src="images/convenience.png" alt="" style="width: 50px; margin-bottom: 10PX;
+                    height: 50px;
+                    "></div>
+                    <h3>CONVENIENT</h3>
+                    <p style = "text-align:center; font-size:16px;"><span style="font-weight:500;font-size:20px;">Want a stress-free home loan experience?</span><br><br><span style="font-size:15px;">We've streamlined the process to make it convenient for you. From application to approval, our team ensures a smooth journey towards homeownership.</span></p>
+                </div>
+                <div class="feature">
+                <div style= ""><img src="images/simple-data-format.png" alt="" style="width: 50px; margin-bottom: 10PX;
+        height: 50px;"></div>
+                    <h3>SIMPLE</h3>
+                    <p style = "text-align:center; font-size:16px;"><span style="font-weight:500;font-size:20px;">Confused by complex loan jargon?</span><br><br><span style="font-size:15px;">We believe in keeping things simple. Our transparent approach and clear communication make understanding your home loan easy, allowing you to make informed decisions with confidence.</span></p>
+                </div>
+            </div>
     </section>
 
+<!-- end why chose us  -->
 
-<!-- faq section -->
-<!-- <div class="faq-section">
-    <div class="faq-content">
-        <h2>Frequently asked questions.</h2>
-        <p>Maecenas velit et ut malesuada amet tempor velit dui. Nullam amet commodo gravida gravida.</p>
-        <div class="faq-questions">
-            <div class="question" onclick="toggleAnswer(this)">
-                Curabitur non nulla sit amet nisl tempus?
-                <div class="answer">This is the answer to the first question.</div>
-            </div>
-            <div class="question" onclick="toggleAnswer(this)">
-                Quisque velit nisi pretium ut lacinia in?
-                <div class="answer">This is the answer to the second question.</div>
-            </div>
-            <div class="question" onclick="toggleAnswer(this)">
-                Quam at scelerisque in velit nisi ultrices neque fames?
-                <div class="answer">This is the answer to the third question.</div>
-            </div>
-        </div>
-    </div>
-    <div class="faq-image">
-        <img src="images/bannerabout.jpg" alt="FAQ Image">
-    </div>
-</div> -->
 
-<!-- faq section end -->
+
+
+
+
 
 <!-- form -->
 
-<div class="loan-offer-section">
+<div class="loan-offer-section" id="loanOfferSection">
     <div class="content-wrapper">
-        <h1>Unlock Best <span class="highlight">Home Loan Offers</span><br />From 10+ Lenders</h1>
-        
+        <h2 style="color: #A8894D; font-family: 'Italiana', Sans-serif; font-size: 50px; font-weight: 400; line-height: 1.3em;">
+            Unlock Best Home Loan Offers From 10+ Lenders
+        </h2><br>
+
         <div class="input-group">
-        <input type="text" placeholder=" Full Name" class="input-field" />
-        <input type="text" placeholder="Contact Number" class="input-field" />
-            <input type="text" placeholder="Required Loan Amount" class="input-field" />
-            <input type="text" placeholder="Monthly Net Salary" class="input-field" />
+            <input type="text" id="loanAmount" placeholder="Required Loan Amount" class="input-field" />
+            <input type="text" id="monthlySalary" placeholder="Monthly Net Salary" class="input-field" />
+        </div>
+        <div class="input-group">
+            <input type="text" id="occupationType" placeholder="Occupation Type" class="input-field" />
+            <input type="text" id="chooseCity" placeholder="Choose City" class="input-field" />
         </div>
 
-        <!-- <div class="input-group">
-            <select class="input-field">
-                <option>Select</option>
-                
-            </select>
-            <select class="input-field">
-                <option>Choose City</option>
-                
-            </select>
-        </div> -->
-
-        <!-- <div class="checkbox-wrapper">
-            <input type="checkbox" id="authorize" />
-            <label for="authorize">
-                I hereby appoint UrbanMoney as my authorised representative to receive my credit information from CIBIL. I hereby accept terms & conditions. <a href="#">Read More.</a>
+        <div class="checkbox-wrapper">
+            <input type="checkbox" id="terms-checkbox" />
+            <label for="terms-checkbox">
+                I hereby appoint UrbanMoney as my authorised representative to receive my credit information from CIBIL. I hereby accept terms & conditions.
             </label>
-        </div> -->
+        </div>
 
-        <button class="get-quote-button" style= "border-radius: 0;
-    font-size: 15px;
-    color: #050f17;
-    background-color: #a8894d;
-    font-weight: 200;">Get Quotes →</button>
+        <button class="home-loan-button" id="getQuotesBtn">Get Quotes →</button>
     </div>
-    
+
     <div class="image-wrapper">
-        <img src="images/homel.png" alt="Home illustration" />
+        <img src="images/homeLeadFrom.svg" alt="Home illustration" />
     </div>
 </div>
+
  <!-- form end -->
+
+
+
+
+
+
+ <!-- banks -->
+ <div class="loan-container">
+    <div class="loan-heading">
+        <h2 style="color: #A8894D; font-family: 'Italiana', Sans-serif; font-size: 50px; font-weight: 400; line-height: 1.3em;">
+            Top Banks For Home Loan
+        </h2>
+    </div>
+    <br>
+    <div class="tabs">
+        <button class="tab-button active" onclick="showLoans('private')">Private Bank</button>
+        <button class="tab-button" onclick="showLoans('nationalized')">Nationalized Bank</button>
+        <button class="tab-button" onclick="showLoans('nbfc')">NBFC</button>
+    </div>
+
+    <div id="private" class="loan-list">
+        <div class="loan-card">
+            <div class="loan-header">
+                <div class="loan-title">
+                    <img src="images/bank.svg" alt="Bank Icon" width="20"> HDFC Home Loan
+                </div>
+                <a href="#loanOfferSection" class="action-button">Apply Now</a>
+                </div>
+            <div class="loan-info">
+                <div><strong>Interest Rate</strong><br> 8.5% - 10.5%</div>
+                <div><strong>Loan Amount</strong><br> ₹10L - ₹2Cr</div>
+                <div><strong>EMI Per Lakh</strong><br> ₹1,987 - ₹2,275</div>
+                <div><strong>Processing Fees</strong><br> 0.5%</div>
+            </div>
+        </div>
+
+        <div class="loan-card">
+            <div class="loan-header">
+                <div class="loan-title">
+                    <img src="images/bank.svg" alt="Bank Icon" width="20"> Axis Home Loan
+                </div>
+                <a href="#loanOfferSection" class="action-button">Apply Now</a>
+                </div>
+            <div class="loan-info">
+                <div><strong>Interest Rate</strong><br> 8.5% - 10.5%</div>
+                <div><strong>Loan Amount</strong><br> ₹10L - ₹2Cr</div>
+                <div><strong>EMI Per Lakh</strong><br> ₹1,987 - ₹2,275</div>
+                <div><strong>Processing Fees</strong><br> 0.5%</div>
+            </div>
+        </div>
+
+        <div class="loan-card">
+            <div class="loan-header">
+                <div class="loan-title">
+                    <img src="images/bank.svg" alt="Bank Icon" width="20"> ICICI Home Loan
+                </div>
+                <a href="#loanOfferSection" class="action-button">Apply Now</a>
+                </div>
+            <div class="loan-info">
+                <div><strong>Interest Rate</strong><br> 8.5% - 10.5%</div>
+                <div><strong>Loan Amount</strong><br> ₹10L - ₹2Cr</div>
+                <div><strong>EMI Per Lakh</strong><br> ₹1,987 - ₹2,275</div>
+                <div><strong>Processing Fees</strong><br> 0.5%</div>
+            </div>
+        </div>
+
+
+        <div class="loan-card">
+            <div class="loan-header">
+                <div class="loan-title">
+                    <img src="images/bank.svg" alt="Bank Icon" width="20"> Bajaj Finance Home Loan
+                </div>
+                <a href="#loanOfferSection" class="action-button">Apply Now</a>
+                </div>
+            <div class="loan-info">
+                <div><strong>Interest Rate</strong><br> 8.5% - 10.5%</div>
+                <div><strong>Loan Amount</strong><br> ₹10L - ₹2Cr</div>
+                <div><strong>EMI Per Lakh</strong><br> ₹1,987 - ₹2,275</div>
+                <div><strong>Processing Fees</strong><br> 0.5%</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="nationalized" class="loan-list" style="display: none;">
+        <div class="loan-card">
+            <div class="loan-header">
+                <div class="loan-title">
+                    <img src="images/bank.svg" alt="Bank Icon" width="20"> SBI Home Loan
+                </div>
+                <a href="#loanOfferSection" class="action-button">Apply Now</a>
+                </div>
+            <div class="loan-info">
+                <div><strong>Interest Rate</strong><br> 7.9% - 9.8%</div>
+                <div><strong>Loan Amount</strong><br> ₹5L - ₹1.5Cr</div>
+                <div><strong>EMI Per Lakh</strong><br> ₹1,895 - ₹2,150</div>
+                <div><strong>Processing Fees</strong><br> 0.3%</div>
+            </div>
+        </div>
+
+        <div class="loan-card">
+            <div class="loan-header">
+                <div class="loan-title">
+                    <img src="images/bank.svg" alt="Bank Icon" width="20"> PNB Home Loan
+                </div>
+                <a href="#loanOfferSection" class="action-button">Apply Now</a>
+                </div>
+            <div class="loan-info">
+                <div><strong>Interest Rate</strong><br> 7.9% - 9.8%</div>
+                <div><strong>Loan Amount</strong><br> ₹5L - ₹1.5Cr</div>
+                <div><strong>EMI Per Lakh</strong><br> ₹1,895 - ₹2,150</div>
+                <div><strong>Processing Fees</strong><br> 0.3%</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="nbfc" class="loan-list" style="display: none;">
+        <div class="loan-card">
+            <div class="loan-header">
+                <div class="loan-title">
+                    <img src="images/bank.svg" alt="Bank Icon" width="20"> Grihum Bank
+                </div>
+                <a href="#loanOfferSection" class="action-button">Apply Now</a>
+                </div>
+            <div class="loan-info">
+                <div><strong>Interest Rate</strong><br> 9.5% - 14%</div>
+                <div><strong>Loan Amount</strong><br> ₹5L - ₹1Cr</div>
+                <div><strong>EMI Per Lakh</strong><br> ₹2,112 - ₹2,500</div>
+                <div><strong>Processing Fees</strong><br> 1%</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function showLoans(type) {
+        document.querySelectorAll('.loan-list').forEach(el => el.style.display = 'none');
+        document.getElementById(type).style.display = 'block';
+        
+        document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+        event.target.classList.add('active');
+    }
+</script>
+
+ <!-- end banks -->
+
+
+
+
+
+
 
 
 <!-- call to action -->
@@ -414,6 +552,211 @@ button:hover {
     </div>
 </section>
 <!-- end call to action -->
+
+
+
+
+ <!-- Enquire Button -->
+ <div id="enquireButtonContainer">
+    <button id="enquireButton">
+        Book A Demo
+    </button>
+</div>
+
+<!-- Enquiry Modal -->
+
+<div id="enquiryModal" style="display:none;">
+    <div class="form-container" style="position: relative; padding: 20px; background: #eaeaea; border-radius: 8px;">
+        <span id="closeModal" style="position: absolute; top: 10px; right: 15px; cursor: pointer; font-size: 20px;">&times;</span>
+        <h3>Enquiry Form</h3>
+
+        <div id="fullFormErrorMessage" class="full-form-message" style="color: red; font-size: 16px;font-weight:500; margin-bottom: 10px; display: none;"></div>
+        <div id="fullFormFeedback" class="full-form-message" style="color: #d18d0a; font-size: 16px;font-weight:500; margin-bottom: 10px; display: none;"></div>
+                
+        
+        <form id="enquiryForm" method="POST">
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <small class="error-message" id="nameError"></small>
+
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            <small class="error-message" id="emailError"></small>
+
+            <input type="text" id="phone" name="phone" placeholder="Your Contact Number" required maxlength="10">
+            <small class="error-message" id="contactError"></small>
+
+            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+            <small class="error-message" id="messageError"></small>
+
+            <!-- CAPTCHA Section -->
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px;">
+                <span id="captchaQuestion" style="font-size: 16px; font-weight: bold; width: 15%;"></span>
+                <input type="text" id="captchaAnswer" name="captchaAnswer" placeholder="Enter Answer" required style="width: 100%;margin-bottom:0;">
+            </div>
+            <small class="error-message" id="captchaError"></small>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</div>
+
+<style>
+    .error-message {
+        color: red;
+        font-size: 12px;
+        display: none;
+    }
+    .full-form-message {
+        font-size: 14px;
+        font-weight: bold;
+        margin-top: 10px;
+        display: none;
+        color:
+    }
+</style>
+
+<script>
+    let correctCaptchaAnswer = 0;
+
+    function generateCaptcha() {
+        let num1 = Math.floor(Math.random() * 10) + 1;
+        let num2 = Math.floor(Math.random() * 10) + 1;
+        correctCaptchaAnswer = num1 + num2;
+        document.getElementById("captchaQuestion").innerText = `${num1} + ${num2} = `;
+    }
+
+    function showErrorMessage(elementId, message) {
+        const errorElement = document.getElementById(elementId);
+        errorElement.innerText = message;
+        errorElement.style.display = "block";
+    }
+
+    function hideErrorMessage(elementId) {
+        document.getElementById(elementId).style.display = "none";
+    }
+
+    function openModal() {
+        generateCaptcha();
+        document.getElementById("enquiryModal").style.display = "block";
+    }
+
+    document.getElementById("getQuotesBtn").addEventListener("click", function () {
+        let loanAmount = document.getElementById("loanAmount").value.trim();
+        let monthlySalary = document.getElementById("monthlySalary").value.trim();
+        let occupationType = document.getElementById("occupationType").value.trim();
+        let chooseCity = document.getElementById("chooseCity").value.trim();
+        let termsChecked = document.getElementById("terms-checkbox").checked;
+
+        let fullFormMessage = document.getElementById("fullFormErrorMessage");
+        fullFormMessage.style.display = "none";
+
+        if (!loanAmount || !monthlySalary || !occupationType || !chooseCity) {
+            fullFormMessage.innerText = "Please fill in all required fields.";
+            fullFormMessage.style.display = "block";
+            return;
+        }
+
+        if (!termsChecked) {
+            fullFormMessage.innerText = "You must accept the terms & conditions.";
+            fullFormMessage.style.display = "block";
+            return;
+        }
+
+        sessionStorage.setItem("loanData", JSON.stringify({ loanAmount, monthlySalary, occupationType, chooseCity }));
+
+        openModal();
+    });
+
+    document.getElementById("closeModal").addEventListener("click", function () {
+        document.getElementById("enquiryModal").style.display = "none";
+    });
+
+    // Add event listeners for Enquire and Consultation buttons
+    document.getElementById("enquireButton").onclick = openModal;
+    document.getElementById("consultationButton").onclick = openModal;
+
+    document.getElementById("enquiryForm").addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        let isValid = true;
+        let name = document.getElementById("name").value.trim();
+        let email = document.getElementById("email").value.trim();
+        let phone = document.getElementById("phone").value.trim();
+        let message = document.getElementById("message").value.trim();
+        let captchaInput = document.getElementById("captchaAnswer").value.trim();
+
+        let fullFormMessage = document.getElementById("fullFormFeedback");
+        fullFormMessage.style.display = "none";
+
+        if (!/^[a-zA-Z\s]{3,}$/.test(name)) {
+            showErrorMessage("nameError", "Enter a valid name (min 3 letters).");
+            isValid = false;
+        } else {
+            hideErrorMessage("nameError");
+        }
+
+        if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)) {
+            showErrorMessage("emailError", "Enter a valid email.");
+            isValid = false;
+        } else {
+            hideErrorMessage("emailError");
+        }
+
+        if (!/^\d{10}$/.test(phone)) {
+            showErrorMessage("contactError", "Enter a valid 10-digit phone number.");
+            isValid = false;
+        } else {
+            hideErrorMessage("contactError");
+        }
+
+        if (message.length < 10) {
+            showErrorMessage("messageError", "Message must be at least 10 characters.");
+            isValid = false;
+        } else {
+            hideErrorMessage("messageError");
+        }
+
+        if (parseInt(captchaInput) !== correctCaptchaAnswer) {
+            showErrorMessage("captchaError", "Incorrect captcha answer.");
+            isValid = false;
+        } else {
+            hideErrorMessage("captchaError");
+        }
+
+        if (!isValid) return;
+
+        let loanData = JSON.parse(sessionStorage.getItem("loanData")) || {};
+        let formData = { name, email, phone, message, ...loanData };
+
+        fetch("forms/homeloan_submit.php", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(formData)
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                fullFormMessage.innerText = "Form submitted successfully!";
+                fullFormMessage.style.color = "green";
+                fullFormMessage.style.display = "block";
+                document.getElementById("enquiryForm").reset();
+                setTimeout(() => window.location.reload(), 2000);
+            } else {
+                fullFormMessage.innerText = "Error: " + data.error;
+                fullFormMessage.style.color = "red";
+                fullFormMessage.style.display = "block";
+            }
+        })
+        .catch(() => {
+            fullFormMessage.innerText = "Something went wrong. Please try again later.";
+            fullFormMessage.style.color = "red";
+            fullFormMessage.style.display = "block";
+        });
+    });
+</script>
+
+<!-- end enquirty -->
+
+
 
 <script>
 function toggleAnswer(element) {

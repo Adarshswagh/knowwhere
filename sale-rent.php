@@ -43,6 +43,43 @@ include("config.php");
 
 <!-- end banner -->
 
+
+
+<!-- first section -->
+<section class="premium-section">
+    <div class="premium-content">
+        <h2>About Sale or Rent</h2>
+        <p>
+            Embrace complete digital transformation with our powerhouse digital marketing company. 
+            One of Pune’s top digital marketing agencies, we provide all services – Branding, Marketing, 
+            Advertising – that will propel your business towards success on full speed. 
+            We fuel comprehensive Online Presence, from SEO, SMM, and web development to graphic design, 
+            content, and email marketing.
+        </p>
+        <!-- <ul class="premium-checklist">
+            <div class="checklist-column">
+                <li><span>✔</span> Turning Dreams into Reality</li>
+                <li><span>✔</span> Industry Leadership</li>
+                <li><span>✔</span> Lasting Relationships</li>
+                <li><span>✔</span> Client-Centered Approach</li>
+                <li><span>✔</span> Transparency and Trust</li>
+
+            </div>
+            
+        </ul> -->
+        <a href="rentproject.php" ><button class="apply-btn">Rent property →</button></a>
+        <a href="saleproject.php" ><button class="apply-btn">Sell property →</button></a>
+
+    </div>
+
+    <div class="property-selection-container">
+        <img id="property-image" src="images/sale-rent.png" alt="Select an option" class="property-img">
+    </div>
+
+</section>
+
+<!-- end -->
+
 <!-- post guide section -->
 
 <div class="post-guide-section">
@@ -52,13 +89,13 @@ include("config.php");
     font-size: 50px;
     font-weight: 400;
     line-height: 1.3em; color:#A8894D; font size: 20px;">How to post to get the most?</h2>
-        <p>Selling/renting property is no more a challenge with Square Yards. Renting / Selling a house has become easy with the internet and easier with us! We will handle the process of selling your property from start to finish. Follow these steps to begin your home selling journey.</p>
+        <p>Selling/renting property is no more a challenge with knohwere. Renting / Selling a house has become easy with the internet and easier with us! We will handle the process of selling your property from start to finish. Follow these steps to begin your home selling journey.</p>
     </div>
     <div class="post-guide-grid">
         <div class="post-step">
             <img src="images/house (1).png" alt="Show off your property" >
             <h3 style="color:#A8894D; font-size: 20px;">Show off your property</h3>
-            <p>Sign up or log in to Square Yards and create a free property ad post with good pictures, detailed video, and other important information like the type, price, size, location, etc.</p>
+            <p>Sign up or log in to knohwere and create a free property ad post with good pictures, detailed video, and other important information like the type, price, size, location, etc.</p>
         </div>
         <div class="post-step">
             <img src="images/assets.png" alt="Property Proposal">
@@ -75,119 +112,96 @@ include("config.php");
 <!-- post guide section end-->
 
 
-<section class="business-loan" style = "background-color: #050f17;">
-        <div class="image-container" style="height:400px;">
-            <img src="images/bannerabout.jpg" alt="People in a business setting">
-        </div>
-        <div class="content">
-            <h2 style=" color: #A8894D;
-    font-family: 'Italiana', Sans-serif;
-    font-size: 40px;
-    font-weight: 400;
-    line-height: 1.3em;">Let Us Show Off Your Property.</h2>
-            <p style = "text-align:left; font-size:15px;">Millions of property buyers and renters check listings on Square Yards every day! We will highlight your property to them and if they find your property suitable, they can contact you immediately and directly. Tip: Clients love true info on listings.</p>
-            
-            <button class="get-quote-button" style="border-radius:0">APPLY FOR A LOAN →</button>
-        </div>
+
+
+<section class="container">
+    <section class="business-loan" style = "background-color: #050f17;">
+        <div class="image-container" style="height:325px;    max-width: 640px;">
+                <img src="images/bannerabout.jpg" alt="People in a business setting">
+            </div>
+            <div class="content" style="max-width: 562px;">
+                <h2 style=" color: #A8894D;
+        font-family: 'Italiana', Sans-serif;
+        font-size: 40px;
+        font-weight: 400;
+        line-height: 1.3em;">Let Us Show Off Your Property.</h2>
+                <p style = "text-align:left; font-size:15px;">Millions of property buyers and renters check listings on Knowhere every day! We will highlight your property to them and if they find your property suitable, they can contact you immediately and directly. Tip: Clients love true info on listings.</p>
+                
+            </div>
     </section>
 
 
-    <section class="business-loan" style = "background-color: #050f17; flex-direction:row-reverse; gap: 100px;">
-        <div class="image-container" style="height:400px;">
+    <section class="business-loan" style = "background-color: #050f17; padding-left:140px;">
+    <div class="content" style="max-width: 564px;">
+            <h2 style = " color: #A8894D;
+        font-family: 'Italiana', Sans-serif;
+        font-size: 40px;
+        font-weight: 400;
+        line-height: 1.3em;">Create a Killer Property Listing.</h2>
+                <p style = "text-align:left; font-size:15px;">For Rocket Fast Deals, create a listing with every detail, like the property type, your expected price and other advantages of the property. Property pictures are very important. Tip: Listings with at least 5 great pics get maximum enquiries.</p>
+                
+            </div>
+        <div class="image-container" style="height:325px;">
             <img src="images/bannerabout.jpg" alt="People in a business setting">
         </div>
-        <div class="content">
-            <h2 style = " color: #A8894D;
-    font-family: 'Italiana', Sans-serif;
-    font-size: 40px;
-    font-weight: 400;
-    line-height: 1.3em;">Create a Killer Property Listing.</h2>
-            <p style = "text-align:left; font-size:15px;">For Rocket Fast Deals, create a listing with every detail, like the property type, your expected price and other advantages of the property. Property pictures are very important. Tip: Listings with at least 5 great pics get maximum enquiries.</p>
-            
-            <button class="get-quote-button" style="border-radius:0">APPLY FOR A LOAN →</button>
-        </div>
+       
     </section>
 
 
     <section class="business-loan" style = "background-color: #050f17;">
-        <div class="image-container" style="height:400px;">
+        <div class="image-container" style="height:325px;   max-width: 640px;">
             <img src="images/bannerabout.jpg" alt="People in a business setting">
         </div>
-        <div class="content">
+        <div class="content" style="max-width: 562px;">
             <h2 style = " color: #A8894D;
-    font-family: 'Italiana', Sans-serif;
-    font-size: 40px;
-    font-weight: 400;
-    line-height: 1.3em;">Your Property. Your Proposal.</h2>
-            <p style = "text-align:left; font-size:15px; ">When an interested party finds your listed property truly suitable and shows deep interest to buy or rent it out, we will share the client’s detail with you over phone or email instantly. Tip: When property owners make proposals, deals happen faster.</p>
+        font-family: 'Italiana', Sans-serif;
+        font-size: 40px;
+        font-weight: 400;
+        line-height: 1.3em;">Your Property. Your Proposal.</h2>
+                <p style = "text-align:left; font-size:15px; ">When an interested party finds your listed property truly suitable and shows deep interest to buy or rent it out, we will share the client’s detail with you over phone or email instantly. Tip: When property owners make proposals, deals happen faster.</p>
             
-            <button class="get-quote-button" style="border-radius:0">APPLY FOR A LOAN →</button>
         </div>
     </section>
 
 
-    <section class="business-loan" style = "background-color: #050f17; flex-direction:row-reverse; gap: 100px;">
-        <div class="image-container" style="height:400px;">
-            <img src="images/bannerabout.jpg" alt="People in a business setting">
-        </div>
-        <div class="content">
+    <section class="business-loan" style = "background-color: #050f17; padding-left:140px;">
+    <div class="content" style="    max-width: 562px;">
             <h2 style = " color: #A8894D;
-    font-family: 'Italiana', Sans-serif;
-    font-size: 40px;
-    font-weight: 400;
-    line-height: 1.3em;">Showing, Negotiating, Closing.</h2>
+        font-family: 'Italiana', Sans-serif;
+        font-size: 40px;
+        font-weight: 400;
+        line-height: 1.3em;">Showing, Negotiating, Closing.</h2>
             <p style = "text-align:left; font-size:15px;">We know that no one can sell your property better than you. After all, only you know everything that a buyer or renter needs to know to close the deal. Its time for site inspections, negotiations, paperwork checks and deal closure. Tip: Don’t under-price.</p>
             
-            <button class="get-quote-button" style="border-radius:0">APPLY FOR A LOAN →</button>
         </div>
-        </section>
-
-        <section class="business-loan" style = "background-color: #050f17;">
-        <div class="image-container" style="height:400px;">
+        <div class="image-container" style="height:325px;     max-width: 640px;">
             <img src="images/bannerabout.jpg" alt="People in a business setting">
         </div>
-        <div class="content">
-            <h2 style = " color: #A8894D;
-    font-family: 'Italiana', Sans-serif;
-    font-size: 40px;
-    font-weight: 400;
-    line-height: 1.3em;">Sell or Rent with Square Yards</h2>
-            <p style = "text-align:left; font-size:15px;">Our property listing site allows you to post property profiles ad for free or you can sell property online and close deals at lightning speed! So, what are you waiting for? Just follow these simple steps, and voila, your property is sold or rented.</p>
-            
-            <button class="get-quote-button" style="border-radius:0">APPLY FOR A LOAN →</button>
-        </div>
+       
     </section>
+
+        <section class="business-loan" style = "background-color: #050f17;">
+                <div class="image-container" style="height:325px;    max-width: 640px;">
+                    <img src="images/bannerabout.jpg" alt="People in a business setting">
+                </div>
+                <div class="content" style="max-width: 564px;">
+                    <h2 style = " color: #A8894D;
+            font-family: 'Italiana', Sans-serif;
+            font-size: 40px;
+            font-weight: 400;
+            line-height: 1.3em;">Sell or Rent with Knowhere</h2>
+                    <p style = "text-align:left; font-size:15px;">Our property listing site allows you to post property profiles ad for free or you can sell property online and close deals at lightning speed! So, what are you waiting for? Just follow these simple steps, and voila, your property is sold or rented.</p>
+                    
+                </div>
+        </section>
 </section>
 
-<section class="contact-section">
-    <div class="contact-container">
-        <div class="form-container">
-            <form style="text-align:center">
-                <div class="input-group" style="width:100%">
-                    <input type="text" name="first-name" placeholder="First Name" required>
-                    <input type="text" name="last-name" placeholder="Last Name" required>
-                </div>
-                <input type="email" name="email" placeholder="Email" required class="email-group">
-                <textarea name="message" placeholder="Message" required></textarea>
-                <button type="submit" style="margin-top:30px">SEND MESSAGE</button>
-            </form>
-        </div>
-        <div class="contact-info">
-            <h2 style="color: #A8894D;
-    font-family: 'Italiana', Sans-serif;
-    font-size: 50px;
-    font-weight: 400;
-    line-height: 1.3em;">Get In Touch</h2>
-            <p>Ready to make your real estate dreams a reality? Get in touch with Knowhere for trusted guidance, tailored solutions, and a seamless property experience.</p>
-            <ul>
-                <li><i class="fas fa-map-marker-alt"></i> Wakad, Pimpri-Chinchwad, Maharashtra 411057</li>
-                <li><i class="fas fa-envelope"></i> example@mail.com</li>
-                <li><i class="fas fa-phone-alt"></i>+91 91122 11291</li>
-                
-            </ul>
-        </div>
-    </div>
-</section>
+<!-- end -->
+
+
+
+
+
 
 <!-- call to action -->
 <section id="main-call">
@@ -204,6 +218,90 @@ include("config.php");
 <!-- end call to action -->
 
 
+
+ <!-- Enquire Button -->
+ <div id="enquireButtonContainer">
+    <button id="enquireButton">
+        Book A Demo
+    </button>
+</div>
+
+<!-- Enquiry Modal -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "T0yb7stlayE2PO5Hv",
+      });
+   })();
+</script>
+
+<div id="enquiryModal" style="display:none;">
+    <div class="form-container" style="position: relative; padding: 20px; background: #eaeaea; border-radius: 8px;">
+        <span id="closeModal" style="position: absolute; top: 10px; right: 15px; cursor: pointer; font-size: 20px;">&times;</span>
+        <h3>Enquiry Form</h3>
+        
+        <!-- Feedback Message -->
+        <div id="feedbackMessage" style="color: #007bff; font-size: 14px; margin-bottom: 10px; display: none;"></div>
+        
+        <form id="enquiryForm" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="text" name="contact" placeholder="Your Contact Number" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</div>
+
+<script>
+// Show modal
+document.getElementById("enquireButton").onclick = function() {
+    document.getElementById("enquiryModal").style.display = "block";
+};
+
+// Hide modal
+document.getElementById("closeModal").onclick = function() {
+    document.getElementById("enquiryModal").style.display = "none";
+    document.getElementById("feedbackMessage").style.display = "none"; // Hide feedback on close
+};
+
+// Form submission
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('enquiryForm');
+    if (form) {
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const name = this.name.value;
+            const email = this.email.value;
+            const phone = this.contact.value;
+            const message = this.message.value;
+
+            const templateParams = {
+                to_name: 'attendancedigitalizetheglobe@gmail.com', // Replace with the recipient's email
+                from_name: name,
+                user_email: email,
+                user_number: phone,
+                message: message
+            };
+
+            emailjs.send("service_whdabtl", "template_fufrp06", templateParams)
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    alert('Email sent successfully!');
+                    document.getElementById("enquiryModal").style.display = "none"; // Close modal on success
+                }, function(error) {
+                    console.log('FAILED...', error);
+                    alert('Error sending email. Please try again.');
+                });
+        });
+    } else {
+        console.warn("enquiryForm element not found.");
+    }
+});
+</script>
+<!-- end enquirty -->
 
 
 <!--	Footer   start-->

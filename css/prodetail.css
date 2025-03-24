@@ -289,7 +289,7 @@ button:hover {
     color: #e8e8e8;
     font-size: 18px;
     font-family: "Lexend", Sans-serif;
-    max-width: 700px;
+    /* max-width: 700px; */
 }
 .property-details {
     display: flex;
@@ -396,7 +396,7 @@ button[type="submit"]:hover {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2 columns for details */
     gap: 30px;
-    width: 20px;
+    /* width: 20px; */
     margin-left: 70px;
 }
 
@@ -405,7 +405,7 @@ button[type="submit"]:hover {
     color: #fff;
     border-bottom: 1px solid #555; /* Similar to the original style */
     padding: 10px 0;
-    width: 350px;
+    /* width: 350px; */
 }
 
 .field-title{
@@ -568,3 +568,422 @@ table tr:hover {
 
 
 /* end property detial */
+
+/* floor plan */
+
+.container {
+    display: flex;
+    gap: 20px;
+}
+
+.floor-plan {
+    position: relative;
+    width: 250px;
+    text-align: center;
+}
+
+.floor-plan img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    filter: blur(1px); /* Apply blur effect */
+}
+
+.blur-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.download-btn {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.download-btn:hover{
+    color: #A8894D;
+}
+
+p {
+    color: white;
+    font-size: 18px;
+    margin-top: 20px !important;
+}
+
+/* Enquiry Form Styles */
+.enquiry-form {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.form-content {
+    text-align: center;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+input, textarea {
+    width: 100%;
+    margin-top: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+
+button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    background: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+/* end floor [plan */
+
+
+
+
+/* Similar Projects Section */
+#similar-projects {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#similar-projects h3 {
+    border-left: 2px solid #A8894D;
+    padding-left: 1.3rem;
+    margin-bottom: 2rem;
+    color: #A8894D;
+    font-family: 'Lexend', sans-serif;
+    margin-top: 30px;
+}
+
+.similar-projects-carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+.project-card {
+    flex: 0 0 auto;
+    width: 250px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.project-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.project-card h4 {
+    font-size: 18px;
+    color: #e8e8e8;
+    margin: 10px 0;
+    font-family: 'Lexend', sans-serif;
+}
+
+.project-card p {
+    font-size: 14px;
+    color: #999;
+    margin: 0 0 10px;
+    font-family: 'Lexend', sans-serif;
+}
+
+
+
+#project-card {
+    margin-top: 20px;
+    height: calc(100vh - 8em);
+    font-family: 'Muli', sans-serif;
+    background-color: #050f17;
+    overflow-x: auto;
+    width: 100%;
+    /* Allow horizontal scroll */
+}
+
+.card-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.card-items {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    animation: cardCarousel 130s infinite linear;
+    animation-play-state: running;
+    /* Ensures the animation runs by default */
+
+}
+
+
+
+.card-entry {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 350px;
+    max-width: 100%;
+    background: white;
+    margin: 1em;
+    /* border-radius: 10px; */
+    box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+
+
+.card-entry img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.promo-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #050f17;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 12px;
+    font-family: 'Lexend', sans-serif;
+}
+
+.property-info {
+    padding: 20px;
+    background-color: #e9e4d4;
+}
+
+.property-title a {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #222;
+    font-family: "Italiana", Sans-serif;
+}
+
+.property-title a:hover {
+    color: #443822;
+    text-decoration: none;
+}
+
+.price {
+    color: #A8894D;
+    font-family: 'Lexend', Sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.4rem;
+}
+
+.location{
+    font-size: 17px;
+    font-weight: 200;
+    color: #866a35;
+    line-height: 1.2em;
+}
+
+
+.property-meta {
+    font-size: 14px;
+    font-family: 'Lexend', sans-serif;
+    color: #050f17;
+    font-weight: 300;
+    line-height: 1.7em;
+    /* margin-bottom: 20px; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* Space between buttons */
+    justify-content: center;
+}
+
+.view-more-btn {
+    font-family: "Lexend", Sans-serif;
+    font-size: 12px;
+    font-weight: 200;
+    text-transform: uppercase;
+    line-height: 1.5em;
+    color: #e8e8e8;
+    background-color: #050f17;
+    border-style: solid;
+    border-width: 0px;
+    padding: 10px 50px;
+    border-radius: 0px;
+}
+
+.view-more-btn:hover {
+    background-color: #a8894d;
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 40px;
+    /* border-radius: 5px; */
+    font-size: 18px;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+.whatsapp-btn {
+    background-color: #25d366;
+}
+
+.whatsapp-btn:hover {
+    background-color: #1ebe5d;
+    color: #fff;
+}
+
+.call-btn {
+    background-color: #4285f4;
+}
+
+.call-btn:hover {
+    background-color: #357ae8;
+    color: #fff;
+}
+
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+    .card-entry {
+        width: 400px;
+        /* Adjusts to show 2 cards on smaller screens */
+    }
+
+    
+}
+
+
+
+/* Popup Styling */
+#popupOverlay {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+    z-index: 1000; /* Sit on top */
+}
+
+#popupContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #050F17;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    height: 80% !important;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    z-index: 1001; /* Ensure it stays above other elements */
+}
+
+#closePopup {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#contactform{
+    flex: 1;
+    padding: 40px;
+    border: 1px solid #6c6c6c;
+    max-width: 550px
+}
+
+#closePopup:hover,
+#closePopup:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+input, textarea {
+    width: 100% !important;
+    padding: 10px !important;
+    margin: 10px 0 !important;
+    background: transparent !important;
+    border: none !important;
+    border-bottom: 1px solid #fff !important;
+    color: #fff !important;
+    font-family: 'Lexend', sans-serif !important;
+    font-size: 14px !important;
+}
+
+#enquiryForm input::placeholder,
+#enquiryForm textarea ::placeholder{
+    color: #fff !important;
+}
+
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #A8894D;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+
+.popup-form{
+    color:#a8894d;
+    align-items: center;
+    text-align: center;
+}
+
+.popup-form-p{
+    color:#f1f1f1;
+    align-items: center;
+    text-align: center;
+}

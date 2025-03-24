@@ -23,23 +23,7 @@ include("config.php");
 
 </head>
 
-<style>
-    button {
-    padding: 12px 24px;
-    background-color: #ff9900;
-    color: #ffffff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: bold;
-    font-family: 'lexend', Sans-serif;
-}
 
-button:hover {
-    background-color: #e68a00;
-}
-</style>
 
 
 <body>
@@ -52,7 +36,7 @@ button:hover {
 
 
   <!-- banner -->
-  <section id="banner-main">
+<section id="banner-main">
     <div class="banner1" >
         <div class="banner-content">
             <h2>Bamboo</h2>
@@ -84,7 +68,7 @@ button:hover {
         <div class="post-step">
             <img src="images/artist.png" alt="Property Proposal">
             <h3 style ="color: #A8894D;">Artistic Excellence</h3>
-            <p style="text-align:center;">To attract buyers or renters, you have to put your best info forward. Jot down all the advantages and benefits of your property that the renter or buyer may want to avail.</p>
+            <p style="text-align:center; margin-top:28px;">To attract buyers or renters, you have to put your best info forward. Jot down all the advantages and benefits of your property that the renter or buyer may want to avail.</p>
         </div>
         <div class="post-step">
             <img src="images/house.png" alt="Needful Negotiations">
@@ -101,7 +85,7 @@ button:hover {
         <div class="post-step">
             <img src="images/partners.png" alt="Property Proposal">
             <h3 style ="color: #A8894D;">Community Empowerment</h3>
-            <p style="text-align:center;">We provide fair wages, training, and growth opportunities to bamboo farmers and artisans, fostering social and economic development.</p>
+            <p style="text-align:center; margin-top:28px;">We provide fair wages, training, and growth opportunities to bamboo farmers and artisans, fostering social and economic development.</p>
         </div>
         <div class="post-step">
             <img src="images/education.png" alt="Needful Negotiations">
@@ -123,7 +107,7 @@ button:hover {
     font-size: 50px;
     font-weight: 400;
     line-height: 1.3em;">Our Main Vertical</h2>
-        <p style="text-align:center; font-size:30px;">We blend traditional craftsmanship with modern design to transform bamboo into functional art and architecture.</p>
+        <p class="bamboo-about" >We blend traditional craftsmanship with modern design to transform bamboo into functional art and architecture.</p>
     </div>
 <div class="main-verticals-section" style="padding-top:100px;">
     <div class="content-wrapper">
@@ -137,9 +121,8 @@ button:hover {
     font-weight: 400;
     line-height: 1.3em;">Bamboo Constructions</h3>
                 <p>Crafted from bamboo, our sustainable sanctuaries – serene villas, breathtaking resorts, charming cafes, and cozy homes – elevate eco-consciousness into an art form.</p>
-                <div class="buttons">
-                    <button href="#" class="view-projects">View Projects</button>
-                    <button href="#" class="book-consultation">Book a Consultation</button>
+                <div class="buttons" >
+                    <button id="consultationButton" href="#" class="book-consultation">Book a Consultation</button>
                 </div>
             </div>
         </div>
@@ -163,8 +146,7 @@ button:hover {
     line-height: 1.3em;">Bamboo Sculpture</h3>
                 <p>Skilled artisans transform bamboo into stunning, eco-friendly sculptures that elevate any space with a touch of green elegance.</p>
                 <div class="buttons">
-                    <button href="#" class="view-projects">View Projects</button>
-                    <button href="#" class="book-consultation">Book a Consultation</button>
+                    <button id="consultationButton2" href="#" class="book-consultation">Book a Consultation</button>
                 </div>
             </div>
         </div>
@@ -191,8 +173,8 @@ button:hover {
     line-height: 1.3em;">Bamboo Products</h3>
                 <p>Embrace sustainable living with our bamboo haven – furniture for rustic charm, kitchenware for organic beauty, all designed to elevate your life and our planet.</p>
                 <div class="buttons">
-                    <button href="#" class="view-projects">View Projects</button>
-                    <button href="#" class="book-consultation">Book a Consultation</button>
+                    <!-- Button HTML -->
+                    <button id="consultationButton3" class="book-consultation">Book a Consultation</button>
                 </div>
             </div>
         </div>
@@ -243,31 +225,6 @@ button:hover {
 </section>
 
 
-<section class="contact-section">
-    <div class="contact-container">
-        <div class="form-container">
-            <form style="text-align:center">
-                <div class="input-group" style="width:100%">
-                    <input type="text" name="first-name" placeholder="First Name" required>
-                    <input type="text" name="last-name" placeholder="Last Name" required>
-                </div>
-                <input type="email" name="email" placeholder="Email" required class="email-group">
-                <textarea name="message" placeholder="Message" required></textarea>
-                <button type="submit" style="margin-top:30px">SEND MESSAGE</button>
-            </form>
-        </div>
-        <div class="contact-info">
-            <h2>Get In Touch</h2>
-            <p>Ready to make your real estate dreams a reality? Get in touch with Knowhere for trusted guidance, tailored solutions, and a seamless property experience.</p>
-            <ul>
-                <li style="text-align:left;"><i class="fas fa-map-marker-alt"></i> Wakad, Pimpri-Chinchwad, Maharashtra 411057</li>
-                <li style="text-align:left;"><i class="fas fa-envelope"></i> example@mail.com</li>
-                <li style="text-align:left;"><i class="fas fa-phone-alt"></i>+91 91122 11291</li>
-                
-            </ul>
-        </div>
-    </div>
-</section>
 
 <!-- call to action -->
 <section id="main-call">
@@ -282,6 +239,171 @@ button:hover {
     </div>
 </section>
 <!-- end call to action -->
+
+
+ <!-- Enquire Button -->
+ <div id="enquireButtonContainer">
+    <button id="enquireButton">
+        Book A Demo
+    </button>
+</div>
+
+<!-- Enquiry Modal -->
+<div id="enquiryModal" style="display:none;">
+    <div class="form-container" style="position: relative; padding: 20px; background: #eaeaea; border-radius: 8px;">
+        <span id="closeModal" style="position: absolute; top: 10px; right: 15px; cursor: pointer; font-size: 20px;">&times;</span>
+        <h3>Enquiry Form</h3>
+        
+        <div id="feedbackMessage" style="color: #007bff; font-size: 14px; margin-bottom: 10px; display: none;"></div>
+        
+        <form id="enquiryForm" method="POST">
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <small class="error-message" id="nameError"></small>
+
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            <small class="error-message" id="emailError"></small>
+
+            <input type="text" id="contact" name="contact" placeholder="Your Contact Number" required maxlength="10">
+            <small class="error-message" id="contactError"></small>
+
+            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+            <small class="error-message" id="messageError"></small>
+
+            <div style="position: relative; display: flex; align-items: center;">
+                <select id="type" name="type" required>
+                    <option value="">Select Type</option>
+                    <option value="Bamboo Constructions">Bamboo Constructions</option>
+                    <option value="Bamboo Sculpture">Bamboo Sculpture</option>
+                    <option value="Bamboo Products">Bamboo Products</option>
+                </select>
+                <i class="fas fa-angle-down" style="position: absolute; top: 15px; right: 10px; color: #555;"></i>
+            </div>
+            <small class="error-message" id="typeError"></small>
+
+            <!-- CAPTCHA Section -->
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <span id="captchaQuestion" style="font-size: 16px; font-weight: bold; width : 15%;"></span>
+                <input type="text" id="captchaAnswer" name="captchaAnswer" placeholder="Enter Answer" required style="width: 100%;">
+            </div>
+            <small class="error-message" id="captchaError"></small>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</div>
+
+<style>
+    .error-message {
+        color: red;
+        font-size: 12px;
+        display: none;
+    }
+</style>
+
+<script>
+    let correctCaptchaAnswer = 0;
+
+    function generateCaptcha() {
+        let num1 = Math.floor(Math.random() * 10) + 1;
+        let num2 = Math.floor(Math.random() * 10) + 1;
+        correctCaptchaAnswer = num1 + num2;
+        document.getElementById("captchaQuestion").innerText = `${num1} + ${num2} = `;
+    }
+
+    function openModal() {
+        generateCaptcha();
+        document.getElementById("enquiryModal").style.display = "block";
+    }
+    document.getElementById("enquireButton").onclick = openModal;
+    document.getElementById("consultationButton").onclick = openModal;  
+    document.getElementById("consultationButton2").onclick = openModal;
+    document.getElementById("consultationButton3").onclick = openModal;
+
+    document.getElementById("closeModal").onclick = function() {
+        document.getElementById("enquiryModal").style.display = "none";
+        document.getElementById("feedbackMessage").style.display = "none"; 
+    };
+
+    document.getElementById("enquiryForm").addEventListener("submit", function(event) {
+        event.preventDefault(); 
+
+        let isValid = true;
+
+        const name = document.getElementById("name").value.trim();
+        if (name === "") { showError("nameError", "Name is required"); isValid = false; } else { hideError("nameError"); }
+
+        const email = document.getElementById("email").value.trim();
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (email === "") { showError("emailError", "Email is required"); isValid = false; } 
+        else if (!emailPattern.test(email)) { showError("emailError", "Enter a valid email"); isValid = false; } 
+        else { hideError("emailError"); }
+
+        const contact = document.getElementById("contact").value.trim();
+        const contactPattern = /^[0-9]{10}$/;
+        if (contact === "") { showError("contactError", "Contact number is required"); isValid = false; } 
+        else if (!contactPattern.test(contact)) { showError("contactError", "Enter a valid 10-digit number"); isValid = false; } 
+        else { hideError("contactError"); }
+
+        const message = document.getElementById("message").value.trim();
+        if (message === "") { showError("messageError", "Message is required"); isValid = false; } 
+        else { hideError("messageError"); }
+
+        const type = document.getElementById("type").value;
+        if (type === "") { showError("typeError", "Please select a type"); isValid = false; } 
+        else { hideError("typeError"); }
+
+        // CAPTCHA Validation
+        const captchaInput = document.getElementById("captchaAnswer").value.trim();
+        if (captchaInput === "" || parseInt(captchaInput) !== correctCaptchaAnswer) {
+            showError("captchaError", "Incorrect CAPTCHA answer");
+            isValid = false;
+        } else {
+            hideError("captchaError");
+        }
+
+        if (!isValid) return;
+
+        const formData = new FormData(this);
+        fetch('bamboo_submit.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            const feedbackMessage = document.getElementById("feedbackMessage");
+            if (data.success) {
+                feedbackMessage.style.color = "green";
+                feedbackMessage.innerText = "Enquiry submitted successfully!";
+                this.reset();
+                generateCaptcha(); // Refresh CAPTCHA
+            } else {
+                feedbackMessage.style.color = "red";
+                feedbackMessage.innerText = "Error submitting enquiry. Please try again.";
+            }
+            feedbackMessage.style.display = "block";
+            setTimeout(() => { document.getElementById("enquiryModal").style.display = "none"; location.reload(); }, 2000);
+        })
+        .catch(error => {
+            console.error("Error:", error);
+            alert("Something went wrong. Please try again.");
+        });
+    });
+
+    function showError(elementId, message) {
+        const errorElement = document.getElementById(elementId);
+        errorElement.innerText = message;
+        errorElement.style.display = "block";
+    }
+
+    function hideError(elementId) {
+        const errorElement = document.getElementById(elementId);
+        errorElement.style.display = "none";
+    }
+</script>
+
+
+
+<!-- end enquirty -->
 
 
 

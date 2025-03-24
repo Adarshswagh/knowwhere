@@ -11,7 +11,7 @@ include("config.php");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Knowhere</title>
 
     <link rel="stylesheet" href="css/knowabout.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -35,7 +35,7 @@ include("config.php");
     <div class="banner1" >
         <div class="banner-content">
             <h2>About Us</h2>
-            <p><a href="#" class="banner-bread">Home</a> &gt; <a href="#" class="banner-bread">About Us</a></p>
+            <p style="text-align:center;"><a href="#" class="banner-bread" >Home</a> &gt; <a href="#" class="banner-bread">About Us</a></p>
         </div>
     </div>
 </section>
@@ -43,36 +43,35 @@ include("config.php");
 <!--end banner  -->
 
 <!-- details -->
-<section class="about-section">
+<section class="about-section" id="about-section">
     <div class="content">
         <div class="text">
-            <h1>About Knowhere</h1>
-            <p>At Knowhere, we prioritize your unique needs, providing tailored solutions and fostering lasting client relationships. Our commitment to transparency, integrity, and professionalism has established us as one of the industry’s most trusted consultants.</p>
+            <h1 class="animate h1-animation">About Knowhere</h1>
+            <p class="animate p-animation">At Knowhere, we prioritize your unique needs, providing tailored solutions and fostering lasting client relationships. Our commitment to transparency, integrity, and professionalism has established us as one of the industry’s most trusted consultants.</p>
             <ul class="checklist">
                 <div class="list-left">
-                    <li><span>✔</span> Turning Dreams into Reality</li>
-                    <li><span>✔</span> Industry Leadership</li>
-                    <li><span>✔</span> Lasting Relationships</li>
-                    <li><span>✔</span> Client-Centered Approach</li>
+                    <li class="animate li-animation" style="--delay: 1;"><span>✔</span> Turning Dreams into Reality</li>
+                    <li class="animate li-animation" style="--delay: 2;"><span>✔</span> Industry Leadership</li>
+                    <li class="animate li-animation" style="--delay: 3;"><span>✔</span> Lasting Relationships</li>
+                    <li class="animate li-animation" style="--delay: 4;"><span>✔</span> Client-Centered Approach</li>
                 </div>
                 <div class="list-right">
-                    <li><span>✔</span> Transparency and Trust </li>
-                    <li><span>✔</span> Trusted Property Consultant</li>
-                    <li><span>✔</span> Core Values</li>
-                    <li><span>✔</span> Experienced Professionals</li>
+                    <li class="animate li-animation" style="--delay: 5;"><span>✔</span> Transparency and Trust </li>
+                    <li class="animate li-animation" style="--delay: 6;"><span>✔</span> Trusted Property Consultant</li>
+                    <li class="animate li-animation" style="--delay: 7;"><span>✔</span> Core Values</li>
+                    <li class="animate li-animation" style="--delay: 8;"><span>✔</span> Experienced Professionals</li>
                 </div>
             </ul>
         </div>
         <div class="images">
-            <div class="image">
-                <img src="./images/ab1.jpg" alt="Mansion Interior 1">
+            <div class="image animate img-animation">
+                <img src="./images/aboutmain.jpg" alt="Mansion Interior 1">
             </div>
-            <div class="image" style="margin-top:-50px;">
-                <img src="./images/ab2.jpg" alt="Mansion Interior 2">
-            </div>
+            
         </div>
     </div>
 </section>
+
 
  <!-- end details -->
 
@@ -97,48 +96,72 @@ include("config.php");
     </div>
 </section>
 
+
+<script>
+   document.addEventListener("DOMContentLoaded", function () {
+    const counters = document.querySelectorAll(".count");
+
+    counters.forEach(counter => {
+        const target = +counter.getAttribute("data-target"); // Target value from data attribute
+        const speed = 200; // Speed factor for animation
+
+        const updateCount = () => {
+            const current = +counter.innerText.replace("+", ""); // Remove "+" to handle number logic
+            const increment = Math.ceil(target / speed); // Increment value per step
+
+            if (current < target) {
+                counter.innerText = current + increment + "+"; // Append "+" during animation
+                setTimeout(updateCount, 10); // Recursively call to continue incrementing
+            } else {
+                counter.innerText = target + "+"; // Ensure "+" remains when animation completes
+            }
+        };
+
+        updateCount(); // Start the counter animation
+    });
+});
+
+
+    </script>
+
+
   <!-- end counter -->
 
   <!-- vision & mission -->
-   <section class="vision-mission-section">
+<section class="vision-mission-section">
     <div class="container1">
         <div class="section-header">
             <div class="section-title">
-                <h2>Vision & Mission</h2>
-            </div>
-            <div class="button-container">
-                <a href="#" class="btn1">Discover More</a>
+                <h2 class="animate-title">Vision & Mission</h2>
             </div>
         </div>
         <div class="content">
-            <div class="image-box"></div>
+            <div class="image-box animate-image"></div>
             <div class="text-boxes">
-                <div class="text-box">
-                    <h3>Vision</h3>
-                    <p>To be a leading real estate consultancy, known for exceptional client service, continuous innovation, and adapting to evolving client needs</p>
+                <div class="text-box animate-text">
+                    <h3 class="animate-h3">Vision</h3>
+                    <p class="animate-p">To be a leading real estate consultancy, known for exceptional client service, continuous innovation, and adapting to evolving client needs</p>
                     <ul>
-                        <li><span>&#10003;</span> Adaptability</li>
-                        <li><span>&#10003;</span> Value-Added Services</li>
-                        <li><span>&#10003;</span> Sustainability</li>
-                        <li><span>&#10003;</span> Innovative Solutions</li>
+                        <li class="animate-li"><span>&#10003;</span> Adaptability</li>
+                        <li class="animate-li"><span>&#10003;</span> Value-Added Services</li>
+                        <li class="animate-li"><span>&#10003;</span> Sustainability</li>
+                        <li class="animate-li"><span>&#10003;</span> Innovative Solutions</li>
                     </ul>
                 </div>
-                <div class="text-box">
-                    <h3>Mission</h3>
-                    <p>To empower clients with informed, personalized, and transparent property solutions tailored to their unique needs</p>
+                <div class="text-box animate-text">
+                    <h3 class="animate-h3">Mission</h3>
+                    <p class="animate-p">To empower clients with informed, personalized, and transparent property solutions tailored to their unique needs</p>
                     <ul>
-                        <li><span>&#10003;</span> Informed Decisions</li>
-                        <li><span>&#10003;</span> Personalized Service</li>
-                        <li><span>&#10003;</span> Transparency</li>
-                        <li><span>&#10003;</span> Client Empowerment </li>
+                        <li class="animate-li"><span>&#10003;</span> Informed Decisions</li>
+                        <li class="animate-li"><span>&#10003;</span> Personalized Service</li>
+                        <li class="animate-li"><span>&#10003;</span> Transparency</li>
+                        <li class="animate-li"><span>&#10003;</span> Client Empowerment </li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
 </section>
-
-
 
 
    <!-- end vision & mission -->
@@ -148,42 +171,31 @@ include("config.php");
    <section class="why-choose-us">
     <div class="container-whychoose">
         <div class="title">
-            <h2>Why Choose Us</h2>
-            <p>At Knowhere, we prioritize your unique needs, providing tailored solutions and fostering lasting client relationships. Our commitment to transparency, integrity, and professionalism has established us as one of the industry’s most trusted consultants.</p>
-            <a href="#" class="discover-more">Discover More</a>
+            <h2 class="animate-title">Why Choose Us</h2>
+            <p class="animate-paragraph">At Knowhere, we prioritize your unique needs, providing tailored solutions and fostering lasting client relationships. Our commitment to transparency, integrity, and professionalism has established us as one of the industry’s most trusted consultants.</p>
+            <a href="#" class="discover-more animate-anchor">Discover More</a>
         </div>
         <div class="features">
-            <div class="feature-box reliable">
-                <i class="fas fa-building" style="color: #A8894D;
-    size: 20px;
-    font-size: 25px;
-    padding: 10px;"></i> <!-- FontAwesome icon -->
+            <div class="feature-box reliable animate-feature">
+                <i class="fas fa-building icon-about"></i> <!-- FontAwesome icon -->
                 <h3>Reliable</h3>
             </div>
-            <div class="feature-box comfortable">
-                <i class="fas fa-cloud" style="color: #A8894D;
-    size: 20px;
-    font-size: 25px;
-    padding: 10px;"></i> <!-- FontAwesome icon -->
+            <div class="feature-box comfortable animate-feature">
+                <i class="fas fa-cloud icon-about"></i> <!-- FontAwesome icon -->
                 <h3>Comfortable</h3>
             </div>
-            <div class="feature-box guarantee">
-                <i class="fas fa-thumbs-up" style="color: #A8894D;
-    size: 20px;
-    font-size: 25px;
-    padding: 10px;"></i> <!-- FontAwesome icon -->
+            <div class="feature-box guarantee animate-feature">
+                <i class="fas fa-thumbs-up icon-about"></i> <!-- FontAwesome icon -->
                 <h3>Guarantee</h3>
             </div>
-            <div class="feature-box affordable">
-                <i class="fas fa-tag" style="color: #A8894D;
-    size: 20px;
-    font-size: 25px;
-    padding: 10px;"></i> <!-- FontAwesome icon -->
+            <div class="feature-box affordable animate-feature">
+                <i class="fas fa-tag icon-about"></i> <!-- FontAwesome icon -->
                 <h3>Affordable</h3>
             </div>
         </div>
     </div>
 </section>
+
 
     <!-- why choose us -->
 
@@ -192,63 +204,63 @@ include("config.php");
 
 <section class="project-section">
     <div class="content-wrapper">
-        <h2 class="section-title">Expert Team Behind knowhere</h2>
-        <p class="section-description">
+        <h2 class="section-title animate-title">Expert Team Behind Knowhere</h2>
+        <p class="section-description animate-paragraph">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nibh eu ullamcorper luctus, lacus ex consequat ipsum, ultricies interdum ex ante.
         </p>
     </div>
-
 </section>
-<section class="custom-team-section">
-        <div class="custom-container">
-            
-            <div class="custom-team-grid">
-                <div class="custom-team-card">
-                    <img src="./images/girl.jpg" alt="Sarah Jhon" class="custom-team-img">
-                    <h3 class="custom-team-name">Sarah Jhon</h3>
-                    <p class="custom-team-role">Mansion Team</p>
-                    <div class="custom-social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="custom-team-card">
-                    <img src="./images/boy.jpg" alt="Mike Morales" class="custom-team-img">
-                    <h3 class="custom-team-name">Mike Morales</h3>
-                    <p class="custom-team-role">Mansion Team</p>
-                    <div class="custom-social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="custom-team-card">
-                    <img src="./images/girl.jpg" alt="Steve Irwin" class="custom-team-img">
-                    <h3 class="custom-team-name">Steve Irwin</h3>
-                    <p class="custom-team-role">Mansion Team</p>
-                    <div class="custom-social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="custom-team-card">
-                    <img src="./images/girl.jpg" alt="Steve Irwin" class="custom-team-img">
-                    <h3 class="custom-team-name">Steve Irwin</h3>
-                    <p class="custom-team-role">Mansion Team</p>
-                    <div class="custom-social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
 
+
+<section class="custom-team-section">
+    <div class="custom-container">
+        <div class="custom-team-grid">
+            <div class="custom-team-card">
+                <img src="./images/girl.jpg" alt="Sarah Jhon" class="custom-team-img">
+                <h3 class="custom-team-name">Sarah Jhon</h3>
+                <p class="custom-team-role">Mansion Team</p>
+                <div class="custom-social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="custom-team-card">
+                <img src="./images/boy.jpg" alt="Mike Morales" class="custom-team-img">
+                <h3 class="custom-team-name">Mike Morales</h3>
+                <p class="custom-team-role">Mansion Team</p>
+                <div class="custom-social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="custom-team-card">
+                <img src="./images/girl.jpg" alt="Steve Irwin" class="custom-team-img">
+                <h3 class="custom-team-name">Steve Irwin</h3>
+                <p class="custom-team-role">Mansion Team</p>
+                <div class="custom-social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="custom-team-card">
+                <img src="./images/girl.jpg" alt="Steve Irwin" class="custom-team-img">
+                <h3 class="custom-team-name">Steve Irwin</h3>
+                <p class="custom-team-role">Mansion Team</p>
+                <div class="custom-social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="custom-team-section">
+
+<section class="custom-team-section">
         <div class="custom-container">
             
             <div class="custom-team-grid">
@@ -304,9 +316,9 @@ include("config.php");
     <div class="call-to-action">
         <div class="hero-section">
             <div class="overlay">
-                <h2>Your Dream Home Awaits</h2>
-                <p>Thank you for choosing Knowhere. Let us turn your real estate dreams into reality.</p>
-                <a href="#contact" class="btn">Contact Us</a>
+                <h2 class="call-to-cation-h2">Your Gateway to Perfect Spaces</h2>
+                <p style ="text-align:center;">Step into a world of opportunities with properties that inspire</p>
+                <a href="contact.php" class="btn">Contact Us</a>
             </div>
         </div>
     </div>
@@ -353,6 +365,102 @@ include("config.php");
 
 </script>
   <!-- end call to action -->
+
+
+<script>
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("in-view");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            { threshold: 0.2 }
+        );
+
+        // Select elements to animate
+        const animatables = document.querySelectorAll(".animate");
+        animatables.forEach((el) => observer.observe(el));
+    });
+
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const options = {
+        threshold: 0.2, // Trigger when 20% of the element is visible
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("active");
+            }
+        });
+    }, options);
+
+    // Select all elements with animation classes
+    const animateElements = document.querySelectorAll(
+        ".animate-title, .animate-image, .animate-text, .animate-h3, .animate-p, .animate-li"
+    );
+
+    animateElements.forEach((el) => observer.observe(el));
+});
+
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const options = {
+        threshold: 0.2, // Trigger when 20% of the element is visible
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("active");
+            }
+        });
+    }, options);
+
+    // Select all elements to animate
+    const animateElements = document.querySelectorAll(
+        ".animate-title, .animate-paragraph, .animate-anchor, .animate-feature"
+    );
+
+    animateElements.forEach((el) => observer.observe(el));
+    });
+
+</script>    
+
+<script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const teamCards = document.querySelectorAll(".custom-team-card");
+            const options = {
+                threshold: 0.1, // Trigger when 10% of the section is visible
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        teamCards.forEach((card, index) => {
+                            setTimeout(() => {
+                                card.classList.add("fade-in");
+                            }, index * 500); // 5 seconds delay between cards
+                        });
+                        observer.unobserve(entry.target); // Stop observing once triggered
+                    }
+                });
+            }, options);
+
+            observer.observe(document.querySelector(".custom-team-section"));
+        });
+
+</script>
 
   <!-- footer -->
 

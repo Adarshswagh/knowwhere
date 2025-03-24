@@ -27,6 +27,8 @@ if(isset($_POST['add']))
 	$fsi=$_POST['fsi'];
 	$type=$_POST['type'];
 	$floor=$_POST['floor'];
+	$city=$_POST['city'];
+	$developer=$_POST['developer'];
 
 
 	$image1=$_FILES['image1']['name'];
@@ -55,8 +57,8 @@ if(isset($_POST['add']))
 
 
 // Insert into residential_projects table
-$sql = "INSERT INTO plotting_projects (`project_title`, `project_description`, `project_location`, `plot_area`, `plot_size`, `price`, `psf`, `possesion`, `usp`, `roi`, `status`, `feature`, `image1`, `image2`, `image3`, `image4`, `image5`, `featured`, `fsi`, `type`, `floor`)
-        VALUES ('$project_title', '$project_description', '$project_location', '$plot_area', '$plot_size', '$price', '$psf', '$possesion', '$usp', '$roi', '$status', '$feature', '$image1', '$image2', '$image3', '$image4', '$image5', '$featured', '$fsi', '$type', '$floor')";
+$sql = "INSERT INTO plotting_projects (`project_title`, `project_description`, `project_location`, `plot_area`, `plot_size`, `price`, `psf`, `possesion`, `usp`, `roi`, `status`, `feature`, `image1`, `image2`, `image3`, `image4`, `image5`, `featured`, `fsi`, `type`, `floor`, city, developer)
+        VALUES ('$project_title', '$project_description', '$project_location', '$plot_area', '$plot_size', '$price', '$psf', '$possesion', '$usp', '$roi', '$status', '$feature', '$image1', '$image2', '$image3', '$image4', '$image5', '$featured', '$fsi', '$type', '$floor', '$city', '$developer')";
 
 
 $result = mysqli_query($con, $sql);
@@ -157,11 +159,19 @@ if ($result) {
 											<div class="col-xl-6">
 												
 												<div class="form-group row">
+													<label class="col-lg-3 col-form-label">Project Developer</label>
+													<div class="col-lg-9">
+														<input type="text" class="form-control" name="developer"      placeholder="Enter Project Developer">
+													</div>
+												</div>
+
+												<div class="form-group row">
 													<label class="col-lg-3 col-form-label">Address</label>
 													<div class="col-lg-9">
 														<input type="text" class="form-control" name="project_location"      placeholder="Enter Address">
 													</div>
 												</div>
+												
 												<div class="form-group row">
 													<label class="col-lg-3 col-form-label">Plot Size</label>
 													<div class="col-lg-9">
@@ -211,6 +221,12 @@ if ($result) {
 													</div>
 												</div>
 												<div class="form-group row">
+													<label class="col-lg-3 col-form-label">City</label>
+													<div class="col-lg-9">
+														<input type="text" class="form-control" name="city"      placeholder="Enter City">
+													</div>
+												</div>
+												<div class="form-group row">
 													<label class="col-lg-3 col-form-label">Price</label>
 													<div class="col-lg-9">
 														<input type="text" class="form-control" name="price"      placeholder="Enter Total Units">
@@ -250,13 +266,12 @@ if ($result) {
 
 										
 										
-										<div class="form-group row">
+										<!-- <div class="form-group row">
 											<label class="col-lg-2 col-form-label">Feature</label>
 											<div class="col-lg-9">
 											<p class="alert alert-danger">* Important Please Do Not Remove Below Content Only Change <b>Yes</b> Or <b>No</b> or Details and Do Not Add More Details</p>
 											
 											<textarea class="tinymce form-control" name="feature" rows="10" cols="30">
-												<!---feature area start--->
 												<div class="col-md-4">
 														<ul>
 														<li class="mb-3"><span class="text-secondary font-weight-bold">GYM : </span>Yes</li>
@@ -275,10 +290,9 @@ if ($result) {
 														</ul>
 													</div>
 													
-												<!---feature area end---->
 											</textarea>
 											</div>
-										</div>
+										</div> -->
 												
 										<h4 class="card-title">Image & Status</h4>
 										<div class="row">

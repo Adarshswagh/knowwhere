@@ -1,237 +1,219 @@
-<?php 
-session_start();
-include("config.php");
-
-// Get search parameters
-$location = $_GET['location'] ?? '';
-$projectType = $_GET['project_type'] ?? '';
-
-// Determine the table based on the selected project type
-$table = '';
-switch ($projectType) {
-    case 'residential':
-        $table = 'residential_projects';
-        break;
-    case 'commercial':
-        $table = 'commercial_projects';
-        break;
-    case 'plotting':
-        $table = 'plotting_projects';
-        break;
-}
-
-// Start HTML structure
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Property Listings</title>
-    <link rel="stylesheet" href="css/prolist.css"> <!-- Link to CSS file -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Boxes</title>
+  <style>
+    /* General styles */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f4f4f9;
+    }
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Lexend&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js" crossorigin="anonymous"></script>'
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    .services-section {
+      display: flex;
+      max-width: 1200px;
+      gap: 20px;
+    }
+
+    .left-content {
+      flex: 1;
+    }
+
+    .left-content h4 {
+      font-size: 14px;
+      color: #007bff;
+      margin-bottom: 10px;
+    }
+
+    .left-content h2 {
+      font-size: 28px;
+      margin: 10px 0;
+    }
+
+    .left-content p {
+      font-size: 16px;
+      color: #555;
+    }
+
+    .left-content img {
+      margin-top: 20px;
+      max-width: 100%;
+    }
+
+    .right-content {
+      flex: 1;
+    }
+
+    /* Box container styles */
+    .box-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* Two columns */
+      gap: 10px;
+      position: relative;
+    }
+
+    .box {
+      background-color: #04293a;
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.4s ease;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+    }
+
+    .box h3 {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    .box p {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.3s ease;
+    }
+
+    .box.active p {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Default box size */
+    .box {
+      width: 100%;
+      height: 150px;
+    }
+
+    /* Custom expanded positions */
+    .box.active {
+      z-index: 2;
+    }
+
+    .box#box1.active {
+      transform: translate(-50%, -50%);
+      width: 300px;
+      height: 300px;
+      top: 0;
+      left: 0;
+    }
+
+    .box#box2.active {
+      transform: translate(50%, -50%);
+      width: 300px;
+      height: 300px;
+      top: 0;
+      right: 0;
+    }
+
+    .box#box3.active {
+      transform: translate(-50%, 50%);
+      width: 300px;
+      height: 300px;
+      bottom: 0;
+      left: 0;
+    }
+
+    .box#box4.active {
+      transform: translate(50%, 50%);
+      width: 300px;
+      height: 300px;
+      bottom: 0;
+      right: 0;
+    }
+
+    /* Hover Effects for Professional Look */
+    .box:hover {
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .box-container {
+        grid-template-columns: 1fr; /* Stack boxes in one column */
+      }
+
+      .box {
+        height: 100px;
+      }
+
+      .box.active {
+        width: 100%;
+        height: 250px;
+        transform: none;
+      }
+    }
+  </style>
 </head>
 <body>
-
-
-<!-- navbar -->
-<?php include("include/header.php");?>
-<!-- end navbar -->
-
-<!-- banner -->
-<section id="banner-main">
-    <div class="banner">
-        <div class="banner-content">
-            <h2>Search Property List</h2>
-            <p class="banner-bread"><a href="#" class="banner-bread">Home</a> &gt; <a href="#" class="banner-bread">Property List   </a></p>
-        </div>
+  <section class="services-section">
+    <div class="left-content">
+      <h4>OUR SERVICES</h4>
+      <h2>Solutions Tailored For Your Success</h2>
+      <p>
+        Empowering your business with tailored technology solutions designed to
+        drive growth, streamline operations, and foster innovation. Discover
+        how our expertise in IT strategy, digital transformation, cloud
+        services, and enterprise solutions can propel you forward.
+      </p>
+      <img src="placeholder.png" alt="Illustration">
     </div>
-</section>
-<!--end banner -->
-
-<!-- pro list -->
-
-<section id="properties">
-    <div class="container" style="max-width:1450px;">
-        <!-- Left Section (Property Listings) -->
-        <div class="left-section">
-            <div class="row">
-            <?php
-                if ($table) {
-                    $stmt = $con->prepare("SELECT * FROM $table WHERE project_location LIKE ?");
-                    $searchTerm = "%$location%";
-                    $stmt->bind_param("s", $searchTerm);
-                    $stmt->execute();
-                    $result = $stmt->get_result();
-
-                    while ($row = $result->fetch_assoc()) {
-                        $imagePath = "admin/property/" . $row['image1'];
-                        $projectTitle = htmlspecialchars($row['project_title']);
-                        $projectLocation = htmlspecialchars($row['project_location']);
-                        $projectArea = htmlspecialchars($row['project_area']);
-                       
-
-                        
-                        
-                        // Only set these if they exist
-                        $TotalTowers = isset($row['total_towers']) ? htmlspecialchars($row['total_towers']) : "N/A";
-                        $TotalUnits = isset($row['total_units']) ? htmlspecialchars($row['total_units']) : "N/A";
-                        $projectPrice = isset($row['price']) ? htmlspecialchars($row['price']) : "N/A";
-                        $projectTypology = isset($row['typology']) ? htmlspecialchars($row['typology']) : "N/A";
-                        $plotSize = isset($row['plot_size']) ? htmlspecialchars($row['plot_size']) : "N/A";
-
-
-
-
-                        $officeSpace = isset($row['office_space']) ? htmlspecialchars($row['office_space']) : "N/A";
-                        $parking = isset($row['parking']) ? htmlspecialchars($row['parking']) : "N/A";
-                        $warehouseSize = isset($row['warehouse_size']) ? htmlspecialchars($row['warehouse_size']) : "N/A";
-                        $loadingDocks = isset($row['loading_docks']) ? htmlspecialchars($row['loading_docks']) : "N/A";
-
-                        // Determine the project type layout
-                        if ($projectType == "residential") { ?>
-                            <!-- Residential Project Card Layout -->
-                            <div class="col-md-6 col-sm-10">
-                                <div class="property-card residential-card">
-                                    <img src="<?php echo $imagePath; ?>" alt="Residential Property">
-                                    <div class="promo-badge">Residential Project</div>
-                                    <div class="property-info">
-                                        <h3><?php echo $projectTitle; ?></h3>
-                                        <div class="property-meta">
-                                            <span class="location card-location"><i class="fas fa-map-marker-alt"></i> <?php echo $projectLocation; ?></span>
-                                            <span class="land-area card-location"><i class="fas fa-vector-square"></i> <?php echo $projectArea; ?></span>
-                                            <span class="land-area card-location"><i class="fa-solid fa-building" style="color: #a8894d;"></i> <?php echo $TotalTowers; ?> Towers</span>   
-                                        </div>
-                                        <div class="property-meta">
-                                            <span class="total-units card-location1">Total Units: <?php echo $TotalUnits; ?></span>
-                                        </div>
-                                        <div class="button-container">
-                                            <a href="Prodetail.php?pid=<?php echo $row['pid']; ?>" class="view-more-btn">Know More</a>
-                                            <a href="https://wa.me/1234567890" target="_blank" class="btn-icon whatsapp-btn">
-                                                <i class="fab fa-whatsapp"></i>
-                                            </a>
-                                            <a href="tel:+1234567890" class="btn-icon call-btn">
-                                                <i class="fas fa-phone"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        <?php } elseif ($projectType == "commercial") { ?>
-                            <!-- Commercial Project Card Layout -->
-                            <div class="col-md-6 col-sm-10">
-                                <div class="property-card commercial-card">
-                                    <img src="<?php echo $imagePath; ?>" alt="Commercial Property">
-                                    <div class="promo-badge">Commercial Project</div>
-                                    <div class="property-info">
-                                        <h3><?php echo $projectTitle; ?></h3>
-                                        <div class="property-meta">
-                                            <span class="location card-location"><i class="fa-solid fa-indian-rupee-sign" style="color: #a8894d;"></i> <?php echo $projectPrice;?></span>
-                                            <span class="location card-location"><i class="fas fa-map-marker-alt"></i> <?php echo $projectLocation;?></span>
-                                            <span class="land-area card-location"><i class="fas fa-vector-square"></i> <?php echo $projectArea; ?></span>
-
-                                            
-                                        </div>
-                                        <div class="property-meta">
-                                            <span class="total-units card-location1">Typology : <?php echo $projectTypology; ?></span>
-                                            
-                                        </div>    
-                                        <div class="button-container">
-                                            <a href="Prodetail.php?pid=<?php echo $row['pid']; ?>" class="view-more-btn">Know More</a>
-                                            <a href="https://wa.me/1234567890" target="_blank" class="btn-icon whatsapp-btn">
-                                                <i class="fab fa-whatsapp"></i>
-                                            </a>
-                                            <a href="tel:+1234567890" class="btn-icon call-btn">
-                                                <i class="fas fa-phone"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        <?php } elseif ($projectType == "plotting") { ?>
-                            <!-- Industrial Project Card Layout -->
-                            <div class="col-md-6 col-sm-10">
-                                <div class="property-card industrial-card">
-                                    <img src="<?php echo $imagePath; ?>" alt="Industrial Property">
-                                    <div class="property-info">
-                                        <h3><?php echo $projectTitle; ?></h3>
-                                        <div class="property-meta">
-                                            <span class="location card-location"><i class="fa-solid fa-indian-rupee-sign" style="color: #a8894d;"></i> <?php echo $projectPrice;?></span>
-                                            <span class="location card-location"><i class="fas fa-map-marker-alt"></i> <?php echo $projectLocation;?></span>
-                                            <span class="land-area card-location"><i class="fas fa-vector-square"></i> <?php echo $plotSize; ?></span>
-                                        </div>
-                                        <div class="property-meta">
-                                            <span class="total-units card-location1">Land Area : <?php echo $projectArea; ?></span>
-                                            
-                                        </div> 
-                                        <div class="button-container">
-                                            <a href="plotdetail.php?pid=<?php echo $row['pid']; ?>" class="view-more-btn">Know More</a>
-                                            <a href="https://wa.me/1234567890" target="_blank" class="btn-icon whatsapp-btn">
-                                                <i class="fab fa-whatsapp"></i>
-                                            </a>
-                                            <a href="tel:+1234567890" class="btn-icon call-btn">
-                                                <i class="fas fa-phone"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        <?php }
-                    }
-                } else {
-                    echo "<p>No project type selected.</p>";
-                }
-                $con->close();
-                ?>
-
-            </div>
+    <div class="right-content">
+      <div class="box-container">
+        <div class="box" id="box1">
+          <h3>IT Strategy Development</h3>
+          <p>
+            We work closely with you to develop a robust IT strategy that
+            aligns with your business objectives.
+          </p>
         </div>
-
-        <!-- Right Section (Sticky Contact Form) -->
-        <div class="right-section">
-            <div class="sticky">
-                    <div class="form-container">
-                        <h3 class="form-heading">Connect with Us for Tailored Solutions!</h3>
-                            <form style="text-align:center">
-                                <div class="input-group" style="width:102%">
-                                    <input type="text" name="first-name" placeholder="First Name" required>
-                                    
-                                </div>
-                                <input type="email" name="email" placeholder="Email" required class="email-group">
-                                <textarea name="message" placeholder="Message" required></textarea>
-                                <button type="submit" style="margin-top:30px">SEND MESSAGE</button>
-                            </form>
-                    </div>
-            </div>
+        <div class="box" id="box2">
+          <h3>Enterprise Solutions</h3>
+          <p>
+            Our enterprise solutions are designed to optimize your operational efficiency.
+          </p>
         </div>
+        <div class="box" id="box3">
+          <h3>Digital Transformation Consulting</h3>
+          <p>
+            Transform your business processes with cutting-edge digital tools.
+          </p>
+        </div>
+        <div class="box" id="box4">
+          <h3>Cloud Strategy and Implementation</h3>
+          <p>
+            Achieve scalability and flexibility with our cloud services expertise.
+          </p>
+        </div>
+      </div>
     </div>
-</section>
-<!-- end pro list -->
+  </section>
+  <script>
+    // JavaScript to handle the box click behavior
+    const boxes = document.querySelectorAll('.box');
 
-<!-- call to action -->
-<section id="main-call">
-    <div class="call-to-action">
-        <div class="hero-section">
-            <div class="overlay">
-                <h2>Your Dream Home Awaits</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nibh eu ullam corper luctus, lacus ex consequat ipsum, ultricies interdum ex ante.</p>
-                <a href="#contact" class="btn">Contact Us</a>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- end call to action -->
-
-<!-- footer -->
-<?php include("include/footer.php");?>
-<!-- end footer -->
+    boxes.forEach((box) => {
+      box.addEventListener('click', () => {
+        // Remove 'active' class from all boxes
+        boxes.forEach((b) => b.classList.remove('active'));
+        // Add 'active' class to the clicked box
+        box.classList.add('active');
+      });
+    });
+  </script>
 </body>
 </html>

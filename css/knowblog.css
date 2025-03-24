@@ -1,14 +1,13 @@
 /* banner */
 /* Banner styling */
-
-#banner-blog1{
+#banner-blog1 {
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 15px;
     background-color: #050f17;
     padding-bottom: 20px;
-
 }
+
 .banner-blog {
     height: 400px; /* Ensure height is set */
     background-size: cover; /* Cover the entire area */
@@ -17,7 +16,7 @@
     align-items: center; /* Vertically center content */
     justify-content: center; /* Horizontally center content */
     color: #FFFFFF; /* Set text color to pure white */
-    background-image: url('../images/contact.jpg');
+    background-image: url('../images/banner/5.png');
     background-color: #000; /* Fallback color if image fails to load */
     position: relative; /* Position relative for overlay */
 }
@@ -30,7 +29,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for better contrast */
+    background-color: rgba(0, 0, 0, 0.7); /* Dark overlay for better contrast */
     z-index: 1;
 }
 
@@ -89,7 +88,6 @@
     }
 }
 
-
 /* end banner */
 
 /* blog */
@@ -99,7 +97,6 @@
 }
 
 .container-blog {
-    
     margin: 0 auto;
     padding: 20px;
     background-color: #050f17;
@@ -108,6 +105,7 @@
 .content {
     display: flex;
     gap: 50px;
+    justify-content: center; /* Center content horizontally */
     margin-top: 50px;
 }
 
@@ -135,7 +133,7 @@
     height: auto;
     max-height: 1500px;
     margin-bottom: 10px;
-    border-radius: 8px;
+    /* border-radius: 8px; */
 }
 
 .blog-link {
@@ -148,16 +146,18 @@
 }
 
 .blog-post h2 {
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 400;
     line-height: 1.5em;
+    color: #a8894d;
     margin-bottom: 5px;
     font-family: "Lexend", Sans-serif;
 }
 
 .blog-post p {
-    font-size: 14px;
-    font-weight: 300;
+    font-size: 15px;
+    color: #e8e8e8;
+    font-weight: 100;
     line-height: 1.7em;
     font-family: "Lexend", sans-serif;
 }
@@ -174,11 +174,12 @@
 }
 
 .read-link:hover {
-    color: #fff;
+    color: #ffaa05;
+    text-decoration: none;
 }
 
 .right-sidebar {
-    flex: 1;
+    flex: 1.5;
     position: relative;
 }
 
@@ -242,6 +243,18 @@ button:hover {
     background-color: #fff;
 }
 
+.created-at {
+    color: #fff;
+}
+
+.para-blog {
+    color: white !important;
+}
+
+.main-content {
+    color: #f1f0f0;
+}
+
 /* Responsive Design */
 /* Tablet view adjustments */
 @media (max-width: 921px) {
@@ -251,76 +264,25 @@ button:hover {
     }
 
     .right-sidebar {
-        width: 100%;
-        order: 2; /* Place the sidebar below the blog list on smaller screens */
-    }
-
-    .blog-list {
-        width: 100%;
-    }
-
-    .blog-heading {
-        font-size: 40px;
-        text-align: center;
+        width: 100%; /* Adjust width of right sidebar for smaller screens */
     }
 }
 
 /* Mobile view adjustments */
 @media (max-width: 768px) {
-    .blog-heading {
-        font-size: 25px;
+    .content {
+        flex-direction: column;
+        gap: 20px;
     }
 
-    .blog-post h2 {
-        font-size: 18px;
-    }
-
-    .blog-post p {
-        font-size: 13px;
-    }
-
-    .sticky-box h3 {
-        font-size: 18px;
+    .right-sidebar {
+        width: 100%; /* Adjust width of right sidebar for mobile */
     }
 
     .sticky-box {
-        position: static; /* Remove sticky effect for smaller screens */
-        margin-top: 20px;
-    }
-    
-    .form-container {
-        padding: 15px;
-        max-width: 100%;
-    }
-
-    button {
-        width: 100%; /* Full-width button on mobile */
-    }
-}
-
-@media (max-width: 576px) {
-    .blog-post h2 {
-        font-size: 16px;
-    }
-
-    .blog-post p {
-        font-size: 12px;
-    }
-
-    .sticky-box h3 {
-        font-size: 16px;
-    }
-
-    .form-container input,
-    .form-container textarea {
-        padding: 10px;
-    }
-
-    .form-container button {
-        padding: 12px;
-        font-size: 1rem;
+        position: relative;
+        top: auto;
     }
 }
 
 
-/*end blog   */

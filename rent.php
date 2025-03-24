@@ -165,6 +165,138 @@ button:hover {
 
 
 /*end  get in touch */
+
+
+
+/* business loan */
+
+/* Default styles (for desktop view) */
+.business-loan {
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    background-color: #050f17;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* border-radius: 8px; */
+    overflow: hidden;
+    width: 100%;
+    margin: 20px;
+    padding: 50px 100px;
+    padding-top: 100px;
+}
+
+.image-container {
+    flex: 1;
+}
+
+.image-container img {
+    width: 80%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.content h2 {
+    font-size: 40px;
+    color: #A8894D;
+    margin: 0 0 10px;
+}
+
+
+
+button {
+    padding: 12px 24px;
+    background-color: #ff9900;
+    color: #ffffff;
+    border: none;
+    /* border-radius: 4px; */
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* button:hover {
+    background-color: #e68a00;
+} */
+
+/* Responsive Styles for Tablet */
+@media (max-width: 1024px) {
+    .business-loan {
+        flex-direction: column;
+        padding: 30px 50px;
+        text-align: center;
+    }
+
+    .image-container {
+        width: 100%;
+        height: 300px;
+        padding:20px;
+    }
+
+    .content h2 {
+        font-size: 30px;
+    }
+
+    .content p {
+        font-size: 14px;
+    }
+
+    .checklist {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .checklist .list-left, .checklist .list-right {
+        display: inline-block;
+        text-align: left;
+        color:#fff;
+    }
+}
+
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+    .business-loan {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .image-container {
+        width: 100%;
+        height: 250px;
+    }
+
+    .content h2 {
+        font-size: 24px;
+    }
+
+    .content p {
+        font-size: 13px;
+    }
+
+    .checklist {
+        display: block;
+        text-align: left;
+        padding-left: 20;
+    }
+
+    .checklist .list-left, .checklist .list-right {
+        display: block;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+    }
+}
+
+
 </style>
 <body>
 
@@ -186,19 +318,37 @@ button:hover {
 </section>
 
 
-<div class="client-success-section">
-  <img src="images/blog2.jpg" alt="Meeting with clients" class="client-success-image">
-  <div class="client-success-content">
-    <h2><span style=" color: #A8894D;
-    font-family: 'Italiana', Sans-serif;
-    font-size: 50px;
-    font-weight: 400;
-    line-height: 1.3em;">Rent Agreement</span></h2>
-    <p>
-    A rent agreement is a legally binding document that outlines the terms and conditions of the rental arrangement between the landlord and the tenant. Tenant details, property address, mode of payment, security deposit etc., are some key contents of the agreement. A rental agreement is drafted on a stamp paper and can be prepared for residential and commercial property. These agreements are also called rent deeds or lease deeds. Typically, they are drafted for 11 months to avoid the legal registration.
-    </p>
-  </div>
-</div>
+<!--  rent page about  -->
+
+<section class="business-loan" style = "background-color: #050f17;">
+        <div class="image-container" style="height:400px;">
+            <img src="images/rent.jpg" alt="People in a business setting">
+        </div>
+        <div class="content">
+            <h2 style ="color: #A8894D;
+            font-size: 50px;
+            font-family: 'Italiana', Sans-serif;
+            font-weight: 400;
+            line-height: 1.3em;">About Rent Agreement</h2>
+            <p>Rent Agreement Just as a well-designed bathroom offers comfort and style, a meticulously crafted rent agreement provides security and clarity for both parties. This legally binding document outlines the essential terms of a rental arrangement, including:</p>
+            <ul class="checklist" style="font-size:16px;color:#fff;padding-left:20px;">
+                <div class="list-left">
+                    <li> Tenant and landlord information</li>
+                    <li> Property details</li>
+                    <li> Payment terms and security deposit</li>
+                    <li> Tenancy duration</li>
+                </div>
+                
+            </ul>
+            <p>Typically drafted on stamp paper, these agreements (also called rent or lease deeds) cover both residential and commercial properties. They're often set for 11 months to avoid legal registration requirements.</p>
+            <p>A comprehensive rent agreement forms the foundation for a harmonious landlord-tenant relationship, ensuring a smooth and pleasant rental experience for all involved.</p>
+            <button id="consultationButton" class="home-loan-button" >APPLY FOR RENT AGREEMENT →</button>
+
+        </div>
+</section>
+
+
+<!-- end rent page aboutb -->
 
 
         
@@ -246,10 +396,15 @@ button:hover {
 
 <!-- para -->
 
-<div class="rent-agreement-section" style="padding-bottom:100px;">
-  <h3 style="font-size: 2.0em;">Why is a Rent Agreement Necessary?</h3>
+<div class="rent-agreement-section" style="">
+  <h3 style="font-size: 2.0em;">Why is a rent agreement necessary?</h3>
   <p>
-    It is always a wise decision to document any arrangement between two parties. Mere verbal contract has no legal value. However, a written rent agreement is admissible in court and can be used in case of any possible disputes. In essence, it is a form of establishing transparency and accountability in the landlord-tenant relationship. It plays a critical role in ensuring that no party is exploited in any form by the other.
+  A registered rent agreement is vital for protecting property, providing legal validation for rental arrangements. This document is often required for official and financial transactions, making it essential for both landlords and tenants.
+  </p>
+  <p>
+  According to the Registration Act of 1908, leases longer than 11 months must be registered, while those under 11 months can be notarized.  </p>
+  <p>
+  To complete registration, both parties must be present at the sub-registrar’s office. If one party cannot attend, they can authorize the other to sign on their behalf using a Power of Attorney, allowing the attorney to finalize the agreement.
   </p>
 
   <h3 style="font-size: 2.0em;">Registered Rent Agreement</h3>
@@ -258,8 +413,7 @@ button:hover {
   </p>
   <h3 style="font-size: 2.0em;">Terms & Conditions for Rent Agreement</h3>
   <p>
-  An online rent agreement consists of the various terms and conditions that govern the tenant's occupancy of the property during the specified period of time. Some of the key elements of the rent agreement format are listed below: Rent Amount: The monthly amount to be paid by the tenant to the landlord. Time Period: The duration for which the existing agreement applies. Deposits: Any and every form of deposit required, or made, is clearly highlighted in this section. Usage: The agreement also highlights the purpose for which the property should be used (residential, commercial, etc.) Insurance: Commercial properties typically elaborate on the tenant’s contribution to the property’s insurance, if any. Other terms: These include the manner in which any monetary returns or adjustments shall be made. It also highlights how repairs, maintenance, bill payments, parking space use, and other details will be dealt with. Termination policy: All possible termination scenarios, such as the completion of the contract and premature termination, should be duly elaborated upon in the document. Signature Clause: The agreement should be signed by the landlord and the tenant to indicate mutual acceptance.
-  </p>
+  A rent agreement is a crucial legal document that outlines the terms and conditions governing the relationship between a landlord and tenant. It typically includes essential details such as the monthly rent amount, the duration of the lease, and any security deposits required. The agreement specifies the intended use of the property, whether residential or commercial, and may include insurance requirements for commercial properties. Other important elements often covered are maintenance responsibilities, utility payments, and parking arrangements. The document also outlines the procedures for terminating the agreement, including both natural expiration and early termination scenarios. To ensure mutual understanding and legal binding, the agreement concludes with a signature clause for both parties. By clearly defining these terms, a well-crafted rent agreement helps prevent misunderstandings and provides a solid foundation for a harmonious landlord-tenant relationship throughout the duration of the lease.  </p>
 </div>
 
 
@@ -269,11 +423,11 @@ button:hover {
     font-family: 'Italiana', Sans-serif;
     font-size: 50px;
     font-weight: 400;
-    line-height: 1.3em; text-align:center; padding-top:50px;">Key Benefits of a Rent Agreement</h2>
+    line-height: 1.3em; text-align:center; padding-top:0px;">Key Benefits of a Rent Agreement</h2>
 
 <div class="card-grid">
     
-    <div class="card">
+    <div class="card1">
         <!-- <div class="arrow-icon">↗</div> -->
         <div class="card-icon"><img src="images/compliant.png" alt="Icon"></div>
         <h3 class="card-title"style = "padding-top:15px;">Legal Safeguard</h3>
@@ -282,7 +436,7 @@ button:hover {
         <!-- <a href="#" class="card-link">Read More</a> -->
     </div>
     
-    <div class="card">
+    <div class="card1">
         <!-- <div class="arrow-icon">↗</div> -->
         <div class="card-icon"><img src="images/terms-and-conditions.png" alt="Icon"></div>
         <h3 class="card-title" style = "padding-top:15px;">Defined Terms</h3>
@@ -290,7 +444,7 @@ button:hover {
         <!-- <a href="#" class="card-link">Read More</a> -->
     </div>
     
-    <div class="card featured">
+    <div class="card1 featured">
         <!-- <div class="arrow-icon">↗</div> -->
         <div class="card-icon"><img src="images/house.png" alt="Icon"></div>
         <h3 class="card-title" style = "padding-top:15px;">Rental Period</h3>
@@ -298,11 +452,12 @@ button:hover {
         <!-- <a href="#" class="card-link">Read More</a> -->
     </div>
     
-    <div class="card">
+    <div class="card1">
         <!-- <div class="arrow-icon">↗</div> -->
         <div class="card-icon"><img src="images/online-order.png" alt="Icon"></div>
         <h3 class="card-title" style = "padding-top:15px;">Easy Online Process</h3>
-        <p class="card-description">Services like Square Yards enable quick, digital agreements.</p>
+        <p class="card-description">Services like knohwere+
+         enable quick, digital agreements.</p>
         <!-- <a href="#" class="card-link">Read More</a> -->
     </div>
 
@@ -323,39 +478,79 @@ button:hover {
             <div class="faq-items">
                 <div class="faq-item">
                     <div class="faq-question" onclick="toggleAnswer(this)">
-                        <span class="faq-icon-left" style="text-align:left;"></span> How can I benefit from your startup?
+                        How long is a typical rent agreement valid?
                         <span class="faq-icon-right">+</span>
                     </div>
-                    <div class="faq-answer">Our startup provides a range of benefits, including customized solutions to meet your unique needs...</div>
+                    <div class="faq-answer">Rent agreements are typically drafted for 11 months to avoid legal registration requirements.</div>
                 </div>
+
                 <div class="faq-item">
                     <div class="faq-question" onclick="toggleAnswer(this)">
-                        <span class="faq-icon-left" style="text-align:left;"></span> How can I get in touch with customer support?
+                        What are the key elements of a rent agreement?
                         <span class="faq-icon-right">+</span>
                     </div>
-                    <div class="faq-answer">You can contact our customer support team via email, phone, or live chat on our website.</div>
+                    <div class="faq-answer"> <ul class="checklist" style="font-size:16px;color:#fff;padding-left:20px;">
+                        <ul>
+                            <div class="list-left">
+                                <li>  Rent amount</li>
+                                <li> Lease duration</li>
+                                <li> security deposit</li>
+                                <li> Property usage (residential or commercial)</li>
+                                <li> Insurance details (for commercial properties)</li>
+                                <li> Maintenance and repair responsibilities</li>
+                                <li> Property usage (residential or commercial)</li>
+                                <li> Signature clause</li>
+                            </div>
+                        </ul>
+                    </div>
                 </div>
+                 
                 <div class="faq-item">
                     <div class="faq-question" onclick="toggleAnswer(this)">
-                        <span class="faq-icon-left" style="text-align:left;"></span> How do you ensure data security and privacy?
+                        Is it necessary to register a rent agreement?                       
                         <span class="faq-icon-right">+</span>
                     </div>
-                    <div class="faq-answer">We adhere to the highest security standards to ensure your data is protected...</div>
+                    <div class="faq-answer">The Registration Act, 1908 mandates that leases for more than 11 months must be legally registered. Agreements for less than 11 months may not require registration but can be notarized.</div>
                 </div>
+               
                 <div class="faq-item">
                     <div class="faq-question" onclick="toggleAnswer(this)">
-                        <span class="faq-icon-left" style="text-align:left;"></span> How do I get started with your offerings?
+                        How can I create an online rent agreement?
                         <span class="faq-icon-right">+</span>
                     </div>
-                    <div class="faq-answer">Getting started is easy! Simply reach out to us, and we'll guide you through the process...</div>
+                    <div class="faq-answer">You can create an online rent agreement by following these steps:
+                        <ul>
+                            <div class="list-left">
+                                <li>Fill in the required details online</li>
+                                <li> Make the necessary payment</li>
+                                <li> Digitally sign the agreement at your convenience</li>
+                                <li> Receive an e-stamped agreement via email</li>
+                            </div>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        How is the termination policy typically addressed in a rent agreement?   
+                        <span class="faq-icon-right">+</span>
+                    </div>
+                    <div class="faq-answer">The termination policy should elaborate on all possible scenarios for ending the agreement, including natural completion of the lease term and conditions for early termination.</div>
                 </div>
             </div>
         </div>
         <div class="faq-image">
-            <img src="images/home.jpg" alt="Customer Support" />
+            <img src="images/rent1.jpg" alt="Customer Support" />
         </div>
     </div>
 </section>
+<!-- end faq -->
+
+
+
+
+
 
 
 
@@ -378,31 +573,166 @@ button:hover {
 
 <!-- end call to action -->
 
-<section class="contact-section">
-    <div class="contact-container">
-        <div class="form-container">
-            <form style="text-align:center">
-                <div class="input-group" style="width:100%">
-                    <input type="text" name="first-name" placeholder="First Name" required>
-                    <input type="text" name="last-name" placeholder="Last Name" required>
-                </div>
-                <input type="email" name="email" placeholder="Email" required class="email-group">
-                <textarea name="message" placeholder="Message" required></textarea>
-                <button type="submit" style="margin-top:30px">SEND MESSAGE</button>
-            </form>
-        </div>
-        <div class="contact-info">
-            <h2>Get In Touch</h2>
-            <p>Ready to make your real estate dreams a reality? Get in touch with Knowhere for trusted guidance, tailored solutions, and a seamless property experience.</p>
-            <ul>
-                <li><i class="fas fa-map-marker-alt"></i> Wakad, Pimpri-Chinchwad, Maharashtra 411057</li>
-                <li><i class="fas fa-envelope"></i> example@mail.com</li>
-                <li><i class="fas fa-phone-alt"></i>+91 91122 11291</li>
-                
-            </ul>
-        </div>
+<!-- Enquire Button -->
+    <div id="enquireButtonContainer">
+        <button id="enquireButton">
+            Book A Demo
+        </button>
     </div>
-</section>
+<!-- end enquire button -->
+
+
+
+
+<!-- Enquiry Modal -->
+
+<!-- Enquiry Modal -->
+<div id="enquiryModal" style="display:none;">
+    <div class="form-container" style="position: relative; padding: 20px; background: #eaeaea; border-radius: 8px;">
+        <span id="closeModal" style="position: absolute; top: 10px; right: 15px; cursor: pointer; font-size: 20px;">&times;</span>
+        <h3>Enquiry Form</h3>
+        
+        <div id="feedbackMessage" style="color: #007bff; font-size: 14px; margin-bottom: 10px; display: none;"></div>
+        
+        <form id="enquiryForm" method="POST">
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <small class="error-message" id="nameError"></small>
+
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            <small class="error-message" id="emailError"></small>
+
+            <input type="text" id="contact" name="contact" placeholder="Your Contact Number" required maxlength="10">
+            <small class="error-message" id="contactError"></small>
+
+            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+            <small class="error-message" id="messageError"></small>
+
+            <!-- New Location Field -->
+            <input type="text" id="location" name="location" placeholder="Your Location" required>
+            <small class="error-message" id="locationError"></small>
+
+            <!-- CAPTCHA Section -->
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <span id="captchaQuestion" style="font-size: 16px; font-weight: bold; width: 15%;"></span>
+                <input type="text" id="captchaAnswer" name="captchaAnswer" placeholder="Enter Answer" required style="width: 100%;">
+            </div>
+            <small class="error-message" id="captchaError"></small>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</div>
+
+<style>
+    .error-message {
+        color: red;
+        font-size: 12px;
+        display: none;
+    }
+</style>
+
+<script>
+    let correctCaptchaAnswer = 0;
+
+    function generateCaptcha() {
+        let num1 = Math.floor(Math.random() * 10) + 1;
+        let num2 = Math.floor(Math.random() * 10) + 1;
+        correctCaptchaAnswer = num1 + num2;
+        document.getElementById("captchaQuestion").innerText = `${num1} + ${num2} = `;
+    }
+
+    function openModal() {
+        generateCaptcha();
+        document.getElementById("enquiryModal").style.display = "block";
+    }
+
+    document.getElementById("enquireButton").onclick = openModal;
+    document.getElementById("consultationButton").onclick = openModal;
+
+    document.getElementById("closeModal").onclick = function() {
+        document.getElementById("enquiryModal").style.display = "none";
+        document.getElementById("feedbackMessage").style.display = "none";
+    };
+
+    document.getElementById("enquiryForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        let isValid = true;
+
+        const name = document.getElementById("name").value.trim();
+        if (name === "") { showError("nameError", "Name is required"); isValid = false; } else { hideError("nameError"); }
+
+        const email = document.getElementById("email").value.trim();
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (email === "") { showError("emailError", "Email is required"); isValid = false; } 
+        else if (!emailPattern.test(email)) { showError("emailError", "Enter a valid email"); isValid = false; } 
+        else { hideError("emailError"); }
+
+        const contact = document.getElementById("contact").value.trim();
+        const contactPattern = /^[0-9]{10}$/;
+        if (contact === "") { showError("contactError", "Contact number is required"); isValid = false; } 
+        else if (!contactPattern.test(contact)) { showError("contactError", "Enter a valid 10-digit number"); isValid = false; } 
+        else { hideError("contactError"); }
+
+        const message = document.getElementById("message").value.trim();
+        if (message === "") { showError("messageError", "Message is required"); isValid = false; } 
+        else { hideError("messageError"); }
+
+        const location = document.getElementById("location").value.trim();
+        if (location === "") { showError("locationError", "Location is required"); isValid = false; } 
+        else { hideError("locationError"); }
+
+        // CAPTCHA Validation
+        const captchaInput = document.getElementById("captchaAnswer").value.trim();
+        if (captchaInput === "" || parseInt(captchaInput) !== correctCaptchaAnswer) {
+            showError("captchaError", "Incorrect CAPTCHA answer");
+            isValid = false;
+        } else {
+            hideError("captchaError");
+        }
+
+        if (!isValid) return;
+
+        const formData = new FormData(this);
+        fetch('forms/rent_submit.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            const feedbackMessage = document.getElementById("feedbackMessage");
+            if (data.success) {
+                feedbackMessage.style.color = "green";
+                feedbackMessage.innerText = "Enquiry submitted successfully!";
+                this.reset();
+                generateCaptcha();
+            } else {
+                feedbackMessage.style.color = "red";
+                feedbackMessage.innerText = "Error submitting enquiry. Please try again.";
+            }
+            feedbackMessage.style.display = "block";
+            setTimeout(() => { document.getElementById("enquiryModal").style.display = "none"; location.reload(); }, 2000);
+        })
+        .catch(error => {
+            console.error("Error:", error);
+            alert("Something went wrong. Please try again.");
+        });
+    });
+
+    function showError(elementId, message) {
+        const errorElement = document.getElementById(elementId);
+        errorElement.innerText = message;
+        errorElement.style.display = "block";
+    }
+
+    function hideError(elementId) {
+        const errorElement = document.getElementById(elementId);
+        errorElement.style.display = "none";
+    }
+</script>
+
+
+<!-- end enquirty -->
 
 
 

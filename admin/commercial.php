@@ -22,6 +22,8 @@ if(isset($_POST['add']))
 	$price=$_POST['price'];
 	$roi=$_POST['roi'];
 	$usp=$_POST['usp'];
+	$city=$_POST['city'];
+	$developer=$_POST['developer'];
 	
 	$psf=$_POST['psf'];
 	$possession=$_POST['possession'];
@@ -55,8 +57,8 @@ if(isset($_POST['add']))
 
 
 // Insert into residential_projects table
-$sql = "INSERT INTO commercial_projects (project_title, project_description, project_location, project_area, typology, scheme, size, price, roi, usp, psf, possession, status,image1,image2,image3,image4,image5,featured)
-		VALUES ('$project_title', '$project_description', '$project_location', '$project_area', '$typology', '$scheme', '$size', '$price', '$roi','$usp', '$psf', '$possession', '$status','$image1','$image2','$image3','$image4','$image5','$featured')";
+$sql = "INSERT INTO commercial_projects (project_title, project_description, project_location, project_area, typology, scheme, size, price, roi, usp, psf, possession, status,image1,image2,image3,image4,image5,featured, city, developer)
+		VALUES ('$project_title', '$project_description', '$project_location', '$project_area', '$typology', '$scheme', '$size', '$price', '$roi','$usp', '$psf', '$possession', '$status','$image1','$image2','$image3','$image4','$image5','$featured', '$city', '$developer')";
 
 $result = mysqli_query($con, $sql);
 if ($result) {
@@ -156,17 +158,35 @@ if ($result) {
 											<div class="col-xl-6">
 												
 												<div class="form-group row">
+													<label class="col-lg-3 col-form-label">Project Developer</label>
+													<div class="col-lg-9">
+														<input type="text" class="form-control" name="developer"      placeholder="Enter Project Developer">
+													</div>
+												</div>
+												<div class="form-group row">
 													<label class="col-lg-3 col-form-label">Address</label>
 													<div class="col-lg-9">
 														<input type="text" class="form-control" name="project_location"      placeholder="Enter Address">
 													</div>
 												</div>
+												
+
+
 												<div class="form-group row">
 													<label class="col-lg-3 col-form-label">Typology</label>
 													<div class="col-lg-9">
-														<input type="text" class="form-control" name="typology"      placeholder="Enter Typology">
+														<select class="form-control"       name="typology">
+															<option value="">Select Typology</option>
+															<option value="Shop">Shop</option>
+															<option value="Office">Office</option>
+															<option value="Restaurant">Restaurant</option>
+															<option value="Studio">Studio</option>
+															<option value="Showroom">Showroom</option>
+														</select>
 													</div>
 												</div>
+
+
 												<div class="form-group row">
 													<label class="col-lg-3 col-form-label">Possession</label>
 													<div class="col-lg-9">
@@ -194,6 +214,12 @@ if ($result) {
 													<label class="col-lg-3 col-form-label">Project Area</label>
 													<div class="col-lg-9">
 														<input type="text" class="form-control" name="project_area"      placeholder="Enter Project Area">
+													</div>
+												</div>
+												<div class="form-group row">
+													<label class="col-lg-3 col-form-label">City</label>
+													<div class="col-lg-9">
+														<input type="text" class="form-control" name="city"      placeholder="Enter City">
 													</div>
 												</div>
 												<div class="form-group row">
@@ -238,13 +264,12 @@ if ($result) {
 
 										
 										
-										<div class="form-group row">
+										<!-- <div class="form-group row">
 											<label class="col-lg-2 col-form-label">Feature</label>
 											<div class="col-lg-9">
 											<p class="alert alert-danger">* Important Please Do Not Remove Below Content Only Change <b>Yes</b> Or <b>No</b> or Details and Do Not Add More Details</p>
 											
 											<textarea class="tinymce form-control" name="feature" rows="10" cols="30">
-												<!---feature area start--->
 												<div class="col-md-4">
 														<ul>
 														<li class="mb-3"><span class="text-secondary font-weight-bold">Parking : </span>Yes</li>
@@ -264,10 +289,9 @@ if ($result) {
 														<li class="mb-3"><span class="text-secondary font-weight-bold">CCTV : </span>Yes</li>
 														</ul>
 													</div>
-												<!---feature area end---->
 											</textarea>
 											</div>
-										</div>
+										</div> -->
 												
 										<h4 class="card-title">Image & Status</h4>
 										<div class="row">
