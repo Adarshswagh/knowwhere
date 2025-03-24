@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 24, 2025 at 07:05 AM
+-- Generation Time: Mar 24, 2025 at 08:42 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -63,6 +63,22 @@ CREATE TABLE `admin` (
 INSERT INTO `admin` (`aid`, `auser`, `aemail`, `apass`, `adob`, `aphone`) VALUES
 (9, 'admin', 'admin@gmail.com', '6812f136d636e737248d365016f8cfd5139e387c', '1994-12-06', '1470002569'),
 (10, 'knowhere', 'knowwhere@gmail.com', 'e02918e68ee434beb7e403cbe9ddb97a97804255', '1990-01-01', '9136211332');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bamboo`
+--
+
+CREATE TABLE `bamboo` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `message` text DEFAULT NULL,
+  `contact` varchar(15) DEFAULT NULL,
+  `type` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -210,6 +226,22 @@ INSERT INTO `commercial_projects` (`pid`, `project_title`, `project_description`
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `construction`
+--
+
+CREATE TABLE `construction` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `contact` varchar(15) DEFAULT NULL,
+  `message` text DEFAULT NULL,
+  `type` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `contact`
 --
 
@@ -228,6 +260,22 @@ CREATE TABLE `contact` (
 
 INSERT INTO `contact` (`cid`, `name`, `email`, `phone`, `subject`, `message`) VALUES
 (7, ' ', 'asda@asd.com', '8888885454', ' .com', 'asdasdasd');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `digital`
+--
+
+CREATE TABLE `digital` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `contact` varchar(15) DEFAULT NULL,
+  `message` text DEFAULT NULL,
+  `type` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -278,6 +326,40 @@ INSERT INTO `form_submissions` (`id`, `name`, `email`, `contact`, `message`, `cr
 (22, 'Adarsh Sanjivan Waghmare', 'waghmareadarsh1432@gmail.com', '7482025922', 'knowhere', '2024-11-18 11:03:50'),
 (23, 'Adarsh Sanjivan Waghmare', 'adarsh1432@gmail.com', '7020727854', 'Hello', '2024-12-09 06:32:24'),
 (24, 'Sneha ghaiwat ', 'nehaghaiwat@gmail.com', '9356713037', 'Looking for property in Baner 2bhk nearing possession. Budget 80lc ', '2025-02-05 14:16:36');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `home_loan`
+--
+
+CREATE TABLE `home_loan` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `contact` varchar(15) DEFAULT NULL,
+  `message` text DEFAULT NULL,
+  `loan_amount` decimal(15,2) DEFAULT NULL,
+  `monthly_net_salary` decimal(15,2) DEFAULT NULL,
+  `occupation` varchar(255) DEFAULT NULL,
+  `city` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `interior`
+--
+
+CREATE TABLE `interior` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `contact` varchar(15) DEFAULT NULL,
+  `message` text DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -369,6 +451,47 @@ INSERT INTO `property` (`pid`, `title`, `pcontent`, `type`, `bhk`, `stype`, `bed
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `rent`
+--
+
+CREATE TABLE `rent` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `contact` varchar(15) DEFAULT NULL,
+  `message` text DEFAULT NULL,
+  `city` varchar(255) DEFAULT NULL,
+  `location` varchar(255) DEFAULT NULL,
+  `project_name` varchar(255) DEFAULT NULL,
+  `total_floor` int(11) DEFAULT NULL,
+  `total_unit` int(11) DEFAULT NULL,
+  `carpet_area` decimal(10,2) DEFAULT NULL,
+  `rent_per_month` decimal(10,2) DEFAULT NULL,
+  `usp` text DEFAULT NULL,
+  `project_type` enum('Residential','Commercial') DEFAULT NULL,
+  `overview` text DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `rent_agreement`
+--
+
+CREATE TABLE `rent_agreement` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `contact` varchar(15) DEFAULT NULL,
+  `message` text DEFAULT NULL,
+  `location` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `residential_projects`
 --
 
@@ -412,6 +535,31 @@ INSERT INTO `residential_projects` (`pid`, `project_title`, `project_description
 (137, 'The Canary', 'Experience luxury living at The Canary Balewadi, where style meets convenience. Our meticulously designed Kunal Canary residences cater to those who appreciate designer living. Located in the vibrant heart of Balewadi, our 4 & 3 BHK apartments offer elegance and sophistication with contemporary architecture and top-tier finishes, ensuring a dream home experience tailored to your lifestyle.', 'Balewadi', '7 Acres', '8', '26', 'Dec 2022', '', 'banner.jpg', '', '', '', '', 'Ready To Move', 0, '[{\"name\":\"2 BHK\",\"size\":\"829 Sq.Ft\",\"price\":\"1.10 Cr\"},{\"name\":\"3 BHK\",\"size\":\"1109 / 1370\",\"price\":\"1.44 / 1.81 cr\"},{\"name\":\"4 BHK\",\"size\":\"1885\",\"price\":\"2.60 Cr\"}]', '', '30 Floors ', 'Pune', '', 'KUNAL', ''),
 (138, 'The Balmoral Riverside', 'Steeped in luxury and adorned with a serene river view, soak in the experience of riverside living in these chic residences at The Balmoral Riverside, Balewadi. An exclusive offering by Kasturi, The Balmoral Riverside presents a life less ordinary in one of Pune’s most sought-after locations.', 'Balewadi', '6 Acres', '4', '500', '2027', '', '336AE46B-61E0-4179-A3B7-4841D2142EBE.webp', '', '', '', '', 'Early Possession', 1, '[{\"name\":\"3 BHK\",\"size\":\"1400 Sq.Ft\",\"price\":\"2.11 Cr\"},{\"name\":\"4 BHK\",\"size\":\"1860  Sq.Ft\",\"price\":\"2.88 Cr\"}]', '', '37 Floors ', 'Pune', '', 'KASTURI', ''),
 (139, 'Kasturi Balmoral towers', 'A distinct offering from The Balmoral Collection, The Balmoral Towers offers a lifestyle that has been scrupulously put together with carefully chosen specifications & features to help build a vibrant community of like-minded families.', 'Balewadi', '6 Acres', '4', '550', '2027', '', 'towes.jpg', '', '', '', '', 'Early Possession', 0, '[{\"name\":\"3 BHK\",\"size\":\"1240 Sq.Ft\",\"price\":\"1.81 Cr\"},{\"name\":\"4 BHK\",\"size\":\"1560 Sq.Ft\",\"price\":\"2.50 Cr\"}]', '', '37 Floors', 'Pune', '', 'KASTURI', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sale`
+--
+
+CREATE TABLE `sale` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `contact` varchar(15) DEFAULT NULL,
+  `message` text DEFAULT NULL,
+  `city` varchar(255) DEFAULT NULL,
+  `location` varchar(255) DEFAULT NULL,
+  `project_name` varchar(255) DEFAULT NULL,
+  `total_floor` int(11) DEFAULT NULL,
+  `total_unit` int(11) DEFAULT NULL,
+  `carpet_area` decimal(10,2) DEFAULT NULL,
+  `rent_per_month` decimal(10,2) DEFAULT NULL,
+  `usp` text DEFAULT NULL,
+  `project_type` enum('Residential','Commercial') DEFAULT NULL,
+  `overview` text DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -475,6 +623,12 @@ ALTER TABLE `admin`
   ADD PRIMARY KEY (`aid`);
 
 --
+-- Indexes for table `bamboo`
+--
+ALTER TABLE `bamboo`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `blogs`
 --
 ALTER TABLE `blogs`
@@ -499,10 +653,22 @@ ALTER TABLE `commercial_projects`
   ADD PRIMARY KEY (`pid`);
 
 --
+-- Indexes for table `construction`
+--
+ALTER TABLE `construction`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `contact`
 --
 ALTER TABLE `contact`
   ADD PRIMARY KEY (`cid`);
+
+--
+-- Indexes for table `digital`
+--
+ALTER TABLE `digital`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `feedback`
@@ -514,6 +680,18 @@ ALTER TABLE `feedback`
 -- Indexes for table `form_submissions`
 --
 ALTER TABLE `form_submissions`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `home_loan`
+--
+ALTER TABLE `home_loan`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `interior`
+--
+ALTER TABLE `interior`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -529,10 +707,28 @@ ALTER TABLE `property`
   ADD PRIMARY KEY (`pid`);
 
 --
+-- Indexes for table `rent`
+--
+ALTER TABLE `rent`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `rent_agreement`
+--
+ALTER TABLE `rent_agreement`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `residential_projects`
 --
 ALTER TABLE `residential_projects`
   ADD PRIMARY KEY (`pid`);
+
+--
+-- Indexes for table `sale`
+--
+ALTER TABLE `sale`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `state`
@@ -563,6 +759,12 @@ ALTER TABLE `admin`
   MODIFY `aid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
+-- AUTO_INCREMENT for table `bamboo`
+--
+ALTER TABLE `bamboo`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `blogs`
 --
 ALTER TABLE `blogs`
@@ -587,10 +789,22 @@ ALTER TABLE `commercial_projects`
   MODIFY `pid` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=77;
 
 --
+-- AUTO_INCREMENT for table `construction`
+--
+ALTER TABLE `construction`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `contact`
 --
 ALTER TABLE `contact`
   MODIFY `cid` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `digital`
+--
+ALTER TABLE `digital`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `feedback`
@@ -605,6 +819,18 @@ ALTER TABLE `form_submissions`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
+-- AUTO_INCREMENT for table `home_loan`
+--
+ALTER TABLE `home_loan`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `interior`
+--
+ALTER TABLE `interior`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `plotting_projects`
 --
 ALTER TABLE `plotting_projects`
@@ -617,10 +843,28 @@ ALTER TABLE `property`
   MODIFY `pid` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
+-- AUTO_INCREMENT for table `rent`
+--
+ALTER TABLE `rent`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `rent_agreement`
+--
+ALTER TABLE `rent_agreement`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `residential_projects`
 --
 ALTER TABLE `residential_projects`
   MODIFY `pid` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=141;
+
+--
+-- AUTO_INCREMENT for table `sale`
+--
+ALTER TABLE `sale`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `state`
